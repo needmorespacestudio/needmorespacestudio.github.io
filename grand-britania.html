@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Grand Britania Rama 5 | Need More Space Studio</title>
+<meta name="description" content="Modern living infused with nature's calm — Grand Britania Rama 5, Nonthaburi 2023 by Need More Space Studio">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400&family=Noto+Serif+Thai:wght@300;400&family=Jost:wght@200;300;400&display=swap" rel="stylesheet">
+<style>
+:root{--ivory:#FDFAF5;--cream:#F5F0E8;--muted:#8C8478;--stone:#6B6560;--bark:#2C2416;--charcoal:#1A1814;--gold:#B8975A;--gold-light:#D4AF7A;--border:rgba(184,151,90,0.18);--serif:'Playfair Display',serif;--serif-th:'Noto Serif Thai',serif;--sans:'Jost',sans-serif;}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}html{scroll-behavior:smooth;}
+body{background:var(--charcoal);color:var(--ivory);font-family:var(--sans);font-weight:300;line-height:1.7;overflow-x:hidden;}
+::-webkit-scrollbar{width:2px;}::-webkit-scrollbar-thumb{background:var(--gold);}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:1.5rem 3rem;display:flex;align-items:center;justify-content:space-between;transition:all 0.5s;}
+nav.dark{background:rgba(26,24,20,0.96);backdrop-filter:blur(20px);padding:1rem 3rem;border-bottom:1px solid rgba(184,151,90,0.1);}
+.nav-back{font-size:0.7rem;letter-spacing:0.2em;text-transform:uppercase;color:rgba(248,245,239,0.6);text-decoration:none;transition:color 0.3s;}.nav-back:hover{color:var(--gold);}
+.nav-logo{display:flex;align-items:center;text-decoration:none;}.nav-logo img{height:30px;width:auto;filter:invert(1);}
+.nav-cta{font-size:0.68rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--gold);text-decoration:none;border:1px solid rgba(184,151,90,0.3);padding:0.5rem 1.2rem;transition:all 0.3s;}.nav-cta:hover{background:var(--gold);color:var(--charcoal);}
+.hero{height:100vh;position:relative;overflow:hidden;}
+.hero-img{width:100%;height:100%;object-fit:cover;display:block;transform:scale(1.05);transition:transform 8s ease;}.hero-img.loaded{transform:scale(1);}
+.hero-overlay{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(26,24,20,0.15) 0%,rgba(26,24,20,0) 40%,rgba(26,24,20,0.75) 80%,rgba(26,24,20,1) 100%);}
+.hero-content{position:absolute;bottom:0;left:0;right:0;padding:4rem 3rem 5rem;}
+.hero-tag{font-size:0.68rem;letter-spacing:0.28em;text-transform:uppercase;color:var(--gold);margin-bottom:1rem;display:flex;align-items:center;gap:1rem;}.hero-tag::before{content:'';width:30px;height:1px;background:var(--gold);}
+.hero-title{font-family:var(--serif);font-size:clamp(2.5rem,6vw,5rem);font-weight:400;line-height:1;margin-bottom:0.3rem;}.hero-title em{font-style:italic;color:rgba(248,245,239,0.55);}
+.hero-meta{display:flex;gap:3rem;flex-wrap:wrap;margin-top:1.5rem;}
+.meta-label{font-size:0.6rem;letter-spacing:0.22em;text-transform:uppercase;color:rgba(248,245,239,0.38);margin-bottom:0.3rem;}
+.meta-value{font-family:var(--serif);font-size:0.95rem;color:var(--ivory);}
+.intro-section{padding:7rem 3rem;display:grid;grid-template-columns:1fr 1fr;gap:6rem;align-items:start;max-width:1300px;margin:0 auto;}
+.eyebrow{font-size:0.65rem;letter-spacing:0.25em;text-transform:uppercase;color:var(--gold);margin-bottom:1.5rem;display:flex;align-items:center;gap:1rem;}.eyebrow::before{content:'';width:30px;height:1px;background:var(--gold);}
+.intro-title{font-family:var(--serif);font-size:clamp(1.8rem,3vw,2.6rem);font-weight:400;line-height:1.2;margin-bottom:1rem;}.intro-title em{font-style:italic;color:var(--gold);}
+.intro-quote{font-family:var(--serif);font-size:0.98rem;font-style:italic;line-height:2;color:rgba(248,245,239,0.55);border-left:1px solid var(--gold);padding-left:1.5rem;}
+.spec-grid{display:grid;grid-template-columns:1fr 1fr;gap:2px;}
+.spec-item{background:rgba(248,245,239,0.03);border:1px solid rgba(248,245,239,0.06);padding:1.5rem;transition:background 0.3s;}.spec-item:hover{background:rgba(184,151,90,0.07);}
+.spec-num{font-family:var(--serif);font-size:2rem;font-weight:400;color:var(--gold);line-height:1;margin-bottom:0.3rem;}
+.spec-label{font-size:0.62rem;letter-spacing:0.18em;text-transform:uppercase;color:rgba(248,245,239,0.38);}
+.highlights{margin-top:2px;grid-column:span 2;background:rgba(248,245,239,0.03);border:1px solid rgba(248,245,239,0.06);padding:1.5rem;}
+.hl-title{font-size:0.62rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--gold);margin-bottom:1rem;}
+.hl-list{list-style:none;}.hl-list li{font-size:0.82rem;color:rgba(248,245,239,0.55);padding:0.5rem 0;border-bottom:1px solid rgba(248,245,239,0.05);display:flex;align-items:center;gap:0.8rem;}.hl-list li::before{content:'◆';font-size:0.4rem;color:var(--gold);flex-shrink:0;}
+.gallery-section{padding:0 0 5rem;}
+.gallery-header{padding:4rem 3rem 3rem;display:flex;align-items:flex-end;justify-content:space-between;}
+.gallery-title{font-family:var(--serif);font-size:clamp(1.5rem,2.5vw,2rem);font-weight:400;}
+.gallery-count{font-family:var(--serif);font-size:3rem;font-weight:400;color:rgba(184,151,90,0.12);line-height:1;}
+.g-2col{display:grid;grid-template-columns:1fr 1fr;gap:3px;padding:0 3rem;margin-bottom:3px;}
+.g-3col{display:grid;grid-template-columns:1fr 1fr 1fr;gap:3px;padding:0 3rem;margin-bottom:3px;}
+.g-wide{padding:0 3rem;margin-bottom:3px;}
+.img-wrap{overflow:hidden;position:relative;}.img-wrap img{width:100%;height:100%;object-fit:cover;display:block;transition:transform 0.8s cubic-bezier(0.25,0.46,0.45,0.94);filter:brightness(0.92);}.img-wrap:hover img{transform:scale(1.05);filter:brightness(1);}
+.room-tag{position:absolute;bottom:1rem;left:1rem;background:rgba(26,24,20,0.8);backdrop-filter:blur(8px);font-size:0.6rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--gold);padding:0.4rem 0.8rem;opacity:0;transition:opacity 0.3s;}.img-wrap:hover .room-tag{opacity:1;}
+.concept-section{padding:7rem 3rem;background:rgba(248,245,239,0.02);border-top:1px solid rgba(248,245,239,0.05);}
+.concept-inner{max-width:1300px;margin:0 auto;display:grid;grid-template-columns:1fr 2fr;gap:6rem;align-items:start;}
+.concept-label{font-size:0.65rem;letter-spacing:0.25em;text-transform:uppercase;color:var(--gold);writing-mode:vertical-rl;transform:rotate(180deg);}
+.concept-title{font-family:var(--serif);font-size:clamp(1.8rem,3.5vw,3rem);font-weight:400;line-height:1.15;margin-bottom:1.5rem;}.concept-title em{font-style:italic;color:var(--gold);}
+.concept-body{font-size:0.88rem;line-height:2.1;color:rgba(248,245,239,0.55);}
+.palette{margin-top:2.5rem;padding-top:2.5rem;border-top:1px solid rgba(248,245,239,0.07);display:flex;align-items:center;gap:2rem;flex-wrap:wrap;}
+.palette-label{font-size:0.62rem;letter-spacing:0.2em;text-transform:uppercase;color:rgba(248,245,239,0.35);}
+.swatches{display:flex;gap:0.5rem;flex-wrap:wrap;}
+.swatch{width:36px;height:36px;border:1px solid rgba(248,245,239,0.1);position:relative;}.swatch::after{content:attr(data-name);position:absolute;bottom:-1.4rem;left:50%;transform:translateX(-50%);font-size:0.48rem;letter-spacing:0.1em;text-transform:uppercase;color:rgba(248,245,239,0.3);white-space:nowrap;}
+.cta-strip{background:var(--bark);padding:5rem 3rem;text-align:center;}
+.cta-title{font-family:var(--serif);font-size:clamp(1.8rem,3.5vw,2.8rem);font-weight:400;color:white;line-height:1.15;margin-bottom:0.5rem;}.cta-title em{font-style:italic;color:var(--gold);}
+.cta-sub{font-family:var(--serif-th);font-size:0.95rem;color:rgba(255,255,255,0.45);font-weight:300;margin-bottom:2.5rem;line-height:1.8;}
+.cta-btns{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;}
+.btn-gold{display:inline-block;font-size:0.7rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--bark);background:var(--gold);padding:1rem 2.4rem;text-decoration:none;transition:all 0.3s;}.btn-gold:hover{background:var(--gold-light);}
+.btn-outline{display:inline-block;font-size:0.7rem;letter-spacing:0.18em;text-transform:uppercase;color:rgba(255,255,255,0.6);padding:1rem 2.4rem;text-decoration:none;border:1px solid rgba(255,255,255,0.2);transition:all 0.3s;}.btn-outline:hover{border-color:var(--gold);color:var(--gold);}
+footer{background:rgba(0,0,0,0.4);padding:2.5rem 3rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem;border-top:1px solid rgba(248,245,239,0.05);}
+.footer-logo-img{height:26px;width:auto;filter:invert(1) brightness(0.7);}
+.footer-copy{font-size:0.7rem;color:rgba(248,245,239,0.2);}
+.reveal{opacity:0;transform:translateY(30px);transition:opacity 0.9s ease,transform 0.9s ease;}.reveal.visible{opacity:1;transform:translateY(0);}
+.d1{transition-delay:0.12s;}.d2{transition-delay:0.24s;}.d3{transition-delay:0.36s;}
+@media(max-width:900px){nav{padding:1.2rem 1.5rem;}.nav-cta{display:none;}.hero-content{padding:3rem 1.5rem 4rem;}.intro-section{grid-template-columns:1fr;gap:3rem;padding:5rem 1.5rem;}.gallery-header{padding:3rem 1.5rem 2rem;}.g-2col,.g-3col,.g-wide{padding:0 1.5rem;}.g-3col{grid-template-columns:1fr 1fr;}.concept-section{padding:5rem 1.5rem;}.concept-inner{grid-template-columns:1fr;gap:2rem;}.concept-label{writing-mode:horizontal-tb;transform:none;}.cta-strip{padding:4rem 1.5rem;}footer{padding:2rem 1.5rem;}}
+@media(max-width:600px){.g-2col,.g-3col{grid-template-columns:1fr;}.hero-meta{gap:1.5rem;}}
+</style>
+</head>
+<body>
+<nav id="navbar">
+  <a href="index.html" class="nav-back">← กลับหน้าหลัก</a>
+  <a href="index.html" class="nav-logo"><img src="logo_dark.png" alt="Need More Space Studio"></a>
+  <a href="contact.html" class="nav-cta">ปรึกษาฟรี</a>
+</nav>
+
+<section class="hero">
+  <img class="hero-img" id="heroImg" src="https://images.squarespace-cdn.com/content/v1/68f6f5d02a3e2e34520b02b2/b6dfc7f6-ecf2-471c-abfc-69b234c8bfb1/LINE_ALBUM_%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%97%E0%B8%B2%E0%B9%80%E0%B8%99%E0%B8%B5%E0%B8%A2+%E0%B8%9E%E0%B8%A3%E0%B8%B0%E0%B8%A3%E0%B8%B2%E0%B8%A1+5+%E0%B8%84%E0%B8%A3%E0%B8%B1%E0%B9%89%E0%B8%87%E0%B8%97%E0%B8%B5%E0%B9%88+2.1_230417_5.jpg" alt="Grand Britania Rama 5">
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <div class="hero-tag">Residential · Nonthaburi · 2023</div>
+    <h1 class="hero-title">Grand<br><em>Britania Rama 5</em></h1>
+    <div class="hero-meta">
+      <div><div class="meta-label">Location</div><div class="meta-value">Nakorn In, Rama 5, Nonthaburi</div></div>
+      <div><div class="meta-label">Type</div><div class="meta-value">Private Residence</div></div>
+      <div><div class="meta-label">Year</div><div class="meta-value">2023</div></div>
+      <div><div class="meta-label">Scope</div><div class="meta-value">Design + Build</div></div>
+    </div>
+  </div>
+</section>
+
+<div style="max-width:1300px;margin:0 auto;">
+  <div class="intro-section">
+    <div class="reveal">
+      <div class="eyebrow">Project Story</div>
+      <h2 class="intro-title">Nature's Calm<br><em>Meets Modern Living</em></h2>
+      <blockquote class="intro-quote">"Experience modern living infused with nature's calm. This residence utilizes warm wood finishes and touches of green to create a tranquil atmosphere. Gentle curves guide movement and soften the interior landscape, promoting a sense of ease and flow."</blockquote>
+    </div>
+    <div class="reveal d1">
+      <div class="spec-grid">
+        <div class="spec-item"><div class="spec-num">Modern</div><div class="spec-label">Style</div></div>
+        <div class="spec-item"><div class="spec-num">2023</div><div class="spec-label">Year Completed</div></div>
+        <div class="spec-item"><div class="spec-num">Rama 5</div><div class="spec-label">Location</div></div>
+        <div class="spec-item"><div class="spec-num">100%</div><div class="spec-label">Turnkey</div></div>
+        <div class="highlights">
+          <div class="hl-title">Design Highlights</div>
+          <ul class="hl-list">
+            <li>Warm wood finishes + touches of green สร้างบรรยากาศสงบจากธรรมชาติ</li>
+            <li>Gentle curves ทั่วพื้นที่ สร้าง flow ที่อ่อนโยนและน่าสบาย</li>
+            <li>Window seat ริมหน้าต่าง — มุมพักผ่อนที่ดึงแสงธรรมชาติเข้ามา</li>
+            <li>Contemporary style meets everyday comfort and relaxation</li>
+            <li>ห้องนอน Walk-in Closet และ Built-in ครบชุดทุกห้อง</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<section class="gallery-section">
+  <div class="gallery-header reveal">
+    <div><div class="eyebrow" style="margin-bottom:0.5rem;">Photography</div><h2 class="gallery-title">Project Gallery</h2></div>
+    <div class="gallery-count">05</div>
+  </div>
+  <div class="g-wide reveal"><div class="img-wrap" style="aspect-ratio:21/9;"><img src="https://images.squarespace-cdn.com/content/v1/68f6f5d02a3e2e34520b02b2/b6dfc7f6-ecf2-471c-abfc-69b234c8bfb1/LINE_ALBUM_%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%97%E0%B8%B2%E0%B9%80%E0%B8%99%E0%B8%B5%E0%B8%A2+%E0%B8%9E%E0%B8%A3%E0%B8%B0%E0%B8%A3%E0%B8%B2%E0%B8%A1+5+%E0%B8%84%E0%B8%A3%E0%B8%B1%E0%B9%89%E0%B8%87%E0%B8%97%E0%B8%B5%E0%B9%88+2.1_230417_5.jpg" alt="Living Room"><div class="room-tag">Living Room</div></div></div>
+  <div class="g-3col reveal">
+    <div class="img-wrap" style="aspect-ratio:4/3;"><img src="https://images.squarespace-cdn.com/content/v1/68f6f5d02a3e2e34520b02b2/33d5c938-f231-4d43-95a2-13078c85cffc/unnamed.jpg" alt="Dining"><div class="room-tag">Dining Area</div></div>
+    <div class="img-wrap" style="aspect-ratio:4/3;"><img src="https://images.squarespace-cdn.com/content/v1/68f6f5d02a3e2e34520b02b2/b6dfc7f6-ecf2-471c-abfc-69b234c8bfb1/LINE_ALBUM_%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%97%E0%B8%B2%E0%B9%80%E0%B8%99%E0%B8%B5%E0%B8%A2+%E0%B8%9E%E0%B8%A3%E0%B8%B0%E0%B8%A3%E0%B8%B2%E0%B8%A1+5+%E0%B8%84%E0%B8%A3%E0%B8%B1%E0%B9%89%E0%B8%87%E0%B8%97%E0%B8%B5%E0%B9%88+2.1_230417_5.jpg" alt="Bedroom"><div class="room-tag">Bedroom</div></div>
+    <div class="img-wrap" style="aspect-ratio:4/3;"><img src="https://images.squarespace-cdn.com/content/v1/68f6f5d02a3e2e34520b02b2/33d5c938-f231-4d43-95a2-13078c85cffc/unnamed.jpg" alt="Closet"><div class="room-tag">Walk-in Closet</div></div>
+  </div>
+</section>
+
+<section class="concept-section">
+  <div class="concept-inner">
+    <div class="concept-label reveal">Design Concept</div>
+    <div class="reveal d1">
+      <h2 class="concept-title">Warm Wood &<br><em>Green Serenity</em></h2>
+      <p class="concept-body">บ้านที่ Grand Britania Rama 5 ออกแบบให้ Modern living ผสมกับความสงบของธรรมชาติ โดยใช้ไม้อบอุ่นและสีเขียวสร้างบรรยากาศผ่อนคลาย เส้นโค้งอ่อนๆ ทั่วพื้นที่ช่วยนำสายตาและสร้าง flow ที่เป็นธรรมชาติ ผลลัพธ์คือบ้านที่ดูทันสมัย แต่ยังรู้สึกอบอุ่น สบาย และผ่อนคลายในทุกช่วงเวลาของชีวิต</p>
+      <div class="palette">
+        <span class="palette-label">Color Palette</span>
+        <div class="swatches">
+          <div class="swatch" style="background:#F5F0E8;" data-name="White"></div>
+          <div class="swatch" style="background:#D4C4AA;" data-name="Warm Oak"></div>
+          <div class="swatch" style="background:#B8C4A8;" data-name="Sage"></div>
+          <div class="swatch" style="background:#8B9B80;" data-name="Green"></div>
+          <div class="swatch" style="background:#5A6A50;" data-name="Forest"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="cta-strip">
+  <h2 class="cta-title reveal">พร้อมสร้างพื้นที่<br><em>ที่สะท้อนตัวตนคุณ?</em></h2>
+  <p class="cta-sub reveal d1">นัดปรึกษาฟรี ไม่มีข้อผูกมัด · รับคิวจำกัด</p>
+  <div class="cta-btns reveal d2">
+    <a href="contact.html" class="btn-gold">รับคำปรึกษาฟรี</a>
+    <a href="index.html#projects" class="btn-outline">ดูผลงานอื่น →</a>
+  </div>
+</div>
+<footer>
+  <img src="logo_cut_white.png" alt="Need More Space Studio" class="footer-logo-img">
+  <span class="footer-copy">© 2025 Need More Space Studio · Bangkok</span>
+</footer>
+<script>
+  const navbar=document.getElementById('navbar');
+  window.addEventListener('scroll',()=>{navbar.classList.toggle('dark',window.scrollY>80);});
+  const heroImg=document.getElementById('heroImg');
+  if(heroImg){setTimeout(()=>heroImg.classList.add('loaded'),100);}
+  const reveals=document.querySelectorAll('.reveal');
+  const obs=new IntersectionObserver((e)=>{e.forEach(el=>{if(el.isIntersecting){el.target.classList.add('visible');obs.unobserve(el.target);}});},{threshold:0.1});
+  reveals.forEach(el=>obs.observe(el));
+</script>
+</body></html>

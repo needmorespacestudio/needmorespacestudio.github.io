@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ivory & Grace — Rhythm Charoenkrung | Need More Space Studio</title>
+<meta name="description" content="ผลงานออกแบบภายในคอนโด Modern Classic โทนขาว-เบจ ที่ Rhythm Charoenkrung กรุงเทพฯ โดย Need More Space Studio">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&family=Noto+Serif+Thai:wght@300;400&family=Jost:wght@200;300;400&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --ivory: #F8F5EF;
+  --cream: #EDE8DF;
+  --warm: #D9D0C1;
+  --stone: #9A9080;
+  --bark: #4A3F32;
+  --charcoal: #1E1C19;
+  --gold: #C4A97A;
+  --gold-dim: rgba(196,169,122,0.3);
+  --serif: 'Playfair Display', serif;
+  --serif-th: 'Noto Serif Thai', serif;
+  --sans: 'Jost', sans-serif;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--charcoal);
+  color: var(--ivory);
+  font-family: var(--sans);
+  font-weight: 300;
+  overflow-x: hidden;
+}
+
+::-webkit-scrollbar { width: 2px; }
+::-webkit-scrollbar-thumb { background: var(--gold); }
+
+/* ── NAV ── */
+nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  padding: 1.5rem 3rem;
+  display: flex; align-items: center; justify-content: space-between;
+  mix-blend-mode: normal;
+  transition: all 0.5s;
+}
+nav.dark {
+  background: rgba(30,28,25,0.95);
+  backdrop-filter: blur(20px);
+  padding: 1rem 3rem;
+  border-bottom: 1px solid rgba(196,169,122,0.1);
+}
+.nav-back {
+  font-size: 0.72rem; letter-spacing: 0.2em; text-transform: uppercase;
+  color: rgba(248,245,239,0.6); text-decoration: none;
+  display: flex; align-items: center; gap: 0.6rem;
+  transition: color 0.3s;
+}
+.nav-back:hover { color: var(--gold); }
+.nav-back::before { content: '←'; font-size: 0.9rem; }
+
+.nav-logo {
+  font-family: var(--serif);
+  font-size: 0.95rem; font-weight: 400;
+  letter-spacing: 0.08em; color: var(--ivory);
+  text-decoration: none;
+}
+.nav-logo span { color: var(--gold); }
+
+.nav-cta {
+  font-size: 0.68rem; letter-spacing: 0.18em; text-transform: uppercase;
+  color: var(--gold); text-decoration: none;
+  border: 1px solid var(--gold-dim);
+  padding: 0.5rem 1.2rem;
+  transition: all 0.3s;
+}
+.nav-cta:hover { background: var(--gold); color: var(--charcoal); }
+
+/* ── HERO ── */
+.hero {
+  height: 100vh; position: relative; overflow: hidden;
+}
+.hero-img {
+  width: 100%; height: 100%;
+  object-fit: cover; object-position: center;
+  transform: scale(1.05);
+  transition: transform 8s ease;
+  display: block;
+}
+.hero-img.loaded { transform: scale(1); }
+
+.hero-overlay {
+  position: absolute; inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(30,28,25,0.2) 0%,
+    rgba(30,28,25,0) 40%,
+    rgba(30,28,25,0.7) 80%,
+    rgba(30,28,25,1) 100%
+  );
+}
+
+.hero-content {
+  position: absolute; bottom: 0; left: 0; right: 0;
+  padding: 4rem 3rem 5rem;
+}
+.hero-tag {
+  font-size: 0.68rem; letter-spacing: 0.28em; text-transform: uppercase;
+  color: var(--gold); margin-bottom: 1.2rem;
+  display: flex; align-items: center; gap: 1rem;
+}
+.hero-tag::before { content: ''; width: 30px; height: 1px; background: var(--gold); }
+
+.hero-title {
+  font-family: var(--serif);
+  font-size: clamp(3rem, 8vw, 7rem);
+  font-weight: 400; line-height: 0.95;
+  letter-spacing: -0.01em;
+  margin-bottom: 0.3rem;
+}
+.hero-title em { font-style: italic; color: var(--warm); }
+
+.hero-sub {
+  font-family: var(--serif-th);
+  font-size: clamp(0.9rem, 1.5vw, 1.1rem);
+  font-weight: 300; color: rgba(248,245,239,0.5);
+  margin-bottom: 2rem; letter-spacing: 0.04em;
+}
+
+.hero-meta {
+  display: flex; gap: 3rem; flex-wrap: wrap;
+}
+.meta-item { }
+.meta-label {
+  font-size: 0.6rem; letter-spacing: 0.22em;
+  text-transform: uppercase; color: var(--stone);
+  margin-bottom: 0.3rem;
+}
+.meta-value {
+  font-family: var(--serif);
+  font-size: 1rem; font-weight: 400; color: var(--ivory);
+}
+
+.hero-scroll {
+  position: absolute; right: 3rem; bottom: 5rem;
+  writing-mode: vertical-rl; transform: rotate(180deg);
+  font-size: 0.62rem; letter-spacing: 0.22em;
+  text-transform: uppercase; color: var(--stone);
+  display: flex; align-items: center; gap: 1rem;
+}
+.hero-scroll::before {
+  content: ''; height: 50px; width: 1px;
+  background: linear-gradient(to bottom, transparent, var(--gold));
+}
+
+/* ── INTRO ── */
+.intro-section {
+  padding: 8rem 3rem;
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 6rem; align-items: start;
+  max-width: 1300px; margin: 0 auto;
+}
+.intro-left { }
+.intro-eyebrow {
+  font-size: 0.65rem; letter-spacing: 0.25em;
+  text-transform: uppercase; color: var(--gold);
+  margin-bottom: 2rem;
+  display: flex; align-items: center; gap: 1rem;
+}
+.intro-eyebrow::before { content: ''; width: 30px; height: 1px; background: var(--gold); }
+
+.intro-title {
+  font-family: var(--serif);
+  font-size: clamp(1.8rem, 3vw, 2.8rem);
+  font-weight: 400; line-height: 1.2;
+  color: var(--ivory); margin-bottom: 1rem;
+}
+.intro-title em { font-style: italic; color: var(--gold); }
+
+.intro-title-th {
+  font-family: var(--serif-th);
+  font-size: 1rem; color: var(--stone);
+  font-weight: 300; line-height: 1.9;
+  margin-bottom: 2rem;
+}
+
+.intro-quote {
+  font-family: var(--serif);
+  font-size: 1.1rem; font-style: italic;
+  line-height: 1.8; color: rgba(248,245,239,0.65);
+  border-left: 1px solid var(--gold);
+  padding-left: 1.5rem;
+}
+
+.intro-right {
+  padding-top: 2rem;
+}
+.spec-grid {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 2px;
+}
+.spec-item {
+  background: rgba(248,245,239,0.03);
+  border: 1px solid rgba(248,245,239,0.06);
+  padding: 1.5rem;
+  transition: background 0.3s;
+}
+.spec-item:hover { background: rgba(196,169,122,0.06); }
+.spec-num {
+  font-family: var(--serif);
+  font-size: 2.2rem; font-weight: 400;
+  color: var(--gold); line-height: 1;
+  margin-bottom: 0.3rem;
+}
+.spec-label {
+  font-size: 0.65rem; letter-spacing: 0.18em;
+  text-transform: uppercase; color: var(--stone);
+}
+
+.highlights {
+  margin-top: 2px;
+  grid-column: span 2;
+  background: rgba(248,245,239,0.03);
+  border: 1px solid rgba(248,245,239,0.06);
+  padding: 1.5rem;
+}
+.highlight-title {
+  font-size: 0.65rem; letter-spacing: 0.18em;
+  text-transform: uppercase; color: var(--gold);
+  margin-bottom: 1rem;
+}
+.highlight-list { list-style: none; }
+.highlight-list li {
+  font-size: 0.82rem; color: rgba(248,245,239,0.6);
+  padding: 0.5rem 0;
+  border-bottom: 1px solid rgba(248,245,239,0.05);
+  display: flex; align-items: center; gap: 0.8rem;
+  line-height: 1.6;
+}
+.highlight-list li::before {
+  content: '◆'; font-size: 0.4rem; color: var(--gold); flex-shrink: 0;
+}
+
+/* ── GALLERY ── */
+.gallery-section { padding: 0 0 6rem; }
+
+.gallery-header {
+  padding: 4rem 3rem 3rem;
+  display: flex; align-items: flex-end; justify-content: space-between;
+}
+.gallery-eyebrow {
+  font-size: 0.65rem; letter-spacing: 0.25em;
+  text-transform: uppercase; color: var(--gold);
+  margin-bottom: 0.8rem;
+  display: flex; align-items: center; gap: 1rem;
+}
+.gallery-eyebrow::before { content: ''; width: 30px; height: 1px; background: var(--gold); }
+.gallery-title {
+  font-family: var(--serif);
+  font-size: clamp(1.6rem, 2.5vw, 2.2rem);
+  font-weight: 400; color: var(--ivory);
+}
+.gallery-count {
+  font-family: var(--serif);
+  font-size: 3rem; font-weight: 400;
+  color: rgba(196,169,122,0.15); line-height: 1;
+}
+
+/* Featured 2-col */
+.gallery-featured {
+  display: grid; grid-template-columns: 1.4fr 1fr;
+  gap: 3px; margin-bottom: 3px;
+  padding: 0 3rem;
+}
+.gallery-featured .img-wrap { overflow: hidden; position: relative; }
+.gallery-featured .img-wrap:first-child { aspect-ratio: 16/10; }
+.gallery-featured .img-wrap:last-child { aspect-ratio: 4/5; }
+
+/* Room grid */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3px; padding: 0 3rem;
+  margin-bottom: 3px;
+}
+.gallery-grid .img-wrap { overflow: hidden; aspect-ratio: 4/3; position: relative; }
+
+/* Wide single */
+.gallery-wide { padding: 0 3rem; }
+.gallery-wide .img-wrap { overflow: hidden; aspect-ratio: 21/9; position: relative; }
+
+/* Img shared */
+.img-wrap img {
+  width: 100%; height: 100%;
+  object-fit: cover; display: block;
+  transition: transform 0.8s cubic-bezier(0.25,0.46,0.45,0.94);
+  filter: brightness(0.95);
+}
+.img-wrap:hover img { transform: scale(1.04); filter: brightness(1); }
+
+.img-wrap .room-tag {
+  position: absolute; bottom: 1rem; left: 1rem;
+  background: rgba(30,28,25,0.75);
+  backdrop-filter: blur(8px);
+  font-size: 0.6rem; letter-spacing: 0.18em;
+  text-transform: uppercase; color: var(--gold);
+  padding: 0.4rem 0.8rem;
+  opacity: 0; transition: opacity 0.3s;
+}
+.img-wrap:hover .room-tag { opacity: 1; }
+
+/* ── DESIGN CONCEPT ── */
+.concept-section {
+  padding: 8rem 3rem;
+  background: rgba(248,245,239,0.02);
+  border-top: 1px solid rgba(248,245,239,0.05);
+  border-bottom: 1px solid rgba(248,245,239,0.05);
+}
+.concept-inner {
+  max-width: 1300px; margin: 0 auto;
+  display: grid; grid-template-columns: 1fr 2fr;
+  gap: 6rem; align-items: start;
+}
+.concept-label {
+  font-size: 0.65rem; letter-spacing: 0.25em;
+  text-transform: uppercase; color: var(--gold);
+  writing-mode: vertical-rl; transform: rotate(180deg);
+  padding-top: 1rem;
+}
+.concept-content { }
+.concept-title {
+  font-family: var(--serif);
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  font-weight: 400; line-height: 1.15;
+  color: var(--ivory); margin-bottom: 2.5rem;
+}
+.concept-title em { font-style: italic; color: var(--gold); }
+
+.concept-cols {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+}
+.concept-col p {
+  font-size: 0.88rem; line-height: 2;
+  color: rgba(248,245,239,0.55);
+}
+
+.palette {
+  margin-top: 3rem; padding-top: 3rem;
+  border-top: 1px solid rgba(248,245,239,0.07);
+  display: flex; align-items: center; gap: 2rem; flex-wrap: wrap;
+}
+.palette-label {
+  font-size: 0.62rem; letter-spacing: 0.2em;
+  text-transform: uppercase; color: var(--stone);
+}
+.palette-swatches { display: flex; gap: 0.5rem; }
+.swatch {
+  width: 40px; height: 40px;
+  border: 1px solid rgba(248,245,239,0.1);
+  position: relative;
+}
+.swatch::after {
+  content: attr(data-name);
+  position: absolute; bottom: -1.4rem; left: 50%;
+  transform: translateX(-50%);
+  font-size: 0.5rem; letter-spacing: 0.1em;
+  text-transform: uppercase; color: var(--stone);
+  white-space: nowrap;
+}
+
+/* ── CTA ── */
+.cta-section {
+  padding: 8rem 3rem;
+  text-align: center;
+  position: relative; overflow: hidden;
+}
+.cta-section::before {
+  content: 'IVORY & GRACE';
+  position: absolute; top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: var(--serif);
+  font-size: clamp(4rem, 12vw, 10rem);
+  font-weight: 400; font-style: italic;
+  color: rgba(196,169,122,0.04);
+  white-space: nowrap; pointer-events: none;
+  letter-spacing: 0.05em;
+}
+
+.cta-eyebrow {
+  font-size: 0.65rem; letter-spacing: 0.25em;
+  text-transform: uppercase; color: var(--gold);
+  margin-bottom: 1.5rem;
+}
+.cta-title {
+  font-family: var(--serif);
+  font-size: clamp(1.8rem, 3.5vw, 3rem);
+  font-weight: 400; line-height: 1.2;
+  color: var(--ivory); margin-bottom: 0.5rem;
+}
+.cta-title em { font-style: italic; color: var(--gold); }
+.cta-sub {
+  font-family: var(--serif-th);
+  font-size: 1rem; color: var(--stone);
+  font-weight: 300; margin-bottom: 3rem; line-height: 1.8;
+}
+.cta-buttons { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+
+.btn-gold {
+  display: inline-block;
+  font-size: 0.72rem; letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--charcoal); background: var(--gold);
+  padding: 1rem 2.5rem; text-decoration: none;
+  transition: all 0.3s;
+}
+.btn-gold:hover { background: #D4BA8A; }
+
+.btn-outline {
+  display: inline-block;
+  font-size: 0.72rem; letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(248,245,239,0.6);
+  padding: 1rem 2.5rem; text-decoration: none;
+  border: 1px solid rgba(248,245,239,0.15);
+  transition: all 0.3s;
+}
+.btn-outline:hover { border-color: var(--gold); color: var(--gold); }
+
+/* ── FOOTER ── */
+footer {
+  background: rgba(0,0,0,0.3);
+  padding: 3rem;
+  display: flex; align-items: center;
+  justify-content: space-between; flex-wrap: wrap; gap: 1rem;
+  border-top: 1px solid rgba(248,245,239,0.05);
+}
+.footer-logo {
+  font-family: var(--serif);
+  font-size: 0.9rem; color: rgba(248,245,239,0.4);
+  letter-spacing: 0.08em; text-decoration: none;
+}
+.footer-logo span { color: var(--gold); }
+.footer-copy {
+  font-size: 0.7rem; color: rgba(248,245,239,0.2);
+  letter-spacing: 0.06em;
+}
+
+/* ── REVEAL ── */
+.reveal {
+  opacity: 0; transform: translateY(40px);
+  transition: opacity 0.9s ease, transform 0.9s ease;
+}
+.reveal.visible { opacity: 1; transform: translateY(0); }
+.reveal-delay-1 { transition-delay: 0.15s; }
+.reveal-delay-2 { transition-delay: 0.3s; }
+.reveal-delay-3 { transition-delay: 0.45s; }
+
+/* ── MOBILE ── */
+@media (max-width: 900px) {
+  nav { padding: 1.2rem 1.5rem; }
+  nav.dark { padding: 0.8rem 1.5rem; }
+  .hero-content { padding: 3rem 1.5rem 4rem; }
+  .hero-scroll { display: none; }
+  .intro-section { grid-template-columns: 1fr; gap: 3rem; padding: 5rem 1.5rem; }
+  .spec-grid { grid-template-columns: 1fr 1fr; }
+  .gallery-header { padding: 3rem 1.5rem 2rem; }
+  .gallery-featured { grid-template-columns: 1fr; padding: 0 1.5rem; }
+  .gallery-featured .img-wrap:last-child { aspect-ratio: 4/3; }
+  .gallery-grid { grid-template-columns: 1fr 1fr; padding: 0 1.5rem; }
+  .gallery-wide { padding: 0 1.5rem; }
+  .gallery-wide .img-wrap { aspect-ratio: 16/9; }
+  .concept-section { padding: 5rem 1.5rem; }
+  .concept-inner { grid-template-columns: 1fr; gap: 2rem; }
+  .concept-label { writing-mode: horizontal-tb; transform: none; }
+  .concept-cols { grid-template-columns: 1fr; gap: 1.5rem; }
+  .cta-section { padding: 5rem 1.5rem; }
+  footer { padding: 2rem 1.5rem; }
+}
+
+@media (max-width: 600px) {
+  .gallery-grid { grid-template-columns: 1fr; }
+  .spec-grid { grid-template-columns: 1fr 1fr; }
+  .hero-meta { gap: 1.5rem; }
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="navbar">
+  <a href="index.html" class="nav-back">กลับหน้าหลัก</a>
+  <a href="index.html" class="nav-logo"><img src="logo_cut_white.png" alt="Need More Space Studio" style="height:34px;width:auto;"></a>
+  <a href="https://lin.ee/uWnOGsX" target="_blank" class="nav-cta">ปรึกษาฟรี</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <img class="hero-img" id="heroImg"
+    src="img8.jpg"
+    alt="Ivory & Grace — Master Bedroom">
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <div class="hero-tag">Residential · Bangkok · 2025</div>
+    <h1 class="hero-title">Ivory<br>& <em>Grace</em></h1>
+    <p class="hero-sub">คอนโด Modern Classic โทนขาว-เบจ ที่ Rhythm เจริญกรุง</p>
+    <div class="hero-meta">
+      <div class="meta-item">
+        <div class="meta-label">Location</div>
+        <div class="meta-value">Rhythm Charoenkrung</div>
+      </div>
+      <div class="meta-item">
+        <div class="meta-label">Area</div>
+        <div class="meta-value">80 ตร.ม.</div>
+      </div>
+      <div class="meta-item">
+        <div class="meta-label">Duration</div>
+        <div class="meta-value">4 เดือน</div>
+      </div>
+      <div class="meta-item">
+        <div class="meta-label">Scope</div>
+        <div class="meta-value">Design + Build</div>
+      </div>
+    </div>
+  </div>
+  <div class="hero-scroll">Scroll to explore</div>
+</section>
+
+<!-- INTRO -->
+<section style="padding: 0 3rem;">
+  <div class="intro-section" style="padding-left:0; padding-right:0;">
+    <div class="intro-left reveal">
+      <div class="intro-eyebrow">Project Story</div>
+      <h2 class="intro-title">ความเงียบสงบ<br>ที่ <em>งดงามไร้กาลเวลา</em></h2>
+      <p class="intro-title-th">Transforming an urban condominium into a serene sanctuary</p>
+      <blockquote class="intro-quote">
+        "เมื่อดีไซน์ที่ดีไม่ใช่แค่เรื่องความสวยงาม แต่คือการสร้างพื้นที่ที่ทำให้ชีวิตประจำวันของคุณง่ายขึ้น งดงามขึ้น และมีความหมายมากขึ้น"
+      </blockquote>
+    </div>
+    <div class="intro-right reveal reveal-delay-1">
+      <div class="spec-grid">
+        <div class="spec-item">
+          <div class="spec-num">80</div>
+          <div class="spec-label">ตร.ม.</div>
+        </div>
+        <div class="spec-item">
+          <div class="spec-num">4</div>
+          <div class="spec-label">เดือน</div>
+        </div>
+        <div class="spec-item">
+          <div class="spec-num">3</div>
+          <div class="spec-label">ห้องนอน</div>
+        </div>
+        <div class="spec-item">
+          <div class="spec-num">100%</div>
+          <div class="spec-label">Turnkey</div>
+        </div>
+        <div class="highlights">
+          <div class="highlight-title">Design Highlights</div>
+          <ul class="highlight-list">
+            <li>Wall moulding ทุกห้อง — เพิ่มมิติและความ Classic ให้กับผนังเรียบ</li>
+            <li>Marble feature wall ในห้องนอนใหญ่ — จุดโฟกัสที่หรูหราและ Timeless</li>
+            <li>ห้อง Hobby Room สำหรับเปียโนและ Display Collection</li>
+            <li>Built-in ทุกห้อง — ออกแบบให้เข้ากับสัดส่วนพื้นที่อย่างพอดี</li>
+            <li>โทนสี Ivory–Beige–Warm Brown สร้างความอบอุ่นตลอดทั้งคอนโด</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section class="gallery-section">
+  <div class="gallery-header reveal">
+    <div>
+      <div class="gallery-eyebrow">Photography</div>
+      <h2 class="gallery-title">Project Gallery</h2>
+    </div>
+    <div class="gallery-count">09</div>
+  </div>
+
+  <!-- Featured 2-up -->
+  <div class="gallery-featured reveal">
+    <div class="img-wrap">
+      <img src="img1.jpg" alt="Living & Dining Area">
+      <div class="room-tag">Living & Dining</div>
+    </div>
+    <div class="img-wrap">
+      <img src="img3.jpg" alt="Dining Area Detail">
+      <div class="room-tag">Dining Area</div>
+    </div>
+  </div>
+
+  <!-- 3-col grid -->
+  <div class="gallery-grid reveal" style="margin-top:3px;">
+    <div class="img-wrap">
+      <img src="img2.jpg" alt="TV Wall & Living">
+      <div class="room-tag">TV Wall</div>
+    </div>
+    <div class="img-wrap">
+      <img src="img8.jpg" alt="Master Bedroom">
+      <div class="room-tag">Master Bedroom</div>
+    </div>
+    <div class="img-wrap">
+      <img src="img9.jpg" alt="Master Bedroom Alt">
+      <div class="room-tag">Master Bedroom</div>
+    </div>
+  </div>
+
+  <!-- Wide panorama -->
+  <div class="gallery-wide reveal" style="margin-top:3px;">
+    <div class="img-wrap">
+      <img src="img4.jpg" alt="Bedroom 2" style="object-position: center 30%;">
+      <div class="room-tag">Bedroom 2</div>
+    </div>
+  </div>
+
+  <!-- Bottom 3 -->
+  <div class="gallery-grid reveal" style="margin-top:3px;">
+    <div class="img-wrap">
+      <img src="img5.jpg" alt="Bedroom 3">
+      <div class="room-tag">Bedroom 3</div>
+    </div>
+    <div class="img-wrap">
+      <img src="img6.jpg" alt="Hobby Room">
+      <div class="room-tag">Hobby Room</div>
+    </div>
+    <div class="img-wrap">
+      <img src="img7.jpg" alt="Walk-in Closet">
+      <div class="room-tag">Walk-in Closet</div>
+    </div>
+  </div>
+</section>
+
+<!-- DESIGN CONCEPT -->
+<section class="concept-section">
+  <div class="concept-inner">
+    <div class="concept-label reveal">Design Concept</div>
+    <div class="concept-content">
+      <h2 class="concept-title reveal">
+        Modern Classic<br>
+        <em>ที่สะท้อนตัวตน</em>
+      </h2>
+      <div class="concept-cols">
+        <div class="concept-col reveal">
+          <p>โปรเจกต์นี้เริ่มต้นจากความต้องการของเจ้าของที่อยากได้บ้านที่ "สวยตรงปก" และสะท้อนรสนิยมส่วนตัวได้อย่างแท้จริง ทั้งความชอบในดนตรีคลาสสิก ของสะสม และความงามแบบ Timeless</p>
+        </div>
+        <div class="concept-col reveal reveal-delay-1">
+          <p>เราออกแบบทุก Built-in ให้เข้ากับสัดส่วนพื้นที่อย่างพอดี วางแผนงบประมาณล็อกทุกรายการตั้งแต่วันแรก และคุมงานก่อสร้างทุกขั้นตอนจนส่งมอบบ้านพร้อมอยู่ใน 4 เดือน</p>
+        </div>
+      </div>
+      <div class="palette reveal reveal-delay-2">
+        <span class="palette-label">Color Palette</span>
+        <div class="palette-swatches">
+          <div class="swatch" style="background:#F5F0E5;" data-name="Ivory"></div>
+          <div class="swatch" style="background:#E8DFD0;" data-name="Cream"></div>
+          <div class="swatch" style="background:#C4B99A;" data-name="Warm Beige"></div>
+          <div class="swatch" style="background:#7A6555;" data-name="Brown"></div>
+          <div class="swatch" style="background:#3A3028;" data-name="Bark"></div>
+          <div class="swatch" style="background:#C4A97A;" data-name="Gold"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+  <div class="cta-eyebrow reveal">Start Your Project</div>
+  <h2 class="cta-title reveal">
+    พร้อมสร้างพื้นที่<br>
+    ที่ <em>สะท้อนตัวตนคุณ?</em>
+  </h2>
+  <p class="cta-sub reveal reveal-delay-1">
+    นัดปรึกษาฟรี ไม่มีข้อผูกมัด<br>รับคิวจำกัดเพื่อรักษามาตรฐานสูงสุด
+  </p>
+  <div class="cta-buttons reveal reveal-delay-2">
+    <a href="https://lin.ee/uWnOGsX" target="_blank" class="btn-gold">รับคำปรึกษาฟรี</a>
+    <a href="index.html#projects" class="btn-outline">ดูผลงานอื่น →</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <a href="index.html" class="footer-logo">
+    Need More<span> Space</span> Studio
+  </a>
+  <span class="footer-copy">© 2025 Need More Space Studio · Bangkok</span>
+</footer>
+
+<script>
+  // Nav scroll
+  const navbar = document.getElementById('navbar');
+  window.addEventListener('scroll', () => {
+    navbar.classList.toggle('dark', window.scrollY > 80);
+  });
+
+  // Hero image pan
+  const heroImg = document.getElementById('heroImg');
+  setTimeout(() => heroImg.classList.add('loaded'), 100);
+
+  // Reveal
+  const reveals = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('visible');
+        observer.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.1 });
+  reveals.forEach(el => observer.observe(el));
+</script>
+</body>
+</html>

@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>เริ่มต้นโปรเจกต์ | Need More Space Studio</title>
+<meta name="description" content="กรอกข้อมูลเบื้องต้น — ภาณุจะติดต่อกลับภายใน 24 ชั่วโมง ฟรี ไม่มีข้อผูกมัด">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Noto+Serif+Thai:wght@300;400;500&family=Jost:wght@200;300;400&display=swap" rel="stylesheet">
+<style>
+:root {
+  --ivory:#FDFAF5;--cream:#F5F0E8;--warm:#EDE8DF;--muted:#8C8478;--stone:#6B6560;
+  --bark:#2C2416;--charcoal:#1A1814;--gold:#B8975A;--gold-light:#D4AF7A;
+  --border:rgba(184,151,90,0.2);
+  --serif:'Cormorant Garamond',serif;--serif-th:'Noto Serif Thai',serif;--sans:'Jost',sans-serif;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{background:var(--ivory);color:var(--charcoal);font-family:var(--sans);font-weight:300;line-height:1.7;overflow-x:hidden;}
+::-webkit-scrollbar{width:2px;}::-webkit-scrollbar-thumb{background:var(--gold);}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:1.2rem 3rem;background:rgba(253,250,245,0.97);backdrop-filter:blur(20px);border-bottom:1px solid var(--border);}
+.nav-logo{display:flex;align-items:center;text-decoration:none;}
+.nav-logo img{height:32px;width:auto;}
+.nav-back{font-size:0.7rem;letter-spacing:0.16em;text-transform:uppercase;color:var(--muted);text-decoration:none;display:flex;align-items:center;gap:0.5rem;transition:color 0.3s;}
+.nav-back::before{content:'←';font-size:0.9rem;}
+.nav-back:hover{color:var(--gold);}
+
+/* HERO */
+.form-hero{padding:8rem 3rem 4rem;display:grid;grid-template-columns:1fr 1fr;gap:6rem;align-items:start;max-width:1300px;margin:0 auto;}
+.form-left{}
+.hero-eyebrow{font-size:0.68rem;letter-spacing:0.26em;text-transform:uppercase;color:var(--gold);display:flex;align-items:center;gap:1rem;margin-bottom:2rem;}
+.hero-eyebrow::before{content:'';width:40px;height:1px;background:var(--gold);}
+.hero-title{font-family:var(--serif);font-size:clamp(2.5rem,5vw,4rem);font-weight:300;line-height:1.1;color:var(--bark);margin-bottom:0.8rem;}
+.hero-title em{font-style:italic;color:var(--gold);}
+.hero-sub{font-family:var(--serif-th);font-size:1rem;font-weight:300;color:var(--muted);line-height:1.9;margin-bottom:3rem;}
+
+.promise-list{list-style:none;margin-bottom:3rem;}
+.promise-list li{font-size:0.85rem;line-height:1.8;color:var(--stone);padding:0.8rem 0;border-bottom:1px solid var(--border);display:flex;align-items:center;gap:1rem;}
+.promise-list li:first-child{border-top:1px solid var(--border);}
+.promise-list li::before{content:'✓';color:var(--gold);font-size:0.8rem;flex-shrink:0;font-weight:400;}
+
+.project-img-preview{width:100%;aspect-ratio:4/3;object-fit:cover;display:block;margin-top:2rem;}
+
+/* FORM */
+.form-right{}
+.form-card{background:white;padding:3rem;border:1px solid var(--border);}
+.form-title{font-family:var(--serif);font-size:1.4rem;font-weight:400;color:var(--bark);margin-bottom:0.4rem;}
+.form-subtitle{font-family:var(--serif-th);font-size:0.85rem;color:var(--muted);font-weight:300;line-height:1.8;margin-bottom:2.5rem;}
+
+.form-group{margin-bottom:1.5rem;}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:1.5rem;}
+label{display:block;font-size:0.68rem;letter-spacing:0.16em;text-transform:uppercase;color:var(--stone);margin-bottom:0.5rem;}
+label span{color:var(--gold);}
+input,select,textarea{width:100%;font-family:var(--sans);font-size:0.85rem;font-weight:300;color:var(--charcoal);background:var(--ivory);border:1px solid rgba(184,151,90,0.25);padding:0.9rem 1rem;outline:none;transition:border-color 0.3s;-webkit-appearance:none;appearance:none;border-radius:0;}
+input:focus,select:focus,textarea:focus{border-color:var(--gold);}
+select{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23B8975A' fill='none' stroke-width='1.5'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 1rem center;}
+textarea{resize:vertical;min-height:100px;}
+.form-note{font-size:0.72rem;color:var(--muted);margin-top:0.4rem;line-height:1.6;}
+
+.btn-submit{width:100%;font-family:var(--sans);font-size:0.75rem;font-weight:400;letter-spacing:0.18em;text-transform:uppercase;color:white;background:var(--bark);padding:1.1rem 2rem;border:1px solid var(--bark);cursor:pointer;transition:all 0.3s;margin-top:0.5rem;}
+.btn-submit:hover{background:var(--gold);border-color:var(--gold);}
+
+.privacy-note{font-size:0.68rem;color:var(--muted);text-align:center;margin-top:1rem;line-height:1.7;}
+
+/* TRUST BADGES */
+.trust-strip{background:var(--bark);padding:4rem 3rem;}
+.trust-inner{max-width:1300px;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:0;}
+.trust-item{padding:2rem 3rem;border-right:1px solid rgba(255,255,255,0.07);text-align:center;}
+.trust-item:last-child{border-right:none;}
+.trust-num{font-family:var(--serif);font-size:2.5rem;font-weight:300;color:var(--gold);display:block;margin-bottom:0.3rem;}
+.trust-label{font-size:0.7rem;letter-spacing:0.14em;text-transform:uppercase;color:rgba(255,255,255,0.45);}
+
+/* SUCCESS */
+.success-screen{display:none;text-align:center;padding:3rem 2rem;}
+.success-icon{font-size:3rem;margin-bottom:1.5rem;display:block;}
+.success-title{font-family:var(--serif);font-size:1.8rem;font-weight:300;color:var(--bark);margin-bottom:0.5rem;}
+.success-sub{font-family:var(--serif-th);font-size:0.9rem;color:var(--muted);font-weight:300;line-height:1.9;margin-bottom:2rem;}
+.btn-back{display:inline-block;font-size:0.7rem;letter-spacing:0.16em;text-transform:uppercase;color:var(--bark);padding:0.9rem 2rem;text-decoration:none;border:1px solid var(--border);transition:all 0.3s;}
+.btn-back:hover{border-color:var(--gold);color:var(--gold);}
+
+/* FOOTER */
+footer{background:var(--charcoal);padding:3rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem;border-top:1px solid rgba(255,255,255,0.04);}
+.footer-logo-img{height:26px;width:auto;}
+.footer-copy{font-size:0.7rem;color:rgba(255,255,255,0.2);}
+
+@media(max-width:900px){
+  nav{padding:1rem 1.5rem;}
+  .form-hero{grid-template-columns:1fr;gap:3rem;padding:7rem 1.5rem 3rem;}
+  .project-img-preview{display:none;}
+  .form-card{padding:2rem 1.5rem;}
+  .form-row{grid-template-columns:1fr;}
+  .trust-strip{padding:3rem 1.5rem;}
+  .trust-inner{grid-template-columns:1fr;}
+  .trust-item{border-right:none;border-bottom:1px solid rgba(255,255,255,0.07);padding:1.5rem;}
+  .trust-item:last-child{border-bottom:none;}
+  footer{padding:2rem 1.5rem;}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-back">กลับหน้าหลัก</a>
+  <a href="index.html" class="nav-logo"><img src="logo_dark.png" alt="Need More Space Studio"></a>
+  <span style="width:120px;"></span>
+</nav>
+
+<div class="form-hero">
+  <div class="form-left">
+    <div class="hero-eyebrow">Start Your Project</div>
+    <h1 class="hero-title">Let's Start<br>Your <em>Project</em></h1>
+    <p class="hero-sub">เพื่อให้ทุกโปรเจกต์ได้รับการดูแลอย่างใกล้ชิดที่สุด สตูดิโอของเราจำกัดจำนวนโปรเจกต์ต่อปี</p>
+
+    <ul class="promise-list">
+      <li>ภาณุจะติดต่อกลับภายใน 24 ชั่วโมง</li>
+      <li>นัดคุยและประเมินโปรเจกต์โดยตรง</li>
+      <li>ฟรี ไม่มีค่าใช้จ่าย ไม่มีข้อผูกมัด</li>
+      <li>รับเฉพาะกรุงเทพฯ และปริมณฑล</li>
+    </ul>
+
+    <img class="project-img-preview" src="kao2.jpg" alt="K.Kao & K.Vow Home — Need More Space Studio" loading="lazy">
+  </div>
+
+  <div class="form-right">
+    <div class="form-card">
+      <div id="formContent">
+        <h2 class="form-title">กรอกข้อมูลเบื้องต้น</h2>
+        <p class="form-subtitle">ผมจะติดต่อกลับภายใน 24 ชั่วโมง เพื่อนัดคุยและประเมินโปรเจกต์ของคุณโดยตรง ไม่มีค่าใช้จ่าย ไม่มีข้อผูกมัด</p>
+
+        <form name="contact" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" action="/contact.html" id="contactForm">
+          <input type="hidden" name="form-name" value="contact">
+          <p style="display:none;"><input name="bot-field"></p>
+
+          <div class="form-row">
+            <div>
+              <label>ชื่อ <span>*</span></label>
+              <input type="text" name="firstname" placeholder="ชื่อ" required>
+            </div>
+            <div>
+              <label>นามสกุล</label>
+              <input type="text" name="lastname" placeholder="นามสกุล">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label>เบอร์โทรศัพท์ <span>*</span></label>
+            <input type="tel" name="phone" placeholder="08X-XXX-XXXX" required>
+            <p class="form-note">สำหรับนัดคุยโดยตรง — ไม่มีการโทรขาย</p>
+          </div>
+
+          <div class="form-group">
+            <label>Email</label>
+            <input type="email" name="email" placeholder="email@example.com">
+          </div>
+
+          <div class="form-group">
+            <label>ประเภทโปรเจกต์ <span>*</span></label>
+            <select name="project_type" required>
+              <option value="" disabled selected>เลือกประเภท...</option>
+              <option>บ้านสร้างใหม่ / ตกแต่งภายในครบชุด</option>
+              <option>รีโนเวทบ้าน / คอนโด</option>
+              <option>ตกแต่งคอนโดใหม่</option>
+              <option>งานออฟฟิศ / คลินิก / ร้าน</option>
+              <option>อื่นๆ</option>
+            </select>
+          </div>
+
+          <div class="form-row">
+            <div>
+              <label>พื้นที่โดยประมาณ</label>
+              <select name="area">
+                <option value="" disabled selected>ตร.ม...</option>
+                <option>น้อยกว่า 50 ตร.ม.</option>
+                <option>50–100 ตร.ม.</option>
+                <option>100–200 ตร.ม.</option>
+                <option>200–300 ตร.ม.</option>
+                <option>มากกว่า 300 ตร.ม.</option>
+              </select>
+            </div>
+            <div>
+              <label>อยู่ในกทม./ปริมณฑล? <span>*</span></label>
+              <select name="location" required>
+                <option value="" disabled selected>เลือก...</option>
+                <option>ใช่ — กรุงเทพฯ</option>
+                <option>ใช่ — ปริมณฑล</option>
+                <option>ไม่ใช่</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label>รายละเอียดเพิ่มเติม</label>
+            <textarea name="message" placeholder="เล่าให้ฟังสั้นๆ เช่น ต้องการรีโนเวทห้องนอน, สร้างบ้านใหม่ 3 ชั้น, งบประมาณเบื้องต้น ฯลฯ"></textarea>
+          </div>
+
+          <button type="submit" class="btn-submit">ส่งข้อมูลให้ประเมินฟรี →</button>
+          <p class="privacy-note">ข้อมูลของคุณจะถูกเก็บเป็นความลับ และใช้เพื่อการติดต่อเท่านั้น</p>
+        </form>
+      </div>
+
+      <div class="success-screen" id="successScreen">
+        <span class="success-icon">✓</span>
+        <h2 class="success-title">ได้รับข้อมูลแล้วครับ</h2>
+        <p class="success-sub">ภาณุจะติดต่อกลับภายใน 24 ชั่วโมง<br>เพื่อนัดคุยและประเมินโปรเจกต์โดยตรง</p>
+        <a href="index.html" class="btn-back">← กลับหน้าหลัก</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="trust-strip">
+  <div class="trust-inner">
+    <div class="trust-item">
+      <span class="trust-num">40+</span>
+      <span class="trust-label">โปรเจกต์ที่ส่งมอบแล้ว</span>
+    </div>
+    <div class="trust-item">
+      <span class="trust-num">10</span>
+      <span class="trust-label">ปีประสบการณ์</span>
+    </div>
+    <div class="trust-item">
+      <span class="trust-num">100%</span>
+      <span class="trust-label">งบไม่บานปลาย</span>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <img src="logo_dark.png" alt="Need More Space Studio" class="footer-logo-img">
+  <span class="footer-copy">© 2025 Need More Space Studio · Bangkok</span>
+</footer>
+
+<script>
+// Netlify Forms handles submission natively when action="/contact.html"
+// Show success screen after redirect or use JS intercept
+const urlParams = new URLSearchParams(window.location.search);
+if (urlParams.get('success') === 'true') {
+  document.getElementById('formContent').style.display = 'none';
+  document.getElementById('successScreen').style.display = 'block';
+}
+
+document.getElementById('contactForm').addEventListener('submit', async function(e) {
+  e.preventDefault();
+  const form = e.target;
+  const data = new FormData(form);
+  try {
+    const response = await fetch('/', {
+      method: 'POST',
+      headers: {'Content-Type': 'application/x-www-form-urlencoded'},
+      body: new URLSearchParams(data).toString()
+    });
+    if (response.ok) {
+      document.getElementById('formContent').style.display = 'none';
+      document.getElementById('successScreen').style.display = 'block';
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  } catch(err) {
+    // Fallback: submit normally
+    form.submit();
+  }
+});
+</script>
+</body>
+</html>
