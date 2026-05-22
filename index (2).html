@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Need More Space Studio | รับออกแบบตกแต่งภายใน กรุงเทพฯ Turnkey ครบจบ</title>
+<meta name="description" content="สตูดิโอออกแบบและบริหารโปรเจกต์ Turnkey กรุงเทพฯ ดูแลตั้งแต่คิดคอนเซปต์จนส่งมอบบ้าน งบไม่บานปลาย โดยภาณุ Design Director">
+<meta property="og:title" content="Need More Space Studio | Turnkey Interior Design Bangkok">
+<meta property="og:description" content="สร้างบ้านในฝันให้สมบูรณ์แบบ โดยที่คุณไม่ต้องเอาเวลาชีวิตมาปวดหัวกับหน้างาน">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Noto+Serif+Thai:wght@300;400&family=DM+Sans:wght@300;400&display=swap" rel="stylesheet">
+<!-- Meta Pixel — แทน YOUR_PIXEL_ID ด้วย Pixel ID จริง -->
+<script>!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');fbq('init','YOUR_PIXEL_ID');fbq('track','PageView');</script>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;font-size:18px;}
+:root{
+  --white:#FDFAF6;
+  --off:#F2EDE4;
+  --sand:#E5DDD1;
+  --muted:#9A9080;
+  --dark:#1C1A16;
+  --ink:#2A2620;
+  --gold:#B89860;
+  --gold2:#D4B07A;
+  --serif:'Marcellus',serif;
+  --serif-th:'Noto Serif Thai',serif;
+  --sans:'DM Sans',sans-serif;
+}
+body{background:var(--white);color:var(--ink);font-family:var(--sans);font-weight:300;line-height:1.7;overflow-x:hidden;font-size:1rem;}
+::-webkit-scrollbar{width:3px;}
+::-webkit-scrollbar-thumb{background:var(--gold);}
+
+/* ── NAV ── */
+.nav{
+  position:fixed;top:0;left:0;right:0;z-index:100;
+  padding:1.5rem 4rem;
+  display:flex;align-items:center;justify-content:space-between;
+  transition:all 0.5s;
+}
+.nav.solid{
+  background:rgba(253,250,246,0.97);
+  backdrop-filter:blur(24px);
+  padding:1rem 4rem;
+  border-bottom:1px solid rgba(184,152,96,0.12);
+}
+.nav-logo{display:flex;align-items:center;text-decoration:none;}
+.nav-logo img{height:30px;width:auto;transition:opacity 0.3s;}
+.nav-logo img:hover{opacity:0.7;}
+.nav-links{display:flex;align-items:center;gap:2.8rem;list-style:none;}
+.nav-links a{
+  font-size:0.85rem;letter-spacing:0.14em;text-transform:uppercase;
+  color:var(--muted);text-decoration:none;transition:color 0.3s;
+}
+.nav-links a:hover{color:var(--ink);}
+.nav-btn{
+  font-size:0.82rem;letter-spacing:0.12em;text-transform:uppercase;
+  color:var(--white);background:var(--dark);
+  padding:0.7rem 1.8rem;text-decoration:none;
+  transition:background 0.3s;white-space:nowrap;
+}
+.nav-btn:hover{background:var(--gold);}
+.burger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:4px;}
+.burger span{display:block;width:22px;height:1.5px;background:var(--ink);transition:all 0.3s;}
+
+/* mobile drawer */
+.drawer{
+  display:none;position:fixed;inset:0;z-index:99;
+  background:var(--white);flex-direction:column;
+  align-items:center;justify-content:center;gap:3rem;
+}
+.drawer.open{display:flex;}
+.drawer a{font-family:var(--serif);font-size:1.8rem;color:var(--ink);text-decoration:none;transition:color 0.3s;}
+.drawer a:hover{color:var(--gold);}
+.drawer-close{position:absolute;top:2rem;right:2.5rem;font-size:1.5rem;cursor:pointer;background:none;border:none;color:var(--ink);}
+
+/* ── HERO ── */
+.hero{
+  min-height:100vh;
+  display:grid;grid-template-columns:1fr 1fr;
+  overflow:hidden;
+}
+.hero-l{
+  padding:10rem 4rem 6rem;
+  display:flex;flex-direction:column;justify-content:center;
+  animation:fadeUp 1.2s ease both;
+}
+.hero-pill{
+  display:inline-flex;align-items:center;gap:0.8rem;
+  font-size:0.82rem;letter-spacing:0.18em;text-transform:uppercase;
+  color:var(--gold);margin-bottom:2.5rem;
+}
+.hero-pill::before{content:'';display:block;width:32px;height:1px;background:var(--gold);}
+.hero-h1{
+  font-family:var(--serif);
+  font-size:clamp(3rem,5vw,4.5rem);
+  font-weight:400;line-height:1.12;
+  color:var(--dark);margin-bottom:1rem;
+  letter-spacing:0.01em;
+}
+.hero-h1 em{font-style:italic;color:var(--gold);}
+.hero-sub{
+  font-family:var(--serif-th);
+  font-size:1.15rem;font-weight:300;
+  color:var(--muted);line-height:1.9;
+  margin-bottom:2rem;max-width:420px;
+}
+.hero-p{
+  font-size:1rem;line-height:2;color:#5a5550;
+  max-width:400px;margin-bottom:3rem;
+}
+.hero-actions{display:flex;gap:1rem;flex-wrap:wrap;margin-bottom:2.5rem;}
+.btn-dark{
+  display:inline-block;
+  font-size:0.85rem;letter-spacing:0.12em;text-transform:uppercase;
+  color:var(--white);background:var(--dark);
+  padding:1rem 2.4rem;text-decoration:none;
+  transition:background 0.3s;
+}
+.btn-dark:hover{background:var(--gold);}
+.btn-ghost{
+  display:inline-block;
+  font-size:0.85rem;letter-spacing:0.12em;text-transform:uppercase;
+  color:var(--ink);padding:1rem 2.4rem;text-decoration:none;
+  border:1px solid rgba(184,152,96,0.3);
+  transition:all 0.3s;
+}
+.btn-ghost:hover{border-color:var(--gold);color:var(--gold);}
+.hero-lead{
+  display:flex;align-items:center;gap:1rem;
+  padding:1rem 1.2rem;
+  background:var(--off);
+  border-left:2px solid var(--gold);
+  max-width:420px;text-decoration:none;
+  transition:background 0.3s;
+}
+.hero-lead:hover{background:var(--sand);}
+.hero-lead-text{font-size:0.9rem;line-height:1.5;color:var(--muted);}
+.hero-lead-text strong{color:var(--dark);font-weight:400;}
+.hero-lead-arr{font-size:0.78rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold);white-space:nowrap;flex-shrink:0;}
+
+.hero-r{
+  position:relative;overflow:hidden;
+  min-height:100vh;
+}
+.hero-img{
+  width:100%;height:100%;
+  object-fit:cover;object-position:center;
+  display:block;
+  transform:scale(1.06);
+  transition:transform 10s ease;
+}
+.hero-img.zoom{transform:scale(1);}
+.hero-overlay{
+  position:absolute;inset:0;
+  background:linear-gradient(to left,rgba(28,26,22,0) 60%,rgba(253,250,246,0.1) 100%);
+}
+.hero-stats{
+  position:absolute;bottom:3rem;right:0;
+  display:flex;flex-direction:column;gap:1px;
+}
+.stat{
+  background:var(--white);
+  padding:1rem 1.6rem;border-left:2px solid var(--gold);
+}
+.stat-n{font-family:var(--serif);font-size:1.5rem;font-weight:400;color:var(--dark);line-height:1;}
+.stat-l{font-size:0.58rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--muted);}
+
+/* ── PROOF ── */
+.proof{
+  background:var(--dark);
+  padding:7rem 4rem;
+}
+.proof-inner{max-width:1300px;margin:0 auto;}
+.proof-head{margin-bottom:5rem;}
+.eyebrow{
+  font-size:0.8rem;letter-spacing:0.2em;text-transform:uppercase;
+  color:var(--gold);display:flex;align-items:center;gap:1rem;margin-bottom:1.2rem;
+}
+.eyebrow::before{content:'';width:32px;height:1px;background:var(--gold);}
+.section-h{
+  font-family:var(--serif);
+  font-size:clamp(2.2rem,3.5vw,3.2rem);
+  font-weight:400;line-height:1.15;
+  color:var(--white);
+}
+.section-h em{font-style:italic;color:var(--gold);}
+.section-th{
+  font-family:var(--serif-th);
+  font-size:1.05rem;font-weight:300;
+  color:rgba(253,250,246,0.4);
+  line-height:1.9;margin-top:0.4rem;
+}
+
+/* Project grid — horizontal scroll */
+.proj-grid{
+  display:flex;
+  gap:3px;
+  overflow-x:auto;
+  scroll-snap-type:x mandatory;
+  scrollbar-width:none;
+  -ms-overflow-style:none;
+  padding-bottom:0.5rem;
+}
+.proj-grid::-webkit-scrollbar{display:none;}
+.proj-card{
+  position:relative;overflow:hidden;text-decoration:none;display:block;
+  flex:0 0 380px;scroll-snap-align:start;
+}
+.proj-card:first-child{flex:0 0 520px;}
+.proj-img{
+  width:100%;aspect-ratio:3/4;object-fit:cover;display:block;
+  transition:transform 0.8s cubic-bezier(0.25,0.46,0.45,0.94);
+  filter:brightness(0.88) saturate(0.95);
+}
+.proj-card:hover .proj-img{transform:scale(1.05);filter:brightness(1) saturate(1);}
+.proj-info{
+  position:absolute;bottom:0;left:0;right:0;
+  background:linear-gradient(to top,rgba(28,26,22,0.9) 0%,transparent 60%);
+  padding:2rem;
+}
+.proj-tag{font-size:0.75rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--gold);margin-bottom:0.4rem;}
+.proj-name{font-family:var(--serif);font-size:1.4rem;font-weight:400;color:var(--white);line-height:1.2;margin-bottom:0.2rem;}
+.proj-loc{font-size:0.85rem;color:rgba(253,250,246,0.55);}
+.proj-arrow{
+  position:absolute;top:1.5rem;right:1.5rem;
+  width:42px;height:42px;
+  border:1px solid rgba(253,250,246,0.2);
+  display:flex;align-items:center;justify-content:center;
+  color:var(--white);font-size:1rem;
+  opacity:0;transition:all 0.3s;
+}
+.proj-card:hover .proj-arrow{opacity:1;border-color:var(--gold);color:var(--gold);}
+/* Scroll hint */
+.proj-scroll-hint{
+  display:flex;align-items:center;gap:0.8rem;
+  font-size:0.8rem;letter-spacing:0.12em;text-transform:uppercase;
+  color:rgba(253,250,246,0.35);margin-top:1.5rem;
+}
+.proj-scroll-hint::after{content:'→→→';letter-spacing:0.3em;color:var(--gold);}
+
+/* ── HOW ── */
+.how{background:var(--off);padding:7rem 4rem;}
+.how-inner{max-width:1300px;margin:0 auto;}
+.how-head{max-width:540px;margin-bottom:5rem;}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;}
+.step{
+  background:var(--white);
+  padding:3rem 2.2rem;
+  position:relative;
+  transition:background 0.4s;
+}
+.step:hover{background:var(--dark);}
+.step:hover .step-n,.step:hover .step-title{color:var(--white);}
+.step:hover .step-sub{color:rgba(253,250,246,0.45);}
+.step:hover .step-p{color:rgba(253,250,246,0.55);}
+.step:hover .step-line{background:rgba(253,250,246,0.15);}
+.step-n{
+  font-family:var(--serif);
+  font-size:3.5rem;font-weight:400;
+  color:rgba(184,152,96,0.18);
+  line-height:1;margin-bottom:1.5rem;
+  transition:color 0.4s;
+}
+.step-line{width:32px;height:1px;background:var(--gold);margin-bottom:1.2rem;transition:background 0.4s;}
+.step-title{font-family:var(--serif);font-size:1.25rem;font-weight:400;color:var(--dark);margin-bottom:0.2rem;transition:color 0.4s;}
+.step-sub{font-family:var(--serif-th);font-size:0.92rem;color:var(--muted);margin-bottom:0.8rem;font-weight:300;transition:color 0.4s;}
+.step-p{font-size:0.95rem;line-height:1.9;color:#666;transition:color 0.4s;}
+
+/* ── WHY ── */
+.why{background:var(--white);padding:7rem 4rem;}
+.why-inner{max-width:1300px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:6rem;align-items:center;}
+.why-text{}
+.why-cards{display:flex;flex-direction:column;gap:1px;}
+.why-card{
+  display:flex;gap:1.5rem;
+  padding:1.8rem 0;
+  border-bottom:1px solid rgba(184,152,96,0.14);
+  align-items:start;
+}
+.why-card:first-child{border-top:1px solid rgba(184,152,96,0.14);}
+.why-icon{
+  width:42px;height:42px;flex-shrink:0;
+  border:1px solid var(--gold);
+  display:flex;align-items:center;justify-content:center;
+  font-size:1rem;color:var(--gold);margin-top:0.2rem;
+}
+.why-card-title{font-family:var(--serif);font-size:1.2rem;font-weight:400;color:var(--dark);margin-bottom:0.15rem;}
+.why-card-th{font-family:var(--serif-th);font-size:0.9rem;color:var(--muted);margin-bottom:0.4rem;font-weight:300;}
+.why-card-p{font-size:0.95rem;line-height:1.9;color:#666;}
+
+.why-visual{position:relative;}
+.why-img-main{width:100%;aspect-ratio:4/5;object-fit:cover;display:block;}
+.why-img-over{
+  position:absolute;bottom:-2rem;left:-2rem;
+  width:55%;aspect-ratio:4/3;object-fit:cover;
+  border:5px solid var(--white);
+}
+.why-badge{
+  position:absolute;top:2rem;right:-1rem;
+  background:var(--dark);padding:1.2rem 1.5rem;text-align:center;
+}
+.why-badge-n{font-family:var(--serif);font-size:1.8rem;font-weight:400;color:var(--gold);display:block;}
+.why-badge-l{font-size:0.58rem;letter-spacing:0.12em;text-transform:uppercase;color:rgba(253,250,246,0.45);display:block;margin-top:0.2rem;}
+
+/* ── TRUST ── */
+.trust{background:var(--dark);padding:7rem 4rem;}
+.trust-inner{max-width:1300px;margin:0 auto;display:grid;grid-template-columns:1.2fr 1fr;gap:6rem;align-items:start;}
+
+/* Testimonials */
+.testi-stack{display:flex;flex-direction:column;gap:2px;}
+.testi{background:rgba(253,250,246,0.04);padding:2.2rem;}
+.testi.featured{background:rgba(184,152,96,0.1);border-left:2px solid var(--gold);}
+.testi-q{font-family:var(--serif-th);font-size:1rem;font-style:italic;line-height:2;color:rgba(253,250,246,0.65);margin-bottom:1.2rem;}
+.testi-by{display:flex;align-items:center;gap:0.8rem;}
+.testi-avatar{width:38px;height:38px;background:var(--gold);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:0.9rem;color:var(--dark);font-weight:400;flex-shrink:0;}
+.testi-name{font-size:0.9rem;font-weight:400;color:var(--white);}
+.testi-proj{font-size:0.75rem;color:rgba(253,250,246,0.38);}
+
+/* Founder card */
+.founder{display:flex;flex-direction:column;}
+.founder-img-wrap{position:relative;overflow:hidden;margin-bottom:2rem;}
+.founder-img{width:100%;aspect-ratio:4/3;object-fit:cover;object-position:top;display:block;filter:grayscale(15%);}
+.founder-eyebrow{font-size:0.78rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--gold);display:flex;align-items:center;gap:0.8rem;margin-bottom:1rem;}
+.founder-eyebrow::before{content:'';width:24px;height:1px;background:var(--gold);}
+.founder-name{font-family:var(--serif);font-size:clamp(1.8rem,2.5vw,2.4rem);font-weight:400;color:var(--white);line-height:1.1;margin-bottom:0.2rem;}
+.founder-role{font-size:0.82rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold);margin-bottom:1.2rem;}
+.founder-q{font-family:var(--serif-th);font-size:1rem;font-weight:300;line-height:2;color:rgba(253,250,246,0.55);border-left:1px solid var(--gold);padding-left:1.2rem;margin-bottom:1.5rem;}
+.badges{display:flex;gap:0.5rem;flex-wrap:wrap;}
+.badge{font-size:0.72rem;letter-spacing:0.1em;text-transform:uppercase;border:1px solid rgba(184,152,96,0.22);color:rgba(212,176,122,0.8);padding:0.35rem 0.8rem;}
+
+/* ── CTA ── */
+.cta-block{
+  background:var(--off);
+  padding:7rem 4rem;
+  display:grid;grid-template-columns:1fr auto;
+  gap:4rem;align-items:center;
+  max-width:100%;
+}
+.cta-text{}
+.cta-h{font-family:var(--serif);font-size:clamp(1.8rem,3.5vw,2.8rem);font-weight:400;color:var(--dark);line-height:1.15;}
+.cta-h em{font-style:italic;color:var(--gold);}
+.cta-sub{font-family:var(--serif-th);font-size:1.05rem;color:var(--muted);margin-top:0.5rem;font-weight:300;}
+.cta-btns{display:flex;flex-direction:column;gap:0.8rem;flex-shrink:0;}
+.btn-gold{
+  display:inline-block;font-size:0.85rem;letter-spacing:0.12em;text-transform:uppercase;
+  color:var(--dark);background:var(--gold);
+  padding:1rem 2.4rem;text-decoration:none;text-align:center;
+  transition:background 0.3s;
+}
+.btn-gold:hover{background:var(--gold2);}
+.btn-ghost2{
+  display:inline-block;font-size:0.85rem;letter-spacing:0.12em;text-transform:uppercase;
+  color:var(--muted);padding:1rem 2.4rem;text-decoration:none;text-align:center;
+  border:1px solid rgba(184,152,96,0.25);transition:all 0.3s;
+}
+.btn-ghost2:hover{border-color:var(--gold);color:var(--gold);}
+
+/* ── FOOTER ── */
+footer{
+  background:var(--dark);padding:4rem;
+  display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:3rem;
+}
+.foot-logo img{height:26px;width:auto;filter:invert(1) brightness(0.6);margin-bottom:1rem;display:block;}
+.foot-tag{font-family:var(--serif-th);font-size:0.9rem;color:rgba(253,250,246,0.28);line-height:1.9;margin-bottom:1.2rem;}
+.foot-social{display:flex;gap:0.5rem;}
+.soc{width:34px;height:34px;border:1px solid rgba(253,250,246,0.1);display:flex;align-items:center;justify-content:center;text-decoration:none;color:rgba(253,250,246,0.3);transition:all 0.3s;}
+.soc:hover{border-color:var(--gold);color:var(--gold);}
+.foot-h{font-size:0.75rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--gold);margin-bottom:1.2rem;}
+.foot-ul{list-style:none;}
+.foot-ul li{margin-bottom:0.6rem;}
+.foot-ul a{font-size:0.9rem;color:rgba(253,250,246,0.3);text-decoration:none;transition:color 0.3s;}
+.foot-ul a:hover{color:var(--white);}
+.foot-bottom{
+  grid-column:span 4;border-top:1px solid rgba(253,250,246,0.05);
+  padding-top:2rem;margin-top:1rem;
+  display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;
+}
+.foot-copy{font-size:0.8rem;color:rgba(253,250,246,0.18);}
+
+/* ── ANIMATIONS ── */
+@keyframes fadeUp{from{opacity:0;transform:translateY(28px);}to{opacity:1;transform:translateY(0);}}
+.reveal{opacity:0;transform:translateY(24px);transition:opacity 0.85s ease,transform 0.85s ease;}
+.reveal.in{opacity:1;transform:translateY(0);}
+.d1{transition-delay:0.1s;}.d2{transition-delay:0.2s;}.d3{transition-delay:0.3s;}
+
+/* ── RESPONSIVE ── */
+@media(max-width:1100px){
+  .why-inner{grid-template-columns:1fr;gap:3rem;}
+  .why-img-over{display:none;}
+  .trust-inner{grid-template-columns:1fr;gap:3rem;}
+  .cta-block{grid-template-columns:1fr;}
+  footer{grid-template-columns:1fr 1fr;gap:2.5rem;}
+  .foot-bottom{grid-column:span 2;}
+}
+@media(max-width:900px){
+  .hero{grid-template-columns:1fr;min-height:auto;}
+  .hero-l{padding:8rem 2rem 3rem;}
+  .hero-r{height:55vw;min-height:360px;}
+  .steps{grid-template-columns:1fr 1fr;}
+  .proof{padding:5rem 2rem;}
+  .how{padding:5rem 2rem;}
+  .why{padding:5rem 2rem;}
+  .trust{padding:5rem 2rem;}
+  .cta-block{padding:5rem 2rem;}
+  footer{padding:3rem 2rem;}
+  .proj-card{flex:0 0 300px!important;}
+  .proj-card:first-child{flex:0 0 360px!important;}
+}
+@media(max-width:768px){
+  .nav{padding:1.2rem 2rem;}
+  .nav.solid{padding:0.9rem 2rem;}
+  .nav-links,.nav-btn{display:none;}
+  .burger{display:flex;}
+  .steps{grid-template-columns:1fr;}
+  footer{grid-template-columns:1fr;}
+  .foot-bottom{grid-column:span 1;}
+  .proj-card{flex:0 0 260px!important;}
+  .proj-card:first-child{flex:0 0 280px!important;}
+}
+</style>
+</head>
+<body>
+
+<!-- ── NAV ── -->
+<nav class="nav" id="nav">
+  <a href="#" class="nav-logo"><img src="logo_dark.png" alt="Need More Space Studio"></a>
+  <ul class="nav-links">
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#process">Process</a></li>
+    <li><a href="#why">Why Us</a></li>
+    <li><a href="#team">Team</a></li>
+  </ul>
+  <a href="contact.html" class="nav-btn">นัดปรึกษาฟรี</a>
+  <button class="burger" id="burger"><span></span><span></span><span></span></button>
+</nav>
+
+<div class="drawer" id="drawer">
+  <button class="drawer-close" id="drawerClose">✕</button>
+  <a href="#projects" onclick="closeD()">Projects</a>
+  <a href="#process" onclick="closeD()">Process</a>
+  <a href="#why" onclick="closeD()">Why Us</a>
+  <a href="#team" onclick="closeD()">Team</a>
+  <a href="contact.html" style="color:var(--gold)">นัดปรึกษาฟรี →</a>
+</div>
+
+<!-- ── 1. HERO ── -->
+<section class="hero">
+  <div class="hero-l">
+    <div class="hero-pill">Bangkok Interior Studio · Est. 2015</div>
+    <h1 class="hero-h1">
+      คุณสมควรได้<br>บ้านในฝัน<br><em>โดยไม่เหนื่อย</em>
+    </h1>
+    <p class="hero-sub">สร้างพื้นที่ที่สะท้อนความสำเร็จของคุณ ในงบที่ล็อกไว้ตั้งแต่วันแรก</p>
+    <p class="hero-p">ภาณุรับหน้าที่เป็น "ผู้จัดการโปรเจกต์ส่วนตัว" ของคุณ ดูแลทุกขั้นตอนตั้งแต่คิดคอนเซปต์จนส่งมอบบ้าน คุณมีหน้าที่แค่เลือกแบบที่ชอบ</p>
+    <div class="hero-actions">
+      <a href="contact.html" class="btn-dark">นัดปรึกษาหน้างานฟรี</a>
+      <a href="#projects" class="btn-ghost">ดูผลงาน</a>
+    </div>
+    <a href="https://drive.google.com/file/d/1PbGq4iaoKzgGuZ-4D4RdVw2q7iaHJPlI/view" target="_blank" class="hero-lead">
+      <span style="font-size:1.2rem;">📋</span>
+      <span class="hero-lead-text"><strong>ดาวน์โหลดฟรี:</strong> เช็คลิสต์ 7 หลุมพรางงบทำบ้าน</span>
+      <span class="hero-lead-arr">รับเลย →</span>
+    </a>
+  </div>
+  <div class="hero-r">
+    <img class="hero-img" id="heroImg" src="kao2.jpg" alt="K.Kao & K.Vow Home — Need More Space Studio">
+    <div class="hero-overlay"></div>
+    <div class="hero-stats">
+      <div class="stat"><span class="stat-n">40+</span><span class="stat-l">Projects</span></div>
+      <div class="stat"><span class="stat-n">10</span><span class="stat-l">ปีประสบการณ์</span></div>
+      <div class="stat"><span class="stat-n">100%</span><span class="stat-l">On Budget</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ── 2. PROOF — Projects ── -->
+<section class="proof" id="projects">
+  <div class="proof-inner">
+    <div class="proof-head reveal">
+      <div class="eyebrow" style="color:var(--gold);">Selected Work</div>
+      <h2 class="section-h">ผลงาน<em>คัดสรร</em></h2>
+      <p class="section-th">งานจริงที่เราภูมิใจส่งมอบ — ทุกโปรเจกต์ดูแลโดยภาณุโดยตรง</p>
+    </div>
+    <div class="proj-grid">
+      <a class="proj-card reveal" href="kao-vow.html">
+        <img class="proj-img" src="kao2.jpg" alt="K.Kao & K.Vow Home" loading="lazy">
+        <div class="proj-info">
+          <div class="proj-tag">Residential · 2025 · 243 ตร.ม.</div>
+          <div class="proj-name">K.Kao & K.Vow Home</div>
+          <div class="proj-loc">Supalai Elegance Phaholyothin 50</div>
+        </div>
+        <div class="proj-arrow">→</div>
+      </a>
+      <a class="proj-card reveal d1" href="ivory-grace.html">
+        <img class="proj-img" src="img8.jpg" alt="Ivory & Grace" loading="lazy">
+        <div class="proj-info">
+          <div class="proj-tag">Residential · 2025 · 80 ตร.ม.</div>
+          <div class="proj-name">Ivory & Grace</div>
+          <div class="proj-loc">Rhythm Charoenkrung</div>
+        </div>
+        <div class="proj-arrow">→</div>
+      </a>
+      <a class="proj-card reveal d2" href="harmony-curve.html">
+        <img class="proj-img" src="https://images.squarespace-cdn.com/content/v1/68f6f5d02a3e2e34520b02b2/18e1b405-f972-4082-a7bb-4d037f6c8521/LINE_ALBUM_IVF+Clinic+1_241014_5.jpg" alt="Harmony Curve Clinic" loading="lazy">
+        <div class="proj-info">
+          <div class="proj-tag">Commercial · 2024</div>
+          <div class="proj-name">Harmony Curve Clinic</div>
+          <div class="proj-loc">Sathon Rd, Bangkok</div>
+        </div>
+        <div class="proj-arrow">→</div>
+      </a>
+      <a class="proj-card reveal d1" href="venue-flow.html">
+        <img class="proj-img" src="https://images.squarespace-cdn.com/content/v1/68f6f5d02a3e2e34520b02b2/65f47685-c292-4fec-b8ce-0069dfa031e7/LINE_ALBUM_%E0%B8%9A%E0%B9%89%E0%B8%B2%E0%B8%99%E0%B8%84%E0%B8%B8%E0%B8%93%E0%B9%84%E0%B8%81%E0%B9%88+Draft+3+17-06-2023_230617_7.jpg" alt="Venue Flow" loading="lazy">
+        <div class="proj-info">
+          <div class="proj-tag">Residential · 2023</div>
+          <div class="proj-name">Venue Flow Rama 5</div>
+          <div class="proj-loc">Rama 5 Ratchapruek</div>
+        </div>
+        <div class="proj-arrow">→</div>
+      </a>
+      <a class="proj-card reveal d2" href="grand-britania.html">
+        <img class="proj-img" src="https://images.squarespace-cdn.com/content/v1/68f6f5d02a3e2e34520b02b2/b6dfc7f6-ecf2-471c-abfc-69b234c8bfb1/LINE_ALBUM_%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%97%E0%B8%B2%E0%B9%80%E0%B8%99%E0%B8%B5%E0%B8%A2+%E0%B8%9E%E0%B8%A3%E0%B8%B0%E0%B8%A3%E0%B8%B2%E0%B8%A1+5+%E0%B8%84%E0%B8%A3%E0%B8%B1%E0%B9%89%E0%B8%87%E0%B8%97%E0%B8%B5%E0%B9%88+2.1_230417_5.jpg" alt="Grand Britania" loading="lazy">
+        <div class="proj-info">
+          <div class="proj-tag">Residential · 2023</div>
+          <div class="proj-name">Grand Britania Rama 5</div>
+          <div class="proj-loc">Nakorn In, Nonthaburi</div>
+        </div>
+        <div class="proj-arrow">→</div>
+      </a>
+    </div>
+    <div class="proj-scroll-hint reveal">เลื่อนดูผลงานเพิ่มเติม</div>
+  </div>
+</section>
+<section class="how" id="process">
+  <div class="how-inner">
+    <div class="how-head reveal">
+      <div class="eyebrow">Process</div>
+      <h2 class="section-h" style="color:var(--dark);">4 ขั้นตอน<br><em style="color:var(--gold);">ที่คุณไม่ต้องเหนื่อย</em></h2>
+      <p class="section-th" style="color:var(--muted);">คุณมีหน้าที่แค่บอกความต้องการ — นอกนั้นผมจัดการให้ทั้งหมด</p>
+    </div>
+    <div class="steps">
+      <div class="step reveal">
+        <div class="step-n">01</div><div class="step-line"></div>
+        <div class="step-title">Brief & Consult</div>
+        <div class="step-sub">ปรึกษาและวางแผน</div>
+        <p class="step-p">ผมลงพื้นที่สำรวจด้วยตัวเอง รับฟังวิถีชีวิตและล็อกงบประมาณตั้งแต่แรก</p>
+      </div>
+      <div class="step reveal d1">
+        <div class="step-n">02</div><div class="step-line"></div>
+        <div class="step-title">Design & Develop</div>
+        <div class="step-sub">ออกแบบและจัดทำแบบสร้าง</div>
+        <p class="step-p">ออกแบบ 3D สมจริง คัดสรรวัสดุ ให้อยู่ในงบที่ตั้งไว้ทุกรายการ</p>
+      </div>
+      <div class="step reveal d2">
+        <div class="step-n">03</div><div class="step-line"></div>
+        <div class="step-title">Construct & Manage</div>
+        <div class="step-sub">ก่อสร้างและบริหารโครงการ</div>
+        <p class="step-p">ผมคุมงานแทนคุณ ตรวจ QC ทุกจุด ส่งรายงานทุกสัปดาห์ คุณไม่ต้องลงหน้างาน</p>
+      </div>
+      <div class="step reveal d3">
+        <div class="step-n">04</div><div class="step-line"></div>
+        <div class="step-title">Handover & Care</div>
+        <div class="step-sub">ส่งมอบและดูแลหลังงาน</div>
+        <p class="step-p">ตรวจรับงานอย่างละเอียด ส่งมอบพื้นที่พร้อมเข้าอยู่ 100% ไม่มีงานค้าง</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── 4. WHY US ── -->
+<section class="why" id="why">
+  <div class="why-inner">
+    <div class="why-text reveal">
+      <div class="eyebrow">Why Us</div>
+      <h2 class="section-h" style="color:var(--dark);">One Studio,<br><em>Zero Headaches</em></h2>
+      <p class="section-th" style="color:var(--muted);">สิ่งที่ทำให้เราต่างจากสตูดิโอทั่วไป</p>
+      <div class="why-cards" style="margin-top:2.5rem;">
+        <div class="why-card">
+          <div class="why-icon">◈</div>
+          <div>
+            <div class="why-card-title">Single Point of Contact</div>
+            <div class="why-card-th">ประตูบานเดียว ติดต่อผมคนเดียวจบ</div>
+            <p class="why-card-p">ไม่ต้องคุยกับสถาปนิก ช่างไฟ ผู้รับเหมา แยกกัน ผมประสานงานทุกฝ่ายแทนคุณตลอดโปรเจกต์</p>
+          </div>
+        </div>
+        <div class="why-card">
+          <div class="why-icon">◈</div>
+          <div>
+            <div class="why-card-title">Budget Lock Guarantee</div>
+            <div class="why-card-th">ล็อกงบตั้งแต่วันแรก ไม่บานปลาย 100%</div>
+            <p class="why-card-p">เสนอราคาก่อสร้างตั้งแต่แรก ไม่มีค่าใช้จ่ายแฝง Value Engineering คุมงบให้ไม่เกินที่ตกลง</p>
+          </div>
+        </div>
+        <div class="why-card">
+          <div class="why-icon">◈</div>
+          <div>
+            <div class="why-card-title">Limited Queue · Maximum Care</div>
+            <div class="why-card-th">จำกัด 10 โปรเจกต์/ปี เพื่อมาตรฐานสูงสุด</div>
+            <p class="why-card-p">ผมดูแลโปรเจกต์ของคุณด้วยตัวเองทุกหลัง ไม่ใช่โยนให้ทีม รับเฉพาะกรุงเทพฯ และปริมณฑล</p>
+          </div>
+        </div>
+      </div>
+      <!-- Pricing signal -->
+      <div style="margin-top:2.5rem;padding:1.5rem;background:var(--off);border-left:2px solid var(--gold);" class="reveal d1">
+        <div style="font-size:0.65rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--gold);margin-bottom:0.8rem;">Starting Price</div>
+        <div style="font-family:var(--serif);font-size:1rem;color:var(--dark);margin-bottom:0.3rem;">ออกแบบ: <strong>1,000 บาท/ตร.ม.</strong> · ก่อสร้าง: <strong>12,000+ บาท/ตร.ม.</strong></div>
+        <div style="font-size:0.75rem;color:var(--muted);">ลดค่าออกแบบ 35% เมื่อใช้บริการ Turnkey · รับเฉพาะ กทม. และปริมณฑล</div>
+      </div>
+    </div>
+    <div class="why-visual reveal d2">
+      <img class="why-img-main" src="img1.jpg" alt="Portfolio" loading="lazy">
+      <img class="why-img-over" src="kao1.jpg" alt="Detail" loading="lazy">
+      <div class="why-badge"><span class="why-badge-n">40+</span><span class="why-badge-l">Projects Delivered</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ── 5. TRUST ── -->
+<section class="trust" id="team">
+  <div class="trust-inner">
+    <div class="reveal">
+      <div class="eyebrow">Client Stories</div>
+      <h2 class="section-h" style="margin-bottom:2rem;">ลูกค้าพูดถึง<br><em>ประสบการณ์จริง</em></h2>
+      <div class="testi-stack">
+        <div class="testi featured">
+          <p class="testi-q">"สบายใจมากครับ ตลอด 4 เดือนไม่ต้องคุยกับช่างเองแม้แต่ครั้งเดียว ภาณุจัดการทุกอย่างและอัพเดทให้ทุกสัปดาห์ งบก็ตรงที่ตกลงกันไว้ตั้งแต่แรกเลย"</p>
+          <div class="testi-by">
+            <div class="testi-avatar">K</div>
+            <div><div class="testi-name">K.Kao & K.Vow</div><div class="testi-proj">Supalai Elegance · 243 ตร.ม.</div></div>
+          </div>
+        </div>
+        <div class="testi">
+          <p class="testi-q">"งบไม่บานปลายเลยสักบาท ภาณุวางแผนและล็อกงบให้ตั้งแต่ก่อนเริ่ม บ้านออกมาสวยกว่าที่คิดไว้ด้วย แนะนำเพื่อนไปแล้ว 2 คน"</p>
+          <div class="testi-by">
+            <div class="testi-avatar">P</div>
+            <div><div class="testi-name">K.Mink</div><div class="testi-proj">Rhythm Charoenkrung · 80 ตร.ม.</div></div>
+          </div>
+        </div>
+        <div class="testi">
+          <p class="testi-q">"ในฐานะเจ้าของธุรกิจ เวลาคือทุกอย่าง ภาณุเป็นเหมือน Project Manager ส่วนตัว เราแค่บอก requirement ไป เขาจัดการให้หมด บ้านเสร็จตรงเวลา"</p>
+          <div class="testi-by">
+            <div class="testi-avatar">K</div>
+            <div><div class="testi-name">K.Kai</div><div class="testi-proj">Venue Flow Rama 5 · 215 ตร.ม.</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="founder reveal d1">
+      <div class="founder-img-wrap">
+        <img class="founder-img" src="kao6.jpg" alt="ภาณุ — Need More Space Studio">
+      </div>
+      <div class="founder-eyebrow">Founder & Design Director</div>
+      <div class="founder-name">Panupong<br>Truncharoen</div>
+      <div class="founder-role">ภาณุ · Need More Space Studio</div>
+      <blockquote class="founder-q">"ผมไม่ขายกระดาษเขียนแบบ แต่ขายผลลัพธ์และความสบายใจ คุณมีหน้าที่แค่บอกความฝัน นอกเหนือจากนั้นผมรับจบให้ทั้งหมด"</blockquote>
+      <div class="badges">
+        <span class="badge">10+ ปี Experience</span>
+        <span class="badge">Hafele Standard</span>
+        <span class="badge">Developer-Grade QC</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── 6. CTA ── -->
+<div class="cta-block">
+  <div class="reveal">
+    <h2 class="cta-h">พร้อมเริ่ม<br><em>โปรเจกต์ของคุณ?</em></h2>
+    <p class="cta-sub">นัดปรึกษาหน้างานฟรี — ผมลงพื้นที่สำรวจด้วยตัวเอง ไม่มีข้อผูกมัด</p>
+  </div>
+  <div class="cta-btns reveal d1">
+    <a href="contact.html" class="btn-gold">นัดปรึกษาหน้างานฟรี</a>
+    <a href="https://drive.google.com/file/d/1PbGq4iaoKzgGuZ-4D4RdVw2q7iaHJPlI/view" target="_blank" class="btn-ghost2">ดาวน์โหลด Budget Guide ฟรี</a>
+  </div>
+</div>
+
+<!-- ── FOOTER ── -->
+<footer>
+  <div>
+    <img src="logo_cut_white.png" alt="Need More Space Studio" class="foot-logo" style="height:26px;width:auto;filter:invert(1) brightness(0.6);margin-bottom:1rem;display:block;">
+    <p class="foot-tag">สตูดิโอออกแบบและบริหารโปรเจกต์ Turnkey<br>กรุงเทพฯ และปริมณฑล</p>
+    <div class="foot-social">
+      <a href="https://www.instagram.com/needmorespace.studio" target="_blank" class="soc" title="Instagram"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
+      <a href="https://www.facebook.com/profile.php?id=100064759611739" target="_blank" class="soc" title="Facebook"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+      <a href="https://lin.ee/uWnOGsX" target="_blank" class="soc" title="Line"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/></svg></a>
+      <a href="https://linktr.ee/needmorespace.studio" target="_blank" class="soc" title="Linktree">⊕</a>
+    </div>
+  </div>
+  <div>
+    <div class="foot-h">Projects</div>
+    <ul class="foot-ul">
+      <li><a href="kao-vow.html">K.Kao & K.Vow Home</a></li>
+      <li><a href="ivory-grace.html">Ivory & Grace</a></li>
+      <li><a href="harmony-curve.html">Harmony Curve Clinic</a></li>
+      <li><a href="venue-flow.html">Venue Flow Rama 5</a></li>
+      <li><a href="grand-britania.html">Grand Britania</a></li>
+    </ul>
+  </div>
+  <div>
+    <div class="foot-h">Studio</div>
+    <ul class="foot-ul">
+      <li><a href="#process">Process</a></li>
+      <li><a href="#why">Why Us</a></li>
+      <li><a href="#team">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="https://drive.google.com/file/d/1PbGq4iaoKzgGuZ-4D4RdVw2q7iaHJPlI/view" target="_blank">Free Guide</a></li>
+    </ul>
+  </div>
+  <div>
+    <div class="foot-h">Contact</div>
+    <ul class="foot-ul">
+      <li><a href="mailto:needmorespacestudio@gmail.com">needmorespacestudio@gmail.com</a></li>
+      <li><a href="https://lin.ee/uWnOGsX" target="_blank">Line OA</a></li>
+    </ul>
+    <div style="margin-top:1.5rem;">
+      <a href="contact.html" class="btn-gold" style="font-size:0.62rem;padding:0.6rem 1.2rem;">นัดปรึกษาฟรี</a>
+    </div>
+  </div>
+  <div class="foot-bottom">
+    <span class="foot-copy">© 2025 Need More Space Studio · Bangkok · All Rights Reserved</span>
+  </div>
+</footer>
+
+<script>
+  // Nav
+  const nav=document.getElementById('nav');
+  window.addEventListener('scroll',()=>nav.classList.toggle('solid',scrollY>60));
+  // Burger
+  const burger=document.getElementById('burger');
+  const drawer=document.getElementById('drawer');
+  const drawerClose=document.getElementById('drawerClose');
+  burger.addEventListener('click',()=>drawer.classList.add('open'));
+  drawerClose.addEventListener('click',()=>drawer.classList.remove('open'));
+  function closeD(){drawer.classList.remove('open');}
+  // Hero image zoom
+  const hImg=document.getElementById('heroImg');
+  if(hImg){setTimeout(()=>hImg.classList.add('zoom'),100);}
+  // Reveal on scroll
+  const reveals=document.querySelectorAll('.reveal');
+  const obs=new IntersectionObserver(entries=>{
+    entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');obs.unobserve(e.target);}});
+  },{threshold:0.1});
+  reveals.forEach(el=>obs.observe(el));
+</script>
+</body>
+</html>
