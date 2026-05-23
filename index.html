@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Need More Space Studio | รับออกแบบตกแต่งภายใน กรุงเทพฯ Turnkey ครบจบ</title>
-<meta name="description" content="สตูดิโอออกแบบและบริหารโปรเจกต์ Turnkey กรุงเทพฯ ดูแลตั้งแต่คิดคอนเซปต์จนส่งมอบบ้าน งบไม่บานปลาย โดยภาณุ Design Director">
+<meta name="description" content="สตูดิโอออกแบบและบริหารโปรเจกต์ Turnkey กรุงเทพฯ ดูแลตั้งแต่คิดคอนเซปต์จนส่งมอบบ้าน ราคาชัดเจน ไม่มีค่าใช้จ่ายแฝง">
 <meta property="og:title" content="Need More Space Studio | Turnkey Interior Design Bangkok">
 <meta property="og:description" content="สร้างบ้านในฝันให้สมบูรณ์แบบ โดยที่คุณไม่ต้องเอาเวลาชีวิตมาปวดหัวกับหน้างาน">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -46,7 +46,7 @@ body{background:var(--white);color:var(--ink);font-family:var(--sans);font-weigh
   border-bottom:1px solid rgba(184,152,96,0.12);
 }
 .nav-logo{display:flex;align-items:center;text-decoration:none;}
-.nav-logo img{height:30px;width:auto;transition:opacity 0.3s;}
+.nav-logo img{height:30px;width:auto;transition:opacity 0.3s;mix-blend-mode:multiply;}
 .nav-logo img:hover{opacity:0.7;}
 .nav-links{display:flex;align-items:center;gap:2.8rem;list-style:none;}
 .nav-links a{
@@ -169,9 +169,13 @@ body{background:var(--white);color:var(--ink);font-family:var(--sans);font-weigh
 
 /* ── PROOF ── */
 .proof{
-  background:var(--dark);
+  background:var(--off);
   padding:7rem 4rem;
 }
+.proof .proj-btn{border-color:rgba(42,38,32,0.18);color:rgba(42,38,32,0.45);}
+.proof .proj-btn:hover{border-color:var(--gold);color:var(--gold);}
+.proof .proj-dot{background:rgba(42,38,32,0.1);}
+.proof .proj-dot.active{background:var(--gold);width:36px;}
 .proof-inner{max-width:1300px;margin:0 auto;}
 .proof-head{margin-bottom:5rem;}
 .eyebrow{
@@ -236,7 +240,7 @@ body{background:var(--white);color:var(--ink);font-family:var(--sans);font-weigh
 .proj-track-outer{position:relative;}
 .proj-track-outer::after{
   content:'';position:absolute;top:0;right:0;bottom:0;width:120px;
-  background:linear-gradient(to right,transparent,rgba(28,26,22,0.95));
+  background:linear-gradient(to right,transparent,rgba(242,237,228,0.97));
   pointer-events:none;z-index:2;
 }
 .proj-dots{display:flex;gap:6px;margin-top:1.5rem;}
@@ -333,16 +337,13 @@ body{background:var(--white);color:var(--ink);font-family:var(--sans);font-weigh
 .why-card-th{font-family:var(--serif-th);font-size:0.9rem;color:var(--muted);margin-bottom:0.4rem;font-weight:300;}
 .why-card-p{font-size:0.95rem;line-height:1.9;color:#666;}
 
-.why-visual{position:relative;}
-.why-img-main{width:100%;aspect-ratio:4/5;object-fit:cover;display:block;}
-.why-img-over{
-  position:absolute;bottom:-2rem;left:-2rem;
-  width:55%;aspect-ratio:4/3;object-fit:cover;
-  border:5px solid var(--white);
-}
+.why-visual{}
+.why-img-grid{display:grid;grid-template-columns:1.2fr 1fr;gap:6px;align-items:end;}
+.why-img-a{width:100%;aspect-ratio:3/5;object-fit:cover;display:block;}
+.why-img-b{width:100%;aspect-ratio:1/1;object-fit:cover;display:block;}
 .why-badge{
-  position:absolute;top:2rem;right:-1rem;
   background:var(--dark);padding:1.2rem 1.5rem;text-align:center;
+  margin-top:6px;display:inline-block;
 }
 .why-badge-n{font-family:var(--serif);font-size:1.8rem;font-weight:400;color:var(--gold);display:block;}
 .why-badge-l{font-size:0.58rem;letter-spacing:0.12em;text-transform:uppercase;color:rgba(253,250,246,0.45);display:block;margin-top:0.2rem;}
@@ -431,7 +432,8 @@ footer{
 /* ── RESPONSIVE ── */
 @media(max-width:1100px){
   .why-inner{grid-template-columns:1fr;gap:3rem;}
-  .why-img-over{display:none;}
+  .why-img-b{display:none;}
+  .why-img-a{aspect-ratio:3/2;}
   .trust-inner{grid-template-columns:1fr;gap:3rem;}
   .cta-block{grid-template-columns:1fr;}
   footer{grid-template-columns:1fr 1fr;gap:2.5rem;}
@@ -494,7 +496,7 @@ footer{
       คุณสมควรได้<br>บ้านในฝัน<br><em>โดยไม่เหนื่อย</em>
     </h1>
     <p class="hero-sub">สร้างพื้นที่ที่สะท้อนความสำเร็จของคุณ ในงบที่ล็อกไว้ตั้งแต่วันแรก</p>
-    <p class="hero-p">ภาณุรับหน้าที่เป็น "ผู้จัดการโปรเจกต์ส่วนตัว" ของคุณ ดูแลทุกขั้นตอนตั้งแต่คิดคอนเซปต์จนส่งมอบบ้าน คุณมีหน้าที่แค่เลือกแบบที่ชอบ</p>
+    <p class="hero-p">เราทำหน้าที่เป็น "ผู้จัดการโปรเจกต์ส่วนตัว" ของคุณ ดูแลทุกขั้นตอนตั้งแต่คิดคอนเซปต์จนส่งมอบบ้าน คุณมีหน้าที่แค่เลือกแบบที่ชอบ</p>
     <div class="hero-actions">
       <a href="contact.html" class="btn-dark">นัดปรึกษาหน้างานฟรี</a>
       <a href="#projects" class="btn-ghost">ดูผลงาน</a>
@@ -510,8 +512,8 @@ footer{
     <div class="hero-overlay"></div>
     <div class="hero-stats">
       <div class="stat"><span class="stat-n">40+</span><span class="stat-l">Projects</span></div>
-      <div class="stat"><span class="stat-n">10</span><span class="stat-l">ปีประสบการณ์</span></div>
-      <div class="stat"><span class="stat-n">100%</span><span class="stat-l">On Budget</span></div>
+      <div class="stat"><span class="stat-n">Since</span><span class="stat-l">2015</span></div>
+      <div class="stat"><span class="stat-n">Fixed</span><span class="stat-l">Price</span></div>
     </div>
   </div>
 </section>
@@ -522,8 +524,8 @@ footer{
     <div class="proof-head reveal" style="display:flex;align-items:flex-end;justify-content:space-between;flex-wrap:wrap;gap:1.5rem;margin-bottom:3rem;">
       <div>
         <div class="eyebrow" style="color:var(--gold);">Selected Work</div>
-        <h2 class="section-h">ผลงาน<em>คัดสรร</em></h2>
-        <p class="section-th">งานจริงที่เราภูมิใจส่งมอบ — ดูแลโดยภาณุโดยตรงทุกโปรเจกต์</p>
+        <h2 class="section-h" style="color:var(--dark);">ผลงาน<em>คัดสรร</em></h2>
+        <p class="section-th" style="color:var(--muted);">งานจริงที่เราภูมิใจส่งมอบ — ดูแลโดยทีมงานโดยตรงทุกโปรเจกต์</p>
       </div>
       <!-- Arrow controls -->
       <div style="display:flex;gap:0.5rem;align-items:center;">
@@ -603,7 +605,7 @@ footer{
         <div class="eyebrow">Process</div>
         <h2 class="section-h" style="color:var(--dark);">4 ขั้นตอน<em style="color:var(--gold);"> ที่คุณไม่ต้องเหนื่อย</em></h2>
       </div>
-      <p style="font-family:var(--serif-th);font-size:1rem;color:var(--muted);max-width:340px;line-height:1.8;text-align:right;">คุณมีหน้าที่แค่บอกความต้องการ<br>นอกนั้นผมจัดการให้ทั้งหมด</p>
+      <p style="font-family:var(--serif-th);font-size:1rem;color:var(--muted);max-width:340px;line-height:1.8;text-align:right;">คุณมีหน้าที่แค่บอกความต้องการ<br>นอกนั้นเราจัดการให้ทั้งหมด</p>
     </div>
     <!-- 4-column step timeline -->
     <div class="steps reveal">
@@ -611,7 +613,7 @@ footer{
         <div class="step-n">01</div>
         <div class="step-title">Brief & Consult</div>
         <div class="step-sub">ปรึกษาและวางแผน</div>
-        <p class="step-p">ผมลงพื้นที่สำรวจด้วยตัวเอง รับฟังวิถีชีวิตและล็อกงบประมาณตั้งแต่แรก ก่อนเริ่มออกแบบทุกครั้ง</p>
+        <p class="step-p">เราลงพื้นที่สำรวจด้วยตัวเอง รับฟังวิถีชีวิตและล็อกงบประมาณตั้งแต่แรก ก่อนเริ่มออกแบบทุกครั้ง</p>
       </div>
       <div class="step">
         <div class="step-n">02</div>
@@ -623,7 +625,7 @@ footer{
         <div class="step-n">03</div>
         <div class="step-title">Construct & Manage</div>
         <div class="step-sub">ก่อสร้างและบริหารโครงการ</div>
-        <p class="step-p">ผมคุมงานแทนคุณ ตรวจ QC ทุกจุด ส่งรายงานทุกสัปดาห์ คุณไม่ต้องลงหน้างาน</p>
+        <p class="step-p">เราคุมงานแทนคุณ ตรวจ QC ทุกจุด ส่งรายงานทุกสัปดาห์ คุณไม่ต้องลงหน้างาน</p>
       </div>
       <div class="step">
         <div class="step-n">04</div>
@@ -647,15 +649,15 @@ footer{
           <div class="why-icon">◈</div>
           <div>
             <div class="why-card-title">Single Point of Contact</div>
-            <div class="why-card-th">ประตูบานเดียว ติดต่อผมคนเดียวจบ</div>
-            <p class="why-card-p">ไม่ต้องคุยกับสถาปนิก ช่างไฟ ผู้รับเหมา แยกกัน ผมประสานงานทุกฝ่ายแทนคุณตลอดโปรเจกต์</p>
+            <div class="why-card-th">ประตูบานเดียว ติดต่อเราจุดเดียวจบ</div>
+            <p class="why-card-p">ไม่ต้องคุยกับสถาปนิก ช่างไฟ ผู้รับเหมา แยกกัน เราประสานงานทุกฝ่ายแทนคุณตลอดโปรเจกต์</p>
           </div>
         </div>
         <div class="why-card">
           <div class="why-icon">◈</div>
           <div>
             <div class="why-card-title">Budget Lock Guarantee</div>
-            <div class="why-card-th">ล็อกงบตั้งแต่วันแรก ไม่บานปลาย 100%</div>
+            <div class="why-card-th">ล็อกงบตั้งแต่วันแรก ไม่มีค่าใช้จ่ายแฝง</div>
             <p class="why-card-p">เสนอราคาก่อสร้างตั้งแต่แรก ไม่มีค่าใช้จ่ายแฝง Value Engineering คุมงบให้ไม่เกินที่ตกลง</p>
           </div>
         </div>
@@ -664,7 +666,7 @@ footer{
           <div>
             <div class="why-card-title">Limited Queue · Maximum Care</div>
             <div class="why-card-th">จำกัด 10 โปรเจกต์/ปี เพื่อมาตรฐานสูงสุด</div>
-            <p class="why-card-p">ผมดูแลโปรเจกต์ของคุณด้วยตัวเองทุกหลัง ไม่ใช่โยนให้ทีม รับเฉพาะกรุงเทพฯ และปริมณฑล</p>
+            <p class="why-card-p">เราดูแลทุกโปรเจกต์อย่างใส่ใจ ไม่รับงานเกินกำลัง เพื่อให้คุณได้มาตรฐานสูงสุด · รับเฉพาะกรุงเทพฯ และปริมณฑล</p>
           </div>
         </div>
       </div>
@@ -676,9 +678,11 @@ footer{
       </div>
     </div>
     <div class="why-visual reveal d2">
-      <img class="why-img-main" src="img1.jpg" alt="Portfolio" loading="lazy">
-      <img class="why-img-over" src="kao1.jpg" alt="Detail" loading="lazy">
-      <div class="why-badge"><span class="why-badge-n">40+</span><span class="why-badge-l">Projects Delivered</span></div>
+      <div class="why-img-grid">
+        <img class="why-img-a" src="img1.jpg" alt="Portfolio" loading="lazy">
+        <img class="why-img-b" src="kao1.jpg" alt="Detail" loading="lazy">
+      </div>
+      <div class="why-badge"><span class="why-badge-n">40+</span><span class="why-badge-l">Projects</span></div>
     </div>
   </div>
 </section>
@@ -734,7 +738,7 @@ footer{
 <div class="cta-block">
   <div class="reveal">
     <h2 class="cta-h">พร้อมเริ่ม<br><em>โปรเจกต์ของคุณ?</em></h2>
-    <p class="cta-sub">นัดปรึกษาหน้างานฟรี — ผมลงพื้นที่สำรวจด้วยตัวเอง ไม่มีข้อผูกมัด</p>
+    <p class="cta-sub">นัดปรึกษาหน้างานฟรี — เราลงพื้นที่สำรวจด้วยตัวเอง ไม่มีข้อผูกมัด</p>
   </div>
   <div class="cta-btns reveal d1">
     <a href="contact.html" class="btn-gold">นัดปรึกษาหน้างานฟรี</a>
