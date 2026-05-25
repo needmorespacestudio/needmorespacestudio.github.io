@@ -192,8 +192,19 @@ footer{background:var(--charcoal);padding:3rem;display:flex;align-items:center;j
           </div>
 
           <div class="form-group">
+            <label>งบประมาณที่ตั้งไว้สำหรับโปรเจกต์นี้? <span>*</span></label>
+            <select name="budget" required>
+              <option value="" disabled selected>เลือกช่วงงบประมาณ...</option>
+              <option>น้อยกว่า 800,000 บาท</option>
+              <option>800,000 – 1.5 ล้านบาท</option>
+              <option>1.5 – 3 ล้านบาท</option>
+              <option>3 ล้านบาท ขึ้นไป</option>
+            </select>
+          </div>
+
+          <div class="form-group">
             <label>รายละเอียดเพิ่มเติม</label>
-            <textarea name="message" placeholder="เล่าให้ฟังสั้นๆ เช่น ต้องการรีโนเวทห้องนอน, สร้างบ้านใหม่ 3 ชั้น, งบประมาณเบื้องต้น ฯลฯ"></textarea>
+            <textarea name="message" placeholder="เล่าให้ฟังสั้นๆ เช่น ต้องการรีโนเวทห้องนอน, สร้างบ้านใหม่ 3 ชั้น, สไตล์ที่ชอบ ฯลฯ"></textarea>
           </div>
 
           <button type="submit" class="btn-submit">ส่งข้อมูลให้ประเมินฟรี →</button>
