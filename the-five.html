@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Five — Perfect Place Minburi | Need More Space Studio</title>
+<meta name="description" content="บ้าน 536 ตร.ม. สำหรับครอบครัว 5 คน ที่ Perfect Place Minburi ห้องนอนแต่ละห้องออกแบบตามสไตล์เฉพาะตัว — Need More Space Studio">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400&family=Noto+Serif+Thai:wght@300;400&family=Jost:wght@200;300;400&display=swap" rel="stylesheet">
+<style>
+:root{--ivory:#FDFAF5;--cream:#F5F0E8;--muted:#8C8478;--stone:#6B6560;--bark:#2C2416;--charcoal:#1A1814;--gold:#B8975A;--gold-light:#D4AF7A;--border:rgba(184,151,90,0.18);--serif:'Playfair Display',serif;--serif-th:'Noto Serif Thai',serif;--sans:'Jost',sans-serif;}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}html{scroll-behavior:smooth;}
+body{background:var(--charcoal);color:var(--ivory);font-family:var(--sans);font-weight:300;line-height:1.7;overflow-x:hidden;}
+::-webkit-scrollbar{width:2px;}::-webkit-scrollbar-thumb{background:var(--gold);}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:1.5rem 3rem;display:flex;align-items:center;justify-content:space-between;transition:all 0.5s;}
+nav.dark{background:rgba(26,24,20,0.96);backdrop-filter:blur(20px);padding:1rem 3rem;border-bottom:1px solid rgba(184,151,90,0.1);}
+.nav-back{font-size:0.7rem;letter-spacing:0.2em;text-transform:uppercase;color:rgba(248,245,239,0.6);text-decoration:none;transition:color 0.3s;}
+.nav-back:hover{color:var(--gold);}
+.nav-logo{display:flex;align-items:center;text-decoration:none;}
+.nav-logo img{height:30px;width:auto;transition:opacity 0.3s;}
+.nav-cta{font-size:0.68rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--gold);text-decoration:none;border:1px solid rgba(184,151,90,0.3);padding:0.5rem 1.2rem;transition:all 0.3s;}
+.nav-cta:hover{background:var(--gold);color:var(--charcoal);}
+.hero{height:100vh;position:relative;overflow:hidden;}
+.hero-img{width:100%;height:100%;object-fit:cover;display:block;transform:scale(1.05);transition:transform 8s ease;}
+.hero-img.loaded{transform:scale(1);}
+.hero-overlay{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(26,24,20,0.15) 0%,rgba(26,24,20,0) 40%,rgba(26,24,20,0.75) 80%,rgba(26,24,20,1) 100%);}
+.hero-content{position:absolute;bottom:0;left:0;right:0;padding:4rem 3rem 5rem;}
+.hero-tag{font-size:0.68rem;letter-spacing:0.28em;text-transform:uppercase;color:var(--gold);margin-bottom:1rem;display:flex;align-items:center;gap:1rem;}
+.hero-tag::before{content:'';width:30px;height:1px;background:var(--gold);}
+.hero-title{font-family:var(--serif);font-size:clamp(2.8rem,7vw,5.5rem);font-weight:400;line-height:1;margin-bottom:0.3rem;}
+.hero-title em{font-style:italic;color:rgba(248,245,239,0.55);}
+.hero-meta{display:flex;gap:3rem;flex-wrap:wrap;margin-top:1.5rem;}
+.meta-label{font-size:0.6rem;letter-spacing:0.22em;text-transform:uppercase;color:rgba(248,245,239,0.38);margin-bottom:0.3rem;}
+.meta-value{font-family:var(--serif);font-size:0.95rem;color:var(--ivory);}
+.intro-section{padding:7rem 3rem;display:grid;grid-template-columns:1fr 1fr;gap:6rem;align-items:start;max-width:1300px;margin:0 auto;}
+.eyebrow{font-size:0.65rem;letter-spacing:0.25em;text-transform:uppercase;color:var(--gold);margin-bottom:1.5rem;display:flex;align-items:center;gap:1rem;}
+.eyebrow::before{content:'';width:30px;height:1px;background:var(--gold);}
+.intro-title{font-family:var(--serif);font-size:clamp(1.8rem,3vw,2.6rem);font-weight:400;line-height:1.2;margin-bottom:1rem;}
+.intro-title em{font-style:italic;color:var(--gold);}
+.intro-quote{font-family:var(--serif);font-size:0.98rem;font-style:italic;line-height:2;color:rgba(248,245,239,0.55);border-left:1px solid var(--gold);padding-left:1.5rem;}
+.spec-grid{display:grid;grid-template-columns:1fr 1fr;gap:2px;}
+.spec-item{background:rgba(248,245,239,0.03);border:1px solid rgba(248,245,239,0.06);padding:1.5rem;transition:background 0.3s;}
+.spec-item:hover{background:rgba(184,151,90,0.07);}
+.spec-num{font-family:var(--serif);font-size:2rem;font-weight:400;color:var(--gold);line-height:1;margin-bottom:0.3rem;}
+.spec-label{font-size:0.62rem;letter-spacing:0.18em;text-transform:uppercase;color:rgba(248,245,239,0.38);}
+.highlights{margin-top:2px;grid-column:span 2;background:rgba(248,245,239,0.03);border:1px solid rgba(248,245,239,0.06);padding:1.5rem;}
+.hl-title{font-size:0.62rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--gold);margin-bottom:1rem;}
+.hl-list{list-style:none;}
+.hl-list li{font-size:0.82rem;color:rgba(248,245,239,0.55);padding:0.5rem 0;border-bottom:1px solid rgba(248,245,239,0.05);display:flex;align-items:center;gap:0.8rem;}
+.hl-list li::before{content:'◆';font-size:0.4rem;color:var(--gold);flex-shrink:0;}
+.gallery-section{padding:0 0 5rem;}
+.gallery-header{padding:4rem 3rem 3rem;display:flex;align-items:flex-end;justify-content:space-between;}
+.gallery-title{font-family:var(--serif);font-size:clamp(1.5rem,2.5vw,2rem);font-weight:400;}
+.gallery-count{font-family:var(--serif);font-size:3rem;font-weight:400;color:rgba(184,151,90,0.12);line-height:1;}
+.g-2col{display:grid;grid-template-columns:1fr 1fr;gap:3px;padding:0 3rem;margin-bottom:3px;}
+.g-3col{display:grid;grid-template-columns:1fr 1fr 1fr;gap:3px;padding:0 3rem;margin-bottom:3px;}
+.g-wide{padding:0 3rem;margin-bottom:3px;}
+.g-label{padding:2.5rem 3rem 0.8rem;font-size:0.62rem;letter-spacing:0.25em;text-transform:uppercase;color:var(--gold);display:flex;align-items:center;gap:1rem;}
+.g-label::before{content:'';width:24px;height:1px;background:var(--gold);}
+.img-wrap{overflow:hidden;position:relative;}
+.img-wrap img{width:100%;height:100%;object-fit:cover;display:block;transition:transform 0.8s cubic-bezier(0.25,0.46,0.45,0.94);filter:brightness(0.92);}
+.img-wrap:hover img{transform:scale(1.05);filter:brightness(1);}
+.room-tag{position:absolute;bottom:1rem;left:1rem;background:rgba(26,24,20,0.8);backdrop-filter:blur(8px);font-size:0.6rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--gold);padding:0.4rem 0.8rem;opacity:0;transition:opacity 0.3s;}
+.img-wrap:hover .room-tag{opacity:1;}
+.concept-section{padding:7rem 3rem;background:rgba(248,245,239,0.02);border-top:1px solid rgba(248,245,239,0.05);}
+.concept-inner{max-width:1300px;margin:0 auto;display:grid;grid-template-columns:1fr 2fr;gap:6rem;align-items:start;}
+.concept-label{font-size:0.65rem;letter-spacing:0.25em;text-transform:uppercase;color:var(--gold);writing-mode:vertical-rl;transform:rotate(180deg);}
+.concept-title{font-family:var(--serif);font-size:clamp(1.8rem,3.5vw,3rem);font-weight:400;line-height:1.15;margin-bottom:1.5rem;}
+.concept-title em{font-style:italic;color:var(--gold);}
+.concept-body{font-size:0.88rem;line-height:2.1;color:rgba(248,245,239,0.55);}
+.palette{margin-top:2.5rem;padding-top:2.5rem;border-top:1px solid rgba(248,245,239,0.07);display:flex;align-items:center;gap:2rem;flex-wrap:wrap;}
+.palette-label{font-size:0.62rem;letter-spacing:0.2em;text-transform:uppercase;color:rgba(248,245,239,0.35);}
+.swatches{display:flex;gap:0.5rem;flex-wrap:wrap;}
+.swatch{width:36px;height:36px;border:1px solid rgba(248,245,239,0.1);position:relative;}
+.swatch::after{content:attr(data-name);position:absolute;bottom:-1.4rem;left:50%;transform:translateX(-50%);font-size:0.48rem;letter-spacing:0.1em;text-transform:uppercase;color:rgba(248,245,239,0.3);white-space:nowrap;}
+.cta-strip{background:var(--bark);padding:5rem 3rem;text-align:center;}
+.cta-title{font-family:var(--serif);font-size:clamp(1.8rem,3.5vw,2.8rem);font-weight:400;color:white;line-height:1.15;margin-bottom:0.5rem;}
+.cta-title em{font-style:italic;color:var(--gold);}
+.cta-sub{font-family:var(--serif-th);font-size:0.95rem;color:rgba(255,255,255,0.45);font-weight:300;margin-bottom:2.5rem;line-height:1.8;}
+.cta-btns{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;}
+.btn-gold{display:inline-block;font-size:0.7rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--bark);background:var(--gold);padding:1rem 2.4rem;text-decoration:none;transition:all 0.3s;}
+.btn-gold:hover{background:var(--gold-light);}
+.btn-outline{display:inline-block;font-size:0.7rem;letter-spacing:0.18em;text-transform:uppercase;color:rgba(255,255,255,0.6);padding:1rem 2.4rem;text-decoration:none;border:1px solid rgba(255,255,255,0.2);transition:all 0.3s;}
+.btn-outline:hover{border-color:var(--gold);color:var(--gold);}
+footer{background:rgba(0,0,0,0.4);padding:2.5rem 3rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem;border-top:1px solid rgba(248,245,239,0.05);}
+.footer-logo-img{height:26px;width:auto;filter:invert(1) brightness(0.7);}
+.footer-copy{font-size:0.7rem;color:rgba(248,245,239,0.2);}
+.reveal{opacity:0;transform:translateY(30px);transition:opacity 0.9s ease,transform 0.9s ease;}
+.reveal.visible{opacity:1;transform:translateY(0);}
+.d1{transition-delay:0.12s;}.d2{transition-delay:0.24s;}.d3{transition-delay:0.36s;}
+@media(max-width:900px){nav{padding:1.2rem 1.5rem;}.nav-cta{display:none;}.hero-content{padding:3rem 1.5rem 4rem;}.intro-section{grid-template-columns:1fr;gap:3rem;padding:5rem 1.5rem;}.gallery-header{padding:3rem 1.5rem 2rem;}.g-2col,.g-3col,.g-wide,.g-label{padding:0 1.5rem;}.g-label{padding:2rem 1.5rem 0.6rem;}.g-3col{grid-template-columns:1fr 1fr;}.concept-section{padding:5rem 1.5rem;}.concept-inner{grid-template-columns:1fr;gap:2rem;}.concept-label{writing-mode:horizontal-tb;transform:none;}.cta-strip{padding:4rem 1.5rem;}footer{padding:2rem 1.5rem;}}
+@media(max-width:600px){.g-2col,.g-3col{grid-template-columns:1fr;}.hero-meta{gap:1.5rem;}}
+
+/* ── LIGHT THEME OVERRIDE ── */
+body{background:#F8F5EF;color:#2A2620;}
+.intro-title{color:#2A2620;}
+.intro-quote{color:rgba(42,38,32,0.68);}
+.spec-item{background:rgba(42,38,32,0.025);border-color:rgba(42,38,32,0.08);}
+.spec-item:hover{background:rgba(184,151,90,0.06);}
+.spec-label{color:var(--muted);}
+.highlights{background:rgba(42,38,32,0.025);border-color:rgba(42,38,32,0.08);}
+.hl-list li{color:rgba(42,38,32,0.62);border-bottom-color:rgba(42,38,32,0.07);}
+.gallery-title{color:#2A2620;}
+.gallery-count{color:rgba(184,151,90,0.18);}
+.g-label{color:var(--gold);}
+.g-label::before{background:var(--gold);}
+.concept-section{background:rgba(42,38,32,0.03);border-color:rgba(42,38,32,0.06);}
+.concept-title{color:#2A2620;}
+.concept-body{color:rgba(42,38,32,0.62);}
+.palette-label{color:var(--stone);}
+.swatch{border-color:rgba(42,38,32,0.12);}
+.swatch::after{color:var(--stone);}
+.cta-strip{background:#EDE8DF;}
+.cta-title{color:#2A2620;}
+.cta-sub{color:rgba(42,38,32,0.55);}
+.btn-outline{color:rgba(42,38,32,0.55);border-color:rgba(42,38,32,0.18);}
+.btn-outline:hover{color:var(--gold);border-color:var(--gold);}
+footer{background:#D9D0C1;border-top-color:rgba(42,38,32,0.1);}
+.footer-logo-img{filter:invert(1);}
+.footer-copy{color:rgba(42,38,32,0.35);}
+</style>
+</head>
+<body>
+<nav id="navbar">
+  <a href="index.html" class="nav-back">← กลับหน้าหลัก</a>
+  <a href="index.html" class="nav-logo"><img src="logo_cut_white.png" alt="Need More Space Studio"></a>
+  <a href="contact.html" class="nav-cta">ปรึกษากับเรา</a>
+</nav>
+
+<section class="hero">
+  <img class="hero-img" id="heroImg" src="living.jpg" alt="The Five — Perfect Place Minburi">
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <div class="hero-tag">Residential · Minburi · 2024</div>
+    <h1 class="hero-title">The<br><em>Five</em></h1>
+    <div class="hero-meta">
+      <div><div class="meta-label">Location</div><div class="meta-value">Perfect Place Minburi</div></div>
+      <div><div class="meta-label">Type</div><div class="meta-value">Private Residence</div></div>
+      <div><div class="meta-label">Size</div><div class="meta-value">536 ตร.ม.</div></div>
+      <div><div class="meta-label">Scope</div><div class="meta-value">Design + Build</div></div>
+    </div>
+  </div>
+</section>
+
+<div style="max-width:1300px;margin:0 auto;">
+  <div class="intro-section">
+    <div class="reveal">
+      <div class="eyebrow">Project Story</div>
+      <h2 class="intro-title">Five Residents,<br><em>Five Stories</em></h2>
+      <blockquote class="intro-quote">"โจทย์ที่ท้าทายที่สุดของโปรเจกต์นี้คือ การออกแบบพื้นที่ 536 ตร.ม. ให้ทั้ง 5 ชีวิตในครอบครัว รู้สึกว่า 'นี่คือบ้านของฉัน' อย่างเต็มภาคภูมิ ทุกห้องนอนสะท้อนตัวตนของแต่ละคน ขณะที่พื้นที่ส่วนกลางเชื่อมทุกความแตกต่างให้กลายเป็นครอบครัวเดียวกัน"</blockquote>
+    </div>
+    <div class="reveal d1">
+      <div class="spec-grid">
+        <div class="spec-item"><div class="spec-num">536</div><div class="spec-label">ตร.ม. พื้นที่ใช้สอย</div></div>
+        <div class="spec-item"><div class="spec-num">5+6</div><div class="spec-label">Bed · Bath</div></div>
+        <div class="spec-item"><div class="spec-num">Minburi</div><div class="spec-label">Location</div></div>
+        <div class="spec-item"><div class="spec-num">100%</div><div class="spec-label">Turnkey</div></div>
+        <div class="highlights">
+          <div class="hl-title">Design Highlights</div>
+          <ul class="hl-list">
+            <li>ห้องนอน 5 ห้อง — ออกแบบเฉพาะบุคคล สไตล์แตกต่างกันในแต่ละห้อง</li>
+            <li>โรงหนังส่วนตัวและ Fitness Room สำหรับ Lifestyle ที่ครบครัน</li>
+            <li>2 ห้องนั่งเล่นแยกโซน — Formal Living และ Family Lounge</li>
+            <li>ห้องพระที่ออกแบบด้วยความประณีต สงบ และอบอุ่น</li>
+            <li>Kitchen + Built-in ครบชุด รองรับการใช้งานจริงของครอบครัว</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<section class="gallery-section">
+  <div class="gallery-header reveal">
+    <div><div class="eyebrow" style="margin-bottom:0.5rem;">Photography</div><h2 class="gallery-title">Project Gallery</h2></div>
+    <div class="gallery-count">31</div>
+  </div>
+
+  <!-- ARRIVAL & LIVING -->
+  <div class="g-label reveal">Arrival &amp; Living</div>
+  <div class="g-wide reveal"><div class="img-wrap" style="aspect-ratio:21/9;"><img src="foyer.jpg" alt="Foyer"><div class="room-tag">Foyer</div></div></div>
+  <div class="g-2col reveal">
+    <div class="img-wrap" style="aspect-ratio:4/3;"><img src="living.jpg" alt="Living Room"><div class="room-tag">Living Room</div></div>
+    <div class="img-wrap" style="aspect-ratio:4/3;"><img src="living%201.jpg" alt="Family Lounge"><div class="room-tag">Family Lounge</div></div>
+  </div>
+  <div class="g-wide reveal"><div class="img-wrap" style="aspect-ratio:16/9;"><img src="stair.jpg" alt="Staircase"><div class="room-tag">Staircase</div></div></div>
+
+  <!-- KITCHEN -->
+  <div class="g-label reveal">Kitchen</div>
+  <div class="g-2col reveal">
+    <div class="img-wrap" style="aspect-ratio:4/3;"><img src="kitchen.png" alt="Kitchen"><div class="room-tag">Kitchen</div></div>
+    <div class="img-wrap" style="aspect-ratio:4/3;"><img src="kitehen2.png" alt="Kitchen Detail"><div class="room-tag">Kitchen Detail</div></div>
+  </div>
+
+  <!-- ENTERTAINMENT & WELLNESS -->
+  <div class="g-label reveal">Entertainment &amp; Wellness</div>
+  <div class="g-2col reveal">
+    <div class="img-wrap" style="aspect-ratio:4/3;"><img src="Theater%20Room%20.png" alt="Home Theatre"><div class="room-tag">Home Theatre</div></div>
+    <div class="img-wrap" style="aspect-ratio:4/3;"><img src="gym.jpg" alt="Fitness Room"><div class="room-tag">Fitness Room</div></div>
+  </div>
+
+  <!-- PRIVATE CORNERS -->
+  <div class="g-label reveal">Private Corners</div>
+  <div class="g-3col reveal">
+    <div class="img-wrap" style="aspect-ratio:4/3;"><img src="preyroom.png" alt="ห้องพระ"><div class="room-tag">ห้องพระ</div></div>
+    <div class="img-wrap" style="aspect-ratio:4/3;"><img src="working%20room.jpg" alt="Home Office"><div class="room-tag">Home Office</div></div>
+    <div class="img-wrap" style="aspect-ratio:4/3;"><img src="wc.jpg" alt="Bathroom"><div class="room-tag">Bathroom</div></div>
+  </div>
+
+  <!-- BEDROOM 1 -->
+  <div class="g-label reveal">Master Suite · Bedroom 01</div>
+  <div class="g-wide reveal"><div class="img-wrap" style="aspect-ratio:21/9;"><img src="bedroom1%20(1).png" alt="Master Bedroom"><div class="room-tag">Master Bedroom</div></div></div>
+  <div class="g-2col reveal">
+    <div class="img-wrap" style="aspect-ratio:4/3;"><img src="bedroom1%20(2).png" alt="Master Suite"><div class="room-tag">Master Suite</div></div>
+    <div class="img-wrap" style="aspect-ratio:4/3;"><img src="bedroom1%20(3).png" alt="Dressing Area"><div class="room-tag">Dressing Area</div></div>
+  </div>
+  <div class="g-2col reveal">
+    <div class="img-wrap" style="aspect-ratio:4/3;"><img src="bedroom1%20(4).png" alt="En-Suite"><div class="room-tag">En-Suite</div></div>
+    <div class="img-wrap" style="aspect-ratio:4/3;"><img src="bedroom1%20(5).png" alt="Master Detail"><div class="room-tag">Master Detail</div></div>
+  </div>
+
+  <!-- BEDROOM 2 -->
+  <div class="g-label reveal">Bedroom 02</div>
+  <div class="g-2col reveal">
+    <div class="img-wrap" style="aspect-ratio:4/3;"><img src="bedroom2%20(1).jpg" alt="Bedroom 2"><div class="room-tag">Bedroom 2</div></div>
+    <div class="img-wrap" style="aspect-ratio:4/3;"><img src="bedroom2%20(2).jpg" alt="Bedroom 2"><div class="room-tag">Bedroom 2</div></div>
+  </div>
+  <div class="g-2col reveal">
+    <div class="img-wrap" style="aspect-ratio:4/3;"><img src="bedroom2%20(1).png" alt="Bedroom 2 Render"><div class="room-tag">Bedroom 2</div></div>
+    <div class="img-wrap" style="aspect-ratio:4/3;"><img src="bedroom2%20(3).png" alt="Bedroom 2 Render"><div class="room-tag">Bedroom 2</div></div>
+  </div>
+
+  <!-- BEDROOM 3 -->
+  <div class="g-label reveal">Bedroom 03</div>
+  <div class="g-wide reveal"><div class="img-wrap" style="aspect-ratio:16/9;"><img src="bedroom3%20(1).jpg" alt="Bedroom 3"><div class="room-tag">Bedroom 3</div></div></div>
+  <div class="g-2col reveal">
+    <div class="img-wrap" style="aspect-ratio:4/3;"><img src="bedroom3%20(2).jpg" alt="Bedroom 3"><div class="room-tag">Bedroom 3</div></div>
+    <div class="img-wrap" style="aspect-ratio:4/3;"><img src="bedroom3%20(3).jpg" alt="Bedroom 3"><div class="room-tag">Bedroom 3</div></div>
+  </div>
+  <div class="g-2col reveal">
+    <div class="img-wrap" style="aspect-ratio:4/3;"><img src="bedroom3%20(4).jpg" alt="Bedroom 3"><div class="room-tag">Bedroom 3</div></div>
+    <div class="img-wrap" style="aspect-ratio:4/3;"><img src="bedroom3%20(5).jpg" alt="Bedroom 3"><div class="room-tag">Bedroom 3</div></div>
+  </div>
+
+  <!-- BEDROOM 4 -->
+  <div class="g-label reveal">Bedroom 04</div>
+  <div class="g-3col reveal">
+    <div class="img-wrap" style="aspect-ratio:4/3;"><img src="beedroom4%20(1).jpg" alt="Bedroom 4"><div class="room-tag">Bedroom 4</div></div>
+    <div class="img-wrap" style="aspect-ratio:4/3;"><img src="beedroom4%20(2).jpg" alt="Bedroom 4"><div class="room-tag">Bedroom 4</div></div>
+    <div class="img-wrap" style="aspect-ratio:4/3;"><img src="beedroom4%20(3).jpg" alt="Bedroom 4"><div class="room-tag">Bedroom 4</div></div>
+  </div>
+
+  <!-- BEDROOM 5 -->
+  <div class="g-label reveal">Bedroom 05</div>
+  <div class="g-3col reveal">
+    <div class="img-wrap" style="aspect-ratio:4/3;"><img src="bedroom5%20(1).jpg" alt="Bedroom 5"><div class="room-tag">Bedroom 5</div></div>
+    <div class="img-wrap" style="aspect-ratio:4/3;"><img src="bedroom5%20(2).jpg" alt="Bedroom 5"><div class="room-tag">Bedroom 5</div></div>
+    <div class="img-wrap" style="aspect-ratio:4/3;"><img src="bedroom5%20(3).jpg" alt="Bedroom 5"><div class="room-tag">Bedroom 5</div></div>
+  </div>
+</section>
+
+<section class="concept-section">
+  <div class="concept-inner">
+    <div class="concept-label reveal">Design Concept</div>
+    <div class="reveal d1">
+      <h2 class="concept-title">Five Styles,<br><em>One Vision</em></h2>
+      <p class="concept-body">ด้วยพื้นที่ 536 ตร.ม. และสมาชิก 5 คนที่มีบุคลิกภาพและรสนิยมแตกต่างกัน โจทย์หลักของการออกแบบโปรเจกต์นี้คือ การสร้างสมดุลระหว่าง 'ความเป็นปัจเจก' กับ 'ความเป็นครอบครัว' ห้องนอนแต่ละห้องจึงถูกออกแบบเป็นพื้นที่ส่วนตัวที่สมบูรณ์แบบสำหรับแต่ละคน ขณะที่ Foyer, ห้องนั่งเล่น, ห้องครัว และพื้นที่บันเทิง ได้รับการออกแบบให้เป็นศูนย์กลางที่ดึงทุกคนมารวมกัน ผลลัพธ์คือบ้านที่รู้สึกทั้ง 'เป็นส่วนตัว' และ 'อบอุ่น' ในเวลาเดียวกัน</p>
+      <div class="palette">
+        <span class="palette-label">Color Palette</span>
+        <div class="swatches">
+          <div class="swatch" style="background:#F5F0E8;" data-name="Ivory"></div>
+          <div class="swatch" style="background:#D4C4AA;" data-name="Oak"></div>
+          <div class="swatch" style="background:#C8B8A0;" data-name="Sand"></div>
+          <div class="swatch" style="background:#A09080;" data-name="Taupe"></div>
+          <div class="swatch" style="background:#3A3530;" data-name="Ebony"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="cta-strip">
+  <h2 class="cta-title reveal">พร้อมสร้างพื้นที่<br><em>ที่สะท้อนตัวตนคุณ?</em></h2>
+  <p class="cta-sub reveal d1">ปรึกษากับเรา ฟรี ไม่มีข้อผูกมัด · รับคิวจำกัด</p>
+  <div class="cta-btns reveal d2">
+    <a href="contact.html" class="btn-gold">ปรึกษากับเรา ฟรี</a>
+    <a href="index.html#projects" class="btn-outline">ดูผลงานอื่น →</a>
+  </div>
+</div>
+<footer>
+  <img src="logo_cut_white.png" alt="Need More Space Studio" class="footer-logo-img">
+  <span class="footer-copy">© 2025 Need More Space Studio · Bangkok</span>
+</footer>
+<script>
+  const navbar=document.getElementById('navbar');
+  window.addEventListener('scroll',()=>{navbar.classList.toggle('dark',window.scrollY>80);});
+  const heroImg=document.getElementById('heroImg');
+  if(heroImg){setTimeout(()=>heroImg.classList.add('loaded'),100);}
+  const reveals=document.querySelectorAll('.reveal');
+  const obs=new IntersectionObserver((e)=>{e.forEach(el=>{if(el.isIntersecting){el.target.classList.add('visible');obs.unobserve(el.target);}});},{threshold:0.1});
+  reveals.forEach(el=>obs.observe(el));
+</script>
+
+<!-- LIGHTBOX -->
+<div id="lightbox" style="position:fixed;inset:0;z-index:9999;background:rgba(0,0,0,0.96);display:flex;align-items:center;justify-content:center;opacity:0;pointer-events:none;transition:opacity 0.3s;">
+  <button id="lb-close" style="position:absolute;top:1.5rem;right:2rem;background:none;border:none;color:rgba(255,255,255,0.7);font-size:1.8rem;cursor:pointer;line-height:1;padding:0.5rem;">✕</button>
+  <button id="lb-prev" style="position:absolute;left:1.5rem;top:50%;transform:translateY(-50%);background:none;border:1px solid rgba(255,255,255,0.2);color:rgba(255,255,255,0.7);font-size:1.3rem;cursor:pointer;padding:0.8rem 1.1rem;transition:opacity 0.2s;">←</button>
+  <div style="display:flex;flex-direction:column;align-items:center;max-width:92vw;">
+    <img id="lb-img" src="" alt="" style="max-width:88vw;max-height:82vh;object-fit:contain;display:block;">
+    <div id="lb-cap" style="font-size:0.62rem;letter-spacing:0.22em;text-transform:uppercase;color:rgba(255,255,255,0.35);margin-top:0.9rem;"></div>
+  </div>
+  <button id="lb-next" style="position:absolute;right:1.5rem;top:50%;transform:translateY(-50%);background:none;border:1px solid rgba(255,255,255,0.2);color:rgba(255,255,255,0.7);font-size:1.3rem;cursor:pointer;padding:0.8rem 1.1rem;transition:opacity 0.2s;">→</button>
+</div>
+<script>
+(function(){
+  var lb=document.getElementById('lightbox'),lbImg=document.getElementById('lb-img'),lbCap=document.getElementById('lb-cap');
+  var lbPrev=document.getElementById('lb-prev'),lbNext=document.getElementById('lb-next'),lbClose=document.getElementById('lb-close');
+  var items=[],cur=0;
+  document.querySelectorAll('.img-wrap').forEach(function(wrap){
+    var img=wrap.querySelector('img');if(!img)return;
+    var tag=wrap.querySelector('.room-tag');
+    var idx=items.length;
+    items.push({src:img.src,cap:tag?tag.textContent.trim():''});
+    wrap.style.cursor='pointer';
+    wrap.addEventListener('click',function(){open(idx);});
+  });
+  function open(i){cur=i;lb.style.opacity='1';lb.style.pointerEvents='auto';show();}
+  function close(){lb.style.opacity='0';lb.style.pointerEvents='none';}
+  function show(){lbImg.src=items[cur].src;lbCap.textContent=items[cur].cap;lbPrev.style.opacity=cur>0?'1':'0.2';lbNext.style.opacity=cur<items.length-1?'1':'0.2';}
+  lbClose.addEventListener('click',close);
+  lb.addEventListener('click',function(e){if(e.target===lb)close();});
+  lbPrev.addEventListener('click',function(e){e.stopPropagation();if(cur>0){cur--;show();}});
+  lbNext.addEventListener('click',function(e){e.stopPropagation();if(cur<items.length-1){cur++;show();}});
+  document.addEventListener('keydown',function(e){if(lb.style.opacity==='1'){if(e.key==='Escape')close();else if(e.key==='ArrowLeft'&&cur>0){cur--;show();}else if(e.key==='ArrowRight'&&cur<items.length-1){cur++;show();}}});
+})();
+</script>
+</body></html>
