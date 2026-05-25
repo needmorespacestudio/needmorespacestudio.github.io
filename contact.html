@@ -23,7 +23,7 @@ body{background:var(--ivory);color:var(--charcoal);font-family:var(--sans);font-
 /* NAV */
 nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:1.2rem 3rem;background:rgba(253,250,245,0.97);backdrop-filter:blur(20px);border-bottom:1px solid var(--border);}
 .nav-logo{display:flex;align-items:center;text-decoration:none;}
-.nav-logo img{height:32px;width:auto;}
+.nav-logo img{height:32px;width:auto;filter:invert(1);}
 .nav-back{font-size:0.7rem;letter-spacing:0.16em;text-transform:uppercase;color:var(--muted);text-decoration:none;display:flex;align-items:center;gap:0.5rem;transition:color 0.3s;}
 .nav-back::before{content:'←';font-size:0.9rem;}
 .nav-back:hover{color:var(--gold);}
@@ -83,7 +83,7 @@ textarea{resize:vertical;min-height:100px;}
 
 /* FOOTER */
 footer{background:var(--charcoal);padding:3rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem;border-top:1px solid rgba(255,255,255,0.04);}
-.footer-logo-img{height:26px;width:auto;}
+.footer-logo-img{height:26px;width:auto;filter:brightness(0.7);}
 .footer-copy{font-size:0.7rem;color:rgba(255,255,255,0.2);}
 
 @media(max-width:900px){
@@ -104,7 +104,7 @@ footer{background:var(--charcoal);padding:3rem;display:flex;align-items:center;j
 
 <nav>
   <a href="index.html" class="nav-back">กลับหน้าหลัก</a>
-  <a href="index.html" class="nav-logo"><img src="logo_dark.png" alt="Need More Space Studio"></a>
+  <a href="index.html" class="nav-logo"><img src="logo_cut_white.png" alt="Need More Space Studio"></a>
   <span style="width:120px;"></span>
 </nav>
 
@@ -240,7 +240,7 @@ footer{background:var(--charcoal);padding:3rem;display:flex;align-items:center;j
 </div>
 
 <footer>
-  <img src="logo_dark.png" alt="Need More Space Studio" class="footer-logo-img">
+  <img src="logo_cut_white.png" alt="Need More Space Studio" class="footer-logo-img">
   <span class="footer-copy">© 2025 Need More Space Studio · Bangkok</span>
 </footer>
 
