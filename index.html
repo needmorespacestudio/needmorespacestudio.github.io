@@ -97,19 +97,19 @@ body{background:var(--white);color:var(--ink);font-family:var(--sans);font-weigh
   font-size:clamp(2rem,3.6vw,3.2rem);
   font-weight:400;line-height:1.28;
   color:var(--dark);margin-bottom:1.2rem;
-  letter-spacing:0.01em;
+  letter-spacing:0.01em;text-wrap:balance;
 }
 .hero-h1 em{font-style:italic;color:var(--gold);}
 .hero-sub{
   font-family:var(--serif-th);
   font-size:1.05rem;font-weight:300;
   color:var(--muted);line-height:1.85;
-  margin-bottom:1.5rem;max-width:440px;
+  margin-bottom:1.5rem;max-width:440px;text-wrap:pretty;
 }
 .hero-p{
   font-family:var(--serif-th);
   font-size:0.92rem;line-height:2;color:rgba(42,38,32,0.6);
-  max-width:440px;margin-bottom:2.5rem;font-weight:300;
+  max-width:440px;margin-bottom:2.5rem;font-weight:300;text-wrap:pretty;
 }
 .hero-actions{display:flex;gap:1rem;flex-wrap:wrap;margin-bottom:2.5rem;}
 .btn-dark{
@@ -189,14 +189,14 @@ body{background:var(--white);color:var(--ink);font-family:var(--sans);font-weigh
   font-family:var(--serif);
   font-size:clamp(2rem,3.2vw,3rem);
   font-weight:400;line-height:1.18;
-  color:var(--dark);
+  color:var(--dark);text-wrap:balance;
 }
 .section-h em{font-style:italic;color:var(--gold);}
 .section-th{
   font-family:var(--serif-th);
   font-size:1rem;font-weight:300;
   color:var(--muted);
-  line-height:1.9;margin-top:0.5rem;
+  line-height:1.9;margin-top:0.5rem;text-wrap:pretty;
 }
 
 /* ── PROJECT SLIDER ── */
@@ -275,7 +275,7 @@ body{background:var(--white);color:var(--ink);font-family:var(--sans);font-weigh
   display:block;font-family:var(--serif-th);font-size:0.85rem;
   font-weight:300;color:var(--muted);margin-top:0.15rem;transition:color 0.4s;
 }
-.sc-p{font-size:0.92rem;line-height:1.85;color:#666;transition:color 0.4s;}
+.sc-p{font-size:0.92rem;line-height:1.85;color:#666;transition:color 0.4s;text-wrap:pretty;}
 
 /* ── HOW ── */
 .how{background:var(--white);padding:5rem 4rem;}
@@ -314,7 +314,7 @@ body{background:var(--white);color:var(--ink);font-family:var(--sans);font-weigh
 }
 .step-title{font-family:var(--serif);font-size:1.1rem;font-weight:400;color:var(--dark);margin-bottom:0.15rem;transition:color 0.4s;}
 .step-sub{font-family:var(--serif-th);font-size:0.82rem;color:var(--muted);margin-bottom:0.8rem;font-weight:300;transition:color 0.4s;}
-.step-p{font-size:0.88rem;line-height:1.85;color:#777;transition:color 0.4s;}
+.step-p{font-size:0.88rem;line-height:1.85;color:#777;transition:color 0.4s;text-wrap:pretty;}
 
 /* ── WHY ── */
 .why{background:var(--off);padding:7rem 4rem;}
@@ -336,7 +336,7 @@ body{background:var(--white);color:var(--ink);font-family:var(--sans);font-weigh
 }
 .why-card-title{font-family:var(--serif);font-size:1.2rem;font-weight:400;color:var(--dark);margin-bottom:0.15rem;}
 .why-card-th{font-family:var(--serif-th);font-size:0.9rem;color:var(--muted);margin-bottom:0.4rem;font-weight:300;}
-.why-card-p{font-size:0.95rem;line-height:1.9;color:#666;}
+.why-card-p{font-size:0.95rem;line-height:1.9;color:#666;text-wrap:pretty;}
 
 .why-visual{}
 .why-img-grid{display:grid;grid-template-columns:1.2fr 1fr;gap:6px;align-items:end;}
@@ -351,33 +351,39 @@ body{background:var(--white);color:var(--ink);font-family:var(--sans);font-weigh
 
 /* ── TRUST ── */
 .trust{background:var(--off);padding:7rem 4rem;}
-.trust-inner{max-width:1300px;margin:0 auto;display:grid;grid-template-columns:1.1fr 1fr;gap:5rem;align-items:start;}
+.trust-inner{max-width:1300px;margin:0 auto;}
 
-/* Testimonials */
-.testi-stack{display:flex;flex-direction:column;gap:2px;}
+/* Testimonials — 3-col grid */
+.trust-testi-head{margin-bottom:2.5rem;}
+.trust-testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;}
 .testi{background:var(--white);padding:2rem 2.2rem;border:none;border-bottom:1px solid rgba(184,152,96,0.1);}
 .testi.featured{background:var(--white);border-left:2px solid var(--gold);border-bottom:1px solid rgba(184,152,96,0.1);padding-left:2rem;}
-.testi-q{font-family:var(--serif-th);font-size:1rem;font-style:italic;line-height:2;color:rgba(28,26,22,0.72);margin-bottom:1.2rem;}
+.testi-q{font-family:var(--serif-th);font-size:0.95rem;font-style:italic;line-height:2;color:rgba(28,26,22,0.72);margin-bottom:1.2rem;text-wrap:pretty;}
 .testi-by{display:flex;align-items:center;gap:0.8rem;}
 .testi-avatar{width:38px;height:38px;background:var(--gold);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:0.9rem;color:var(--dark);font-weight:400;flex-shrink:0;}
 .testi-name{font-size:0.9rem;font-weight:400;color:var(--dark);}
 .testi-proj{font-size:0.75rem;color:var(--muted);}
 
-/* Founder card */
-.founder{display:flex;flex-direction:column;}
-.founder-img-wrap{position:relative;overflow:hidden;margin-bottom:2rem;}
-.founder-img{width:100%;aspect-ratio:3/2;object-fit:cover;object-position:top;display:block;}
+/* Founder block — photo left, text right */
+.trust-founder-block{display:grid;grid-template-columns:340px 1fr;gap:5rem;margin-top:5rem;padding-top:5rem;border-top:1px solid rgba(184,152,96,0.12);align-items:start;}
+.founder-img-col{}
+.founder-img-wrap{position:relative;overflow:hidden;margin-bottom:1.5rem;}
+.founder-img{width:100%;aspect-ratio:3/4;object-fit:cover;object-position:top;display:block;}
+.founder-text-col{display:flex;flex-direction:column;}
 .founder-eyebrow{font-size:0.78rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--gold);display:flex;align-items:center;gap:0.8rem;margin-bottom:1rem;}
 .founder-eyebrow::before{content:'';width:24px;height:1px;background:var(--gold);}
-.founder-name{font-family:var(--serif);font-size:clamp(1.8rem,2.5vw,2.4rem);font-weight:400;color:var(--dark);line-height:1.1;margin-bottom:0.2rem;}
-.founder-role{font-size:0.82rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold);margin-bottom:1.2rem;}
-.founder-q{font-family:var(--serif-th);font-size:1rem;font-weight:300;line-height:2;color:rgba(28,26,22,0.68);border-left:2px solid var(--gold);padding-left:1.2rem;margin-bottom:1rem;}
-.founder-story{font-family:var(--serif-th);font-size:0.88rem;font-weight:300;line-height:2;color:rgba(28,26,22,0.62);margin-bottom:1.5rem;}
+.founder-name{font-family:var(--serif);font-size:clamp(1.8rem,2.5vw,2.4rem);font-weight:400;color:var(--dark);line-height:1.1;margin-bottom:0.2rem;text-wrap:balance;}
+.founder-role{font-size:0.82rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold);margin-bottom:1.4rem;}
+.founder-q{font-family:var(--serif-th);font-size:1rem;font-weight:300;line-height:1.9;color:rgba(28,26,22,0.78);border-left:2px solid var(--gold);padding-left:1.2rem;margin-bottom:1.5rem;text-wrap:pretty;}
+.founder-story{font-family:var(--serif-th);font-size:0.88rem;font-weight:300;line-height:2.1;color:rgba(28,26,22,0.62);margin-bottom:1rem;text-wrap:pretty;}
 .founder-story em{font-style:normal;font-weight:400;color:var(--ink);}
-.founder-expertise{display:grid;grid-template-columns:1fr 1fr;gap:1px;margin-top:0.5rem;}
-.expertise-item{background:var(--white);padding:1.1rem;border:1px solid rgba(184,152,96,0.1);}
-.expertise-label{font-size:0.66rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold);margin-bottom:0.35rem;}
-.expertise-desc{font-family:var(--serif-th);font-size:0.8rem;color:rgba(28,26,22,0.58);line-height:1.7;font-weight:300;}
+.founder-expertise-label{font-size:0.7rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--gold);margin-bottom:1rem;margin-top:0.5rem;display:flex;align-items:center;gap:0.8rem;}
+.founder-expertise-label::before{content:'';width:20px;height:1px;background:var(--gold);}
+.founder-expertise{display:flex;flex-direction:column;gap:0;}
+.expertise-item{background:var(--white);padding:1rem 1.2rem;border:1px solid rgba(184,152,96,0.1);border-bottom:none;}
+.expertise-item:last-child{border-bottom:1px solid rgba(184,152,96,0.1);}
+.expertise-label{font-size:0.72rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--gold);margin-bottom:0.3rem;font-weight:400;}
+.expertise-desc{font-family:var(--serif-th);font-size:0.82rem;color:rgba(28,26,22,0.62);line-height:1.8;font-weight:300;text-wrap:pretty;}
 .badges{display:flex;gap:0.5rem;flex-wrap:wrap;}
 .badge{font-size:0.72rem;letter-spacing:0.1em;text-transform:uppercase;border:1px solid rgba(184,152,96,0.25);color:var(--gold);padding:0.35rem 0.8rem;}
 
@@ -387,25 +393,27 @@ body{background:var(--white);color:var(--ink);font-family:var(--sans);font-weigh
 .offer-section-top{max-width:620px;margin:0 auto 4rem;text-align:center;}
 .offer-eyebrow-line{font-size:0.75rem;letter-spacing:0.22em;text-transform:uppercase;color:var(--gold);display:flex;align-items:center;justify-content:center;gap:1.2rem;margin-bottom:1.2rem;}
 .offer-eyebrow-line::before,.offer-eyebrow-line::after{content:'';flex:0 0 32px;height:1px;background:var(--gold);}
-.offer-h2{font-family:var(--serif);font-size:clamp(1.9rem,3.2vw,2.8rem);font-weight:400;color:var(--dark);line-height:1.18;margin-bottom:0.7rem;}
+.offer-h2{font-family:var(--serif);font-size:clamp(1.9rem,3.2vw,2.8rem);font-weight:400;color:var(--dark);line-height:1.18;margin-bottom:0.7rem;text-wrap:balance;}
 .offer-h2 em{font-style:italic;color:var(--gold);}
-.offer-section-tagline{font-family:var(--serif-th);font-size:0.95rem;color:var(--muted);font-weight:300;line-height:1.9;}
+.offer-section-tagline{font-family:var(--serif-th);font-size:0.95rem;color:var(--muted);font-weight:300;line-height:1.9;text-wrap:pretty;}
 .offer-cols{display:grid;grid-template-columns:1fr 1fr;gap:2px;align-items:stretch;}
 .offer-stat-block{padding:3rem;background:var(--off);border-top:3px solid var(--gold);}
 .offer-big-pct{font-family:var(--serif);font-size:clamp(3.5rem,7vw,5rem);font-weight:400;color:var(--gold);line-height:1;margin-bottom:0.5rem;}
-.offer-stat-desc{font-family:var(--serif-th);font-size:0.98rem;color:var(--ink);font-weight:400;line-height:1.9;margin-bottom:1.5rem;padding-bottom:1.5rem;border-bottom:1px solid rgba(184,152,96,0.15);}
-.offer-body-txt{font-family:var(--serif-th);font-size:0.88rem;color:rgba(28,26,22,0.6);line-height:2.1;font-weight:300;}
+.offer-stat-desc{font-family:var(--serif-th);font-size:0.98rem;color:var(--ink);font-weight:400;line-height:1.9;margin-bottom:1.5rem;padding-bottom:1.5rem;border-bottom:1px solid rgba(184,152,96,0.15);text-wrap:pretty;}
+.offer-body-txt{font-family:var(--serif-th);font-size:0.88rem;color:rgba(28,26,22,0.6);line-height:2.1;font-weight:300;text-wrap:pretty;}
 .offer-body-txt em{font-style:italic;color:var(--gold);font-family:var(--serif);}
 .offer-price-card{padding:3rem;background:var(--sand);border-top:3px solid var(--gold);}
-.offer-price-eyebrow{font-size:0.62rem;letter-spacing:0.22em;text-transform:uppercase;color:var(--gold);margin-bottom:1rem;}
+.offer-price-eyebrow{font-size:0.62rem;letter-spacing:0.22em;text-transform:uppercase;color:var(--gold);margin-bottom:0.4rem;}
+.offer-price-subtitle{font-family:var(--serif-th);font-size:0.88rem;color:var(--muted);font-weight:300;margin-bottom:1.4rem;}
 .offer-price-row{display:flex;align-items:baseline;gap:0.4rem;flex-wrap:wrap;margin-bottom:0.5rem;}
-.offer-price-from{font-size:0.82rem;color:var(--muted);}
+.offer-price-from{font-family:var(--serif-th);font-size:0.82rem;color:var(--muted);font-weight:300;line-height:1.6;text-wrap:pretty;}
 .offer-price-num{font-family:var(--serif);font-size:clamp(3rem,5vw,4rem);color:var(--gold);line-height:1;}
 .offer-price-of{font-size:0.82rem;color:var(--muted);}
-.offer-price-desc{font-family:var(--serif-th);font-size:0.85rem;color:rgba(28,26,22,0.58);line-height:1.9;font-weight:300;margin-bottom:1.8rem;margin-top:0.8rem;padding-top:1rem;border-top:1px solid rgba(28,26,22,0.08);}
-.offer-coverage{display:flex;flex-direction:column;gap:0.7rem;margin-bottom:2rem;}
-.offer-coverage span{font-family:var(--serif-th);font-size:0.85rem;color:rgba(28,26,22,0.65);font-weight:300;display:flex;align-items:center;gap:0.8rem;}
-.offer-coverage span::before{content:'';width:18px;height:1px;background:var(--gold);flex-shrink:0;}
+.offer-price-desc{font-family:var(--serif-th);font-size:0.85rem;color:rgba(28,26,22,0.58);line-height:1.9;font-weight:300;margin-bottom:1.8rem;margin-top:0.8rem;padding-top:1rem;border-top:1px solid rgba(28,26,22,0.08);text-wrap:pretty;}
+.offer-coverage{display:flex;flex-direction:column;gap:0.8rem;margin-bottom:2rem;}
+.offer-coverage span{font-family:var(--serif-th);font-size:0.85rem;color:rgba(28,26,22,0.65);font-weight:300;display:flex;align-items:flex-start;gap:0.8rem;line-height:1.7;}
+.offer-coverage span::before{content:'';width:18px;height:1px;background:var(--gold);flex-shrink:0;margin-top:0.6em;}
+.offer-coverage strong{font-weight:400;color:var(--ink);font-family:var(--sans);font-size:0.8rem;letter-spacing:0.02em;}
 
 /* ── CTA ── */
 .cta-block{
@@ -421,9 +429,9 @@ body{background:var(--white);color:var(--ink);font-family:var(--sans);font-weigh
   gap:1.2rem;margin-bottom:2rem;
 }
 .cta-eyebrow::before,.cta-eyebrow::after{content:'';flex:0 0 40px;height:1px;background:var(--gold);}
-.cta-h{font-family:var(--serif);font-size:clamp(2rem,4vw,3.2rem);font-weight:400;color:var(--dark);line-height:1.1;margin-bottom:1rem;}
+.cta-h{font-family:var(--serif);font-size:clamp(2rem,4vw,3.2rem);font-weight:400;color:var(--dark);line-height:1.1;margin-bottom:1rem;text-wrap:balance;}
 .cta-h em{font-style:italic;color:var(--gold);}
-.cta-sub{font-family:var(--serif-th);font-size:1rem;color:var(--muted);font-weight:300;line-height:1.9;margin-bottom:2.5rem;}
+.cta-sub{font-family:var(--serif-th);font-size:1rem;color:var(--muted);font-weight:300;line-height:1.9;margin-bottom:2.5rem;text-wrap:pretty;}
 .cta-btns{display:flex;gap:1rem;flex-wrap:wrap;justify-content:center;}
 .btn-gold{
   display:inline-block;font-size:0.85rem;letter-spacing:0.12em;text-transform:uppercase;
@@ -472,7 +480,8 @@ footer{
   .why-inner{grid-template-columns:1fr;gap:3rem;}
   .why-img-b{display:none;}
   .why-img-a{aspect-ratio:3/2;}
-  .trust-inner{grid-template-columns:1fr;gap:3rem;}
+  .trust-testi-grid{grid-template-columns:1fr 1fr;}
+  .trust-founder-block{grid-template-columns:280px 1fr;gap:3rem;}
   footer{grid-template-columns:1fr 1fr;gap:2.5rem;}
   .foot-bottom{grid-column:span 2;}
 }
@@ -485,6 +494,9 @@ footer{
   .how{padding:5rem 2rem;}
   .why{padding:5rem 2rem;}
   .trust{padding:5rem 2rem;}
+  .trust-testi-grid{grid-template-columns:1fr;}
+  .trust-founder-block{grid-template-columns:1fr;gap:2.5rem;}
+  .founder-img{aspect-ratio:3/2;}
   .cta-block{padding:5rem 2rem;}
   footer{padding:3rem 2rem;}
   .proj-card{flex:0 0 220px!important;}
@@ -731,22 +743,22 @@ footer{
     <div class="offer-cols">
       <div class="offer-stat-block reveal">
         <div class="offer-big-pct">90%</div>
-        <p class="offer-stat-desc">ของเจ้าของบ้านพบปัญหา — งบบานปลาย ช่างไม่ตรงเวลา ผลลัพธ์ไม่ตรงปก</p>
-        <p class="offer-body-txt">เราทำหน้าที่เป็น <em>Project Orchestrator</em> ส่วนตัวของคุณ ดูแลตั้งแต่คอนเซปต์ คัดผู้รับเหมา ล็อกงบ ตรวจงานก่อสร้าง จนส่งมอบบ้านพร้อมอยู่ — คุณมีหน้าที่แค่เลือกแบบที่ชอบ</p>
+        <p class="offer-stat-desc">ของเจ้าของบ้านพบปัญหา — งบบานปลาย งานล่าช้า ผลลัพธ์ไม่ตรงปก</p>
+        <p class="offer-body-txt">เราทำหน้าที่เป็น Project Orchestrator ส่วนตัวของคุณ ดูแลแบบเบ็ดเสร็จตั้งแต่คิดคอนเซปต์ดีไซน์ ล็อกงบประมาณ ควบคุมมาตรฐานก่อสร้าง ไปจนถึงวันส่งมอบบ้านพร้อมอยู่ — คุณมีหน้าที่แค่เลือกแบบที่ชอบ นอกนั้นเราจัดการความวุ่นวายแทนคุณทั้งหมด</p>
       </div>
       <div class="offer-price-card reveal d1">
-        <div class="offer-price-eyebrow">ค่าบริการ</div>
+        <div class="offer-price-eyebrow">Turnkey Project Orchestrator</div>
+        <div class="offer-price-subtitle">ที่ปรึกษา ออกแบบ และบริหารโครงการก่อสร้าง</div>
         <div class="offer-price-row">
-          <span class="offer-price-from">เริ่มต้นเพียง</span>
+          <span class="offer-price-from">ลงทุนเพื่อความสบายใจ ด้วยค่าบริการประมาณ</span>
           <span class="offer-price-num">5%</span>
-          <span class="offer-price-of">ของมูลค่าโครงการ</span>
         </div>
-        <p class="offer-price-desc">ครอบคลุมทั้ง Design + Construction Management ตั้งแต่วันแรกจนส่งมอบ</p>
+        <p class="offer-price-desc">เซฟงบก่อสร้างไม่ให้บานปลาย และปิดความเสี่ยงจากรายจ่ายแอบแฝง ด้วยการให้เราเป็นตัวแทนบริหารจัดการความวุ่นวายทั้งหมด เพื่อให้บ้านเสร็จสมบูรณ์ 100% โดยที่คุณไม่ต้องเหนื่อยเอง</p>
         <div class="offer-coverage">
-          <span>ออกแบบ 3D + คัดสรรวัสดุ</span>
-          <span>คัดและบริหารผู้รับเหมา</span>
-          <span>QC ทุกขั้นตอน + รายงานรายสัปดาห์</span>
-          <span>ส่งมอบพร้อมอยู่ 100%</span>
+          <span><strong>Design & Spec</strong> — ออกแบบ 3D เฉพาะคุณ + คัดสรรวัสดุพรีเมียม</span>
+          <span><strong>Construction Management</strong> — บริหารงานก่อสร้างและคุมงบตั้งแต่ต้นจนจบ</span>
+          <span><strong>Quality Control</strong> — ตรวจสอบความเนี้ยบทุกขั้นตอน พร้อมรายงานประจำสัปดาห์</span>
+          <span><strong>Move-in Ready</strong> — ส่งมอบพื้นที่พร้อมเข้าอยู่ 100%</span>
         </div>
         <a href="contact.html" class="btn-dark" style="display:inline-block;">ปรึกษากับเรา ฟรี</a>
       </div>
@@ -757,61 +769,73 @@ footer{
 <!-- ── 5. TRUST ── -->
 <section class="trust" id="team">
   <div class="trust-inner">
-    <div class="reveal">
+
+    <!-- Testimonials — 3 col -->
+    <div class="trust-testi-head reveal">
       <div class="eyebrow">Client Stories</div>
-      <h2 class="section-h" style="margin-bottom:2rem;">เสียงจากลูกค้า<br><em>ประสบการณ์จริง</em></h2>
-      <div class="testi-stack">
-        <div class="testi featured">
-          <p class="testi-q">"สบายใจมากครับ ตลอด 4 เดือนไม่ต้องคุยกับช่างเองแม้แต่ครั้งเดียว ภาณุจัดการทุกอย่างและอัพเดทให้ทุกสัปดาห์ งบก็ตรงที่ตกลงกันไว้ตั้งแต่แรกเลย"</p>
-          <div class="testi-by">
-            <div class="testi-avatar">K</div>
-            <div><div class="testi-name">K.Kao & K.Vow</div><div class="testi-proj">Supalai Elegance · 243 ตร.ม.</div></div>
-          </div>
+      <h2 class="section-h">เสียงจากลูกค้า<em> ประสบการณ์จริง</em></h2>
+    </div>
+    <div class="trust-testi-grid">
+      <div class="testi featured reveal">
+        <p class="testi-q">"สบายใจมากครับ ตลอด 4 เดือนไม่ต้องคุยกับช่างเองแม้แต่ครั้งเดียว จัดการทุกอย่างและอัพเดทให้ทุกสัปดาห์ งบก็ตรงที่ตกลงกันไว้ตั้งแต่แรกเลย"</p>
+        <div class="testi-by">
+          <div class="testi-avatar">K</div>
+          <div><div class="testi-name">K.Kao & K.Vow</div><div class="testi-proj">Supalai Elegance · 243 ตร.ม.</div></div>
         </div>
-        <div class="testi">
-          <p class="testi-q">"งบไม่บานปลายเลยสักบาท ภาณุวางแผนและล็อกงบให้ตั้งแต่ก่อนเริ่ม บ้านออกมาสวยกว่าที่คิดไว้ด้วย แนะนำเพื่อนไปแล้ว 2 คน"</p>
-          <div class="testi-by">
-            <div class="testi-avatar">P</div>
-            <div><div class="testi-name">K.Mink</div><div class="testi-proj">Rhythm Charoenkrung · 80 ตร.ม.</div></div>
-          </div>
+      </div>
+      <div class="testi reveal d1">
+        <p class="testi-q">"งบไม่บานปลายเลยสักบาท วางแผนและล็อกงบให้ตั้งแต่ก่อนเริ่ม บ้านออกมาสวยกว่าที่คิดไว้ด้วย แนะนำเพื่อนไปแล้ว 2 คน"</p>
+        <div class="testi-by">
+          <div class="testi-avatar">P</div>
+          <div><div class="testi-name">K.Mink</div><div class="testi-proj">Rhythm Charoenkrung · 80 ตร.ม.</div></div>
         </div>
-        <div class="testi">
-          <p class="testi-q">"ในฐานะเจ้าของธุรกิจ เวลาคือทุกอย่าง ภาณุเป็นเหมือน Project Manager ส่วนตัว เราแค่บอก requirement ไป เขาจัดการให้หมด บ้านเสร็จตรงเวลา"</p>
-          <div class="testi-by">
-            <div class="testi-avatar">K</div>
-            <div><div class="testi-name">K.Kai</div><div class="testi-proj">Venue Flow Rama 5 · 215 ตร.ม.</div></div>
+      </div>
+      <div class="testi reveal d2">
+        <p class="testi-q">"ในฐานะเจ้าของธุรกิจ เวลาคือทุกอย่าง เหมือนได้ Project Manager ส่วนตัว เราแค่บอก requirement ไป จัดการให้หมด บ้านเสร็จตรงเวลา"</p>
+        <div class="testi-by">
+          <div class="testi-avatar">K</div>
+          <div><div class="testi-name">K.Kai</div><div class="testi-proj">Venue Flow Rama 5 · 215 ตร.ม.</div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Founder — photo left, text right -->
+    <div class="trust-founder-block">
+      <div class="founder-img-col reveal">
+        <div class="founder-img-wrap">
+          <img class="founder-img" src="founder.jpg" alt="Panupong — Need More Space Studio">
+        </div>
+        <div class="founder-eyebrow">Founder & Design Director</div>
+        <div class="founder-name">Panupong<br>Truncharoen</div>
+        <div class="founder-role">Need More Space Studio</div>
+      </div>
+      <div class="founder-text-col reveal d1">
+        <blockquote class="founder-q">"งานออกแบบที่ดี ไม่ใช่แค่ความสวยงามบนหน้ากระดาษ แต่คือการส่งมอบ 'ความสบายใจ' ให้กับผู้อยู่อาศัยในทุกขั้นตอน"</blockquote>
+        <p class="founder-story">จากประสบการณ์กว่า 10 ปีในวงการอสังหาริมทรัพย์และงานออกแบบ ผมพบว่าปัญหาใหญ่ที่สุดที่เจ้าของบ้านต้องเผชิญ ไม่ใช่การหาแบบบ้านที่ถูกใจ แต่คือ <em>'ความวุ่นวาย งบบานปลาย และความเครียดระหว่างการก่อสร้าง'</em></p>
+        <p class="founder-story">Need More Space Studio จึงถูกก่อตั้งขึ้นเพื่อเปลี่ยนการทำบ้านให้เป็นเรื่องง่ายและไร้กังวล ในฐานะ Boutique Studio ผมตั้งใจรับหน้าที่เป็น <em>'ผู้อำนวยการสร้างและผู้จัดการโปรเจกต์ส่วนตัว'</em> ให้กับคุณ โดยลงไปดูแลครอบคลุมตั้งแต่การออกแบบ ควบคุมงบประมาณ ไปจนถึงการคุมมาตรฐานหน้าไซต์งานอย่างใกล้ชิด</p>
+        <p class="founder-story">คุณมีหน้าที่แค่บอกเล่าความฝันและวิถีชีวิตของคุณ นอกเหนือจากนั้น... ผมพร้อมเป็นตัวแทนรับจบทุกความซับซ้อน เพื่อส่งมอบพื้นที่ที่สมบูรณ์แบบที่สุดให้กับคุณครับ</p>
+        <div class="founder-expertise-label">ความเชี่ยวชาญ (Core Expertise)</div>
+        <div class="founder-expertise">
+          <div class="expertise-item">
+            <div class="expertise-label">10+ Years Experience</div>
+            <div class="expertise-desc">สั่งสมประสบการณ์บริหารโครงการอสังหาฯ และออกแบบตกแต่งภายในกว่าทศวรรษ</div>
+          </div>
+          <div class="expertise-item">
+            <div class="expertise-label">Reality-Based Design</div>
+            <div class="expertise-desc">ผสาน "สุนทรียภาพ" เข้ากับ "การใช้งานจริง" ภายใต้งบประมาณที่ล็อกไว้ 100% ไร้รายจ่ายแอบแฝง</div>
+          </div>
+          <div class="expertise-item">
+            <div class="expertise-label">Turnkey Orchestrator</div>
+            <div class="expertise-desc">ดูแลแบบเบ็ดเสร็จตั้งแต่คิดคอนเซปต์ คุมช่างหน้างาน และแก้ปัญหาแทนคุณอย่างเด็ดขาด เพื่อให้คุณได้เวลาอันมีค่าคืนมา</div>
+          </div>
+          <div class="expertise-item">
+            <div class="expertise-label">Trusted Quality</div>
+            <div class="expertise-desc">การันตีมาตรฐานความเนี้ยบ จากประสบการณ์ร่วมงานกับบริษัทอสังหาริมทรัพย์ (Developer) ชั้นนำของประเทศ</div>
           </div>
         </div>
       </div>
     </div>
-    <div class="founder reveal d1">
-      <div class="founder-img-wrap">
-        <img class="founder-img" src="founder.jpg" alt="Panupong — Need More Space Studio">
-      </div>
-      <div class="founder-eyebrow">Founder & Design Director</div>
-      <div class="founder-name">Panupong<br>Truncharoen</div>
-      <div class="founder-role">ภาณุ · Need More Space Studio</div>
-      <blockquote class="founder-q">"ผมเชื่อว่าบ้านที่ดีไม่ได้เกิดจากดีไซน์เนอร์คนเดียว แต่เกิดจากระบบที่ดี — การวางแผน การสื่อสาร และการควบคุมคุณภาพที่ทำงานพร้อมกันทุกขั้นตอน"</blockquote>
-      <p class="founder-story">ผมเริ่มต้นจากการเป็นผู้รับเหมาก่อสร้างก่อนผันตัวมาเป็นดีไซน์เนอร์ ทำให้เข้าใจ<em>ทั้งสองด้าน</em> — ทั้งงานสร้างสรรค์และงานบริหารหน้างาน ลูกค้าของผมไม่ต้องเป็นผู้เชี่ยวชาญด้านก่อสร้าง เพราะนั่นคือหน้าที่ของผม</p>
-      <div class="founder-expertise">
-        <div class="expertise-item">
-          <div class="expertise-label">Design Direction</div>
-          <div class="expertise-desc">Concept ถึง 3D Visualization คัดสรรวัสดุให้ตรงกับ lifestyle ของคุณ</div>
-        </div>
-        <div class="expertise-item">
-          <div class="expertise-label">Project Management</div>
-          <div class="expertise-desc">บริหารผู้รับเหมา ล็อกงบ ตรวจ QC ทุกขั้นตอน ส่งรายงานทุกสัปดาห์</div>
-        </div>
-        <div class="expertise-item">
-          <div class="expertise-label">Budget Control</div>
-          <div class="expertise-desc">Value Engineering คุมงบไม่ให้เกิน ไม่มีค่าใช้จ่ายแฝง ทุกโปรเจกต์</div>
-        </div>
-        <div class="expertise-item">
-          <div class="expertise-label">Quality Standard</div>
-          <div class="expertise-desc">มาตรฐาน Hafele + Developer-Grade QC ทุกรายละเอียด</div>
-        </div>
-      </div>
-    </div>
+
   </div>
 </section>
 
