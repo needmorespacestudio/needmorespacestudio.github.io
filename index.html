@@ -341,53 +341,69 @@ body{background:var(--white);color:var(--ink);font-family:var(--sans);font-weigh
 .why-img-a{width:100%;aspect-ratio:3/5;object-fit:cover;display:block;}
 .why-img-b{width:100%;aspect-ratio:1/1;object-fit:cover;display:block;}
 .why-badge{
-  background:var(--dark);padding:1.2rem 1.5rem;text-align:center;
+  background:var(--sand);padding:1.2rem 1.5rem;text-align:center;
   margin-top:6px;display:inline-block;
 }
 .why-badge-n{font-family:var(--serif);font-size:1.8rem;font-weight:400;color:var(--gold);display:block;}
-.why-badge-l{font-size:0.58rem;letter-spacing:0.12em;text-transform:uppercase;color:rgba(253,250,246,0.45);display:block;margin-top:0.2rem;}
+.why-badge-l{font-size:0.58rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--muted);display:block;margin-top:0.2rem;}
 
 /* ── TRUST ── */
-.trust{background:var(--dark);padding:7rem 4rem;}
+.trust{background:var(--off);padding:7rem 4rem;}
 .trust-inner{max-width:1300px;margin:0 auto;display:grid;grid-template-columns:1.2fr 1fr;gap:6rem;align-items:start;}
 
 /* Testimonials */
 .testi-stack{display:flex;flex-direction:column;gap:2px;}
-.testi{background:rgba(253,250,246,0.04);padding:2.2rem;}
-.testi.featured{background:rgba(184,152,96,0.1);border-left:2px solid var(--gold);}
-.testi-q{font-family:var(--serif-th);font-size:1rem;font-style:italic;line-height:2;color:rgba(253,250,246,0.65);margin-bottom:1.2rem;}
+.testi{background:rgba(28,26,22,0.03);padding:2.2rem;border:1px solid rgba(184,152,96,0.1);}
+.testi.featured{background:rgba(184,152,96,0.07);border-left:2px solid var(--gold);border-top:none;border-right:none;border-bottom:none;}
+.testi-q{font-family:var(--serif-th);font-size:1rem;font-style:italic;line-height:2;color:rgba(28,26,22,0.72);margin-bottom:1.2rem;}
 .testi-by{display:flex;align-items:center;gap:0.8rem;}
 .testi-avatar{width:38px;height:38px;background:var(--gold);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:0.9rem;color:var(--dark);font-weight:400;flex-shrink:0;}
-.testi-name{font-size:0.9rem;font-weight:400;color:var(--white);}
-.testi-proj{font-size:0.75rem;color:rgba(253,250,246,0.38);}
+.testi-name{font-size:0.9rem;font-weight:400;color:var(--dark);}
+.testi-proj{font-size:0.75rem;color:var(--muted);}
 
 /* Founder card */
 .founder{display:flex;flex-direction:column;}
 .founder-img-wrap{position:relative;overflow:hidden;margin-bottom:2rem;}
-.founder-img{width:100%;aspect-ratio:4/3;object-fit:cover;object-position:top;display:block;filter:grayscale(15%);}
+.founder-img{width:100%;aspect-ratio:4/3;object-fit:cover;object-position:top;display:block;filter:grayscale(10%);}
 .founder-eyebrow{font-size:0.78rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--gold);display:flex;align-items:center;gap:0.8rem;margin-bottom:1rem;}
 .founder-eyebrow::before{content:'';width:24px;height:1px;background:var(--gold);}
-.founder-name{font-family:var(--serif);font-size:clamp(1.8rem,2.5vw,2.4rem);font-weight:400;color:var(--white);line-height:1.1;margin-bottom:0.2rem;}
+.founder-name{font-family:var(--serif);font-size:clamp(1.8rem,2.5vw,2.4rem);font-weight:400;color:var(--dark);line-height:1.1;margin-bottom:0.2rem;}
 .founder-role{font-size:0.82rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold);margin-bottom:1.2rem;}
-.founder-q{font-family:var(--serif-th);font-size:1rem;font-weight:300;line-height:2;color:rgba(253,250,246,0.55);border-left:1px solid var(--gold);padding-left:1.2rem;margin-bottom:1.5rem;}
+.founder-q{font-family:var(--serif-th);font-size:1rem;font-weight:300;line-height:2;color:rgba(28,26,22,0.68);border-left:2px solid var(--gold);padding-left:1.2rem;margin-bottom:1rem;}
+.founder-story{font-family:var(--serif-th);font-size:0.88rem;font-weight:300;line-height:2;color:rgba(28,26,22,0.62);margin-bottom:1.5rem;}
+.founder-story em{font-style:normal;font-weight:400;color:var(--ink);}
+.founder-expertise{display:grid;grid-template-columns:1fr 1fr;gap:1px;margin-top:0.5rem;}
+.expertise-item{background:var(--white);padding:1.1rem;border:1px solid rgba(184,152,96,0.1);}
+.expertise-label{font-size:0.66rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold);margin-bottom:0.35rem;}
+.expertise-desc{font-family:var(--serif-th);font-size:0.8rem;color:rgba(28,26,22,0.58);line-height:1.7;font-weight:300;}
 .badges{display:flex;gap:0.5rem;flex-wrap:wrap;}
-.badge{font-size:0.72rem;letter-spacing:0.1em;text-transform:uppercase;border:1px solid rgba(184,152,96,0.22);color:rgba(212,176,122,0.8);padding:0.35rem 0.8rem;}
+.badge{font-size:0.72rem;letter-spacing:0.1em;text-transform:uppercase;border:1px solid rgba(184,152,96,0.25);color:var(--gold);padding:0.35rem 0.8rem;}
 
-/* ── OFFER BLOCK ── */
-.offer-block{margin-top:2.5rem;padding:2rem;background:var(--dark);border-top:2px solid var(--gold);}
-.offer-label{font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:1rem;}
-.offer-title{font-family:var(--serif);font-size:1.4rem;font-weight:400;color:var(--white);line-height:1.2;margin-bottom:0.4rem;}
-.offer-th{font-family:var(--serif-th);font-size:0.82rem;color:rgba(253,250,246,0.4);margin-bottom:1.2rem;line-height:1.7;font-weight:300;}
-.offer-rule{height:1px;background:rgba(184,152,96,0.15);margin-bottom:1.2rem;}
-.offer-stat-row{display:flex;align-items:center;gap:1rem;margin-bottom:1.2rem;}
-.offer-pct{font-family:var(--serif);font-size:2rem;font-weight:400;color:var(--gold);line-height:1;flex-shrink:0;}
-.offer-stat-copy{font-size:0.78rem;color:rgba(253,250,246,0.45);line-height:1.6;}
-.offer-body{font-family:var(--serif-th);font-size:0.85rem;color:rgba(253,250,246,0.5);line-height:1.9;margin-bottom:1.2rem;font-weight:300;}
-.offer-body em{font-style:italic;color:var(--gold2);font-family:var(--serif);}
-.offer-price-row{display:flex;align-items:baseline;gap:0.4rem;margin-bottom:1.5rem;flex-wrap:wrap;}
-.offer-from{font-size:0.75rem;color:rgba(253,250,246,0.38);}
-.offer-num{font-family:var(--serif);font-size:1.8rem;color:var(--gold);line-height:1;}
-.offer-of{font-size:0.75rem;color:rgba(253,250,246,0.38);}
+/* ── OFFER SECTION (standalone) ── */
+.offer-section{background:var(--off);padding:7rem 4rem;border-top:1px solid rgba(184,152,96,0.12);}
+.offer-section-inner{max-width:1300px;margin:0 auto;}
+.offer-section-top{text-align:center;margin-bottom:4rem;}
+.offer-eyebrow-line{font-size:0.78rem;letter-spacing:0.22em;text-transform:uppercase;color:var(--gold);display:flex;align-items:center;justify-content:center;gap:1.2rem;margin-bottom:1.5rem;}
+.offer-eyebrow-line::before,.offer-eyebrow-line::after{content:'';flex:0 0 40px;height:1px;background:var(--gold);}
+.offer-h2{font-family:var(--serif);font-size:clamp(2rem,3.5vw,3rem);font-weight:400;color:var(--dark);line-height:1.15;margin-bottom:0.6rem;}
+.offer-h2 em{font-style:italic;color:var(--gold);}
+.offer-section-tagline{font-family:var(--serif-th);font-size:1rem;color:var(--muted);font-weight:300;line-height:1.9;}
+.offer-cols{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:start;}
+.offer-stat-block{padding:2.5rem;background:var(--white);border-left:3px solid var(--gold);}
+.offer-big-pct{font-family:var(--serif);font-size:clamp(4rem,8vw,6rem);font-weight:400;color:var(--gold);line-height:1;margin-bottom:0.6rem;}
+.offer-stat-desc{font-family:var(--serif-th);font-size:0.95rem;color:var(--ink);font-weight:400;line-height:1.9;margin-bottom:1.5rem;}
+.offer-body-txt{font-family:var(--serif-th);font-size:0.88rem;color:rgba(28,26,22,0.6);line-height:2.1;font-weight:300;}
+.offer-body-txt em{font-style:italic;color:var(--gold);font-family:var(--serif);}
+.offer-price-card{padding:2.5rem;background:var(--white);border:1px solid rgba(184,152,96,0.18);border-top:3px solid var(--gold);}
+.offer-price-eyebrow{font-size:0.65rem;letter-spacing:0.22em;text-transform:uppercase;color:var(--gold);margin-bottom:1.2rem;}
+.offer-price-row{display:flex;align-items:baseline;gap:0.4rem;flex-wrap:wrap;margin-bottom:0.6rem;}
+.offer-price-from{font-size:0.82rem;color:var(--muted);}
+.offer-price-num{font-family:var(--serif);font-size:clamp(3rem,5vw,4rem);color:var(--gold);line-height:1;}
+.offer-price-of{font-size:0.82rem;color:var(--muted);}
+.offer-price-desc{font-family:var(--serif-th);font-size:0.85rem;color:rgba(28,26,22,0.55);line-height:1.9;font-weight:300;margin-bottom:1.5rem;border-top:1px solid rgba(184,152,96,0.12);padding-top:1rem;}
+.offer-coverage{display:flex;flex-direction:column;gap:0.55rem;margin-bottom:1.8rem;}
+.offer-coverage span{font-family:var(--serif-th);font-size:0.85rem;color:rgba(28,26,22,0.65);font-weight:300;display:flex;align-items:center;gap:0.6rem;}
+.offer-coverage span::before{content:'';width:16px;height:1px;background:var(--gold);flex-shrink:0;}
 
 /* ── CTA ── */
 .cta-block{
@@ -422,25 +438,25 @@ body{background:var(--white);color:var(--ink);font-family:var(--sans);font-weigh
 
 /* ── FOOTER ── */
 footer{
-  background:var(--dark);padding:4rem;
+  background:var(--sand);padding:4rem;
   display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:3rem;
 }
-.foot-logo img{height:26px;width:auto;filter:invert(1) brightness(0.6);margin-bottom:1rem;display:block;}
-.foot-tag{font-family:var(--serif-th);font-size:0.9rem;color:rgba(253,250,246,0.28);line-height:1.9;margin-bottom:1.2rem;}
+.foot-logo-img{height:26px;width:auto;filter:invert(1);margin-bottom:1rem;display:block;}
+.foot-tag{font-family:var(--serif-th);font-size:0.9rem;color:rgba(28,26,22,0.45);line-height:1.9;margin-bottom:1.2rem;}
 .foot-social{display:flex;gap:0.5rem;}
-.soc{width:34px;height:34px;border:1px solid rgba(253,250,246,0.1);display:flex;align-items:center;justify-content:center;text-decoration:none;color:rgba(253,250,246,0.3);transition:all 0.3s;}
+.soc{width:34px;height:34px;border:1px solid rgba(28,26,22,0.12);display:flex;align-items:center;justify-content:center;text-decoration:none;color:rgba(28,26,22,0.38);transition:all 0.3s;}
 .soc:hover{border-color:var(--gold);color:var(--gold);}
 .foot-h{font-size:0.75rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--gold);margin-bottom:1.2rem;}
 .foot-ul{list-style:none;}
 .foot-ul li{margin-bottom:0.6rem;}
-.foot-ul a{font-size:0.9rem;color:rgba(253,250,246,0.3);text-decoration:none;transition:color 0.3s;}
-.foot-ul a:hover{color:var(--white);}
+.foot-ul a{font-size:0.9rem;color:rgba(28,26,22,0.5);text-decoration:none;transition:color 0.3s;}
+.foot-ul a:hover{color:var(--dark);}
 .foot-bottom{
-  grid-column:span 4;border-top:1px solid rgba(253,250,246,0.05);
+  grid-column:span 4;border-top:1px solid rgba(28,26,22,0.1);
   padding-top:2rem;margin-top:1rem;
   display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;
 }
-.foot-copy{font-size:0.8rem;color:rgba(253,250,246,0.18);}
+.foot-copy{font-size:0.8rem;color:rgba(28,26,22,0.35);}
 
 /* ── ANIMATIONS ── */
 @keyframes fadeUp{from{opacity:0;transform:translateY(28px);}to{opacity:1;transform:translateY(0);}}
@@ -469,6 +485,10 @@ footer{
   .cta-block{padding:5rem 2rem;}
   footer{padding:3rem 2rem;}
   .proj-card{flex:0 0 220px!important;}
+}
+@media(max-width:900px){
+  .offer-cols{grid-template-columns:1fr;}
+  .offer-section{padding:5rem 2rem;}
 }
 @media(max-width:768px){
   .nav{padding:1.2rem 2rem;}
@@ -509,10 +529,10 @@ footer{
   <div class="hero-l">
     <div class="hero-pill">Bangkok Interior Studio · Est. 2015</div>
     <h1 class="hero-h1">
-      คุณสมควรได้<br>บ้านในฝัน<br><em>โดยไม่เหนื่อย</em>
+      งานออกแบบระดับพรีเมียม<br>ที่มาพร้อม<br><em>"ความสบายใจ" 100%</em>
     </h1>
-    <p class="hero-sub">สร้างพื้นที่ที่สะท้อนความสำเร็จของคุณ ในงบที่ล็อกไว้ตั้งแต่วันแรก</p>
-    <p class="hero-p">เราทำหน้าที่เป็น "ผู้จัดการโปรเจกต์ส่วนตัว" ของคุณ ดูแลทุกขั้นตอนตั้งแต่คิดคอนเซปต์จนส่งมอบบ้าน คุณมีหน้าที่แค่เลือกแบบที่ชอบ</p>
+    <p class="hero-sub">สร้างพื้นที่ที่สะท้อนตัวตนและวิถีชีวิตของคุณ ภายใต้งบก่อสร้างที่ถูกล็อกไว้ตั้งแต่วันแรก</p>
+    <p class="hero-p">เราไม่ได้ส่งมอบแค่งานดีไซน์ แต่เราเป็น "ที่ปรึกษาและผู้จัดการโปรเจกต์ส่วนตัว" ให้กับคุณตั้งแต่วันแรกจนถึงวันส่งมอบ — คุณมีหน้าที่แค่เลือกแบบที่ชอบ เราดูแลทุกขั้นตอนแทนคุณ</p>
     <div class="hero-actions">
       <a href="contact.html" class="btn-dark">ปรึกษากับเรา ฟรี</a>
       <a href="#projects" class="btn-ghost">ดูผลงาน</a>
@@ -608,17 +628,6 @@ footer{
           <div class="proj-loc">Nakorn In, Nonthaburi</div>
         </div>
       </a>
-      <a class="proj-card" href="kao-vow.html">
-        <div class="proj-img-wrap">
-          <img class="proj-img" src="kao4.jpg" alt="Arch & Wood Dining" loading="lazy">
-          <div class="proj-arrow">→</div>
-        </div>
-        <div class="proj-info">
-          <div class="proj-tag">Design Highlight · Japandi</div>
-          <div class="proj-name">Arch & Wood Dining</div>
-          <div class="proj-loc">K.Kao & K.Vow · Phaholyothin 50</div>
-        </div>
-      </a>
       <!-- เพิ่มโปรเจกต์ใหม่ตรงนี้ได้เลย ↓ -->
     </div>
     </div>
@@ -697,24 +706,6 @@ footer{
           </div>
         </div>
       </div>
-      <!-- Offer block -->
-      <div class="offer-block reveal d1">
-        <div class="offer-label">บริการของเรา</div>
-        <h3 class="offer-title">Premium Design &<br>Turnkey Management</h3>
-        <div class="offer-th">บริการออกแบบและบริหารงานก่อสร้างแบบเบ็ดเสร็จ</div>
-        <div class="offer-rule"></div>
-        <div class="offer-stat-row">
-          <span class="offer-pct">90%</span>
-          <span class="offer-stat-copy">ของเจ้าของบ้านพบปัญหา — งบบานปลาย ช่างไม่ตรงเวลา ผลลัพธ์ไม่ตรงปก</span>
-        </div>
-        <p class="offer-body">เราทำหน้าที่เป็น <em>Project Orchestrator</em> ส่วนตัวของคุณ ดูแลตั้งแต่คอนเซปต์ คัดผู้รับเหมา ล็อกงบ ตรวจงานก่อสร้าง จนส่งมอบบ้านพร้อมอยู่ — คุณมีหน้าที่แค่เลือกแบบที่ชอบ</p>
-        <div class="offer-price-row">
-          <span class="offer-from">เริ่มต้นเพียง</span>
-          <span class="offer-num">5%</span>
-          <span class="offer-of">ของมูลค่าโครงการ</span>
-        </div>
-        <a href="contact.html" class="btn-dark" style="display:inline-block;">ปรึกษากับเรา ฟรี</a>
-      </div>
     </div>
     <div class="why-visual reveal d2">
       <div class="why-img-grid">
@@ -722,6 +713,40 @@ footer{
         <img class="why-img-b" src="kao1.jpg" alt="Detail" loading="lazy">
       </div>
       <div class="why-badge"><span class="why-badge-n">40+</span><span class="why-badge-l">Projects</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ── OFFER ── -->
+<section class="offer-section">
+  <div class="offer-section-inner">
+    <div class="offer-section-top reveal">
+      <div class="offer-eyebrow-line">บริการของเรา</div>
+      <h2 class="offer-h2">Premium Design &<br><em>Turnkey Management</em></h2>
+      <p class="offer-section-tagline">บริการออกแบบและบริหารงานก่อสร้างแบบเบ็ดเสร็จ ดูแลทุกขั้นตอนตั้งแต่วันแรกจนส่งมอบ</p>
+    </div>
+    <div class="offer-cols">
+      <div class="offer-stat-block reveal">
+        <div class="offer-big-pct">90%</div>
+        <p class="offer-stat-desc">ของเจ้าของบ้านพบปัญหา — งบบานปลาย ช่างไม่ตรงเวลา ผลลัพธ์ไม่ตรงปก</p>
+        <p class="offer-body-txt">เราทำหน้าที่เป็น <em>Project Orchestrator</em> ส่วนตัวของคุณ ดูแลตั้งแต่คอนเซปต์ คัดผู้รับเหมา ล็อกงบ ตรวจงานก่อสร้าง จนส่งมอบบ้านพร้อมอยู่ — คุณมีหน้าที่แค่เลือกแบบที่ชอบ</p>
+      </div>
+      <div class="offer-price-card reveal d1">
+        <div class="offer-price-eyebrow">ค่าบริการ</div>
+        <div class="offer-price-row">
+          <span class="offer-price-from">เริ่มต้นเพียง</span>
+          <span class="offer-price-num">5%</span>
+          <span class="offer-price-of">ของมูลค่าโครงการ</span>
+        </div>
+        <p class="offer-price-desc">ครอบคลุมทั้ง Design + Construction Management ตั้งแต่วันแรกจนส่งมอบ</p>
+        <div class="offer-coverage">
+          <span>ออกแบบ 3D + คัดสรรวัสดุ</span>
+          <span>คัดและบริหารผู้รับเหมา</span>
+          <span>QC ทุกขั้นตอน + รายงานรายสัปดาห์</span>
+          <span>ส่งมอบพร้อมอยู่ 100%</span>
+        </div>
+        <a href="contact.html" class="btn-dark" style="display:inline-block;">ปรึกษากับเรา ฟรี</a>
+      </div>
     </div>
   </div>
 </section>
@@ -763,11 +788,25 @@ footer{
       <div class="founder-eyebrow">Founder & Design Director</div>
       <div class="founder-name">Panupong<br>Truncharoen</div>
       <div class="founder-role">ภาณุ · Need More Space Studio</div>
-      <blockquote class="founder-q">"ผมไม่ขายกระดาษเขียนแบบ แต่ขายผลลัพธ์และความสบายใจ คุณมีหน้าที่แค่บอกความฝัน นอกเหนือจากนั้นผมรับจบให้ทั้งหมด"</blockquote>
-      <div class="badges">
-        <span class="badge">10+ ปี Experience</span>
-        <span class="badge">Hafele Standard</span>
-        <span class="badge">Developer-Grade QC</span>
+      <blockquote class="founder-q">"ผมเชื่อว่าบ้านที่ดีไม่ได้เกิดจากดีไซน์เนอร์คนเดียว แต่เกิดจากระบบที่ดี — การวางแผน การสื่อสาร และการควบคุมคุณภาพที่ทำงานพร้อมกันทุกขั้นตอน"</blockquote>
+      <p class="founder-story">ผมเริ่มต้นจากการเป็นผู้รับเหมาก่อสร้างก่อนผันตัวมาเป็นดีไซน์เนอร์ ทำให้เข้าใจ<em>ทั้งสองด้าน</em> — ทั้งงานสร้างสรรค์และงานบริหารหน้างาน ลูกค้าของผมไม่ต้องเป็นผู้เชี่ยวชาญด้านก่อสร้าง เพราะนั่นคือหน้าที่ของผม</p>
+      <div class="founder-expertise">
+        <div class="expertise-item">
+          <div class="expertise-label">Design Direction</div>
+          <div class="expertise-desc">Concept ถึง 3D Visualization คัดสรรวัสดุให้ตรงกับ lifestyle ของคุณ</div>
+        </div>
+        <div class="expertise-item">
+          <div class="expertise-label">Project Management</div>
+          <div class="expertise-desc">บริหารผู้รับเหมา ล็อกงบ ตรวจ QC ทุกขั้นตอน ส่งรายงานทุกสัปดาห์</div>
+        </div>
+        <div class="expertise-item">
+          <div class="expertise-label">Budget Control</div>
+          <div class="expertise-desc">Value Engineering คุมงบไม่ให้เกิน ไม่มีค่าใช้จ่ายแฝง ทุกโปรเจกต์</div>
+        </div>
+        <div class="expertise-item">
+          <div class="expertise-label">Quality Standard</div>
+          <div class="expertise-desc">มาตรฐาน Hafele + Developer-Grade QC ทุกรายละเอียด</div>
+        </div>
       </div>
     </div>
   </div>
@@ -789,7 +828,7 @@ footer{
 <!-- ── FOOTER ── -->
 <footer>
   <div>
-    <img src="logo_cut_white.png" alt="Need More Space Studio" class="foot-logo" style="height:26px;width:auto;filter:invert(1) brightness(0.6);margin-bottom:1rem;display:block;">
+    <img src="logo_cut_white.png" alt="Need More Space Studio" class="foot-logo-img">
     <p class="foot-tag">สตูดิโอออกแบบและบริหารโปรเจกต์ Turnkey<br>กรุงเทพฯ และปริมณฑล</p>
     <div class="foot-social">
       <a href="https://www.instagram.com/needmorespace.studio" target="_blank" class="soc" title="Instagram"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
