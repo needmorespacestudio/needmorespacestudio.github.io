@@ -46,7 +46,7 @@ body{background:var(--white);color:var(--ink);font-family:var(--sans);font-weigh
   border-bottom:1px solid rgba(184,152,96,0.12);
 }
 .nav-logo{display:flex;align-items:center;text-decoration:none;}
-.nav-logo img{height:30px;width:auto;transition:opacity 0.3s;mix-blend-mode:multiply;}
+.nav-logo img{height:30px;width:auto;transition:opacity 0.3s;filter:invert(1);}
 .nav-logo img:hover{opacity:0.7;}
 .nav-links{display:flex;align-items:center;gap:2.8rem;list-style:none;}
 .nav-links a{
@@ -373,19 +373,21 @@ body{background:var(--white);color:var(--ink);font-family:var(--sans);font-weigh
 .badges{display:flex;gap:0.5rem;flex-wrap:wrap;}
 .badge{font-size:0.72rem;letter-spacing:0.1em;text-transform:uppercase;border:1px solid rgba(184,152,96,0.22);color:rgba(212,176,122,0.8);padding:0.35rem 0.8rem;}
 
-/* ── PRICING ── */
-.pricing-block{margin-top:2.5rem;padding:1.8rem;background:var(--white);border-top:2px solid var(--gold);}
-.pricing-label{font-size:0.68rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:1.2rem;}
-.pricing-grid{display:flex;gap:0;margin-bottom:1.2rem;}
-.pricing-item{flex:1;padding-right:1.5rem;}
-.pricing-item+.pricing-item{padding-left:1.5rem;padding-right:0;border-left:1px solid rgba(184,152,96,0.2);}
-.pricing-service{font-size:0.72rem;color:var(--muted);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:0.5rem;}
-.pricing-num{font-family:var(--serif);font-size:1.6rem;color:var(--dark);line-height:1;}
-.pricing-unit{font-size:0.72rem;font-family:var(--sans);color:var(--muted);margin-left:0.15rem;font-weight:300;}
-.pricing-note{font-size:0.76rem;color:var(--gold);margin-top:0.35rem;}
-.pricing-sub{font-size:0.76rem;color:var(--muted);padding-top:0.9rem;border-top:1px solid rgba(184,152,96,0.12);}
-.pricing-sub a{color:var(--gold);text-decoration:none;}
-.pricing-sub a:hover{text-decoration:underline;}
+/* ── OFFER BLOCK ── */
+.offer-block{margin-top:2.5rem;padding:2rem;background:var(--dark);border-top:2px solid var(--gold);}
+.offer-label{font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:1rem;}
+.offer-title{font-family:var(--serif);font-size:1.4rem;font-weight:400;color:var(--white);line-height:1.2;margin-bottom:0.4rem;}
+.offer-th{font-family:var(--serif-th);font-size:0.82rem;color:rgba(253,250,246,0.4);margin-bottom:1.2rem;line-height:1.7;font-weight:300;}
+.offer-rule{height:1px;background:rgba(184,152,96,0.15);margin-bottom:1.2rem;}
+.offer-stat-row{display:flex;align-items:center;gap:1rem;margin-bottom:1.2rem;}
+.offer-pct{font-family:var(--serif);font-size:2rem;font-weight:400;color:var(--gold);line-height:1;flex-shrink:0;}
+.offer-stat-copy{font-size:0.78rem;color:rgba(253,250,246,0.45);line-height:1.6;}
+.offer-body{font-family:var(--serif-th);font-size:0.85rem;color:rgba(253,250,246,0.5);line-height:1.9;margin-bottom:1.2rem;font-weight:300;}
+.offer-body em{font-style:italic;color:var(--gold2);font-family:var(--serif);}
+.offer-price-row{display:flex;align-items:baseline;gap:0.4rem;margin-bottom:1.5rem;flex-wrap:wrap;}
+.offer-from{font-size:0.75rem;color:rgba(253,250,246,0.38);}
+.offer-num{font-family:var(--serif);font-size:1.8rem;color:var(--gold);line-height:1;}
+.offer-of{font-size:0.75rem;color:rgba(253,250,246,0.38);}
 
 /* ── CTA ── */
 .cta-block{
@@ -464,7 +466,7 @@ footer{
   .how{padding:5rem 2rem;}
   .why{padding:5rem 2rem;}
   .trust{padding:5rem 2rem;}
-  .cta-block{padding:5rem 2rem;}.pricing-grid{flex-direction:column;gap:1rem;}.pricing-item+.pricing-item{border-left:none;padding-left:0;border-top:1px solid rgba(184,152,96,0.18);padding-top:1rem;}
+  .cta-block{padding:5rem 2rem;}
   footer{padding:3rem 2rem;}
   .proj-card{flex:0 0 220px!important;}
 }
@@ -484,14 +486,13 @@ footer{
 
 <!-- ── NAV ── -->
 <nav class="nav" id="nav">
-  <a href="#" class="nav-logo"><img src="logo_dark.png" alt="Need More Space Studio"></a>
+  <a href="#" class="nav-logo"><img src="logo_cut_white.png" alt="Need More Space Studio"></a>
   <ul class="nav-links">
     <li><a href="#projects">Projects</a></li>
     <li><a href="#process">Process</a></li>
     <li><a href="#why">Why Us</a></li>
-    <li><a href="#team">Team</a></li>
   </ul>
-  <a href="contact.html" class="nav-btn">นัดปรึกษาฟรี</a>
+  <a href="contact.html" class="nav-btn">ปรึกษากับเรา</a>
   <button class="burger" id="burger"><span></span><span></span><span></span></button>
 </nav>
 
@@ -500,8 +501,7 @@ footer{
   <a href="#projects" onclick="closeD()">Projects</a>
   <a href="#process" onclick="closeD()">Process</a>
   <a href="#why" onclick="closeD()">Why Us</a>
-  <a href="#team" onclick="closeD()">Team</a>
-  <a href="contact.html" style="color:var(--gold)">นัดปรึกษาฟรี →</a>
+  <a href="contact.html" style="color:var(--gold)">ปรึกษากับเรา →</a>
 </div>
 
 <!-- ── 1. HERO ── -->
@@ -514,7 +514,7 @@ footer{
     <p class="hero-sub">สร้างพื้นที่ที่สะท้อนความสำเร็จของคุณ ในงบที่ล็อกไว้ตั้งแต่วันแรก</p>
     <p class="hero-p">เราทำหน้าที่เป็น "ผู้จัดการโปรเจกต์ส่วนตัว" ของคุณ ดูแลทุกขั้นตอนตั้งแต่คิดคอนเซปต์จนส่งมอบบ้าน คุณมีหน้าที่แค่เลือกแบบที่ชอบ</p>
     <div class="hero-actions">
-      <a href="contact.html" class="btn-dark">นัดปรึกษาหน้างานฟรี</a>
+      <a href="contact.html" class="btn-dark">ปรึกษากับเรา ฟรี</a>
       <a href="#projects" class="btn-ghost">ดูผลงาน</a>
     </div>
     <a href="https://drive.google.com/file/d/1PbGq4iaoKzgGuZ-4D4RdVw2q7iaHJPlI/view" target="_blank" class="hero-lead">
@@ -693,26 +693,27 @@ footer{
           <div class="why-icon">◈</div>
           <div>
             <div class="why-card-title">Limited Queue · Maximum Care</div>
-            <div class="why-card-th">จำกัด 10 โปรเจกต์/ปี เพื่อมาตรฐานสูงสุด</div>
-            <p class="why-card-p">เราดูแลทุกโปรเจกต์อย่างใส่ใจ ไม่รับงานเกินกำลัง เพื่อให้คุณได้มาตรฐานสูงสุด · รับเฉพาะกรุงเทพฯ และปริมณฑล</p>
+            <p class="why-card-p">เราเชื่อว่าบ้านที่ดีต้องเกิดจากการดูแลที่ทั่วถึง เราจึงจำกัดคิวรับงานเพื่อไม่ให้เกินกำลังความดูแล เพื่อให้มั่นใจว่าเราจะสามารถควบคุมมาตรฐานการก่อสร้างได้ดีที่สุด และส่งมอบผลลัพธ์ที่ทำให้คุณสบายใจได้อย่างแท้จริง</p>
           </div>
         </div>
       </div>
-      <!-- Pricing signal -->
-      <div class="pricing-block reveal d1">
-        <div class="pricing-label">Starting Price</div>
-        <div class="pricing-grid">
-          <div class="pricing-item">
-            <div class="pricing-service">Design Fee</div>
-            <div class="pricing-num">1,000<span class="pricing-unit">฿/ตร.ม.</span></div>
-          </div>
-          <div class="pricing-item">
-            <div class="pricing-service">Turnkey (ออกแบบ + ก่อสร้าง)</div>
-            <div class="pricing-num">12,000+<span class="pricing-unit">฿/ตร.ม.</span></div>
-            <div class="pricing-note">ลดค่าออกแบบ 35% ทันที</div>
-          </div>
+      <!-- Offer block -->
+      <div class="offer-block reveal d1">
+        <div class="offer-label">บริการของเรา</div>
+        <h3 class="offer-title">Premium Design &<br>Turnkey Management</h3>
+        <div class="offer-th">บริการออกแบบและบริหารงานก่อสร้างแบบเบ็ดเสร็จ</div>
+        <div class="offer-rule"></div>
+        <div class="offer-stat-row">
+          <span class="offer-pct">90%</span>
+          <span class="offer-stat-copy">ของเจ้าของบ้านพบปัญหา — งบบานปลาย ช่างไม่ตรงเวลา ผลลัพธ์ไม่ตรงปก</span>
         </div>
-        <div class="pricing-sub">รับเฉพาะ กทม. และปริมณฑล · <a href="contact.html">นัดปรึกษาเพื่อรับใบเสนอราคา →</a></div>
+        <p class="offer-body">เราทำหน้าที่เป็น <em>Project Orchestrator</em> ส่วนตัวของคุณ ดูแลตั้งแต่คอนเซปต์ คัดผู้รับเหมา ล็อกงบ ตรวจงานก่อสร้าง จนส่งมอบบ้านพร้อมอยู่ — คุณมีหน้าที่แค่เลือกแบบที่ชอบ</p>
+        <div class="offer-price-row">
+          <span class="offer-from">เริ่มต้นเพียง</span>
+          <span class="offer-num">5%</span>
+          <span class="offer-of">ของมูลค่าโครงการ</span>
+        </div>
+        <a href="contact.html" class="btn-dark" style="display:inline-block;">ปรึกษากับเรา ฟรี</a>
       </div>
     </div>
     <div class="why-visual reveal d2">
@@ -779,7 +780,7 @@ footer{
     <h2 class="cta-h">พร้อมเริ่ม<br><em>โปรเจกต์ของคุณ?</em></h2>
     <p class="cta-sub">เราลงพื้นที่สำรวจด้วยตัวเอง รับฟังความต้องการ<br>และวางแผนงบประมาณให้ก่อน — ไม่มีข้อผูกมัด</p>
     <div class="cta-btns">
-      <a href="contact.html" class="btn-gold">นัดปรึกษาหน้างานฟรี</a>
+      <a href="contact.html" class="btn-gold">ปรึกษากับเรา ฟรี</a>
       <a href="https://drive.google.com/file/d/1PbGq4iaoKzgGuZ-4D4RdVw2q7iaHJPlI/view" target="_blank" class="btn-ghost2">ดาวน์โหลด Budget Guide ฟรี</a>
     </div>
   </div>
@@ -824,7 +825,7 @@ footer{
       <li><a href="https://lin.ee/uWnOGsX" target="_blank">Line OA</a></li>
     </ul>
     <div style="margin-top:1.5rem;">
-      <a href="contact.html" class="btn-gold" style="font-size:0.62rem;padding:0.6rem 1.2rem;">นัดปรึกษาฟรี</a>
+      <a href="contact.html" class="btn-gold" style="font-size:0.62rem;padding:0.6rem 1.2rem;">ปรึกษากับเรา</a>
     </div>
   </div>
   <div class="foot-bottom">

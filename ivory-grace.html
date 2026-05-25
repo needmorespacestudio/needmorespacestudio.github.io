@@ -493,7 +493,7 @@ footer {
 <nav id="navbar">
   <a href="index.html" class="nav-back">กลับหน้าหลัก</a>
   <a href="index.html" class="nav-logo"><img src="logo_cut_white.png" alt="Need More Space Studio" style="height:34px;width:auto;"></a>
-  <a href="https://lin.ee/uWnOGsX" target="_blank" class="nav-cta">ปรึกษาฟรี</a>
+  <a href="https://lin.ee/uWnOGsX" target="_blank" class="nav-cta">ปรึกษากับเรา</a>
 </nav>
 
 <!-- HERO -->
@@ -675,10 +675,10 @@ footer {
     ที่ <em>สะท้อนตัวตนคุณ?</em>
   </h2>
   <p class="cta-sub reveal reveal-delay-1">
-    นัดปรึกษาฟรี ไม่มีข้อผูกมัด<br>รับคิวจำกัดเพื่อรักษามาตรฐานสูงสุด
+    ปรึกษากับเรา ฟรี ไม่มีข้อผูกมัด<br>รับคิวจำกัดเพื่อรักษามาตรฐานสูงสุด
   </p>
   <div class="cta-buttons reveal reveal-delay-2">
-    <a href="https://lin.ee/uWnOGsX" target="_blank" class="btn-gold">รับคำปรึกษาฟรี</a>
+    <a href="https://lin.ee/uWnOGsX" target="_blank" class="btn-gold">ปรึกษากับเรา ฟรี</a>
     <a href="index.html#projects" class="btn-outline">ดูผลงานอื่น →</a>
   </div>
 </section>
@@ -713,6 +713,40 @@ footer {
     });
   }, { threshold: 0.1 });
   reveals.forEach(el => observer.observe(el));
+</script>
+
+<!-- LIGHTBOX -->
+<div id="lightbox" style="position:fixed;inset:0;z-index:9999;background:rgba(0,0,0,0.96);display:flex;align-items:center;justify-content:center;opacity:0;pointer-events:none;transition:opacity 0.3s;">
+  <button id="lb-close" style="position:absolute;top:1.5rem;right:2rem;background:none;border:none;color:rgba(255,255,255,0.7);font-size:1.8rem;cursor:pointer;line-height:1;padding:0.5rem;">✕</button>
+  <button id="lb-prev" style="position:absolute;left:1.5rem;top:50%;transform:translateY(-50%);background:none;border:1px solid rgba(255,255,255,0.2);color:rgba(255,255,255,0.7);font-size:1.3rem;cursor:pointer;padding:0.8rem 1.1rem;transition:opacity 0.2s;">←</button>
+  <div style="display:flex;flex-direction:column;align-items:center;max-width:92vw;">
+    <img id="lb-img" src="" alt="" style="max-width:88vw;max-height:82vh;object-fit:contain;display:block;">
+    <div id="lb-cap" style="font-size:0.62rem;letter-spacing:0.22em;text-transform:uppercase;color:rgba(255,255,255,0.35);margin-top:0.9rem;"></div>
+  </div>
+  <button id="lb-next" style="position:absolute;right:1.5rem;top:50%;transform:translateY(-50%);background:none;border:1px solid rgba(255,255,255,0.2);color:rgba(255,255,255,0.7);font-size:1.3rem;cursor:pointer;padding:0.8rem 1.1rem;transition:opacity 0.2s;">→</button>
+</div>
+<script>
+(function(){
+  var lb=document.getElementById('lightbox'),lbImg=document.getElementById('lb-img'),lbCap=document.getElementById('lb-cap');
+  var lbPrev=document.getElementById('lb-prev'),lbNext=document.getElementById('lb-next'),lbClose=document.getElementById('lb-close');
+  var items=[],cur=0;
+  document.querySelectorAll('.img-wrap').forEach(function(wrap){
+    var img=wrap.querySelector('img');if(!img)return;
+    var tag=wrap.querySelector('.room-tag');
+    var idx=items.length;
+    items.push({src:img.src,cap:tag?tag.textContent.trim():''});
+    wrap.style.cursor='pointer';
+    wrap.addEventListener('click',function(){open(idx);});
+  });
+  function open(i){cur=i;lb.style.opacity='1';lb.style.pointerEvents='auto';show();}
+  function close(){lb.style.opacity='0';lb.style.pointerEvents='none';}
+  function show(){lbImg.src=items[cur].src;lbCap.textContent=items[cur].cap;lbPrev.style.opacity=cur>0?'1':'0.2';lbNext.style.opacity=cur<items.length-1?'1':'0.2';}
+  lbClose.addEventListener('click',close);
+  lb.addEventListener('click',function(e){if(e.target===lb)close();});
+  lbPrev.addEventListener('click',function(e){e.stopPropagation();if(cur>0){cur--;show();}});
+  lbNext.addEventListener('click',function(e){e.stopPropagation();if(cur<items.length-1){cur++;show();}});
+  document.addEventListener('keydown',function(e){if(lb.style.opacity==='1'){if(e.key==='Escape')close();else if(e.key==='ArrowLeft'&&cur>0){cur--;show();}else if(e.key==='ArrowRight'&&cur<items.length-1){cur++;show();}}});
+})();
 </script>
 </body>
 </html>
