@@ -10,7 +10,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Noto+Serif+Thai:wght@300;400;500&family=Jost:wght@200;300;400&display=swap" rel="stylesheet">
 <style>
 :root {
-  --ivory:#FDFAF5;--cream:#F5F0E8;--warm:#EDE8DF;--muted:#8C8478;--stone:#6B6560;
+  --ivory:#FDFAF5;--cream:#F5F0E8;--warm:#EDE8DF;--sand:#E5DDD1;--muted:#8C8478;--stone:#6B6560;
   --bark:#2C2416;--charcoal:#1A1814;--gold:#B8975A;--gold-light:#D4AF7A;
   --border:rgba(184,151,90,0.2);
   --serif:'Cormorant Garamond',serif;--serif-th:'Noto Serif Thai',serif;--sans:'Jost',sans-serif;
@@ -81,11 +81,27 @@ textarea{resize:vertical;min-height:100px;}
 .btn-back{display:inline-block;font-size:0.7rem;letter-spacing:0.16em;text-transform:uppercase;color:var(--bark);padding:0.9rem 2rem;text-decoration:none;border:1px solid var(--border);transition:all 0.3s;}
 .btn-back:hover{border-color:var(--gold);color:var(--gold);}
 
-/* FOOTER */
-footer{background:var(--charcoal);padding:3rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem;border-top:1px solid rgba(255,255,255,0.04);}
-.footer-logo-img{height:26px;width:auto;filter:brightness(0.7);}
-.footer-copy{font-size:0.7rem;color:rgba(255,255,255,0.2);}
+/* FOOTER — same as index.html */
+footer{background:var(--sand);padding:4rem;display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:3rem;}
+.foot-logo-img{height:26px;width:auto;filter:invert(1);margin-bottom:1rem;display:block;}
+.foot-tag{font-family:var(--serif-th);font-size:0.9rem;color:rgba(28,26,22,0.45);line-height:1.9;margin-bottom:1.2rem;}
+.foot-social{display:flex;gap:0.5rem;}
+.soc{width:34px;height:34px;border:1px solid rgba(28,26,22,0.12);display:flex;align-items:center;justify-content:center;text-decoration:none;color:rgba(28,26,22,0.38);transition:all 0.3s;}
+.soc:hover{border-color:var(--gold);color:var(--gold);}
+.foot-h{font-size:0.75rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--gold);margin-bottom:1.2rem;}
+.foot-ul{list-style:none;}
+.foot-ul li{margin-bottom:0.6rem;}
+.foot-ul a{font-size:0.9rem;color:rgba(28,26,22,0.5);text-decoration:none;transition:color 0.3s;}
+.foot-ul a:hover{color:var(--bark);}
+.foot-bottom{grid-column:span 4;border-top:1px solid rgba(28,26,22,0.1);padding-top:2rem;margin-top:1rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;}
+.foot-copy{font-size:0.8rem;color:rgba(28,26,22,0.35);}
+.btn-gold{display:inline-block;font-size:0.85rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--bark);background:var(--gold);padding:1rem 2.4rem;text-decoration:none;text-align:center;transition:background 0.3s;}
+.btn-gold:hover{background:var(--gold-light);}
 
+@media(max-width:1100px){
+  footer{grid-template-columns:1fr 1fr;gap:2.5rem;}
+  .foot-bottom{grid-column:span 2;}
+}
 @media(max-width:900px){
   nav{padding:1rem 1.5rem;}
   .form-hero{grid-template-columns:1fr;gap:3rem;padding:7rem 1.5rem 3rem;}
@@ -96,7 +112,10 @@ footer{background:var(--charcoal);padding:3rem;display:flex;align-items:center;j
   .trust-inner{grid-template-columns:1fr;}
   .trust-item{border-right:none;border-bottom:1px solid rgba(255,255,255,0.07);padding:1.5rem;}
   .trust-item:last-child{border-bottom:none;}
-  footer{padding:2rem 1.5rem;}
+}
+@media(max-width:768px){
+  footer{grid-template-columns:1fr;padding:3rem 2rem;}
+  .foot-bottom{grid-column:span 1;}
 }
 </style>
 </head>
@@ -115,10 +134,9 @@ footer{background:var(--charcoal);padding:3rem;display:flex;align-items:center;j
     <p class="hero-sub">เพื่อให้ทุกโปรเจกต์ได้รับการดูแลอย่างใกล้ชิดที่สุด สตูดิโอของเราจำกัดจำนวนโปรเจกต์ต่อปี</p>
 
     <ul class="promise-list">
-      <li>ภาณุจะติดต่อกลับภายใน 24 ชั่วโมง</li>
+      <li>ทีมงานจะติดต่อกลับภายใน 24 ชม.</li>
       <li>นัดคุยและประเมินโปรเจกต์โดยตรง</li>
       <li>ฟรี ไม่มีค่าใช้จ่าย ไม่มีข้อผูกมัด</li>
-      <li>รับเฉพาะกรุงเทพฯ และปริมณฑล</li>
     </ul>
 
     <img class="project-img-preview" src="kao2.jpg" alt="K.Kao & K.Vow Home — Need More Space Studio" loading="lazy">
@@ -170,6 +188,16 @@ footer{background:var(--charcoal);padding:3rem;display:flex;align-items:center;j
             </select>
           </div>
 
+          <div class="form-group">
+            <label>รูปแบบบริการที่คุณสนใจ <span>*</span></label>
+            <select name="service_type" required>
+              <option value="" disabled selected>เลือกรูปแบบบริการ...</option>
+              <option>ออกแบบตกแต่ง Interior อย่างเดียว</option>
+              <option>ออกแบบ + บริหารงานก่อสร้างครบวงจร</option>
+              <option>ยังไม่แน่ใจ อยากขอคำปรึกษาและประเมินงานก่อน</option>
+            </select>
+          </div>
+
           <div class="form-row">
             <div>
               <label>พื้นที่โดยประมาณ</label>
@@ -212,7 +240,7 @@ footer{background:var(--charcoal);padding:3rem;display:flex;align-items:center;j
       <div class="success-screen" id="successScreen">
         <span class="success-icon">✓</span>
         <h2 class="success-title">ได้รับข้อมูลแล้วครับ</h2>
-        <p class="success-sub">ภาณุจะติดต่อกลับภายใน 24 ชั่วโมง<br>เพื่อนัดคุยและประเมินโปรเจกต์โดยตรง</p>
+        <p class="success-sub">ทีมงานจะติดต่อกลับภายใน 24 ชม.<br>เพื่อนัดคุยและประเมินโปรเจกต์โดยตรง</p>
         <a href="index.html" class="btn-back">← กลับหน้าหลัก</a>
       </div>
     </div>
@@ -237,8 +265,50 @@ footer{background:var(--charcoal);padding:3rem;display:flex;align-items:center;j
 </div>
 
 <footer>
-  <img src="logo_cut_white.png" alt="Need More Space Studio" class="footer-logo-img">
-  <span class="footer-copy">© 2025 Need More Space Studio · Bangkok</span>
+  <div>
+    <img src="logo_cut_white.png" alt="Need More Space Studio" class="foot-logo-img">
+    <p class="foot-tag">สตูดิโอออกแบบและบริหารโปรเจกต์ Turnkey<br>กรุงเทพฯ และปริมณฑล</p>
+    <div class="foot-social">
+      <a href="https://www.instagram.com/needmorespace.studio" target="_blank" class="soc" title="Instagram"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
+      <a href="https://www.facebook.com/profile.php?id=100064759611739" target="_blank" class="soc" title="Facebook"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+      <a href="https://lin.ee/uWnOGsX" target="_blank" class="soc" title="Line"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/></svg></a>
+      <a href="https://linktr.ee/needmorespace.studio" target="_blank" class="soc" title="Linktree">⊕</a>
+    </div>
+  </div>
+  <div>
+    <div class="foot-h">Projects</div>
+    <ul class="foot-ul">
+      <li><a href="kao-vow.html">K.Kao &amp; K.Vow Home</a></li>
+      <li><a href="ivory-grace.html">Ivory &amp; Grace</a></li>
+      <li><a href="harmony-curve.html">Millennium IVF Clinic</a></li>
+      <li><a href="venue-flow.html">Venue Flow Rama 5</a></li>
+      <li><a href="grand-britania.html">Grand Britania</a></li>
+      <li><a href="the-five.html">The Five · Minburi</a></li>
+    </ul>
+  </div>
+  <div>
+    <div class="foot-h">Studio</div>
+    <ul class="foot-ul">
+      <li><a href="index.html#process">Process</a></li>
+      <li><a href="index.html#why">Why Us</a></li>
+      <li><a href="index.html#team">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="https://drive.google.com/file/d/1PbGq4iaoKzgGuZ-4D4RdVw2q7iaHJPlI/view" target="_blank">Free Guide</a></li>
+    </ul>
+  </div>
+  <div>
+    <div class="foot-h">Contact</div>
+    <ul class="foot-ul">
+      <li><a href="mailto:needmorespacestudio@gmail.com">needmorespacestudio@gmail.com</a></li>
+      <li><a href="https://lin.ee/uWnOGsX" target="_blank">Line OA</a></li>
+    </ul>
+    <div style="margin-top:1.5rem;">
+      <a href="contact.html" class="btn-gold" style="font-size:0.62rem;padding:0.6rem 1.2rem;">ปรึกษากับเรา</a>
+    </div>
+  </div>
+  <div class="foot-bottom">
+    <span class="foot-copy">© 2025 Need More Space Studio · Bangkok · All Rights Reserved</span>
+  </div>
 </footer>
 
 <script>
