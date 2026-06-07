@@ -65,6 +65,14 @@ textarea{resize:vertical;min-height:100px;}
 
 .privacy-note{font-size:0.68rem;color:var(--muted);text-align:center;margin-top:1rem;line-height:1.7;}
 
+/* CHECKBOX */
+.check-group{margin-bottom:1.8rem;padding:1.2rem 1.4rem;background:rgba(184,151,90,0.06);border:1px solid rgba(184,151,90,0.2);border-left:3px solid var(--gold);}
+.check-label{display:flex;align-items:flex-start;gap:0.9rem;cursor:pointer;}
+input[type="checkbox"]{width:18px;height:18px;flex-shrink:0;margin-top:0.15rem;accent-color:var(--gold);cursor:pointer;padding:0;border:none;}
+.check-text{font-family:var(--serif-th);font-size:0.9rem;color:var(--charcoal);line-height:1.7;font-weight:300;}
+.check-text strong{font-weight:400;color:var(--gold);}
+.check-sub{display:block;font-size:0.72rem;color:var(--muted);margin-top:0.2rem;line-height:1.5;}
+
 /* TRUST BADGES */
 .trust-strip{background:var(--bark);padding:4rem 3rem;}
 .trust-inner{max-width:1300px;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:0;}
@@ -230,6 +238,16 @@ footer{background:var(--sand);padding:4rem;display:grid;grid-template-columns:1.
               <option>1.5 – 3 ล้านบาท</option>
               <option>3 ล้านบาท ขึ้นไป</option>
             </select>
+          </div>
+
+          <div class="check-group">
+            <label class="check-label">
+              <input type="checkbox" name="site_visit" value="ยินดีนัดหมายทีมงานเข้าสำรวจโครงการ">
+              <span class="check-text">
+                ยินดีนัดหมายทีมงานให้เข้าไปที่โครงการ — <strong>ฟรี ไม่มีค่าใช้จ่าย</strong>
+                <span class="check-sub">ทีมงานจะโทรนัดหมายวันและเวลาที่สะดวกให้คุณก่อนเข้าสำรวจ</span>
+              </span>
+            </label>
           </div>
 
           <button type="submit" class="btn-submit">ส่งข้อมูลให้ประเมินฟรี →</button>
