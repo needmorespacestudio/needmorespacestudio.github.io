@@ -127,6 +127,23 @@ footer{background:var(--sand);padding:4rem;display:grid;grid-template-columns:1.
   .foot-bottom{grid-column:span 1;}
 }
 </style>
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '966270802855166');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=966270802855166&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
 </head>
 <body>
 
@@ -343,6 +360,7 @@ document.getElementById('contactForm').addEventListener('submit', async function
     });
     const result = await response.json();
     if (result.success) {
+      if (typeof fbq !== 'undefined') fbq('track', 'Lead');
       document.getElementById('formContent').style.display = 'none';
       document.getElementById('successScreen').style.display = 'block';
       window.scrollTo({ top: 0, behavior: 'smooth' });
