@@ -61,25 +61,25 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 .dc-meta{font-size:0.8rem;color:var(--muted);letter-spacing:0.04em;}
 
 /* CONTACT PAGE SECTIONS */
-.contact-hero{padding:8rem 3rem 3rem;max-width:1300px;margin:0 auto;}
-.ct-eyebrow{font-size:0.65rem;letter-spacing:0.26em;text-transform:uppercase;color:var(--gold);display:flex;align-items:center;gap:1rem;margin-bottom:1.8rem;}
-.ct-eyebrow::before{content:'';width:40px;height:1px;background:var(--gold);}
-.ct-heading{font-family:var(--serif);font-size:clamp(4rem,9vw,7rem);font-weight:300;color:var(--bark);line-height:0.95;letter-spacing:-0.02em;}
-.ct-heading em{font-style:italic;color:var(--gold);}
-
-.ci-strip{max-width:1300px;margin:0 auto;padding:3.5rem 3rem;border-top:1px solid var(--border);border-bottom:1px solid var(--border);display:grid;grid-template-columns:1fr 1px 1fr 1px 1fr;gap:0 3rem;}
-.ci-sep{background:var(--border);}
-.ci-col{padding:0 0.5rem;}
-.ci-label{font-size:0.63rem;letter-spacing:0.22em;text-transform:uppercase;color:var(--gold);margin-bottom:1.4rem;}
-.ci-phone{display:block;font-family:var(--serif);font-size:2.2rem;font-weight:300;color:var(--bark);text-decoration:none;letter-spacing:-0.02em;line-height:1.1;margin-bottom:0.4rem;transition:color 0.3s;}
-.ci-phone:hover{color:var(--gold);}
-.ci-name{font-size:0.82rem;color:var(--muted);}
-.ci-link{display:block;font-size:0.88rem;color:rgba(44,36,22,0.6);text-decoration:none;margin-bottom:0.6rem;transition:color 0.3s;}
+.contact-hero{padding:8rem 3rem 4rem;max-width:1300px;margin:0 auto;display:grid;grid-template-columns:5fr 7fr;gap:5rem;align-items:start;}
+.ch-eyebrow{font-size:0.63rem;letter-spacing:0.26em;text-transform:uppercase;color:var(--gold);display:flex;align-items:center;gap:1rem;margin-bottom:1.8rem;}
+.ch-eyebrow::before{content:'';width:40px;height:1px;background:var(--gold);}
+.ch-en{font-family:var(--serif);font-size:clamp(3.5rem,6vw,5.5rem);font-weight:300;color:var(--bark);letter-spacing:-0.03em;line-height:1;margin-bottom:0.5rem;}
+.ch-th{font-family:var(--serif-th);font-size:1rem;font-weight:300;color:var(--muted);margin-bottom:3rem;}
+.ch-phone{display:block;font-family:var(--serif);font-size:clamp(1.8rem,3.5vw,2.6rem);font-weight:300;color:var(--bark);text-decoration:none;letter-spacing:-0.02em;line-height:1.1;margin-bottom:0.4rem;transition:color 0.3s;}
+.ch-phone:hover{color:var(--gold);}
+.ch-name{font-size:0.82rem;color:var(--muted);}
+.ch-right{display:flex;flex-direction:column;padding-top:0.5rem;}
+.ci-block{padding:1.8rem 0;border-top:1px solid var(--border);}
+.ci-block:last-child{border-bottom:1px solid var(--border);}
+.ci-label{font-size:0.63rem;letter-spacing:0.22em;text-transform:uppercase;color:var(--gold);margin-bottom:1.2rem;}
+.ci-link{display:block;font-size:0.9rem;color:rgba(44,36,22,0.6);text-decoration:none;margin-bottom:0.55rem;transition:color 0.3s;}
 .ci-link:hover{color:var(--gold);}
-.ci-hours-row{display:flex;align-items:center;gap:0.8rem;}
-.ci-day{font-size:0.8rem;color:var(--muted);flex-shrink:0;}
+.ci-hours-row{display:flex;align-items:center;gap:1rem;}
+.ci-day{font-size:0.88rem;color:var(--bark);}
 .ci-line{flex:1;height:1px;background:var(--border);}
 .ci-time{font-family:var(--serif);font-size:1.35rem;font-weight:300;color:var(--bark);white-space:nowrap;}
+.contact-divider{border-top:1px solid var(--border);}
 
 /* FORM */
 .form-right{}
@@ -149,10 +149,7 @@ footer{background:var(--sand);padding:4rem;display:grid;grid-template-columns:1.
 }
 @media(max-width:900px){
   nav{padding:1rem 1.5rem;}
-  .contact-hero{padding:7rem 1.5rem 2.5rem;}
-  .ci-strip{grid-template-columns:1fr;padding:2.5rem 1.5rem;gap:2rem 0;}
-  .ci-sep{height:1px;width:100%;}
-  .ci-col{padding:0;}
+  .contact-hero{gap:3rem;padding:8rem 2rem 3rem;}
   .form-hero{grid-template-columns:1fr;gap:3rem;padding:3rem 1.5rem 4rem;}
   .project-img-preview{display:none;}
   .form-card{padding:2rem 1.5rem;}
@@ -164,6 +161,7 @@ footer{background:var(--sand);padding:4rem;display:grid;grid-template-columns:1.
   .nav-logo img{height:44px;}
 }
 @media(max-width:768px){
+  .contact-hero{grid-template-columns:1fr;gap:2rem;padding:7rem 1.5rem 2.5rem;}
   footer{grid-template-columns:1fr;padding:3rem 2rem;}
   .foot-bottom{grid-column:span 1;}
 }
@@ -203,33 +201,31 @@ gtag('config','G-ER5X88Q7QV');
 </nav>
 
 <div class="contact-hero">
-  <div class="ct-eyebrow">Contacts</div>
-  <h1 class="ct-heading">ติดต่อ<br><em>เรา</em></h1>
-</div>
-
-<div class="ci-strip">
-  <div class="ci-col">
-    <div class="ci-label">โทรศัพท์</div>
-    <a href="tel:0905456166" class="ci-phone">090-545-6166</a>
-    <div class="ci-name">คุณ ภาณุพงษ์</div>
+  <div class="ch-left">
+    <div class="ch-eyebrow">Contacts</div>
+    <h1 class="ch-en">Contact</h1>
+    <div class="ch-th">ติดต่อเรา</div>
+    <a href="tel:0905456166" class="ch-phone">090-545-6166</a>
+    <div class="ch-name">คุณ ภาณุพงษ์</div>
   </div>
-  <div class="ci-sep"></div>
-  <div class="ci-col">
-    <div class="ci-label">ช่องทางติดต่อ</div>
-    <a href="https://lin.ee/uWnOGsX" target="_blank" class="ci-link">Line OA</a>
-    <a href="mailto:needmorespacestudio@gmail.com" class="ci-link">needmorespacestudio@gmail.com</a>
-    <a href="https://www.instagram.com/needmorespace.studio" target="_blank" class="ci-link">Instagram</a>
-  </div>
-  <div class="ci-sep"></div>
-  <div class="ci-col">
-    <div class="ci-label">เวลาทำการ</div>
-    <div class="ci-hours-row">
-      <span class="ci-day">จันทร์–ศุกร์</span>
-      <span class="ci-line"></span>
-      <span class="ci-time">9:00 — 18:00</span>
+  <div class="ch-right">
+    <div class="ci-block">
+      <div class="ci-label">ช่องทางติดต่อ</div>
+      <a href="https://lin.ee/uWnOGsX" target="_blank" class="ci-link">Line OA</a>
+      <a href="mailto:needmorespacestudio@gmail.com" class="ci-link">needmorespacestudio@gmail.com</a>
+      <a href="https://www.instagram.com/needmorespace.studio" target="_blank" class="ci-link">Instagram</a>
+    </div>
+    <div class="ci-block">
+      <div class="ci-label">เวลาทำการ</div>
+      <div class="ci-hours-row">
+        <span class="ci-day">จันทร์–ศุกร์</span>
+        <span class="ci-line"></span>
+        <span class="ci-time">9:00 — 18:00</span>
+      </div>
     </div>
   </div>
 </div>
+<div class="contact-divider"></div>
 
 <div class="form-hero">
   <div class="form-left">
