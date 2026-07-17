@@ -14,7 +14,7 @@
 <meta property="og:image" content="https://www.needmorespacestudio.com/liv%20final%2002.png">
 <meta property="og:locale" content="th_TH">
 <meta property="og:site_name" content="Need More Space Studio">
-<title>เริ่มต้นโปรเจกต์ | Need More Space Studio</title>
+<title>ติดต่อเรา | Need More Space Studio</title>
 <meta name="description" content="กรอกข้อมูลเบื้องต้น — ภาณุจะติดต่อกลับภายใน 24 ชั่วโมง ฟรี ไม่มีข้อผูกมัด">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -40,7 +40,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 .nav-back:hover{color:var(--gold);}
 
 /* HERO */
-.form-hero{padding:8rem 3rem 4rem;display:grid;grid-template-columns:1fr 1fr;gap:6rem;align-items:start;max-width:1300px;margin:0 auto;}
+.form-hero{padding:4rem 3rem 5rem;display:grid;grid-template-columns:1fr 1fr;gap:6rem;align-items:start;max-width:1300px;margin:0 auto;}
 .form-left{}
 .hero-eyebrow{font-size:0.68rem;letter-spacing:0.26em;text-transform:uppercase;color:var(--gold);display:flex;align-items:center;gap:1rem;margin-bottom:2rem;}
 .hero-eyebrow::before{content:'';width:40px;height:1px;background:var(--gold);}
@@ -59,6 +59,27 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 .dc-phone{display:block;font-family:var(--serif);font-size:2.4rem;font-weight:300;color:var(--bark);text-decoration:none;letter-spacing:-0.02em;transition:color 0.3s;line-height:1.1;margin-bottom:0.4rem;}
 .dc-phone:hover{color:var(--gold);}
 .dc-meta{font-size:0.8rem;color:var(--muted);letter-spacing:0.04em;}
+
+/* CONTACT PAGE SECTIONS */
+.contact-hero{padding:8rem 3rem 3rem;max-width:1300px;margin:0 auto;}
+.ct-eyebrow{font-size:0.65rem;letter-spacing:0.26em;text-transform:uppercase;color:var(--gold);display:flex;align-items:center;gap:1rem;margin-bottom:1.8rem;}
+.ct-eyebrow::before{content:'';width:40px;height:1px;background:var(--gold);}
+.ct-heading{font-family:var(--serif);font-size:clamp(4rem,9vw,7rem);font-weight:300;color:var(--bark);line-height:0.95;letter-spacing:-0.02em;}
+.ct-heading em{font-style:italic;color:var(--gold);}
+
+.ci-strip{max-width:1300px;margin:0 auto;padding:3.5rem 3rem;border-top:1px solid var(--border);border-bottom:1px solid var(--border);display:grid;grid-template-columns:1fr 1px 1fr 1px 1fr;gap:0 3rem;}
+.ci-sep{background:var(--border);}
+.ci-col{padding:0 0.5rem;}
+.ci-label{font-size:0.63rem;letter-spacing:0.22em;text-transform:uppercase;color:var(--gold);margin-bottom:1.4rem;}
+.ci-phone{display:block;font-family:var(--serif);font-size:2.2rem;font-weight:300;color:var(--bark);text-decoration:none;letter-spacing:-0.02em;line-height:1.1;margin-bottom:0.4rem;transition:color 0.3s;}
+.ci-phone:hover{color:var(--gold);}
+.ci-name{font-size:0.82rem;color:var(--muted);}
+.ci-link{display:block;font-size:0.88rem;color:rgba(44,36,22,0.6);text-decoration:none;margin-bottom:0.6rem;transition:color 0.3s;}
+.ci-link:hover{color:var(--gold);}
+.ci-hours-row{display:flex;align-items:center;gap:0.8rem;}
+.ci-day{font-size:0.8rem;color:var(--muted);flex-shrink:0;}
+.ci-line{flex:1;height:1px;background:var(--border);}
+.ci-time{font-family:var(--serif);font-size:1.35rem;font-weight:300;color:var(--bark);white-space:nowrap;}
 
 /* FORM */
 .form-right{}
@@ -128,7 +149,11 @@ footer{background:var(--sand);padding:4rem;display:grid;grid-template-columns:1.
 }
 @media(max-width:900px){
   nav{padding:1rem 1.5rem;}
-  .form-hero{grid-template-columns:1fr;gap:3rem;padding:7rem 1.5rem 3rem;}
+  .contact-hero{padding:7rem 1.5rem 2.5rem;}
+  .ci-strip{grid-template-columns:1fr;padding:2.5rem 1.5rem;gap:2rem 0;}
+  .ci-sep{height:1px;width:100%;}
+  .ci-col{padding:0;}
+  .form-hero{grid-template-columns:1fr;gap:3rem;padding:3rem 1.5rem 4rem;}
   .project-img-preview{display:none;}
   .form-card{padding:2rem 1.5rem;}
   .form-row{grid-template-columns:1fr;}
@@ -177,10 +202,39 @@ gtag('config','G-ER5X88Q7QV');
   <span style="width:120px;"></span>
 </nav>
 
+<div class="contact-hero">
+  <div class="ct-eyebrow">Contacts</div>
+  <h1 class="ct-heading">ติดต่อ<br><em>เรา</em></h1>
+</div>
+
+<div class="ci-strip">
+  <div class="ci-col">
+    <div class="ci-label">โทรศัพท์</div>
+    <a href="tel:0905456166" class="ci-phone">090-545-6166</a>
+    <div class="ci-name">คุณ ภาณุพงษ์</div>
+  </div>
+  <div class="ci-sep"></div>
+  <div class="ci-col">
+    <div class="ci-label">ช่องทางติดต่อ</div>
+    <a href="https://lin.ee/uWnOGsX" target="_blank" class="ci-link">Line OA</a>
+    <a href="mailto:needmorespacestudio@gmail.com" class="ci-link">needmorespacestudio@gmail.com</a>
+    <a href="https://www.instagram.com/needmorespace.studio" target="_blank" class="ci-link">Instagram</a>
+  </div>
+  <div class="ci-sep"></div>
+  <div class="ci-col">
+    <div class="ci-label">เวลาทำการ</div>
+    <div class="ci-hours-row">
+      <span class="ci-day">จันทร์–ศุกร์</span>
+      <span class="ci-line"></span>
+      <span class="ci-time">9:00 — 18:00</span>
+    </div>
+  </div>
+</div>
+
 <div class="form-hero">
   <div class="form-left">
-    <div class="hero-eyebrow">Start Your Project</div>
-    <h1 class="hero-title">Let's Start<br>Your <em>Project</em></h1>
+    <div class="hero-eyebrow">กรอกแบบฟอร์ม</div>
+    <h2 class="hero-title">นัดพูดคุย<br>กับ <em>เรา</em></h2>
     <p class="hero-sub">เพื่อให้ทุกโปรเจกต์ได้รับการดูแลอย่างใกล้ชิดที่สุด สตูดิโอของเราจำกัดจำนวนโปรเจกต์ต่อปี</p>
 
     <ul class="promise-list">
@@ -188,12 +242,6 @@ gtag('config','G-ER5X88Q7QV');
       <li>นัดคุยและประเมินโปรเจกต์โดยตรง</li>
       <li>ฟรี ไม่มีค่าใช้จ่าย ไม่มีข้อผูกมัด</li>
     </ul>
-
-    <div class="direct-contact">
-      <div class="dc-label">ติดต่อโดยตรง</div>
-      <a href="tel:0905456166" class="dc-phone">090-545-6166</a>
-      <div class="dc-meta">คุณ ภาณุพงษ์ · จ.–ศ. 9:00–18:00</div>
-    </div>
 
     <img class="project-img-preview" src="ig%20fb1.png" alt="Need More Space Studio — Interior Design" loading="lazy">
   </div>
