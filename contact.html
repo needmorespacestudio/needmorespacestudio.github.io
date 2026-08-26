@@ -61,24 +61,24 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 .dc-meta{font-size:0.8rem;color:var(--muted);letter-spacing:0.04em;}
 
 /* CONTACT PAGE SECTIONS */
-.contact-hero{padding:8rem 3rem 4rem;max-width:1300px;margin:0 auto;display:grid;grid-template-columns:5fr 7fr;gap:5rem;align-items:start;}
-.ch-eyebrow{font-size:0.63rem;letter-spacing:0.26em;text-transform:uppercase;color:var(--gold);display:flex;align-items:center;gap:1rem;margin-bottom:1.8rem;}
+.contact-hero{padding:8rem 3rem 4rem;max-width:1300px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:6rem;align-items:start;}
+.ch-eyebrow{font-size:0.62rem;letter-spacing:0.28em;text-transform:uppercase;color:var(--gold);display:flex;align-items:center;gap:1rem;margin-bottom:1.5rem;}
 .ch-eyebrow::before{content:'';width:40px;height:1px;background:var(--gold);}
-.ch-en{font-family:var(--serif);font-size:clamp(3.5rem,6vw,5.5rem);font-weight:300;color:var(--bark);letter-spacing:-0.03em;line-height:1;margin-bottom:0.5rem;}
-.ch-th{font-family:var(--serif-th);font-size:1rem;font-weight:300;color:var(--muted);margin-bottom:3rem;}
-.ch-phone{display:block;font-family:var(--serif);font-size:clamp(1.8rem,3.5vw,2.6rem);font-weight:300;color:var(--bark);text-decoration:none;letter-spacing:-0.02em;line-height:1.1;margin-bottom:0.4rem;transition:color 0.3s;}
+.ch-en{font-family:var(--serif);font-size:clamp(2.8rem,5vw,4.5rem);font-weight:300;color:var(--bark);letter-spacing:-0.03em;line-height:1;margin-bottom:2.5rem;}
+.ch-divider{width:100%;height:1px;background:var(--border);margin-bottom:2.5rem;}
+.ch-phone{display:block;font-family:var(--serif);font-size:clamp(2rem,3.5vw,2.8rem);font-weight:300;color:var(--charcoal);text-decoration:none;letter-spacing:-0.02em;line-height:1.1;margin-bottom:0.5rem;transition:color 0.3s;}
 .ch-phone:hover{color:var(--gold);}
-.ch-name{font-size:0.82rem;color:var(--muted);}
-.ch-right{display:flex;flex-direction:column;padding-top:0.5rem;}
-.ci-block{padding:1.8rem 0;border-top:1px solid var(--border);}
+.ch-name{font-size:0.88rem;color:var(--bark);letter-spacing:0.03em;}
+.ch-right{display:flex;flex-direction:column;}
+.ci-block{padding:2rem 0;border-top:1px solid var(--border);}
 .ci-block:last-child{border-bottom:1px solid var(--border);}
-.ci-label{font-size:0.63rem;letter-spacing:0.22em;text-transform:uppercase;color:var(--gold);margin-bottom:1.2rem;}
-.ci-link{display:block;font-size:0.9rem;color:rgba(44,36,22,0.6);text-decoration:none;margin-bottom:0.55rem;transition:color 0.3s;}
-.ci-link:hover{color:var(--gold);}
-.ci-hours-row{display:flex;align-items:center;gap:1rem;}
-.ci-day{font-size:0.88rem;color:var(--bark);}
+.ci-label{font-size:0.62rem;letter-spacing:0.22em;text-transform:uppercase;color:var(--gold);margin-bottom:1.2rem;}
+.ci-link{display:block;font-size:0.92rem;color:var(--bark);text-decoration:none;margin-bottom:0.6rem;transition:color 0.3s;opacity:0.82;}
+.ci-link:hover{color:var(--gold);opacity:1;}
+.ci-hours-row{display:flex;align-items:center;gap:1.2rem;max-width:300px;}
+.ci-day{font-size:0.85rem;color:var(--stone);white-space:nowrap;}
 .ci-line{flex:1;height:1px;background:var(--border);}
-.ci-time{font-family:var(--serif);font-size:1.35rem;font-weight:300;color:var(--bark);white-space:nowrap;}
+.ci-time{font-family:var(--serif);font-size:1.5rem;font-weight:300;color:var(--charcoal);white-space:nowrap;}
 .contact-divider{border-top:1px solid var(--border);}
 
 /* FORM */
@@ -204,7 +204,7 @@ gtag('config','G-ER5X88Q7QV');
   <div class="ch-left">
     <div class="ch-eyebrow">Contacts</div>
     <h1 class="ch-en">Contact</h1>
-    <div class="ch-th">ติดต่อเรา</div>
+    <div class="ch-divider"></div>
     <a href="tel:0905456166" class="ch-phone">090-545-6166</a>
     <div class="ch-name">คุณ ภาณุพงษ์</div>
   </div>
