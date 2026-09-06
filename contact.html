@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="th">
 <head>
 <meta charset="UTF-8">
@@ -163,6 +163,7 @@ footer{background:var(--sand);padding:4rem;display:grid;grid-template-columns:1.
   footer{grid-template-columns:1fr;padding:3rem 2rem;}
   .foot-bottom{grid-column:span 1;}
 }
+img{-webkit-user-drag:none;pointer-events:none;}.img-wrap,.proj-img-wrap,.pgm-item,.hero,.proj-card{pointer-events:auto;}
 </style>
 <!-- Meta Pixel Code -->
 <script>
@@ -447,5 +448,6 @@ document.getElementById('contactForm').addEventListener('submit', async function
   }
 });
 </script>
+<script>document.addEventListener("contextmenu",e=>e.preventDefault());</script>
 </body>
 </html>

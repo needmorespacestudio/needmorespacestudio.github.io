@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="th">
 <head>
 <meta charset="UTF-8">
@@ -525,6 +525,7 @@ body { background: #F8F5EF; color: #2A2620; }
 footer { background: #D9D0C1; border-top-color: rgba(42,38,32,0.1); }
 .footer-logo { color: rgba(42,38,32,0.45); }
 .footer-copy { color: rgba(42,38,32,0.35); }
+img{-webkit-user-drag:none;pointer-events:none;}.img-wrap,.proj-img-wrap,.pgm-item,.hero,.proj-card{pointer-events:auto;}
 </style>
 <!-- Meta Pixel Code -->
 <script>
@@ -814,5 +815,6 @@ gtag('config','G-ER5X88Q7QV');
   document.addEventListener('keydown',function(e){if(lb.style.opacity==='1'){if(e.key==='Escape')close();else if(e.key==='ArrowLeft'&&cur>0){cur--;show();}else if(e.key==='ArrowRight'&&cur<items.length-1){cur++;show();}}});
 })();
 </script>
+<script>document.addEventListener("contextmenu",e=>e.preventDefault());</script>
 </body>
 </html>

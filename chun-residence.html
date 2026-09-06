@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="th">
 <head>
 <meta charset="UTF-8">
@@ -179,6 +179,7 @@ footer{background:var(--warm);padding:3rem;display:flex;align-items:center;justi
   .g-2{grid-template-columns:1fr;}
   .hero-meta{gap:1.5rem;}
 }
+img{-webkit-user-drag:none;pointer-events:none;}.img-wrap,.proj-img-wrap,.pgm-item,.hero,.proj-card{pointer-events:auto;}
 </style>
 <!-- Meta Pixel Code -->
 <script>
@@ -520,5 +521,6 @@ gtag('config','G-ER5X88Q7QV');
   document.addEventListener('keydown',function(e){if(lb.style.opacity==='1'){if(e.key==='Escape')close();else if(e.key==='ArrowLeft'&&cur>0){cur--;show();}else if(e.key==='ArrowRight'&&cur<items.length-1){cur++;show();}}});
 })();
 </script>
+<script>document.addEventListener("contextmenu",e=>e.preventDefault());</script>
 </body>
 </html>
