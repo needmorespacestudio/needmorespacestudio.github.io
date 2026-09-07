@@ -679,6 +679,15 @@ footer{
 }
 .sticky-cta-icon:hover{background:rgba(184,152,96,0.08);}
 @media(max-width:768px){.sticky-cta{display:flex;}}
+/* ── HERO MOBILE REORDER ── */
+@media(max-width:900px){
+  .hero{display:flex!important;flex-direction:column;}
+  .hero-l{display:contents;}
+  .hero-l-top{order:1;padding:5rem 1.5rem 1rem;animation:fadeUp 1.2s ease both;}
+  .hero-r{order:2;}
+  .hero-l-bot{order:3;padding:1.2rem 1.5rem 2.5rem;display:flex;flex-direction:column;gap:0;}
+  .hero-p{display:none;}
+}
 img{-webkit-user-drag:none;pointer-events:none;}.img-wrap,.proj-img-wrap,.pgm-item,.hero,.proj-card{pointer-events:auto;}
 </style>
 </head>
@@ -707,21 +716,25 @@ img{-webkit-user-drag:none;pointer-events:none;}.img-wrap,.proj-img-wrap,.pgm-it
 <!-- ── 1. HERO ── -->
 <section class="hero">
   <div class="hero-l">
-    <div class="hero-pill">Bangkok Interior Studio · Est. 2015</div>
-    <h1 class="hero-h1">
-      งานออกแบบระดับพรีเมียม<br>ที่มาพร้อม<br><em>"ความสะดวกสบาย" 100%</em>
-    </h1>
-    <p class="hero-sub">สร้างพื้นที่ที่สะท้อนตัวตนและวิถีชีวิตของคุณ ภายใต้งบก่อสร้างที่ถูกล็อกไว้ตั้งแต่วันแรก</p>
-    <p class="hero-p">เราไม่ได้ส่งมอบแค่งานดีไซน์ แต่เราเป็น "ที่ปรึกษาและผู้จัดการโปรเจกต์ส่วนตัว" ให้กับคุณตั้งแต่วันแรกจนถึงวันส่งมอบ — คุณมีหน้าที่แค่เลือกแบบที่ชอบ เราดูแลทุกขั้นตอนแทนคุณ ทั้งนี้เพื่อรักษาคุณภาพการดูแล เรารับดูแลโปรเจกต์ในจำนวนจำกัดต่อปีเท่านั้น</p>
-    <div class="hero-actions">
-      <a href="contact.html" class="btn-dark">สมัครคิวประเมินโปรเจกต์</a>
-      <a href="#projects" class="btn-ghost">ดูผลงาน</a>
+    <div class="hero-l-top">
+      <div class="hero-pill">Bangkok Interior Studio · Est. 2015</div>
+      <h1 class="hero-h1">
+        งานออกแบบระดับพรีเมียม<br>ที่มาพร้อม<br><em>"ความสะดวกสบาย" 100%</em>
+      </h1>
     </div>
-    <a href="https://drive.google.com/file/d/1PbGq4iaoKzgGuZ-4D4RdVw2q7iaHJPlI/view" target="_blank" class="hero-lead">
-      <span style="font-size:1.2rem;">📋</span>
-      <span class="hero-lead-text"><strong>ดาวน์โหลดฟรี:</strong> เช็คลิสต์ 7 หลุมพรางงบทำบ้าน</span>
-      <span class="hero-lead-arr">รับเลย →</span>
-    </a>
+    <div class="hero-l-bot">
+      <p class="hero-sub">สร้างพื้นที่ที่สะท้อนตัวตนและวิถีชีวิตของคุณ ภายใต้งบก่อสร้างที่ถูกล็อกไว้ตั้งแต่วันแรก</p>
+      <p class="hero-p">เราไม่ได้ส่งมอบแค่งานดีไซน์ แต่เราเป็น "ที่ปรึกษาและผู้จัดการโปรเจกต์ส่วนตัว" ให้กับคุณตั้งแต่วันแรกจนถึงวันส่งมอบ — คุณมีหน้าที่แค่เลือกแบบที่ชอบ เราดูแลทุกขั้นตอนแทนคุณ ทั้งนี้เพื่อรักษาคุณภาพการดูแล เรารับดูแลโปรเจกต์ในจำนวนจำกัดต่อปีเท่านั้น</p>
+      <div class="hero-actions">
+        <a href="contact.html" class="btn-dark">สมัครคิวประเมินโปรเจกต์</a>
+        <a href="#projects" class="btn-ghost">ดูผลงาน</a>
+      </div>
+      <a href="https://drive.google.com/file/d/1PbGq4iaoKzgGuZ-4D4RdVw2q7iaHJPlI/view" target="_blank" class="hero-lead">
+        <span style="font-size:1.2rem;">📋</span>
+        <span class="hero-lead-text"><strong>ดาวน์โหลดฟรี:</strong> เช็คลิสต์ 7 หลุมพรางงบทำบ้าน</span>
+        <span class="hero-lead-arr">รับเลย →</span>
+      </a>
+    </div>
   </div>
   <div class="hero-r">
     <img class="hero-img" id="heroImg" src="liv%20final%2002.png" alt="Need More Space Studio — Premium Interior Design Bangkok">
