@@ -671,13 +671,14 @@ footer{
   .offer-section{padding:4rem 1.5rem;}
   .cta-block{padding:4rem 1.5rem;}
 }
-@media(max-width:1024px){
-  .proof{padding:3.5rem 2.5rem;}
-  .how{padding:3.5rem 2.5rem;}
-  .why{padding:3.5rem 2.5rem;}
-  .trust{padding:3.5rem 2.5rem;}
-  .offer-section{padding:3.5rem 2.5rem;}
-  .cta-block{padding:3.5rem 2.5rem;}
+@media(min-width:769px) and (max-width:1366px){
+  /* ── TABLET LAYOUT (iPad portrait → iPad Pro landscape) ── */
+  .proof{padding:3.5rem 8%;}
+  .how{padding:3.5rem 8%;}
+  .why{padding:3.5rem 8%;}
+  .trust{padding:3.5rem 8%;}
+  .offer-section{padding:3.5rem 8%;}
+  .cta-block{padding:3.5rem 8%;}
   .section-h{font-size:1.55rem;line-height:1.25;}
   .section-th{font-size:0.88rem;line-height:1.7;}
   .eyebrow{font-size:0.72rem;margin-bottom:0.8rem;}
@@ -696,6 +697,8 @@ footer{
   .offer-price-desc{font-size:0.82rem;line-height:1.75;}
   .offer-coverage{gap:0.6rem;}
   .offer-coverage span{font-size:0.82rem;}
+  /* Founder photo compact on tablet */
+  .trust-founder-block{grid-template-columns:180px 1fr;gap:2.5rem;margin-top:2.5rem;padding-top:2.5rem;}
 }
 @media(max-width:900px){
   .offer-big-pct{font-size:2.2rem;}
