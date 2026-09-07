@@ -306,6 +306,7 @@ body{background:var(--white);color:var(--ink);font-family:var(--sans);font-weigh
   pointer-events:none;z-index:2;
 }
 .proj-dots{display:flex;gap:6px;margin-top:1.5rem;}
+.proj-swipe-hint{display:none;align-items:center;gap:0.5rem;margin-top:0.8rem;font-size:0.68rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--muted);}
 .proj-dot{
   width:20px;height:2px;background:rgba(42,38,32,0.12);
   cursor:pointer;transition:all 0.3s;border:none;padding:0;
@@ -584,7 +585,9 @@ footer{
   .steps-compact{grid-template-columns:1fr;}
   footer{grid-template-columns:1fr;padding-bottom:5rem;}
   .foot-bottom{grid-column:span 1;}
-  .proj-card{flex:0 0 82vw!important;}
+  .proj-card{flex:0 0 70vw!important;}
+  .proj-track-outer::after{display:none;}
+  .proj-swipe-hint{display:flex;}
   .pgm-grid{grid-template-columns:1fr 1fr;grid-template-rows:100px 100px 85px;}
   .pgm-tall{grid-row:auto;}
   .pgm-wide{grid-column:1/3;}
@@ -844,6 +847,10 @@ img{-webkit-user-drag:none;pointer-events:none;}.img-wrap,.proj-img-wrap,.pgm-it
     </div>
     <!-- Dots indicator -->
     <div class="proj-dots" id="projDots"></div>
+    <div class="proj-swipe-hint">
+      <span>เลื่อนดูโปรเจคทั้งหมด</span>
+      <span>→</span>
+    </div>
   </div>
 </section>
 <section class="how" id="process">
