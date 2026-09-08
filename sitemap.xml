@@ -2,49 +2,61 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://www.needmorespacestudio.com/</loc>
-    <lastmod>2026-07-13</lastmod>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://www.needmorespacestudio.com/contact.html</loc>
-    <lastmod>2026-07-13</lastmod>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.needmorespacestudio.com/kao-vow.html</loc>
-    <lastmod>2026-07-13</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://www.needmorespacestudio.com/ivory-grace.html</loc>
-    <lastmod>2026-07-13</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.needmorespacestudio.com/harmony-curve.html</loc>
-    <lastmod>2026-07-13</lastmod>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.needmorespacestudio.com/venue-flow.html</loc>
-    <lastmod>2026-07-13</lastmod>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.needmorespacestudio.com/grand-britania.html</loc>
-    <lastmod>2026-07-13</lastmod>
+    <lastmod>2026-09-08</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.needmorespacestudio.com/harmony-curve.html</loc>
+    <lastmod>2026-09-08</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.needmorespacestudio.com/kao-vow.html</loc>
+    <lastmod>2026-09-08</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.needmorespacestudio.com/chun-residence.html</loc>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.needmorespacestudio.com/the-five.html</loc>
-    <lastmod>2026-07-13</lastmod>
+    <lastmod>2026-09-08</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.needmorespacestudio.com/private-resident-kmax.html</loc>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
   </url>
