@@ -381,6 +381,42 @@ const hero=document.getElementById('heroImg');
 function triggerHero(){requestAnimationFrame(()=>requestAnimationFrame(()=>hero.classList.add('loaded')));}
 if(hero.complete){triggerHero();}else{hero.addEventListener('load',triggerHero);}
 </script>
+<!-- LIGHTBOX -->
+<div id="lightbox" style="position:fixed;inset:0;z-index:9999;background:rgba(0,0,0,0.96);display:flex;align-items:center;justify-content:center;opacity:0;pointer-events:none;transition:opacity 0.3s;">
+  <button id="lb-close" style="position:absolute;top:1.5rem;right:2rem;background:none;border:none;color:rgba(255,255,255,0.7);font-size:1.8rem;cursor:pointer;line-height:1;padding:0.5rem;">✕</button>
+  <button id="lb-prev" style="position:absolute;left:1rem;top:50%;transform:translateY(-50%);background:none;border:1px solid rgba(255,255,255,0.2);color:rgba(255,255,255,0.7);font-size:1.3rem;cursor:pointer;padding:0.8rem 1.1rem;transition:opacity 0.2s;">←</button>
+  <div style="display:flex;flex-direction:column;align-items:center;max-width:92vw;">
+    <img id="lb-img" src="" alt="" style="max-width:90vw;max-height:84vh;object-fit:contain;display:block;">
+    <div id="lb-cap" style="font-size:0.62rem;letter-spacing:0.22em;text-transform:uppercase;color:rgba(255,255,255,0.35);margin-top:0.9rem;"></div>
+  </div>
+  <button id="lb-next" style="position:absolute;right:1rem;top:50%;transform:translateY(-50%);background:none;border:1px solid rgba(255,255,255,0.2);color:rgba(255,255,255,0.7);font-size:1.3rem;cursor:pointer;padding:0.8rem 1.1rem;transition:opacity 0.2s;">→</button>
+</div>
+<script>
+(function(){
+  var lb=document.getElementById('lightbox'),lbImg=document.getElementById('lb-img'),lbCap=document.getElementById('lb-cap');
+  var lbPrev=document.getElementById('lb-prev'),lbNext=document.getElementById('lb-next'),lbClose=document.getElementById('lb-close');
+  var items=[],cur=0;
+  // grab all gallery images (exclude hero, nav logo, concept)
+  document.querySelectorAll('.gallery img').forEach(function(img){
+    var idx=items.length;
+    items.push({src:img.src,cap:img.alt||''});
+    img.style.cursor='zoom-in';
+    img.addEventListener('click',function(){openLB(idx);});
+  });
+  function openLB(i){cur=i;lb.style.opacity='1';lb.style.pointerEvents='auto';show();}
+  function closeLB(){lb.style.opacity='0';lb.style.pointerEvents='none';}
+  function show(){lbImg.src=items[cur].src;lbCap.textContent=items[cur].cap;lbPrev.style.opacity=cur>0?'1':'0.2';lbNext.style.opacity=cur<items.length-1?'1':'0.2';}
+  lbClose.addEventListener('click',closeLB);
+  lb.addEventListener('click',function(e){if(e.target===lb)closeLB();});
+  lbPrev.addEventListener('click',function(e){e.stopPropagation();if(cur>0){cur--;show();}});
+  lbNext.addEventListener('click',function(e){e.stopPropagation();if(cur<items.length-1){cur++;show();}});
+  document.addEventListener('keydown',function(e){if(lb.style.opacity==='1'){if(e.key==='Escape')closeLB();else if(e.key==='ArrowLeft'&&cur>0){cur--;show();}else if(e.key==='ArrowRight'&&cur<items.length-1){cur++;show();}}});
+  // swipe support for mobile
+  var tx=0;
+  lb.addEventListener('touchstart',function(e){tx=e.touches[0].clientX;},{passive:true});
+  lb.addEventListener('touchend',function(e){var dx=e.changedTouches[0].clientX-tx;if(Math.abs(dx)>50){if(dx<0&&cur<items.length-1){cur++;show();}else if(dx>0&&cur>0){cur--;show();}}});
+})();
+</script>
 <script>document.addEventListener("contextmenu",e=>e.preventDefault());</script>
 </body>
 </html>
