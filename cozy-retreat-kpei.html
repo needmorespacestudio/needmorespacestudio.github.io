@@ -17,7 +17,188 @@
 <meta name="description" content="คอนโดรีโนเวท 58 ตร.ม. สุขุมวิท 26 กรุงเทพฯ โดย Need More Space Studio ออกแบบสไตล์ Warm Minimal รองรับ Work from Home ครบวงจร Design + Build Turnkey">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Noto+Serif+Thai:wght@300;400&family=DM+Sans:wght@300;400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&family=Noto+Serif+Thai:wght@300;400&family=Jost:wght@200;300;400&display=swap" rel="stylesheet">
+<style>
+:root {
+  --ivory: #F8F5EF;
+  --cream: #EDE8DF;
+  --warm: #D9D0C1;
+  --stone: #9A9080;
+  --bark: #4A3F32;
+  --charcoal: #1E1C19;
+  --gold: #C4A97A;
+  --gold-dim: rgba(196,169,122,0.3);
+  --serif: 'Playfair Display', serif;
+  --serif-th: 'Noto Serif Thai', serif;
+  --sans: 'Jost', sans-serif;
+}
+
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{background:var(--charcoal);color:var(--ivory);font-family:var(--sans);font-weight:300;overflow-x:hidden;}
+::-webkit-scrollbar{width:2px;}
+::-webkit-scrollbar-thumb{background:var(--gold);}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:1.5rem 3rem;display:flex;align-items:center;justify-content:space-between;transition:all 0.5s;}
+nav.dark{background:rgba(30,28,25,0.95);backdrop-filter:blur(20px);padding:1rem 3rem;border-bottom:1px solid rgba(196,169,122,0.1);}
+.nav-back{font-size:0.72rem;letter-spacing:0.2em;text-transform:uppercase;color:rgba(248,245,239,0.6);text-decoration:none;display:flex;align-items:center;gap:0.6rem;transition:color 0.3s;}
+.nav-back:hover{color:var(--gold);}
+.nav-back::before{content:'←';font-size:0.9rem;}
+.nav-logo{font-family:var(--serif);font-size:0.95rem;font-weight:400;letter-spacing:0.08em;color:var(--ivory);text-decoration:none;}
+.nav-logo span{color:var(--gold);}
+.nav-cta{font-size:0.68rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--gold);text-decoration:none;border:1px solid var(--gold-dim);padding:0.5rem 1.2rem;transition:all 0.3s;}
+.nav-cta:hover{background:var(--gold);color:var(--charcoal);}
+
+/* HERO */
+.hero{height:100vh;position:relative;overflow:hidden;}
+.hero-img{width:100%;height:100%;object-fit:cover;object-position:center 30%;display:block;transform:scale(1.05);transition:transform 8s ease;}
+.hero-img.loaded{transform:scale(1);}
+.hero-overlay{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(30,28,25,0.2) 0%,rgba(30,28,25,0) 40%,rgba(30,28,25,0.7) 80%,rgba(30,28,25,1) 100%);}
+.hero-content{position:absolute;bottom:0;left:0;right:0;padding:4rem 3rem 5rem;}
+.hero-tag{font-size:0.68rem;letter-spacing:0.28em;text-transform:uppercase;color:var(--gold);margin-bottom:1.2rem;display:flex;align-items:center;gap:1rem;}
+.hero-tag::before{content:'';width:30px;height:1px;background:var(--gold);}
+.hero-title{font-family:var(--serif);font-size:clamp(3rem,8vw,7rem);font-weight:400;line-height:0.95;letter-spacing:-0.01em;margin-bottom:0.3rem;}
+.hero-title em{font-style:italic;color:var(--warm);}
+.hero-sub{font-family:var(--serif-th);font-size:clamp(0.9rem,1.5vw,1.1rem);font-weight:300;color:rgba(248,245,239,0.5);margin-bottom:2rem;letter-spacing:0.04em;}
+.hero-meta{display:flex;gap:3rem;flex-wrap:wrap;}
+.meta-label{font-size:0.6rem;letter-spacing:0.22em;text-transform:uppercase;color:var(--stone);margin-bottom:0.3rem;}
+.meta-value{font-family:var(--serif);font-size:1rem;font-weight:400;color:var(--ivory);}
+.hero-scroll{position:absolute;right:3rem;bottom:5rem;writing-mode:vertical-rl;transform:rotate(180deg);font-size:0.62rem;letter-spacing:0.22em;text-transform:uppercase;color:var(--stone);display:flex;align-items:center;gap:1rem;}
+.hero-scroll::before{content:'';height:50px;width:1px;background:linear-gradient(to bottom,transparent,var(--gold));}
+
+/* INTRO */
+.intro-section{padding:8rem 3rem;display:grid;grid-template-columns:1fr 1fr;gap:6rem;align-items:start;max-width:1300px;margin:0 auto;}
+.intro-eyebrow{font-size:0.65rem;letter-spacing:0.25em;text-transform:uppercase;color:var(--gold);margin-bottom:1.2rem;}
+.intro-title{font-family:var(--serif);font-size:clamp(1.8rem,3vw,2.8rem);font-weight:400;line-height:1.2;color:var(--ivory);margin-bottom:0.5rem;}
+.intro-title em{font-style:italic;color:var(--gold);}
+.intro-title-th{font-family:var(--serif-th);font-size:0.9rem;color:var(--stone);font-weight:300;margin-bottom:1.5rem;}
+.intro-quote{font-family:var(--serif-th);font-size:0.88rem;line-height:2;color:rgba(248,245,239,0.55);font-style:normal;border-left:2px solid var(--gold-dim);padding-left:1.2rem;}
+.spec-grid{display:grid;grid-template-columns:1fr 1fr;gap:2px;}
+.spec-item{padding:1.8rem;background:rgba(248,245,239,0.04);border:1px solid rgba(248,245,239,0.06);text-align:center;transition:background 0.3s;}
+.spec-item:hover{background:rgba(196,169,122,0.06);}
+.spec-num{font-family:var(--serif);font-size:2.5rem;font-weight:400;color:var(--ivory);line-height:1;margin-bottom:0.4rem;}
+.spec-label{font-family:var(--serif-th);font-size:0.72rem;color:var(--stone);font-weight:300;}
+.highlights{grid-column:1/-1;padding:1.5rem;background:rgba(248,245,239,0.03);border:1px solid rgba(248,245,239,0.06);}
+.highlight-title{font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:1rem;}
+.highlight-list{list-style:none;padding:0;}
+.highlight-list li{font-family:var(--serif-th);font-size:0.8rem;color:rgba(248,245,239,0.5);padding:0.55rem 0;border-bottom:1px solid rgba(248,245,239,0.06);line-height:1.7;font-weight:300;}
+.highlight-list li:last-child{border-bottom:none;}
+
+/* GALLERY */
+.gallery-section{}
+.gallery-header{padding:3rem 3rem 2rem;display:flex;align-items:flex-end;justify-content:space-between;}
+.gallery-eyebrow{font-size:0.65rem;letter-spacing:0.25em;text-transform:uppercase;color:var(--gold);margin-bottom:0.5rem;}
+.gallery-title{font-family:var(--serif);font-size:clamp(1.8rem,3vw,2.5rem);font-weight:400;color:var(--ivory);}
+.gallery-count{font-family:var(--serif);font-size:8rem;font-weight:400;color:rgba(196,169,122,0.12);line-height:1;}
+
+.img-wrap{position:relative;overflow:hidden;cursor:zoom-in;}
+.img-wrap img{width:100%;height:100%;object-fit:cover;display:block;transition:transform 0.6s ease;}
+.img-wrap:hover img{transform:scale(1.03);}
+.room-tag{position:absolute;bottom:1rem;left:1rem;font-size:0.6rem;letter-spacing:0.2em;text-transform:uppercase;color:rgba(248,245,239,0.7);background:rgba(30,28,25,0.6);backdrop-filter:blur(6px);padding:0.3rem 0.7rem;}
+
+.gallery-featured{display:grid;grid-template-columns:3fr 2fr;gap:3px;padding:0 3rem;}
+.gallery-featured .img-wrap:first-child{aspect-ratio:16/9;}
+.gallery-featured .img-wrap:last-child{aspect-ratio:4/5;}
+.gallery-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:3px;padding:0 3rem;}
+.gallery-grid .img-wrap{aspect-ratio:4/3;}
+.gallery-2col{display:grid;grid-template-columns:1fr 1fr;gap:3px;padding:0 3rem;}
+.gallery-2col .img-wrap{aspect-ratio:4/3;}
+.gallery-wide{padding:0 3rem;}
+.gallery-wide .img-wrap{aspect-ratio:21/9;}
+.gallery-portrait-wrap{max-width:520px;margin:0 auto;padding:0 3rem;}
+.gallery-portrait-wrap .img-wrap{aspect-ratio:3/4;}
+
+/* CONCEPT */
+.concept-section{padding:8rem 3rem;border-top:1px solid rgba(248,245,239,0.06);}
+.concept-inner{display:grid;grid-template-columns:200px 1fr;gap:6rem;max-width:1300px;margin:0 auto;}
+.concept-label{font-size:0.65rem;letter-spacing:0.25em;text-transform:uppercase;color:var(--stone);writing-mode:vertical-rl;transform:rotate(180deg);height:fit-content;padding-top:0.5rem;}
+.concept-title{font-family:var(--serif);font-size:clamp(1.8rem,3vw,2.8rem);font-weight:400;color:var(--ivory);line-height:1.2;margin-bottom:2.5rem;}
+.concept-title em{font-style:italic;color:var(--gold);}
+.concept-cols{display:grid;grid-template-columns:1fr 1fr;gap:3rem;}
+.concept-col p{font-family:var(--serif-th);font-size:0.88rem;line-height:2.1;color:rgba(248,245,239,0.5);font-weight:300;}
+.palette{margin-top:3rem;padding-top:2rem;border-top:1px solid rgba(248,245,239,0.06);}
+.palette-label{font-size:0.6rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--stone);display:block;margin-bottom:1rem;}
+.palette-swatches{display:flex;gap:0.5rem;}
+.swatch{width:44px;height:44px;border:1px solid rgba(248,245,239,0.1);position:relative;}
+.swatch::after{content:attr(data-name);position:absolute;bottom:-1.2rem;left:0;font-size:0.5rem;color:var(--stone);white-space:nowrap;}
+
+/* CTA */
+.cta-section{padding:8rem 3rem;text-align:center;position:relative;overflow:hidden;border-top:1px solid rgba(248,245,239,0.06);}
+.cta-section::before{content:'Studio';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);font-family:var(--serif);font-size:18vw;font-weight:400;color:rgba(196,169,122,0.04);white-space:nowrap;pointer-events:none;}
+.cta-eyebrow{font-size:0.65rem;letter-spacing:0.25em;text-transform:uppercase;color:var(--gold);margin-bottom:1.5rem;display:flex;align-items:center;justify-content:center;gap:1rem;}
+.cta-eyebrow::before,.cta-eyebrow::after{content:'';width:30px;height:1px;background:var(--gold);}
+.cta-title{font-family:var(--serif);font-size:clamp(2rem,4vw,3.5rem);font-weight:400;color:var(--ivory);line-height:1.15;margin-bottom:1rem;}
+.cta-title em{font-style:italic;color:var(--gold);}
+.cta-sub{font-family:var(--serif-th);font-size:0.92rem;color:rgba(248,245,239,0.4);line-height:2;margin-bottom:2.5rem;font-weight:300;}
+.cta-buttons{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;}
+.btn-gold{display:inline-block;font-size:0.72rem;letter-spacing:0.18em;text-transform:uppercase;background:var(--gold);color:var(--charcoal);padding:0.9rem 2.2rem;text-decoration:none;transition:all 0.3s;}
+.btn-gold:hover{background:var(--warm);}
+.btn-outline{display:inline-block;font-size:0.72rem;letter-spacing:0.18em;text-transform:uppercase;color:rgba(248,245,239,0.5);border:1px solid rgba(248,245,239,0.15);padding:0.9rem 2.2rem;text-decoration:none;transition:all 0.3s;}
+.btn-outline:hover{color:var(--gold);border-color:var(--gold);}
+
+/* FOOTER */
+footer{background:rgba(0,0,0,0.3);padding:2.5rem 3rem;display:flex;align-items:center;justify-content:space-between;border-top:1px solid rgba(196,169,122,0.08);}
+.footer-logo{font-family:var(--serif);font-size:0.9rem;color:rgba(248,245,239,0.3);text-decoration:none;}
+.footer-logo span{color:rgba(196,169,122,0.5);}
+.footer-copy{font-size:0.68rem;color:rgba(248,245,239,0.2);}
+
+/* REVEAL */
+.reveal{opacity:0;transform:translateY(40px);transition:opacity 0.9s ease,transform 0.9s ease;}
+.reveal.visible{opacity:1;transform:translateY(0);}
+.reveal-delay-1{transition-delay:0.15s;}
+.reveal-delay-2{transition-delay:0.3s;}
+.reveal-delay-3{transition-delay:0.45s;}
+
+/* MOBILE */
+@media(max-width:900px){
+  nav{padding:1.2rem 1.5rem;}
+  nav.dark{padding:0.8rem 1.5rem;}
+  .hero-content{padding:3rem 1.5rem 4rem;}
+  .hero-scroll{display:none;}
+  .intro-section{grid-template-columns:1fr;gap:2.5rem;padding:4rem 1.5rem;}
+  .spec-grid{grid-template-columns:1fr 1fr;}
+  .gallery-header{padding:2.5rem 1.5rem 1.5rem;}
+  .gallery-featured{grid-template-columns:1fr;padding:0 1.5rem;}
+  .gallery-featured .img-wrap:last-child{aspect-ratio:4/3;}
+  .gallery-grid{grid-template-columns:1fr 1fr;padding:0 1.5rem;}
+  .gallery-2col{padding:0 1.5rem;}
+  .gallery-wide{padding:0 1.5rem;}
+  .gallery-wide .img-wrap{aspect-ratio:16/9;}
+  .gallery-portrait-wrap{padding:0 1.5rem;}
+  .concept-section{padding:5rem 1.5rem;}
+  .concept-inner{grid-template-columns:1fr;gap:2rem;}
+  .concept-label{writing-mode:horizontal-tb;transform:none;}
+  .concept-cols{grid-template-columns:1fr;gap:1.5rem;}
+  .cta-section{padding:5rem 1.5rem;}
+  footer{padding:2rem 1.5rem;flex-direction:column;gap:0.6rem;text-align:center;}
+}
+@media(max-width:600px){
+  .gallery-grid{grid-template-columns:1fr;}
+  .hero-meta{gap:1.5rem;}
+}
+
+img{-webkit-user-drag:none;pointer-events:none;}
+.img-wrap,.hero{pointer-events:auto;}
+</style>
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '966270802855166');
+fbq('track', 'PageView');
+fbq('track', 'ViewContent', {content_name:'The Cozy Retreat K.Pei',content_category:'Interior Design Project'});
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=966270802855166&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-R0CKBW47ZQ"></script>
 <script>
@@ -26,396 +207,272 @@ function gtag(){dataLayer.push(arguments);}
 gtag('js',new Date());
 gtag('config','G-R0CKBW47ZQ');
 </script>
-<style>
-:root{
-  --white:#FDFAF6;--off:#F2EDE4;--sand:#E5DDD1;
-  --muted:#9A9080;--dark:#1C1A16;--ink:#2A2620;
-  --gold:#B89860;--gold2:#D4B07A;--gold-dim:rgba(184,152,96,0.2);
-  --serif:'Marcellus',serif;
-  --serif-th:'Noto Serif Thai',serif;
-  --sans:'DM Sans',sans-serif;
-}
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
-html{scroll-behavior:smooth;}
-body{background:var(--white);color:var(--ink);font-family:var(--sans);font-weight:300;overflow-x:hidden;}
-img{pointer-events:none;user-select:none;-webkit-user-drag:none;}
-::-webkit-scrollbar{width:2px;}
-::-webkit-scrollbar-thumb{background:var(--gold);}
-
-/* NAV */
-nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:1.5rem 3rem;display:flex;align-items:center;justify-content:space-between;transition:all 0.5s;}
-nav.scrolled{background:rgba(253,250,246,0.97);backdrop-filter:blur(20px);padding:1rem 3rem;border-bottom:1px solid rgba(184,152,96,0.1);}
-.nav-back{font-size:0.7rem;letter-spacing:0.2em;text-transform:uppercase;color:rgba(253,250,246,0.8);text-decoration:none;display:flex;align-items:center;gap:0.6rem;transition:color 0.3s;}
-nav.scrolled .nav-back{color:rgba(42,38,32,0.55);}
-.nav-back:hover{color:var(--gold);}
-.nav-back::before{content:'←';font-size:0.9rem;}
-.nav-logo img{height:44px;width:auto;}
-.nav-cta{font-size:0.68rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--gold);border:1px solid var(--gold-dim);padding:0.5rem 1.2rem;text-decoration:none;transition:all 0.3s;}
-.nav-cta:hover{background:var(--gold);color:var(--dark);}
-
-/* HERO */
-.hero{width:100%;height:100vh;position:relative;overflow:hidden;background:var(--sand);}
-.hero-img{width:100%;height:100%;object-fit:cover;object-position:center 30%;display:block;transform:scale(1.06);transition:transform 8s cubic-bezier(0.25,0.46,0.45,0.94);}
-.hero-img.loaded{transform:scale(1);}
-.hero-overlay{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(28,26,22,0.1) 0%,rgba(28,26,22,0) 45%,rgba(28,26,22,0.55) 80%,rgba(28,26,22,0.85) 100%);}
-.hero-content{position:absolute;bottom:0;left:0;right:0;padding:3rem 3rem 4.5rem;color:var(--white);}
-.hero-tag{font-size:0.65rem;letter-spacing:0.28em;text-transform:uppercase;color:var(--gold2);margin-bottom:1.2rem;display:flex;align-items:center;gap:1rem;}
-.hero-tag::before{content:'';width:28px;height:1px;background:var(--gold2);}
-.hero-title{font-family:var(--serif);font-size:clamp(2.4rem,7vw,6rem);font-weight:400;line-height:1;margin-bottom:0.25rem;}
-.hero-title em{font-style:italic;color:var(--gold2);}
-.hero-sub{font-family:var(--serif-th);font-size:clamp(0.82rem,1.4vw,1rem);font-weight:300;color:rgba(253,250,246,0.5);margin-bottom:2rem;}
-.hero-meta{display:flex;gap:2.5rem;flex-wrap:wrap;}
-.meta-label{font-size:0.58rem;letter-spacing:0.22em;text-transform:uppercase;color:rgba(253,250,246,0.4);margin-bottom:0.25rem;}
-.meta-value{font-family:var(--serif);font-size:0.95rem;color:rgba(253,250,246,0.9);}
-.hero-scroll{position:absolute;right:2.5rem;bottom:4.5rem;writing-mode:vertical-rl;transform:rotate(180deg);font-size:0.6rem;letter-spacing:0.22em;text-transform:uppercase;color:rgba(253,250,246,0.35);display:flex;align-items:center;gap:0.8rem;}
-.hero-scroll::before{content:'';height:44px;width:1px;background:linear-gradient(to bottom,transparent,var(--gold));}
-
-/* INTRO */
-.intro{padding:7rem 4rem;display:grid;grid-template-columns:1fr 1fr;gap:6rem;align-items:start;max-width:1300px;margin:0 auto;}
-.intro-eyebrow{font-size:0.65rem;letter-spacing:0.25em;text-transform:uppercase;color:var(--gold);margin-bottom:1.2rem;}
-.intro-quote{font-family:var(--serif);font-size:clamp(1.5rem,2.5vw,2.2rem);font-weight:400;line-height:1.35;color:var(--dark);margin-bottom:2rem;}
-.intro-quote em{font-style:italic;color:var(--gold);}
-.intro-body{font-family:var(--serif-th);font-size:0.92rem;line-height:2;color:var(--muted);font-weight:300;}
-.stats-grid{display:grid;grid-template-columns:1fr 1fr;gap:2px;margin-top:3rem;}
-.stat-box{background:var(--off);padding:2rem;text-align:center;}
-.stat-num{font-family:var(--serif);font-size:2.8rem;color:var(--dark);line-height:1;margin-bottom:0.4rem;}
-.stat-unit{font-family:var(--serif);font-size:1rem;color:var(--gold);}
-.stat-label{font-family:var(--serif-th);font-size:0.78rem;color:var(--muted);margin-top:0.3rem;font-weight:300;}
-
-/* HIGHLIGHTS */
-.highlights{background:var(--off);padding:6rem 4rem;}
-.highlights-inner{max-width:1300px;margin:0 auto;}
-.section-eyebrow{font-size:0.65rem;letter-spacing:0.25em;text-transform:uppercase;color:var(--gold);margin-bottom:1rem;}
-.section-title{font-family:var(--serif);font-size:clamp(1.6rem,2.5vw,2.2rem);font-weight:400;color:var(--dark);line-height:1.2;margin-bottom:3rem;max-width:480px;}
-.hl-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem;}
-.hl-card{padding:2rem 2rem 2.2rem;background:var(--white);border-top:2px solid var(--gold);}
-.hl-num{font-family:var(--serif);font-size:2.2rem;color:var(--sand);line-height:1;margin-bottom:0.8rem;}
-.hl-title{font-family:var(--serif);font-size:1rem;color:var(--dark);margin-bottom:0.6rem;}
-.hl-body{font-family:var(--serif-th);font-size:0.8rem;color:var(--muted);line-height:1.9;font-weight:300;}
-
-/* GALLERY */
-.gallery{padding:5rem 0;}
-.gallery-label{padding:0 4rem;margin-bottom:1.5rem;}
-.gallery-label span{font-size:0.65rem;letter-spacing:0.22em;text-transform:uppercase;color:var(--muted);}
-.gallery-label h3{font-family:var(--serif);font-size:1.1rem;color:var(--dark);margin-top:0.3rem;}
-
-/* SECTION BREAK */
-.gal-section{margin-bottom:4rem;}
-
-/* Full bleed */
-.img-full{width:100%;display:block;object-fit:cover;aspect-ratio:16/9;}
-/* Half */
-.img-row-2{display:grid;grid-template-columns:1fr 1fr;gap:2px;}
-.img-row-2 img{width:100%;aspect-ratio:4/3;object-fit:cover;display:block;}
-/* 1 wide + 1 tall */
-.img-row-featured{display:grid;grid-template-columns:3fr 2fr;gap:2px;}
-.img-row-featured .img-main{width:100%;aspect-ratio:16/9;object-fit:cover;display:block;}
-.img-row-featured .img-side{width:100%;aspect-ratio:4/5;object-fit:cover;display:block;}
-/* 3 col */
-.img-row-3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:2px;}
-.img-row-3 img{width:100%;aspect-ratio:4/3;object-fit:cover;display:block;}
-/* Single portrait */
-.img-portrait-wrap{max-width:640px;margin:0 auto;}
-.img-portrait{width:100%;aspect-ratio:3/4;object-fit:cover;display:block;}
-
-/* CONCEPT */
-.concept{padding:7rem 4rem;max-width:1300px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:6rem;align-items:start;}
-.concept-eyebrow{font-size:0.65rem;letter-spacing:0.25em;text-transform:uppercase;color:var(--gold);margin-bottom:1rem;}
-.concept-title{font-family:var(--serif);font-size:clamp(1.5rem,2.5vw,2.2rem);font-weight:400;color:var(--dark);line-height:1.25;margin-bottom:0.5rem;}
-.concept-title em{font-style:italic;color:var(--gold);}
-.concept-sub{font-family:var(--serif);font-size:1rem;color:var(--muted);margin-bottom:2rem;}
-.concept-body{font-family:var(--serif-th);font-size:0.88rem;line-height:2.1;color:var(--muted);font-weight:300;}
-.concept-body p+p{margin-top:1.2rem;}
-.concept-img{width:100%;aspect-ratio:4/5;object-fit:cover;display:block;}
-
-/* CTA */
-.cta-strip{background:var(--dark);padding:6rem 4rem;text-align:center;}
-.cta-inner{max-width:620px;margin:0 auto;}
-.cta-eyebrow{font-size:0.65rem;letter-spacing:0.25em;text-transform:uppercase;color:var(--gold);margin-bottom:1.5rem;display:flex;align-items:center;justify-content:center;gap:1rem;}
-.cta-eyebrow::before,.cta-eyebrow::after{content:'';width:28px;height:1px;background:var(--gold);}
-.cta-title{font-family:var(--serif);font-size:clamp(1.6rem,2.8vw,2.5rem);font-weight:400;color:var(--white);line-height:1.2;margin-bottom:0.8rem;}
-.cta-title em{font-style:italic;color:var(--gold2);}
-.cta-body{font-family:var(--serif-th);font-size:0.88rem;color:rgba(253,250,246,0.45);line-height:2;margin-bottom:2.5rem;font-weight:300;}
-.btn-gold{display:inline-block;font-size:0.72rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--gold);border:1px solid rgba(184,152,96,0.4);padding:0.85rem 2.2rem;text-decoration:none;margin-right:1rem;margin-bottom:0.8rem;transition:all 0.3s;}
-.btn-gold:hover{background:var(--gold);color:var(--dark);}
-.btn-ghost{display:inline-block;font-size:0.72rem;letter-spacing:0.18em;text-transform:uppercase;color:rgba(253,250,246,0.45);border:1px solid rgba(253,250,246,0.12);padding:0.85rem 2.2rem;text-decoration:none;margin-bottom:0.8rem;transition:all 0.3s;}
-.btn-ghost:hover{color:var(--white);border-color:rgba(253,250,246,0.3);}
-
-/* FOOTER */
-footer{background:var(--dark);padding:2rem 4rem;border-top:1px solid rgba(253,250,246,0.06);}
-.foot-inner{max-width:1300px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;}
-.foot-copy{font-size:0.7rem;color:rgba(253,250,246,0.3);font-family:var(--serif-th);}
-.foot-link{font-size:0.7rem;letter-spacing:0.14em;text-transform:uppercase;color:rgba(253,250,246,0.35);text-decoration:none;transition:color 0.3s;}
-.foot-link:hover{color:var(--gold);}
-
-/* RESPONSIVE */
-@media(max-width:1024px){
-  .hl-grid{grid-template-columns:1fr 1fr;}
-  .intro,.concept{gap:4rem;}
-}
-@media(max-width:768px){
-  nav{padding:1.1rem 1.4rem;}
-  nav.scrolled{padding:0.8rem 1.4rem;}
-  .hero-content{padding:2rem 1.4rem 3rem;}
-  .intro{padding:2.5rem 1.4rem;grid-template-columns:1fr;gap:1.5rem;}
-  .intro-quote{font-size:1.4rem;margin-bottom:1rem;}
-  .intro-body{font-size:0.82rem;line-height:1.85;}
-  .stats-grid{margin-top:1.5rem;}
-  .stat-box{padding:1.2rem 0.8rem;}
-  .stat-num{font-size:1.9rem;}
-  .stat-label{font-size:0.7rem;}
-  .highlights{padding:2.2rem 1.4rem;}
-  .section-title{font-size:1.2rem;margin-bottom:1.5rem;}
-  .hl-grid{grid-template-columns:1fr 1fr;gap:0.8rem;}
-  .hl-card{padding:1rem 1rem 1.2rem;}
-  .hl-num{font-size:1.5rem;margin-bottom:0.4rem;}
-  .hl-title{font-size:0.82rem;}
-  .hl-body{font-size:0.72rem;line-height:1.7;}
-  .gallery-label{padding:0 1.4rem;}
-  .img-row-2,.img-row-featured,.img-row-3{grid-template-columns:1fr;}
-  .img-row-featured .img-main,.img-row-featured .img-side{aspect-ratio:4/3;}
-  .concept{padding:4rem 1.4rem;grid-template-columns:1fr;gap:2.5rem;}
-  .cta-strip{padding:4rem 1.4rem;}
-  footer{padding:1.8rem 1.4rem;}
-  .foot-inner{flex-direction:column;gap:0.8rem;text-align:center;}
-  .stats-grid{grid-template-columns:1fr 1fr;}
-}
-</style>
 </head>
 <body>
 
-<nav id="nav">
-  <a href="projects.html" class="nav-back">ผลงานทั้งหมด</a>
-  <a href="index.html" class="nav-logo"><img src="logo_dark.png" alt="Need More Space Studio"></a>
-  <a href="contact.html" class="nav-cta" onclick="gtag('event','cta_click',{button_name:'project_nav_cta'})">จองคิวปรึกษา</a>
+<!-- NAV -->
+<nav id="navbar">
+  <a href="index.html" class="nav-back">กลับหน้าหลัก</a>
+  <a href="index.html" class="nav-logo"><img src="logo_cut_white.png" alt="Need More Space Studio" style="height:68px;width:auto;"></a>
+  <a href="https://lin.ee/uWnOGsX" target="_blank" class="nav-cta" onclick="gtag('event','cta_click',{button_name:'project_kpei_nav'})">ปรึกษากับเรา</a>
 </nav>
 
-<!-- HERO — image 1, portrait crop -->
+<!-- HERO -->
 <section class="hero">
-  <img id="heroImg" class="hero-img" src="kpei/01.jpg" alt="The Cozy Retreat — มุมทานข้าวและโต๊ะทำงาน One X Sukhumvit 26">
+  <img class="hero-img" id="heroImg" src="kpei/01.jpg" alt="The Cozy Retreat — Dining Area One X Sukhumvit 26">
   <div class="hero-overlay"></div>
   <div class="hero-content">
-    <div class="hero-tag">Private Residence · 2026</div>
+    <div class="hero-tag">Residential · Sukhumvit · 2026</div>
     <h1 class="hero-title">The Cozy<br><em>Retreat</em></h1>
-    <p class="hero-sub">Private Residence K.Pei · One X Sukhumvit 26, กรุงเทพฯ</p>
+    <p class="hero-sub">คอนโด Warm Minimal พร้อม Work from Home · One X สุขุมวิท 26</p>
     <div class="hero-meta">
-      <div><div class="meta-label">Location</div><div class="meta-value">สุขุมวิท 26, กรุงเทพฯ</div></div>
-      <div><div class="meta-label">Area</div><div class="meta-value">58 ตร.ม.</div></div>
-      <div><div class="meta-label">Scope</div><div class="meta-value">Design + Renovation</div></div>
+      <div>
+        <div class="meta-label">Location</div>
+        <div class="meta-value">Sukhumvit 26, Bangkok</div>
+      </div>
+      <div>
+        <div class="meta-label">Area</div>
+        <div class="meta-value">58 ตร.ม.</div>
+      </div>
+      <div>
+        <div class="meta-label">Scope</div>
+        <div class="meta-value">Design + Renovation</div>
+      </div>
     </div>
   </div>
-  <div class="hero-scroll">Scroll</div>
+  <div class="hero-scroll">Scroll to explore</div>
 </section>
 
 <!-- INTRO -->
-<div class="intro">
-  <div>
-    <div class="intro-eyebrow">Project Story</div>
-    <h2 class="intro-quote">Cozy Retreat ที่<br><em>ทำงานได้ อยู่ได้</em><br>สบายใจ</h2>
-    <p class="intro-body">A 58 sqm condo renovation designed around one clear brief — a home that works as hard as its owner does.</p>
-    <p class="intro-body" style="margin-top:1.2rem;">"โจทย์ของโปรเจกต์นี้ไม่ใช่แค่ทำให้สวย แต่ต้องตอบโจทย์ไลฟ์สไตล์ WFH ที่ใช้ชีวิตอยู่ในพื้นที่นี้แทบทั้งวัน ทุกมุมจึงต้องทำงานได้จริง ไม่ใช่แค่ดูดี"</p>
-  </div>
-  <div>
-    <div class="stats-grid">
-      <div class="stat-box">
-        <div class="stat-num">58</div>
-        <div class="stat-label">ตร.ม.</div>
-      </div>
-      <div class="stat-box">
-        <div class="stat-num">1</div>
-        <div class="stat-label">ห้องนอน</div>
-      </div>
-      <div class="stat-box">
-        <div class="stat-num">1</div>
-        <div class="stat-label">ห้องนั่งเล่น</div>
-      </div>
-      <div class="stat-box" style="background:var(--dark);">
-        <div class="stat-num" style="color:var(--gold);font-size:1.8rem;">100%</div>
-        <div class="stat-label" style="color:rgba(253,250,246,0.45);">Design + Build</div>
-      </div>
+<section style="padding:0 3rem;">
+  <div class="intro-section" style="padding-left:0;padding-right:0;">
+    <div class="intro-left reveal">
+      <div class="intro-eyebrow">Project Story</div>
+      <h2 class="intro-title">Cozy Retreat ที่<br><em>ทำงานได้ อยู่ได้</em><br>สบายใจ</h2>
+      <p class="intro-title-th">A 58 sqm condo renovation designed around one clear brief — a home that works as hard as its owner does.</p>
+      <blockquote class="intro-quote">
+        "โจทย์ของโปรเจกต์นี้ไม่ใช่แค่ทำให้สวย แต่ต้องตอบโจทย์ไลฟ์สไตล์ WFH ที่ใช้ชีวิตอยู่ในพื้นที่นี้แทบทั้งวัน ทุกมุมจึงต้องทำงานได้จริง ไม่ใช่แค่ดูดี"
+      </blockquote>
     </div>
-  </div>
-</div>
-
-<!-- DESIGN HIGHLIGHTS -->
-<section class="highlights">
-  <div class="highlights-inner">
-    <div class="section-eyebrow">Design Highlights</div>
-    <h2 class="section-title">ทุกมุม<em> ออกแบบมา<br>เพื่อชีวิตจริง</em></h2>
-    <div class="hl-grid">
-      <div class="hl-card">
-        <div class="hl-num">01</div>
-        <div class="hl-title">Working Zone ที่ใช่</div>
-        <p class="hl-body">โต๊ะทำงาน Built-in พร้อมชั้นวางไฟอุ่น สร้างบรรยากาศทำงานที่ผ่อนคลาย ไม่รู้สึกเหมือนออฟฟิศ</p>
-      </div>
-      <div class="hl-card">
-        <div class="hl-num">02</div>
-        <div class="hl-title">Warm Minimal โทนอุ่น</div>
-        <p class="hl-body">โทนสีไม้อ่อน–ขาว–ครีม ต่อเนื่องทั้งยูนิต ให้ความรู้สึกสงบ เหมาะกับการอยู่อาศัยระยะยาว</p>
-      </div>
-      <div class="hl-card">
-        <div class="hl-num">03</div>
-        <div class="hl-title">มุมทานข้าวที่รวมใจ</div>
-        <p class="hl-body">โต๊ะกลมพร้อมโคมไฟตกแต่งทรงดอกไม้ เป็นจุดรวมของครอบครัว นอกเหนือจากโซนทำงาน</p>
-      </div>
-      <div class="hl-card">
-        <div class="hl-num">04</div>
-        <div class="hl-title">Kitchen Zone ใช้ได้จริง</div>
-        <p class="hl-body">ครัวรูปตัว L ในพื้นที่จำกัด แต่ฟังก์ชันครบ — กระเบื้อง Zellige โทนครีม ตู้ Upper-Lower Built-in และตู้เย็นขนาดใหญ่ ใช้งานได้สะดวกทุกวัน</p>
-      </div>
-      <div class="hl-card">
-        <div class="hl-num">05</div>
-        <div class="hl-title">Built-in Storage ครบ</div>
-        <p class="hl-body">จัดเก็บครบทุกโซน ตั้งแต่ทางเข้า ห้องนอน ถึงมุมแต่งตัว เพื่อให้พื้นที่ 58 ตร.ม. คุ้มค่าสูงสุด</p>
-      </div>
-      <div class="hl-card">
-        <div class="hl-num">06</div>
-        <div class="hl-title">Dressing Area โรงแรมบูทีค</div>
-        <p class="hl-body">ห้องนอนหลักพร้อมมุม Dressing table แยกสัดส่วน ให้ความรู้สึกเหมือนโรงแรมบูทีค</p>
+    <div class="intro-right reveal reveal-delay-1">
+      <div class="spec-grid">
+        <div class="spec-item">
+          <div class="spec-num">58</div>
+          <div class="spec-label">ตร.ม.</div>
+        </div>
+        <div class="spec-item">
+          <div class="spec-num">1</div>
+          <div class="spec-label">ห้องนอน</div>
+        </div>
+        <div class="spec-item">
+          <div class="spec-num">1</div>
+          <div class="spec-label">ห้องนั่งเล่น</div>
+        </div>
+        <div class="spec-item">
+          <div class="spec-num">100%</div>
+          <div class="spec-label">Design + Build</div>
+        </div>
+        <div class="highlights">
+          <div class="highlight-title">Design Highlights</div>
+          <ul class="highlight-list">
+            <li>Working Zone แยกสัดส่วนชัดเจน — โต๊ะทำงาน Built-in พร้อมชั้นวางไฟอุ่น บรรยากาศผ่อนคลาย ไม่เหมือนออฟฟิศ</li>
+            <li>โทนสี Warm Minimal (ไม้อ่อน–ขาว–ครีม) ต่อเนื่องทั้งยูนิต ให้ความรู้สึกสงบ เหมาะอยู่ระยะยาว</li>
+            <li>มุมโต๊ะทานข้าวกลมพร้อมโคมไฟทรงดอกไม้ เป็นจุดรวมของห้องนอกเหนือจากโซนทำงาน</li>
+            <li>Kitchen Zone รูปตัว L กระเบื้อง Zellige โทนครีม ตู้ Upper-Lower Built-in ครบ ใช้งานได้จริงในพื้นที่จำกัด</li>
+            <li>Built-in Storage ครบทุกโซน ตั้งแต่ทางเข้า ห้องนอน ถึงมุมแต่งตัว เพื่อให้ 58 ตร.ม. คุ้มค่าสูงสุด</li>
+          </ul>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
 <!-- GALLERY -->
-<section class="gallery">
-
-  <!-- Entrance & Dining -->
-  <div class="gal-section">
-    <div class="gallery-label">
-      <span>01 — ทางเข้า &amp; มุมทานข้าว</span>
-      <h3>Entrance &amp; Dining Area</h3>
+<section class="gallery-section">
+  <div class="gallery-header reveal">
+    <div>
+      <div class="gallery-eyebrow">Photography</div>
+      <h2 class="gallery-title">Project Gallery</h2>
     </div>
-    <div class="img-row-featured">
-      <img src="kpei/01.jpg" alt="Dining Area — มุมทานข้าวกลม โคมไฟดอกไม้" class="img-main" loading="lazy">
-      <img src="kpei/02.jpg" alt="Entrance &amp; Shoe Cabinet — ตู้รองเท้า Built-in ทางเข้า" class="img-side" loading="lazy">
+    <div class="gallery-count">10</div>
+  </div>
+
+  <!-- Entrance + Dining featured -->
+  <div class="gallery-featured reveal">
+    <div class="img-wrap">
+      <img src="kpei/01.jpg" alt="Dining Area — มุมทานข้าวกลม โคมไฟดอกไม้" loading="lazy">
+      <div class="room-tag">Dining Area</div>
+    </div>
+    <div class="img-wrap">
+      <img src="kpei/02.jpg" alt="Entrance & Shoe Cabinet — ทางเข้า ตู้รองเท้า Built-in" loading="lazy">
+      <div class="room-tag">Entrance</div>
     </div>
   </div>
 
-  <!-- Living & Working Zone -->
-  <div class="gal-section">
-    <div class="gallery-label">
-      <span>02 — Living &amp; Working Zone</span>
-      <h3>Home Office &amp; Living Room</h3>
+  <!-- Living + Working Zone -->
+  <div class="gallery-grid reveal" style="margin-top:3px;">
+    <div class="img-wrap" style="grid-column:span 2;aspect-ratio:16/9;">
+      <img src="kpei/03.jpg" alt="Dining + Home Office — มุมโต๊ะทำงานและทานข้าว" loading="lazy">
+      <div class="room-tag">Dining & Home Office</div>
     </div>
-    <img src="kpei/03.jpg" alt="Dining + Home Office Corner — มุมโต๊ะทำงานและทานข้าว" class="img-full" loading="lazy">
-    <div style="margin-top:2px;">
-      <img src="kpei/04.jpg" alt="Living Room — ห้องนั่งเล่นและโต๊ะทำงาน" class="img-full" loading="lazy">
+    <div class="img-wrap" style="aspect-ratio:16/9;grid-column:span 3;">
+      <img src="kpei/04.jpg" alt="Living Room & Working Zone — ห้องนั่งเล่นและโต๊ะทำงาน" loading="lazy">
+      <div class="room-tag">Living & Working Zone</div>
     </div>
   </div>
 
   <!-- Kitchen -->
-  <div class="gal-section">
-    <div class="gallery-label">
-      <span>03 — ครัว</span>
-      <h3>Kitchen</h3>
-    </div>
-    <div class="img-portrait-wrap">
-      <img src="kpei/05.jpg" alt="Kitchen — ครัวไม้ + กระเบื้อง Zellige + ตู้เย็น Samsung" class="img-portrait" loading="lazy">
+  <div class="gallery-portrait-wrap reveal" style="margin-top:3px;">
+    <div class="img-wrap">
+      <img src="kpei/05.jpg" alt="Kitchen — ครัวไม้ กระเบื้อง Zellige ตู้เย็น Samsung" loading="lazy">
+      <div class="room-tag">Kitchen</div>
     </div>
   </div>
 
-  <!-- Bathrooms -->
-  <div class="gal-section">
-    <div class="gallery-label">
-      <span>04 — ห้องน้ำ</span>
-      <h3>Bathroom</h3>
+  <!-- Bathroom -->
+  <div class="gallery-2col reveal" style="margin-top:3px;">
+    <div class="img-wrap">
+      <img src="kpei/06.jpg" alt="Bathroom — Mirror Cabinet Smart Toilet" loading="lazy">
+      <div class="room-tag">Bathroom</div>
     </div>
-    <div class="img-row-2">
-      <img src="kpei/06.jpg" alt="Bathroom 1 — Mirror Cabinet Smart Toilet" loading="lazy">
-      <img src="kpei/07.jpg" alt="Bathroom 2 — Rain Shower Smart Toilet" loading="lazy">
+    <div class="img-wrap">
+      <img src="kpei/07.jpg" alt="Bathroom — Rain Shower" loading="lazy">
+      <div class="room-tag">Bathroom · Shower</div>
     </div>
   </div>
 
   <!-- Master Bedroom -->
-  <div class="gal-section">
-    <div class="gallery-label">
-      <span>05 — ห้องนอนหลัก</span>
-      <h3>Master Bedroom</h3>
-    </div>
-    <img src="kpei/08.jpg" alt="Master Bedroom — ห้องนอนพร้อม Dressing Area" class="img-full" loading="lazy">
-    <div class="img-row-2" style="margin-top:2px;">
-      <img src="kpei/09.jpg" alt="Master Bedroom — วิวเมืองจากหน้าต่าง" loading="lazy">
-      <img src="kpei/10.jpg" alt="Dressing Area — มุมแต่งตัว Walk-in Wardrobe" loading="lazy">
+  <div class="gallery-wide reveal" style="margin-top:3px;">
+    <div class="img-wrap">
+      <img src="kpei/08.jpg" alt="Master Bedroom — ห้องนอนหลักพร้อม Dressing Area" loading="lazy" style="object-position:center 40%;">
+      <div class="room-tag">Master Bedroom</div>
     </div>
   </div>
 
+  <div class="gallery-2col reveal" style="margin-top:3px;">
+    <div class="img-wrap">
+      <img src="kpei/09.jpg" alt="Master Bedroom — วิวเมืองและแสงธรรมชาติ" loading="lazy">
+      <div class="room-tag">Master Bedroom · View</div>
+    </div>
+    <div class="img-wrap">
+      <img src="kpei/10.jpg" alt="Dressing Area — Walk-in Wardrobe มุมแต่งตัว" loading="lazy">
+      <div class="room-tag">Dressing Area</div>
+    </div>
+  </div>
 </section>
 
 <!-- DESIGN CONCEPT -->
-<div class="concept">
-  <div>
-    <div class="concept-eyebrow">Design Concept</div>
-    <h2 class="concept-title">Warm Minimal,<br><em>Built for Everyday Work</em></h2>
-    <p class="concept-sub">ออกแบบสำหรับการใช้ชีวิตจริง ไม่ใช่แค่ภาพสวย</p>
-    <div class="concept-body">
-      <p>โปรเจกต์นี้เริ่มจากโจทย์ที่ตรงไปตรงมา — พื้นที่ 58 ตร.ม. ที่ต้องรองรับการทำงานจากบ้านเป็นหลัก เราจึงเริ่มออกแบบจากโซน Working Zone ก่อน วางตำแหน่งโต๊ะทำงานให้รับแสงธรรมชาติ พร้อมชั้นวางของ Built-in ที่มีไฟส่องสว่างนุ่มนวล ช่วยให้บรรยากาศทำงานไม่ตึงเครียดจนเกินไป</p>
-      <p>โทนสีไม้อ่อนและขาวครีมถูกใช้ต่อเนื่องทั้งยูนิต ตั้งแต่ทางเข้าไปจนถึงห้องนอน เพื่อให้พื้นที่ทั้งหมดรู้สึกเชื่อมกันเป็นหนึ่งเดียว แม้จะเป็นคอนโดขนาดกะทัดรัด แต่ทุกฟังก์ชันถูกจัดสรรอย่างตั้งใจ ไม่ให้รู้สึกอึดอัดหรือแออัด</p>
+<section class="concept-section">
+  <div class="concept-inner">
+    <div class="concept-label reveal">Design Concept</div>
+    <div class="concept-content">
+      <h2 class="concept-title reveal">
+        Warm Minimal,<br>
+        <em>Built for Everyday Work</em>
+      </h2>
+      <div class="concept-cols">
+        <div class="concept-col reveal">
+          <p>โปรเจกต์นี้เริ่มจากโจทย์ที่ตรงไปตรงมา — พื้นที่ 58 ตร.ม. ที่ต้องรองรับการทำงานจากบ้านเป็นหลัก เราจึงเริ่มออกแบบจากโซน Working Zone ก่อน วางตำแหน่งโต๊ะทำงานให้รับแสงธรรมชาติ พร้อมชั้นวางของ Built-in ที่มีไฟส่องสว่างนุ่มนวล</p>
+        </div>
+        <div class="concept-col reveal reveal-delay-1">
+          <p>โทนสีไม้อ่อนและขาวครีมถูกใช้ต่อเนื่องทั้งยูนิต ตั้งแต่ทางเข้าไปจนถึงห้องนอน ทุกฟังก์ชันถูกจัดสรรอย่างตั้งใจ ไม่ให้รู้สึกอึดอัดหรือแออัด แม้พื้นที่จะกะทัดรัด</p>
+        </div>
+      </div>
+      <div class="palette reveal reveal-delay-2">
+        <span class="palette-label">Color Palette</span>
+        <div class="palette-swatches">
+          <div class="swatch" style="background:#F5F0E5;" data-name="Ivory"></div>
+          <div class="swatch" style="background:#E8DFD0;" data-name="Cream"></div>
+          <div class="swatch" style="background:#C8B99A;" data-name="Warm Beige"></div>
+          <div class="swatch" style="background:#8B7355;" data-name="Oak"></div>
+          <div class="swatch" style="background:#2A2620;" data-name="Charcoal"></div>
+          <div class="swatch" style="background:#1A1A1A;" data-name="Matte Black"></div>
+        </div>
+      </div>
     </div>
-  </div>
-  <img src="kpei/09.jpg" alt="Master Bedroom — The Cozy Retreat K.Pei" class="concept-img" loading="lazy">
-</div>
-
-<!-- CTA -->
-<section class="cta-strip">
-  <div class="cta-inner">
-    <div class="cta-eyebrow">Start Your Project</div>
-    <h2 class="cta-title">พร้อมสร้าง<em>พื้นที่ที่ใช่</em><br>ของคุณแล้วหรือยัง?</h2>
-    <p class="cta-body">เราลงพื้นที่สำรวจด้วยตัวเอง รับฟังความต้องการ และวางแผนงบประมาณให้ก่อนตัดสินใจ — รับโปรเจกต์จำนวนจำกัดต่อปี</p>
-    <a href="contact.html" class="btn-gold" onclick="gtag('event','cta_click',{button_name:'project_kpei_cta'})">จองคิวปรึกษาโปรเจกต์</a>
-    <a href="projects.html" class="btn-ghost">ดูผลงานทั้งหมด</a>
   </div>
 </section>
 
-<footer>
-  <div class="foot-inner">
-    <span class="foot-copy">© 2026 Need More Space Studio · กรุงเทพมหานคร</span>
-    <a href="projects.html" class="foot-link">← ผลงานทั้งหมด</a>
+<!-- CTA -->
+<section class="cta-section">
+  <div class="cta-eyebrow reveal">Start Your Project</div>
+  <h2 class="cta-title reveal">
+    พร้อมสร้างพื้นที่<br>
+    ที่ <em>สะท้อนตัวตนคุณ?</em>
+  </h2>
+  <p class="cta-sub reveal reveal-delay-1">
+    ปรึกษากับเรา ฟรี ไม่มีข้อผูกมัด<br>รับคิวจำกัดเพื่อรักษามาตรฐานสูงสุด
+  </p>
+  <div class="cta-buttons reveal reveal-delay-2">
+    <a href="https://lin.ee/uWnOGsX" target="_blank" class="btn-gold" onclick="gtag('event','cta_click',{button_name:'project_kpei_line'})">ปรึกษากับเรา ฟรี</a>
+    <a href="index.html#projects" class="btn-outline">ดูผลงานอื่น →</a>
   </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <a href="index.html" class="footer-logo">Need More<span> Space</span> Studio</a>
+  <span class="footer-copy">© 2026 Need More Space Studio · Bangkok</span>
 </footer>
 
-<script>
-const nav=document.getElementById('nav');
-window.addEventListener('scroll',()=>{nav.classList.toggle('scrolled',window.scrollY>80);});
-const hero=document.getElementById('heroImg');
-function triggerHero(){requestAnimationFrame(()=>requestAnimationFrame(()=>hero.classList.add('loaded')));}
-if(hero.complete){triggerHero();}else{hero.addEventListener('load',triggerHero);}
-</script>
 <!-- LIGHTBOX -->
 <div id="lightbox" style="position:fixed;inset:0;z-index:9999;background:rgba(0,0,0,0.96);display:flex;align-items:center;justify-content:center;opacity:0;pointer-events:none;transition:opacity 0.3s;">
   <button id="lb-close" style="position:absolute;top:1.5rem;right:2rem;background:none;border:none;color:rgba(255,255,255,0.7);font-size:1.8rem;cursor:pointer;line-height:1;padding:0.5rem;">✕</button>
-  <button id="lb-prev" style="position:absolute;left:1rem;top:50%;transform:translateY(-50%);background:none;border:1px solid rgba(255,255,255,0.2);color:rgba(255,255,255,0.7);font-size:1.3rem;cursor:pointer;padding:0.8rem 1.1rem;transition:opacity 0.2s;">←</button>
+  <button id="lb-prev" style="position:absolute;left:1.5rem;top:50%;transform:translateY(-50%);background:none;border:1px solid rgba(255,255,255,0.2);color:rgba(255,255,255,0.7);font-size:1.3rem;cursor:pointer;padding:0.8rem 1.1rem;transition:opacity 0.2s;">←</button>
   <div style="display:flex;flex-direction:column;align-items:center;max-width:92vw;">
-    <img id="lb-img" src="" alt="" style="max-width:90vw;max-height:84vh;object-fit:contain;display:block;">
+    <img id="lb-img" src="" alt="" style="max-width:88vw;max-height:82vh;object-fit:contain;display:block;pointer-events:none;">
     <div id="lb-cap" style="font-size:0.62rem;letter-spacing:0.22em;text-transform:uppercase;color:rgba(255,255,255,0.35);margin-top:0.9rem;"></div>
   </div>
-  <button id="lb-next" style="position:absolute;right:1rem;top:50%;transform:translateY(-50%);background:none;border:1px solid rgba(255,255,255,0.2);color:rgba(255,255,255,0.7);font-size:1.3rem;cursor:pointer;padding:0.8rem 1.1rem;transition:opacity 0.2s;">→</button>
+  <button id="lb-next" style="position:absolute;right:1.5rem;top:50%;transform:translateY(-50%);background:none;border:1px solid rgba(255,255,255,0.2);color:rgba(255,255,255,0.7);font-size:1.3rem;cursor:pointer;padding:0.8rem 1.1rem;transition:opacity 0.2s;">→</button>
 </div>
+
 <script>
-(function(){
-  var lb=document.getElementById('lightbox'),lbImg=document.getElementById('lb-img'),lbCap=document.getElementById('lb-cap');
-  var lbPrev=document.getElementById('lb-prev'),lbNext=document.getElementById('lb-next'),lbClose=document.getElementById('lb-close');
-  var items=[],cur=0;
-  // grab all gallery images (exclude hero, nav logo, concept)
-  document.querySelectorAll('.gallery img').forEach(function(img){
-    var idx=items.length;
-    items.push({src:img.src,cap:img.alt||''});
-    img.style.cursor='zoom-in';
-    img.addEventListener('click',function(){openLB(idx);});
+  // Nav scroll
+  const navbar = document.getElementById('navbar');
+  window.addEventListener('scroll', () => {
+    navbar.classList.toggle('dark', window.scrollY > 80);
   });
-  function openLB(i){cur=i;lb.style.opacity='1';lb.style.pointerEvents='auto';show();}
-  function closeLB(){lb.style.opacity='0';lb.style.pointerEvents='none';}
-  function show(){lbImg.src=items[cur].src;lbCap.textContent=items[cur].cap;lbPrev.style.opacity=cur>0?'1':'0.2';lbNext.style.opacity=cur<items.length-1?'1':'0.2';}
-  lbClose.addEventListener('click',closeLB);
-  lb.addEventListener('click',function(e){if(e.target===lb)closeLB();});
-  lbPrev.addEventListener('click',function(e){e.stopPropagation();if(cur>0){cur--;show();}});
-  lbNext.addEventListener('click',function(e){e.stopPropagation();if(cur<items.length-1){cur++;show();}});
-  document.addEventListener('keydown',function(e){if(lb.style.opacity==='1'){if(e.key==='Escape')closeLB();else if(e.key==='ArrowLeft'&&cur>0){cur--;show();}else if(e.key==='ArrowRight'&&cur<items.length-1){cur++;show();}}});
-  // swipe support for mobile
-  var tx=0;
-  lb.addEventListener('touchstart',function(e){tx=e.touches[0].clientX;},{passive:true});
-  lb.addEventListener('touchend',function(e){var dx=e.changedTouches[0].clientX-tx;if(Math.abs(dx)>50){if(dx<0&&cur<items.length-1){cur++;show();}else if(dx>0&&cur>0){cur--;show();}}});
-})();
+
+  // Hero image zoom
+  const heroImg = document.getElementById('heroImg');
+  setTimeout(() => heroImg.classList.add('loaded'), 100);
+
+  // Reveal on scroll
+  const reveals = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('visible');
+        observer.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.1 });
+  reveals.forEach(el => observer.observe(el));
+
+  // Lightbox
+  (function(){
+    var lb=document.getElementById('lightbox'),lbImg=document.getElementById('lb-img'),lbCap=document.getElementById('lb-cap');
+    var lbPrev=document.getElementById('lb-prev'),lbNext=document.getElementById('lb-next'),lbClose=document.getElementById('lb-close');
+    var items=[],cur=0;
+    document.querySelectorAll('.img-wrap').forEach(function(wrap){
+      var img=wrap.querySelector('img');if(!img)return;
+      var tag=wrap.querySelector('.room-tag');
+      var idx=items.length;
+      items.push({src:img.src,cap:tag?tag.textContent.trim():''});
+      wrap.addEventListener('click',function(){openLB(idx);});
+    });
+    function openLB(i){cur=i;lb.style.opacity='1';lb.style.pointerEvents='auto';show();}
+    function closeLB(){lb.style.opacity='0';lb.style.pointerEvents='none';}
+    function show(){lbImg.src=items[cur].src;lbCap.textContent=items[cur].cap;lbPrev.style.opacity=cur>0?'1':'0.2';lbNext.style.opacity=cur<items.length-1?'1':'0.2';}
+    lbClose.addEventListener('click',closeLB);
+    lb.addEventListener('click',function(e){if(e.target===lb)closeLB();});
+    lbPrev.addEventListener('click',function(e){e.stopPropagation();if(cur>0){cur--;show();}});
+    lbNext.addEventListener('click',function(e){e.stopPropagation();if(cur<items.length-1){cur++;show();}});
+    document.addEventListener('keydown',function(e){if(lb.style.opacity==='1'){if(e.key==='Escape')closeLB();else if(e.key==='ArrowLeft'&&cur>0){cur--;show();}else if(e.key==='ArrowRight'&&cur<items.length-1){cur++;show();}}});
+    var tx=0;
+    lb.addEventListener('touchstart',function(e){tx=e.touches[0].clientX;},{passive:true});
+    lb.addEventListener('touchend',function(e){var dx=e.changedTouches[0].clientX-tx;if(Math.abs(dx)>50){if(dx<0&&cur<items.length-1){cur++;show();}else if(dx>0&&cur>0){cur--;show();}}});
+  })();
 </script>
 <script>document.addEventListener("contextmenu",e=>e.preventDefault());</script>
 </body>
