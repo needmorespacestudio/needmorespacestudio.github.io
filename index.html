@@ -451,6 +451,11 @@ body{background:var(--white);color:var(--ink);font-family:var(--sans);font-weigh
 .why-card-title{font-family:var(--serif);font-size:1.2rem;font-weight:400;color:var(--dark);margin-bottom:0.15rem;}
 .why-card-th{font-family:var(--serif-th);font-size:0.9rem;color:var(--muted);margin-bottom:0.4rem;font-weight:300;}
 .why-card-p{font-size:0.95rem;line-height:1.9;color:#666;text-wrap:pretty;}
+.budget-steps{list-style:none;padding:0;margin:0.9rem 0 0;display:flex;flex-direction:column;gap:0.55rem;}
+.budget-steps li{display:flex;gap:0.7rem;align-items:flex-start;}
+.bs-num{flex-shrink:0;width:1.4rem;height:1.4rem;border-radius:50%;background:var(--gold);color:#fff;font-size:0.6rem;font-weight:600;display:flex;align-items:center;justify-content:center;margin-top:0.15rem;}
+.bs-body{font-size:0.82rem;line-height:1.75;color:#666;}
+.bs-body strong{color:var(--dark);font-weight:500;}
 
 .why-visual{}
 .why-img-grid{display:grid;grid-template-columns:1.2fr 1fr;gap:6px;align-items:end;}
@@ -805,7 +810,7 @@ img{-webkit-user-drag:none;pointer-events:none;}.img-wrap,.proj-img-wrap,.pgm-it
       </h1>
     </div>
     <div class="hero-l-bot">
-      <p class="hero-sub">สร้างพื้นที่ที่สะท้อนตัวตนและวิถีชีวิตของคุณ ภายใต้งบก่อสร้างที่ถูกล็อกไว้ตั้งแต่วันแรก</p>
+      <p class="hero-sub">สร้างพื้นที่ที่สะท้อนตัวตนและวิถีชีวิตของคุณ ภายใต้งบประมาณที่วางแผนไว้ตั้งแต่วันแรก และควบคุมไม่ให้บานปลายตลอดโครงการ</p>
       <p class="hero-p">เราไม่ได้ส่งมอบแค่งานดีไซน์ แต่เราเป็น "ที่ปรึกษาและผู้จัดการโปรเจกต์ส่วนตัว" ให้กับคุณตั้งแต่วันแรกจนถึงวันส่งมอบ — คุณมีหน้าที่แค่เลือกแบบที่ชอบ เราดูแลทุกขั้นตอนแทนคุณ ทั้งนี้เพื่อรักษาคุณภาพการดูแล เรารับดูแลโปรเจกต์ในจำนวนจำกัดต่อปีเท่านั้น</p>
       <div class="hero-actions">
         <a href="contact.html" class="btn-dark" onclick="gtag('event','cta_click',{button_name:'hero_book'})">สมัครคิวประเมินโปรเจกต์</a>
@@ -1017,9 +1022,14 @@ img{-webkit-user-drag:none;pointer-events:none;}.img-wrap,.proj-img-wrap,.pgm-it
         <div class="why-card">
           <div class="why-icon">◈</div>
           <div>
-            <div class="why-card-title">Budget Lock Guarantee</div>
+            <div class="why-card-title">การันตีคุมงบไม่บานปลาย</div>
             <div class="why-card-th">บริหารและควบคุมงบประมาณตั้งแต่เริ่มต้นออกแบบ</div>
-            <p class="why-card-p">เริ่มต้นโปรเจกต์ด้วยการ 'กำหนดกรอบงบประมาณ' ร่วมกับคุณ พร้อมประเมินค่าใช้จ่ายและทำ Value Engineering ให้ตั้งแต่วันแรก เพื่อล็อกสเปกและคุมงบก่อสร้างให้อยู่หมัด โดยไม่มีค่าใช้จ่ายแฝง</p>
+            <p class="why-card-p">กำหนดกรอบงบประมาณร่วมกับคุณ พร้อมทำ Value Engineering ตั้งแต่วันแรก เพื่อให้ทุกบาทคุ้มค่า โดยไม่มีค่าใช้จ่ายแฝง</p>
+            <ol class="budget-steps">
+              <li><span class="bs-num">1</span><span class="bs-body"><strong>ช่วงออกแบบ</strong> — วางกรอบงบประมาณคร่าวๆ ร่วมกัน พร้อมปรับแบบให้เหมาะกับงบที่มีจริง</span></li>
+              <li><span class="bs-num">2</span><span class="bs-body"><strong>หลังแบบก่อสร้างเสร็จ</strong> — สรุปราคารวมแบบเหมาเบ็ดเสร็จก่อนเริ่มงาน ไม่มีตัวเลขเปลี่ยนกลางทาง</span></li>
+              <li><span class="bs-num">3</span><span class="bs-body"><strong>ระหว่างก่อสร้าง</strong> — ติดตามและควบคุมค่าใช้จ่ายให้ไม่เกินที่ตกลงกันไว้ ไม่มีค่าใช้จ่ายแอบแฝง</span></li>
+            </ol>
           </div>
         </div>
         <div class="why-card">
