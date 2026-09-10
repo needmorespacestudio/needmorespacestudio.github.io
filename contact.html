@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="th">
 <head>
 <meta charset="UTF-8">
@@ -18,103 +18,67 @@
 <meta name="description" content="กรอกข้อมูลเบื้องต้น — ภาณุจะติดต่อกลับภายใน 24 ชั่วโมง ฟรี ไม่มีข้อผูกมัด">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Noto+Serif+Thai:wght@300;400;500&family=Jost:wght@200;300;400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Noto+Serif+Thai:wght@300;400&family=Jost:wght@200;300;400&display=swap" rel="stylesheet">
 <style>
 :root {
-  --ivory:#FDFAF5;--cream:#F5F0E8;--warm:#EDE8DF;--sand:#E5DDD1;--muted:#8C8478;--stone:#6B6560;
-  --bark:#2C2416;--charcoal:#1A1814;--gold:#B8975A;--gold-light:#D4AF7A;
-  --border:rgba(184,151,90,0.2);
-  --serif:'Cormorant Garamond',serif;--serif-th:'Noto Serif Thai',serif;--sans:'Jost',sans-serif;
+  --ivory:#FDFAF5;--cream:#F5F0E8;--warm:#EDE8DF;--sand:#E5DDD1;
+  --muted:#8C8478;--stone:#6B6560;--bark:#2C2416;--charcoal:#1A1814;
+  --gold:#B8975A;--gold-light:#D4AF7A;--border:rgba(184,151,90,0.2);
+  --serif:'Cormorant Garamond',serif;
+  --serif-th:'Noto Serif Thai',serif;
+  --sans:'Jost',sans-serif;
 }
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
 html{scroll-behavior:smooth;}
 body{background:var(--ivory);color:var(--charcoal);font-family:var(--sans);font-weight:300;line-height:1.7;overflow-x:hidden;}
 ::-webkit-scrollbar{width:2px;}::-webkit-scrollbar-thumb{background:var(--gold);}
 
-/* NAV */
+/* ── NAV ── */
 nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:1.2rem 3rem;background:rgba(253,250,245,0.97);backdrop-filter:blur(20px);border-bottom:1px solid var(--border);}
-.nav-logo{display:flex;align-items:center;text-decoration:none;}
-.nav-logo img{height:64px;width:auto;filter:invert(1);}
-.nav-back{font-size:0.7rem;letter-spacing:0.16em;text-transform:uppercase;color:var(--muted);text-decoration:none;display:flex;align-items:center;gap:0.5rem;transition:color 0.3s;}
+.nav-logo img{height:60px;width:auto;filter:invert(1);}
+.nav-back{font-size:0.68rem;letter-spacing:0.16em;text-transform:uppercase;color:var(--muted);text-decoration:none;display:flex;align-items:center;gap:0.5rem;transition:color 0.3s;}
 .nav-back::before{content:'←';font-size:0.9rem;}
 .nav-back:hover{color:var(--gold);}
 
-/* HERO */
-.form-hero{padding:4rem 3rem 5rem;display:grid;grid-template-columns:1fr 1fr;gap:6rem;align-items:start;max-width:1300px;margin:0 auto;}
-.form-left{}
-.hero-eyebrow{font-size:0.68rem;letter-spacing:0.26em;text-transform:uppercase;color:var(--gold);display:flex;align-items:center;gap:1rem;margin-bottom:2rem;}
-.hero-eyebrow::before{content:'';width:40px;height:1px;background:var(--gold);}
-.hero-title{font-family:var(--serif-th);font-size:clamp(2.5rem,5vw,4rem);font-weight:300;line-height:1.1;color:var(--bark);margin-bottom:0.8rem;}
-.hero-title em{font-style:italic;color:var(--gold);}
-.hero-sub{font-family:var(--serif-th);font-size:1rem;font-weight:300;color:var(--muted);line-height:1.9;margin-bottom:3rem;}
+/* ── SECTION COMMON ── */
+.section-eyebrow{font-size:0.62rem;letter-spacing:0.28em;text-transform:uppercase;color:var(--gold);display:flex;align-items:center;gap:1rem;margin-bottom:1.2rem;}
+.section-eyebrow::before{content:'';width:32px;height:1px;background:var(--gold);}
 
-.promise-list{list-style:none;margin-bottom:3rem;}
-.promise-list li{font-size:0.85rem;line-height:1.8;color:var(--stone);padding:0.8rem 0;border-bottom:1px solid var(--border);display:flex;align-items:center;gap:1rem;}
+/* ── HERO FORM SECTION ── */
+.form-section{padding:8rem 3rem 5rem;max-width:1400px;margin:0 auto;display:grid;grid-template-columns:1fr 1.1fr;gap:5rem;align-items:start;}
+.form-pitch{}
+.pitch-title{font-family:var(--serif-th);font-size:clamp(2.6rem,4.5vw,4.2rem);font-weight:300;line-height:1.05;color:var(--bark);margin-bottom:0.8rem;}
+.pitch-title em{font-style:italic;color:var(--gold);}
+.pitch-sub{font-family:var(--serif-th);font-size:0.92rem;font-weight:300;color:var(--muted);line-height:2;margin-bottom:2.5rem;max-width:440px;}
+.promise-list{list-style:none;margin-bottom:3rem;max-width:420px;}
+.promise-list li{font-size:0.83rem;line-height:1.8;color:var(--stone);padding:0.75rem 0;border-bottom:1px solid var(--border);display:flex;align-items:center;gap:1rem;}
 .promise-list li:first-child{border-top:1px solid var(--border);}
-.promise-list li::before{content:'✓';color:var(--gold);font-size:0.8rem;flex-shrink:0;font-weight:400;}
+.promise-list li::before{content:'✓';color:var(--gold);font-size:0.8rem;flex-shrink:0;}
+.pitch-direct{border-top:1px solid var(--border);padding-top:1.6rem;}
+.pitch-direct-label{font-size:0.6rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:0.6rem;}
+.pitch-phone{display:block;font-family:var(--serif);font-size:2.2rem;font-weight:300;color:var(--bark);text-decoration:none;letter-spacing:-0.02em;line-height:1;margin-bottom:0.35rem;transition:color 0.3s;}
+.pitch-phone:hover{color:var(--gold);}
+.pitch-direct-meta{font-size:0.78rem;color:var(--muted);}
 
-.project-img-preview{width:100%;aspect-ratio:3/4;object-fit:cover;object-position:center top;display:block;margin-top:2rem;}
-.direct-contact{border-top:1px solid var(--border);padding-top:1.8rem;margin-bottom:2rem;}
-.dc-label{font-size:0.63rem;letter-spacing:0.22em;text-transform:uppercase;color:var(--gold);margin-bottom:0.8rem;}
-.dc-phone{display:block;font-family:var(--serif);font-size:2.4rem;font-weight:300;color:var(--bark);text-decoration:none;letter-spacing:-0.02em;transition:color 0.3s;line-height:1.1;margin-bottom:0.4rem;}
-.dc-phone:hover{color:var(--gold);}
-.dc-meta{font-size:0.8rem;color:var(--muted);letter-spacing:0.04em;}
-
-/* CONTACT PAGE SECTIONS */
-.contact-hero{padding:8rem 3rem 4rem;max-width:1300px;margin:0 auto;}
-.ch-eyebrow{font-size:0.62rem;letter-spacing:0.28em;text-transform:uppercase;color:var(--gold);display:flex;align-items:center;gap:1rem;margin-bottom:1.4rem;}
-.ch-eyebrow::before{content:'';width:40px;height:1px;background:var(--gold);}
-.ch-title{font-family:var(--serif);font-size:clamp(3rem,6vw,5rem);font-weight:300;color:var(--bark);letter-spacing:-0.03em;line-height:1;}
-.ch-rule{width:100%;height:1px;background:var(--border);margin:2.5rem 0;}
-.ch-info{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem 4rem;}
-.ch-col-label{font-size:0.62rem;letter-spacing:0.22em;text-transform:uppercase;color:var(--gold);margin-bottom:1.2rem;}
-.ch-phone{display:block;font-family:var(--sans);font-size:1.4rem;font-weight:300;color:var(--charcoal);text-decoration:none;letter-spacing:0.02em;margin-bottom:0.35rem;transition:color 0.3s;}
-.ch-phone:hover{color:var(--gold);}
-.ch-name{font-size:0.85rem;color:var(--stone);}
-.ch-link{display:block;font-size:0.9rem;color:var(--bark);text-decoration:none;margin-bottom:0.5rem;transition:color 0.3s;opacity:0.8;}
-.ch-link:hover{color:var(--gold);opacity:1;}
-.ch-hours-day{font-size:0.85rem;color:var(--stone);margin-bottom:0.4rem;}
-.ch-hours-time{font-family:var(--sans);font-size:1.25rem;font-weight:300;color:var(--charcoal);}
-.contact-divider{border-top:1px solid var(--border);}
-
-/* FORM */
-.form-right{}
-.form-card{background:white;padding:3rem;border:1px solid var(--border);}
-.form-title{font-family:var(--serif);font-size:1.4rem;font-weight:400;color:var(--bark);margin-bottom:0.4rem;}
-.form-subtitle{font-family:var(--serif-th);font-size:0.85rem;color:var(--muted);font-weight:300;line-height:1.8;margin-bottom:2.5rem;}
-
-.form-group{margin-bottom:1.5rem;}
-.form-row{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:1.5rem;}
-label{display:block;font-size:0.68rem;letter-spacing:0.16em;text-transform:uppercase;color:var(--stone);margin-bottom:0.5rem;}
+/* ── FORM CARD ── */
+.form-card{background:white;padding:2.8rem;border:1px solid var(--border);position:sticky;top:100px;}
+.form-title{font-family:var(--serif);font-size:1.35rem;font-weight:400;color:var(--bark);margin-bottom:0.3rem;}
+.form-subtitle{font-family:var(--serif-th);font-size:0.83rem;color:var(--muted);font-weight:300;line-height:1.9;margin-bottom:2.2rem;}
+.form-group{margin-bottom:1.4rem;}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:1.4rem;}
+label{display:block;font-size:0.65rem;letter-spacing:0.16em;text-transform:uppercase;color:var(--stone);margin-bottom:0.45rem;}
 label span{color:var(--gold);}
-input,select,textarea{width:100%;font-family:var(--sans);font-size:0.85rem;font-weight:300;color:var(--charcoal);background:var(--ivory);border:1px solid rgba(184,151,90,0.25);padding:0.9rem 1rem;outline:none;transition:border-color 0.3s;-webkit-appearance:none;appearance:none;border-radius:0;}
+input,select,textarea{width:100%;font-family:var(--sans);font-size:0.83rem;font-weight:300;color:var(--charcoal);background:var(--ivory);border:1px solid rgba(184,151,90,0.25);padding:0.85rem 1rem;outline:none;transition:border-color 0.3s;-webkit-appearance:none;appearance:none;border-radius:0;}
 input:focus,select:focus,textarea:focus{border-color:var(--gold);}
 select{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23B8975A' fill='none' stroke-width='1.5'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 1rem center;}
-textarea{resize:vertical;min-height:100px;}
-.form-note{font-size:0.72rem;color:var(--muted);margin-top:0.4rem;line-height:1.6;}
-
-.btn-submit{width:100%;font-family:var(--sans);font-size:0.75rem;font-weight:400;letter-spacing:0.18em;text-transform:uppercase;color:white;background:var(--bark);padding:1.1rem 2rem;border:1px solid var(--bark);cursor:pointer;transition:all 0.3s;margin-top:0.5rem;}
+textarea{resize:vertical;min-height:90px;}
+.form-note{font-size:0.7rem;color:var(--muted);margin-top:0.35rem;line-height:1.6;}
+.btn-submit{width:100%;font-family:var(--sans);font-size:0.73rem;font-weight:400;letter-spacing:0.18em;text-transform:uppercase;color:white;background:var(--bark);padding:1.05rem 2rem;border:1px solid var(--bark);cursor:pointer;transition:all 0.3s;margin-top:0.4rem;}
 .btn-submit:hover{background:var(--gold);border-color:var(--gold);}
-
-.privacy-note{font-size:0.68rem;color:var(--muted);text-align:center;margin-top:1rem;line-height:1.7;}
-
-/* CHECKBOX */
+.privacy-note{font-size:0.65rem;color:var(--muted);text-align:center;margin-top:0.9rem;line-height:1.7;}
 input[type="checkbox"]{width:16px;height:16px;flex-shrink:0;accent-color:var(--gold);cursor:pointer;padding:0;border:none;}
-.check-option{display:flex;align-items:center;gap:0.75rem;cursor:pointer;padding:0.85rem 1rem;border:1px solid rgba(184,151,90,0.25);background:var(--ivory);transition:all 0.2s;}
-.check-option:hover{border-color:var(--gold);background:rgba(184,151,90,0.04);}
-.check-option input[type="checkbox"]:checked~.check-option-text{color:var(--bark);}
-.check-option-text{font-family:var(--serif-th);font-size:0.88rem;color:var(--stone);font-weight:300;line-height:1.6;}
-.check-option-text strong{font-weight:400;color:var(--gold);}
 
-/* TRUST BADGES */
-.trust-strip{background:var(--bark);padding:4rem 3rem;}
-.trust-inner{max-width:1300px;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:0;}
-.trust-item{padding:2rem 3rem;border-right:1px solid rgba(255,255,255,0.07);text-align:center;}
-.trust-item:last-child{border-right:none;}
-.trust-num{font-family:var(--serif);font-size:2.5rem;font-weight:300;color:var(--gold);display:block;margin-bottom:0.3rem;}
-.trust-label{font-size:0.7rem;letter-spacing:0.14em;text-transform:uppercase;color:rgba(255,255,255,0.45);}
-
-/* SUCCESS */
+/* ── SUCCESS ── */
 .success-screen{display:none;text-align:center;padding:3rem 2rem;}
 .success-icon{font-size:3rem;margin-bottom:1.5rem;display:block;}
 .success-title{font-family:var(--serif);font-size:1.8rem;font-weight:300;color:var(--bark);margin-bottom:0.5rem;}
@@ -122,70 +86,105 @@ input[type="checkbox"]{width:16px;height:16px;flex-shrink:0;accent-color:var(--g
 .btn-back{display:inline-block;font-size:0.7rem;letter-spacing:0.16em;text-transform:uppercase;color:var(--bark);padding:0.9rem 2rem;text-decoration:none;border:1px solid var(--border);transition:all 0.3s;}
 .btn-back:hover{border-color:var(--gold);color:var(--gold);}
 
-/* SERVICE AREA */
-.service-area{padding:5rem 3rem;background:var(--cream);}
-.service-area-inner{max-width:1300px;margin:0 auto;display:grid;grid-template-columns:1fr 1.6fr;gap:4rem;align-items:start;}
-.sa-eyebrow{font-size:0.62rem;letter-spacing:0.28em;text-transform:uppercase;color:var(--gold);display:flex;align-items:center;gap:1rem;margin-bottom:1.4rem;}
-.sa-eyebrow::before{content:'';width:30px;height:1px;background:var(--gold);}
-.sa-title{font-family:var(--serif);font-size:clamp(2rem,3.5vw,2.8rem);font-weight:300;color:var(--bark);line-height:1.1;letter-spacing:-0.02em;margin-bottom:0.5rem;}
-.sa-subtitle{font-family:var(--serif-th);font-size:0.9rem;color:var(--muted);font-weight:300;margin-bottom:2.5rem;line-height:1.8;}
-.sa-provinces{display:flex;flex-wrap:wrap;gap:0.5rem;margin-bottom:2.5rem;}
-.sa-tag{font-size:0.72rem;letter-spacing:0.08em;color:var(--bark);background:white;border:1px solid var(--border);padding:0.4rem 0.9rem;}
-.sa-details{display:flex;flex-direction:column;gap:0.9rem;border-top:1px solid var(--border);padding-top:1.8rem;}
-.sa-row{display:flex;align-items:center;gap:1rem;}
-.sa-icon{width:36px;height:36px;border:1px solid var(--border);display:flex;align-items:center;justify-content:center;color:var(--gold);flex-shrink:0;font-size:0.85rem;}
-.sa-row-text{font-size:0.85rem;color:var(--stone);line-height:1.6;}
-.sa-row-text a{color:var(--bark);text-decoration:none;transition:color 0.3s;}
-.sa-row-text a:hover{color:var(--gold);}
-.sa-map-wrap{position:relative;border:1px solid var(--border);overflow:hidden;background:var(--warm);}
-.sa-map-wrap iframe{display:block;width:100%;height:400px;border:none;filter:sepia(15%) contrast(0.95) brightness(1.02);}
-.sa-map-label{position:absolute;top:1rem;left:1rem;background:white;padding:0.5rem 1rem;font-size:0.65rem;letter-spacing:0.16em;text-transform:uppercase;color:var(--bark);border:1px solid var(--border);pointer-events:none;}
+/* ── CONTACT INFO BAR ── */
+.info-bar{background:var(--cream);border-top:1px solid var(--border);border-bottom:1px solid var(--border);}
+.info-bar-inner{max-width:1400px;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);}
+.info-col{padding:2.5rem 3rem;border-right:1px solid var(--border);}
+.info-col:last-child{border-right:none;}
+.info-label{font-size:0.6rem;letter-spacing:0.24em;text-transform:uppercase;color:var(--gold);margin-bottom:1rem;}
+.info-phone{display:block;font-family:var(--serif);font-size:1.6rem;font-weight:300;color:var(--bark);text-decoration:none;letter-spacing:-0.01em;line-height:1;margin-bottom:0.3rem;transition:color 0.3s;}
+.info-phone:hover{color:var(--gold);}
+.info-name{font-size:0.78rem;color:var(--muted);}
+.info-link{display:block;font-size:0.85rem;color:var(--bark);text-decoration:none;margin-bottom:0.4rem;opacity:0.75;transition:all 0.3s;}
+.info-link:hover{color:var(--gold);opacity:1;}
+.info-hours-day{font-size:0.82rem;color:var(--stone);margin-bottom:0.3rem;}
+.info-hours-time{font-family:var(--serif);font-size:1.4rem;font-weight:300;color:var(--charcoal);}
 
-/* FOOTER — same as index.html */
-footer{background:var(--sand);padding:4rem;display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:3rem;}
+/* ── SERVICE AREA ── */
+.service-section{padding:5rem 3rem;max-width:1400px;margin:0 auto;display:grid;grid-template-columns:1fr 1.8fr;gap:4rem;align-items:start;}
+.sa-info{}
+.sa-title{font-family:var(--serif);font-size:clamp(1.8rem,2.8vw,2.5rem);font-weight:300;color:var(--bark);line-height:1.1;letter-spacing:-0.02em;margin-bottom:0.6rem;}
+.sa-sub{font-family:var(--serif-th);font-size:0.85rem;color:var(--muted);font-weight:300;margin-bottom:2rem;line-height:1.9;}
+.sa-tags{display:flex;flex-wrap:wrap;gap:0.45rem;margin-bottom:2rem;}
+.sa-tag{font-size:0.7rem;letter-spacing:0.06em;color:var(--bark);background:white;border:1px solid var(--border);padding:0.38rem 0.85rem;}
+.sa-rows{display:flex;flex-direction:column;gap:0.8rem;border-top:1px solid var(--border);padding-top:1.6rem;}
+.sa-row{display:flex;align-items:center;gap:0.9rem;}
+.sa-icon{width:34px;height:34px;border:1px solid var(--border);display:flex;align-items:center;justify-content:center;color:var(--gold);flex-shrink:0;}
+.sa-text{font-size:0.83rem;color:var(--stone);line-height:1.6;}
+.sa-text a{color:var(--bark);text-decoration:none;transition:color 0.3s;}
+.sa-text a:hover{color:var(--gold);}
+.sa-map-wrap{position:relative;border:1px solid var(--border);overflow:hidden;background:var(--warm);}
+.sa-map-wrap iframe{display:block;width:100%;height:440px;border:none;filter:sepia(20%) contrast(0.9) brightness(1.03) saturate(0.85);}
+.sa-map-badge{position:absolute;top:1rem;left:1rem;background:white;padding:0.45rem 1rem;font-size:0.62rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--bark);border:1px solid var(--border);pointer-events:none;box-shadow:0 2px 8px rgba(0,0,0,0.06);}
+
+/* ── TRUST STRIP ── */
+.trust-strip{background:var(--bark);padding:4rem 3rem;}
+.trust-inner{max-width:1400px;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);}
+.trust-item{padding:2rem 3rem;border-right:1px solid rgba(255,255,255,0.07);text-align:center;}
+.trust-item:last-child{border-right:none;}
+.trust-num{font-family:var(--serif);font-size:2.6rem;font-weight:300;color:var(--gold);display:block;margin-bottom:0.3rem;}
+.trust-label{font-size:0.68rem;letter-spacing:0.14em;text-transform:uppercase;color:rgba(255,255,255,0.42);}
+
+/* ── FOOTER ── */
+footer{background:var(--sand);padding:4rem 3rem;display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:3rem;}
 .foot-logo-img{height:26px;width:auto;filter:invert(1);margin-bottom:1rem;display:block;}
-.foot-tag{font-family:var(--serif-th);font-size:0.9rem;color:rgba(28,26,22,0.45);line-height:1.9;margin-bottom:1.2rem;}
+.foot-tag{font-family:var(--serif-th);font-size:0.88rem;color:rgba(28,26,22,0.45);line-height:1.9;margin-bottom:1.2rem;}
 .foot-social{display:flex;gap:0.5rem;}
 .soc{width:34px;height:34px;border:1px solid rgba(28,26,22,0.12);display:flex;align-items:center;justify-content:center;text-decoration:none;color:rgba(28,26,22,0.38);transition:all 0.3s;}
 .soc:hover{border-color:var(--gold);color:var(--gold);}
-.foot-h{font-size:0.75rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--gold);margin-bottom:1.2rem;}
+.foot-h{font-size:0.72rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--gold);margin-bottom:1.2rem;}
 .foot-ul{list-style:none;}
 .foot-ul li{margin-bottom:0.6rem;}
-.foot-ul a{font-size:0.9rem;color:rgba(28,26,22,0.5);text-decoration:none;transition:color 0.3s;}
+.foot-ul a{font-size:0.88rem;color:rgba(28,26,22,0.5);text-decoration:none;transition:color 0.3s;}
 .foot-ul a:hover{color:var(--bark);}
-.foot-bottom{grid-column:span 4;border-top:1px solid rgba(28,26,22,0.1);padding-top:2rem;margin-top:1rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;}
-.foot-copy{font-size:0.8rem;color:rgba(28,26,22,0.35);}
-.btn-gold{display:inline-block;font-size:0.85rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--bark);background:var(--gold);padding:1rem 2.4rem;text-decoration:none;text-align:center;transition:background 0.3s;}
+.foot-bottom{grid-column:span 4;border-top:1px solid rgba(28,26,22,0.1);padding-top:1.8rem;margin-top:0.5rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;}
+.foot-copy{font-size:0.78rem;color:rgba(28,26,22,0.32);}
+.btn-gold{display:inline-block;font-size:0.82rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--bark);background:var(--gold);padding:1rem 2.4rem;text-decoration:none;text-align:center;transition:background 0.3s;}
 .btn-gold:hover{background:var(--gold-light);}
 
+/* ── TABLET ── */
 @media(max-width:1100px){
+  .form-section{gap:3rem;}
+  .service-section{gap:3rem;}
   footer{grid-template-columns:1fr 1fr;gap:2.5rem;}
   .foot-bottom{grid-column:span 2;}
 }
+/* ── TABLET ── */
 @media(max-width:900px){
   nav{padding:1rem 1.5rem;}
-  .contact-hero{padding:8rem 2rem 3rem;}
-  .ch-info{gap:2rem;}
-  .form-hero{grid-template-columns:1fr;gap:3rem;padding:3rem 1.5rem 4rem;}
-  .project-img-preview{display:none;}
-  .form-card{padding:2rem 1.5rem;}
-  .form-row{grid-template-columns:1fr;}
-  .trust-strip{padding:3rem 1.5rem;}
+  .nav-logo img{height:48px;}
+  .form-section{grid-template-columns:1fr;gap:0;padding:7rem 2rem 4rem;}
+  .form-card{position:static;margin-bottom:3.5rem;}
+  .pitch-sub{max-width:100%;}
+  .promise-list{max-width:100%;}
+  .pitch-direct{display:none;}
+  .info-bar-inner{grid-template-columns:1fr;}
+  .info-col{border-right:none;border-bottom:1px solid var(--border);padding:2rem 2rem;}
+  .info-col:last-child{border-bottom:none;}
+  .service-section{grid-template-columns:1fr;gap:2.5rem;padding:4rem 2rem;}
+  .sa-map-wrap iframe{height:320px;}
+  .trust-strip{padding:3rem 2rem;}
   .trust-inner{grid-template-columns:1fr;}
-  .trust-item{border-right:none;border-bottom:1px solid rgba(255,255,255,0.07);padding:1.5rem;}
+  .trust-item{border-right:none;border-bottom:1px solid rgba(255,255,255,0.07);padding:1.5rem 2rem;}
   .trust-item:last-child{border-bottom:none;}
-  .nav-logo img{height:44px;}
-}
-@media(max-width:768px){
-  .contact-hero{padding:7rem 1.5rem 2.5rem;}
-  .ch-info{grid-template-columns:1fr;}
   footer{grid-template-columns:1fr;padding:3rem 2rem;}
   .foot-bottom{grid-column:span 1;}
-  .service-area{padding:3.5rem 1.5rem;}
-  .service-area-inner{grid-template-columns:1fr;gap:2.5rem;}
-  .sa-map-wrap iframe{height:280px;}
 }
-img{-webkit-user-drag:none;pointer-events:none;}.img-wrap,.proj-img-wrap,.pgm-item,.hero,.proj-card{pointer-events:auto;}
+/* ── MOBILE ── */
+@media(max-width:600px){
+  .form-section{padding:6.5rem 1.2rem 3.5rem;}
+  .form-card{padding:1.8rem 1.4rem;}
+  .pitch-title{font-size:2.4rem;}
+  .form-row{grid-template-columns:1fr;}
+  .info-col{padding:1.8rem 1.2rem;}
+  .service-section{padding:3.5rem 1.2rem;}
+  .sa-tags{gap:0.35rem;}
+  .sa-map-wrap iframe{height:260px;}
+  .trust-item{padding:1.2rem;}
+  footer{padding:2.5rem 1.2rem;}
+}
+
+img{-webkit-user-drag:none;pointer-events:none;}
 </style>
 <!-- Meta Pixel Code -->
 <script>
@@ -215,157 +214,211 @@ gtag('config','G-R0CKBW47ZQ');
 </head>
 <body>
 
+<!-- NAV -->
 <nav>
   <a href="index.html" class="nav-back">กลับหน้าหลัก</a>
-  <a href="index.html" class="nav-logo"><img src="logo_cut_white.png" alt="Need More Space Studio"></a>
+  <a href="index.html"><img src="logo_cut_white.png" alt="Need More Space Studio" class="nav-logo" style="height:60px;width:auto;filter:invert(1);display:block;"></a>
   <span style="width:120px;"></span>
 </nav>
 
-<div class="contact-hero">
-  <div class="ch-eyebrow">Contacts</div>
-  <h1 class="ch-title">Contact</h1>
-  <div class="ch-rule"></div>
-  <div class="ch-info">
-    <div class="ch-col">
-      <div class="ch-col-label">โทรศัพท์</div>
-      <a href="tel:0905456166" class="ch-phone">090-545-6166</a>
-      <div class="ch-name">คุณ ภาณุพงษ์</div>
+<!-- ── 1. FORM (MAIN CTA) ── -->
+<div class="form-section">
+
+  <!-- Left: Form Card (mobile: renders first) -->
+  <div class="form-card" style="order:1;" id="formWrap">
+    <div id="formContent">
+      <h1 class="form-title">กรอกข้อมูลเบื้องต้น</h1>
+      <p class="form-subtitle">ภาณุจะติดต่อกลับภายใน 24 ชม. เพื่อนัดคุยและประเมินโปรเจกต์ของคุณโดยตรง<br>ฟรี ไม่มีข้อผูกมัด</p>
+
+      <form id="contactForm" name="contact" method="POST"
+            action="https://formsubmit.co/72e95a83fe73655437477b9544c48f37">
+        <input type="hidden" name="_subject" value="ลูกค้าใหม่ — Need More Space Studio">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_next" value="https://www.needmorespacestudio.com/contact.html?success=true">
+
+        <div class="form-row">
+          <div>
+            <label>ชื่อ <span>*</span></label>
+            <input type="text" name="firstname" placeholder="ชื่อ" required>
+          </div>
+          <div>
+            <label>นามสกุล</label>
+            <input type="text" name="lastname" placeholder="นามสกุล">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>เบอร์โทรศัพท์ <span>*</span></label>
+          <input type="tel" name="phone" placeholder="08X-XXX-XXXX" required>
+          <p class="form-note">สำหรับนัดคุยโดยตรง — ไม่มีการโทรขาย</p>
+        </div>
+
+        <div class="form-group">
+          <label>Email</label>
+          <input type="email" name="email" placeholder="email@example.com">
+        </div>
+
+        <div class="form-group">
+          <label>ประเภทโปรเจกต์ <span>*</span></label>
+          <select name="project_type" required>
+            <option value="" disabled selected>เลือกประเภท...</option>
+            <option>บ้านใหม่ Design &amp; Built-in</option>
+            <option>รีโนเวท ปรับปรุงพื้นที่</option>
+            <option>งานออกแบบร้านค้า สำนักงาน อื่นๆ</option>
+            <option>อื่นๆ</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label>รูปแบบบริการที่คุณสนใจ <span>*</span></label>
+          <select name="service_type" required>
+            <option value="" disabled selected>เลือกรูปแบบบริการ...</option>
+            <option>ออกแบบตกแต่ง Interior อย่างเดียว</option>
+            <option>ออกแบบ + บริหารงานก่อสร้างครบวงจร</option>
+            <option>ยังไม่แน่ใจ อยากขอคำปรึกษาและประเมินงานก่อน</option>
+          </select>
+        </div>
+
+        <div class="form-row">
+          <div>
+            <label>พื้นที่โดยประมาณ</label>
+            <select name="area">
+              <option value="" disabled selected>ตร.ม...</option>
+              <option>น้อยกว่า 50 ตร.ม.</option>
+              <option>50–100 ตร.ม.</option>
+              <option>100–200 ตร.ม.</option>
+              <option>200–300 ตร.ม.</option>
+              <option>มากกว่า 300 ตร.ม.</option>
+            </select>
+          </div>
+          <div>
+            <label>ที่ตั้งโครงการ <span>*</span></label>
+            <select name="location" required>
+              <option value="" disabled selected>เลือก...</option>
+              <option>กรุงเทพฯ ฝั่งในเมือง</option>
+              <option>กรุงเทพฯ รอบนอก / ปริมณฑล</option>
+              <option>ต่างจังหวัด</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>งบประมาณที่ตั้งไว้สำหรับโปรเจกต์นี้? <span>*</span></label>
+          <select name="budget" required>
+            <option value="" disabled selected>เลือกช่วงงบประมาณ...</option>
+            <option>น้อยกว่า 800,000 บาท</option>
+            <option>800,000 – 1.5 ล้านบาท</option>
+            <option>1.5 – 3 ล้านบาท</option>
+            <option>3 ล้านบาท ขึ้นไป</option>
+          </select>
+        </div>
+
+        <button type="submit" class="btn-submit">ส่งข้อมูลให้ประเมินฟรี →</button>
+        <p class="privacy-note">ข้อมูลของคุณจะถูกเก็บเป็นความลับ และใช้เพื่อการติดต่อเท่านั้น</p>
+      </form>
     </div>
-    <div class="ch-col">
-      <div class="ch-col-label">ช่องทางติดต่อ</div>
-      <a href="https://lin.ee/uWnOGsX" target="_blank" class="ch-link">Line OA</a>
-      <a href="mailto:needmorespacestudio@gmail.com" class="ch-link">needmorespacestudio@gmail.com</a>
-      <a href="https://www.instagram.com/needmorespace.studio" target="_blank" class="ch-link">Instagram</a>
-    </div>
-    <div class="ch-col">
-      <div class="ch-col-label">เวลาทำการ</div>
-      <div class="ch-hours-day">จันทร์–ศุกร์</div>
-      <div class="ch-hours-time">9:00 — 18:00</div>
+
+    <div class="success-screen" id="successScreen">
+      <span class="success-icon">✓</span>
+      <h2 class="success-title">ได้รับข้อมูลแล้วครับ</h2>
+      <p class="success-sub">ทีมงานจะติดต่อกลับภายใน 24 ชม.<br>เพื่อนัดคุยและประเมินโปรเจกต์โดยตรง</p>
+      <a href="index.html" class="btn-back">← กลับหน้าหลัก</a>
     </div>
   </div>
-</div>
-<div class="contact-divider"></div>
 
-<div class="form-hero">
-  <div class="form-left">
-    <div class="hero-eyebrow">กรอกแบบฟอร์ม</div>
-    <h2 class="hero-title">นัดพูดคุย<br>กับ <em>เรา</em></h2>
-    <p class="hero-sub">เพื่อให้ทุกโปรเจกต์ได้รับการดูแลอย่างใกล้ชิดที่สุด สตูดิโอของเราจำกัดจำนวนโปรเจกต์ต่อปี</p>
+  <!-- Right: Pitch -->
+  <div style="order:2;">
+    <div class="section-eyebrow">ติดต่อเรา</div>
+    <h2 class="pitch-title">นัดพูดคุย<br>กับ <em>เรา</em></h2>
+    <p class="pitch-sub">เพื่อให้ทุกโปรเจกต์ได้รับการดูแลอย่างใกล้ชิด สตูดิโอของเราจำกัดจำนวนโปรเจกต์ต่อปี</p>
 
     <ul class="promise-list">
-      <li>ทีมงานจะติดต่อกลับภายใน 24 ชม.</li>
+      <li>ติดต่อกลับภายใน 24 ชม.</li>
       <li>นัดคุยและประเมินโปรเจกต์โดยตรง</li>
       <li>ฟรี ไม่มีค่าใช้จ่าย ไม่มีข้อผูกมัด</li>
     </ul>
 
-    <img class="project-img-preview" src="ig%20fb1.png" alt="Need More Space Studio — Interior Design" loading="lazy">
+    <div class="pitch-direct">
+      <div class="pitch-direct-label">โทรตรง</div>
+      <a href="tel:0905456166" class="pitch-phone">090-545-6166</a>
+      <div class="pitch-direct-meta">คุณ ภาณุพงษ์ &nbsp;·&nbsp; จ.–ศ. 9:00–18:00</div>
+    </div>
   </div>
 
-  <div class="form-right">
-    <div class="form-card">
-      <div id="formContent">
-        <h2 class="form-title">กรอกข้อมูลเบื้องต้น</h2>
-        <p class="form-subtitle">ผมจะติดต่อกลับภายใน 24 ชั่วโมง เพื่อนัดคุยและประเมินโปรเจกต์ของคุณโดยตรง ไม่มีค่าใช้จ่าย ไม่มีข้อผูกมัด</p>
+</div>
 
-        <form id="contactForm" name="contact" method="POST"
-              action="https://formsubmit.co/72e95a83fe73655437477b9544c48f37">
-          <input type="hidden" name="_subject" value="ลูกค้าใหม่ — Need More Space Studio">
-          <input type="hidden" name="_captcha" value="false">
-          <input type="hidden" name="_template" value="table">
-          <input type="hidden" name="_next" value="https://www.needmorespacestudio.com/contact.html?success=true">
-
-          <div class="form-row">
-            <div>
-              <label>ชื่อ <span>*</span></label>
-              <input type="text" name="firstname" placeholder="ชื่อ" required>
-            </div>
-            <div>
-              <label>นามสกุล</label>
-              <input type="text" name="lastname" placeholder="นามสกุล">
-            </div>
-          </div>
-
-          <div class="form-group">
-            <label>เบอร์โทรศัพท์ <span>*</span></label>
-            <input type="tel" name="phone" placeholder="08X-XXX-XXXX" required>
-            <p class="form-note">สำหรับนัดคุยโดยตรง — ไม่มีการโทรขาย</p>
-          </div>
-
-          <div class="form-group">
-            <label>Email</label>
-            <input type="email" name="email" placeholder="email@example.com">
-          </div>
-
-          <div class="form-group">
-            <label>ประเภทโปรเจกต์ <span>*</span></label>
-            <select name="project_type" required>
-              <option value="" disabled selected>เลือกประเภท...</option>
-              <option>บ้านใหม่ Design &amp; Built-in</option>
-              <option>รีโนเวท ปรับปรุงพื้นที่</option>
-              <option>งานออกแบบร้านค้า สำนักงาน อื่นๆ</option>
-              <option>อื่นๆ</option>
-            </select>
-          </div>
-
-          <div class="form-group">
-            <label>รูปแบบบริการที่คุณสนใจ <span>*</span></label>
-            <select name="service_type" required>
-              <option value="" disabled selected>เลือกรูปแบบบริการ...</option>
-              <option>ออกแบบตกแต่ง Interior อย่างเดียว</option>
-              <option>ออกแบบ + บริหารงานก่อสร้างครบวงจร</option>
-              <option>ยังไม่แน่ใจ อยากขอคำปรึกษาและประเมินงานก่อน</option>
-            </select>
-          </div>
-
-          <div class="form-row">
-            <div>
-              <label>พื้นที่โดยประมาณ</label>
-              <select name="area">
-                <option value="" disabled selected>ตร.ม...</option>
-                <option>น้อยกว่า 50 ตร.ม.</option>
-                <option>50–100 ตร.ม.</option>
-                <option>100–200 ตร.ม.</option>
-                <option>200–300 ตร.ม.</option>
-                <option>มากกว่า 300 ตร.ม.</option>
-              </select>
-            </div>
-            <div>
-              <label>ที่ตั้งโครงการ <span>*</span></label>
-              <select name="location" required>
-                <option value="" disabled selected>เลือก...</option>
-                <option>กรุงเทพฯ ฝั่งในเมือง</option>
-                <option>กรุงเทพฯ รอบนอก / ปริมณฑล</option>
-                <option>ต่างจังหวัด</option>
-              </select>
-            </div>
-          </div>
-
-          <div class="form-group">
-            <label>งบประมาณที่ตั้งไว้สำหรับโปรเจกต์นี้? <span>*</span></label>
-            <select name="budget" required>
-              <option value="" disabled selected>เลือกช่วงงบประมาณ...</option>
-              <option>น้อยกว่า 800,000 บาท</option>
-              <option>800,000 – 1.5 ล้านบาท</option>
-              <option>1.5 – 3 ล้านบาท</option>
-              <option>3 ล้านบาท ขึ้นไป</option>
-            </select>
-          </div>
-
-          <button type="submit" class="btn-submit">ส่งข้อมูลให้ประเมินฟรี →</button>
-          <p class="privacy-note">ข้อมูลของคุณจะถูกเก็บเป็นความลับ และใช้เพื่อการติดต่อเท่านั้น</p>
-        </form>
-      </div>
-
-      <div class="success-screen" id="successScreen">
-        <span class="success-icon">✓</span>
-        <h2 class="success-title">ได้รับข้อมูลแล้วครับ</h2>
-        <p class="success-sub">ทีมงานจะติดต่อกลับภายใน 24 ชม.<br>เพื่อนัดคุยและประเมินโปรเจกต์โดยตรง</p>
-        <a href="index.html" class="btn-back">← กลับหน้าหลัก</a>
-      </div>
+<!-- ── 2. CONTACT INFO BAR ── -->
+<div class="info-bar">
+  <div class="info-bar-inner">
+    <div class="info-col">
+      <div class="info-label">โทรศัพท์</div>
+      <a href="tel:0905456166" class="info-phone">090-545-6166</a>
+      <div class="info-name">คุณ ภาณุพงษ์</div>
+    </div>
+    <div class="info-col">
+      <div class="info-label">ช่องทางติดต่อ</div>
+      <a href="https://lin.ee/uWnOGsX" target="_blank" class="info-link">Line OA · @needmorespace</a>
+      <a href="mailto:needmorespacestudio@gmail.com" class="info-link">needmorespacestudio@gmail.com</a>
+      <a href="https://www.instagram.com/needmorespace.studio" target="_blank" class="info-link">Instagram · @needmorespace.studio</a>
+    </div>
+    <div class="info-col">
+      <div class="info-label">เวลาทำการ</div>
+      <div class="info-hours-day">จันทร์–ศุกร์</div>
+      <div class="info-hours-time">9:00 — 18:00</div>
     </div>
   </div>
 </div>
 
+<!-- ── 3. SERVICE AREA + MAP ── -->
+<div class="service-section">
+  <div class="sa-info">
+    <div class="section-eyebrow">Service Area</div>
+    <h2 class="sa-title">พื้นที่บริการ</h2>
+    <p class="sa-sub">กรุงเทพฯ และปริมณฑล — เราลงพื้นที่สำรวจและคุมงานหน้าไซต์ด้วยตัวเองทุกโปรเจกต์</p>
+    <div class="sa-tags">
+      <span class="sa-tag">กรุงเทพมหานคร</span>
+      <span class="sa-tag">นนทบุรี</span>
+      <span class="sa-tag">ปทุมธานี</span>
+      <span class="sa-tag">สมุทรปราการ</span>
+      <span class="sa-tag">สมุทรสาคร</span>
+    </div>
+    <div class="sa-rows">
+      <div class="sa-row">
+        <div class="sa-icon">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        </div>
+        <div class="sa-text">จันทร์–ศุกร์ &nbsp;09:00–18:00</div>
+      </div>
+      <div class="sa-row">
+        <div class="sa-icon">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.01 1.18 2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92v2z"/></svg>
+        </div>
+        <div class="sa-text"><a href="tel:0905456166">090-545-6166</a> &nbsp;·&nbsp; คุณ ภาณุพงษ์</div>
+      </div>
+      <div class="sa-row">
+        <div class="sa-icon">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/></svg>
+        </div>
+        <div class="sa-text">Line OA: <a href="https://lin.ee/uWnOGsX" target="_blank">@needmorespace</a></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="sa-map-wrap">
+    <!-- แผนที่ placeholder — รอที่อยู่จริงเพื่อปักหมุด -->
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d496958.1097!2d100.2310504!3d13.7248937!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x311d6032280d61f3%3A0x10100b25de24820!2sBangkok!5e0!3m2!1sth!2sth!4v1725964800000!5m2!1sth!2sth"
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"
+      allowfullscreen
+      title="Need More Space Studio — พื้นที่บริการ กรุงเทพฯ และปริมณฑล">
+    </iframe>
+    <div class="sa-map-badge">กรุงเทพฯ และปริมณฑล</div>
+  </div>
+</div>
+
+<!-- ── 4. TRUST NUMBERS ── -->
 <div class="trust-strip">
   <div class="trust-inner">
     <div class="trust-item">
@@ -377,59 +430,13 @@ gtag('config','G-R0CKBW47ZQ');
       <span class="trust-label">ปีประสบการณ์</span>
     </div>
     <div class="trust-item">
-      <span class="trust-num">100%</span>
-      <span class="trust-label">งบไม่บานปลาย</span>
+      <span class="trust-num">≤10</span>
+      <span class="trust-label">โปรเจกต์ต่อปี — ดูแลใกล้ชิดทุกโปรเจกต์</span>
     </div>
   </div>
 </div>
 
-<!-- SERVICE AREA -->
-<section class="service-area">
-  <div class="service-area-inner">
-    <div class="sa-info">
-      <div class="sa-eyebrow">Service Area</div>
-      <h2 class="sa-title">พื้นที่บริการ</h2>
-      <p class="sa-subtitle">กรุงเทพฯ และปริมณฑล — เราลงพื้นที่สำรวจและคุมงานหน้าไซต์ด้วยตัวเองทุกโปรเจกต์</p>
-      <div class="sa-provinces">
-        <span class="sa-tag">กรุงเทพมหานคร</span>
-        <span class="sa-tag">นนทบุรี</span>
-        <span class="sa-tag">ปทุมธานี</span>
-        <span class="sa-tag">สมุทรปราการ</span>
-        <span class="sa-tag">สมุทรสาคร</span>
-      </div>
-      <div class="sa-details">
-        <div class="sa-row">
-          <div class="sa-icon">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-          </div>
-          <div class="sa-row-text">จันทร์–ศุกร์ &nbsp;09:00–18:00</div>
-        </div>
-        <div class="sa-row">
-          <div class="sa-icon">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.01 1.18 2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92v2z"/></svg>
-          </div>
-          <div class="sa-row-text"><a href="tel:0905456166">090-545-6166</a> &nbsp;·&nbsp; คุณ ภาณุพงษ์</div>
-        </div>
-        <div class="sa-row">
-          <div class="sa-icon">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/></svg>
-          </div>
-          <div class="sa-row-text">Line OA: <a href="https://lin.ee/uWnOGsX" target="_blank">@needmorespace</a></div>
-        </div>
-      </div>
-    </div>
-    <div class="sa-map-wrap">
-      <iframe
-        src="https://maps.google.com/maps?q=Bangkok,Thailand&z=9&output=embed"
-        loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade"
-        title="พื้นที่บริการ Need More Space Studio — กรุงเทพฯ และปริมณฑล">
-      </iframe>
-      <div class="sa-map-label">กรุงเทพฯ และปริมณฑล</div>
-    </div>
-  </div>
-</section>
-
+<!-- ── FOOTER ── -->
 <footer>
   <div>
     <img src="logo_cut_white.png" alt="Need More Space Studio" class="foot-logo-img">
@@ -450,6 +457,7 @@ gtag('config','G-R0CKBW47ZQ');
       <li><a href="venue-flow.html">Venue Flow Rama 5</a></li>
       <li><a href="grand-britania.html">Grand Britania</a></li>
       <li><a href="the-five.html">The Five · Minburi</a></li>
+      <li><a href="cozy-retreat-kpei.html">The Cozy Retreat · K.Pei</a></li>
     </ul>
   </div>
   <div>
@@ -466,7 +474,7 @@ gtag('config','G-R0CKBW47ZQ');
     <div class="foot-h">Contact</div>
     <ul class="foot-ul">
       <li><a href="tel:0905456166">090-545-6166</a></li>
-      <li style="font-size:0.78rem;color:rgba(28,26,22,0.35);margin-top:-0.1rem;margin-bottom:0.8rem;">คุณ ภาณุพงษ์ · จ.–ศ. 9:00–18:00</li>
+      <li style="font-size:0.76rem;color:rgba(28,26,22,0.35);margin-top:-0.1rem;margin-bottom:0.8rem;">คุณ ภาณุพงษ์ · จ.–ศ. 9:00–18:00</li>
       <li><a href="mailto:needmorespacestudio@gmail.com">needmorespacestudio@gmail.com</a></li>
       <li><a href="https://lin.ee/uWnOGsX" target="_blank">Line OA</a></li>
     </ul>
@@ -475,19 +483,16 @@ gtag('config','G-R0CKBW47ZQ');
     </div>
   </div>
   <div class="foot-bottom">
-    <span class="foot-copy">© 2025 Need More Space Studio · Bangkok · All Rights Reserved</span>
+    <span class="foot-copy">© 2026 Need More Space Studio · Bangkok · All Rights Reserved</span>
   </div>
 </footer>
 
 <script>
-// Show success screen if redirected back with ?success=true (fallback)
 const urlParams = new URLSearchParams(window.location.search);
 if (urlParams.get('success') === 'true') {
   document.getElementById('formContent').style.display = 'none';
   document.getElementById('successScreen').style.display = 'block';
 }
-
-// Submit via AJAX → send to needmorespace.studio@gmail.com via Formsubmit.co
 document.getElementById('contactForm').addEventListener('submit', async function(e) {
   e.preventDefault();
   const form = e.target;
@@ -512,7 +517,6 @@ document.getElementById('contactForm').addEventListener('submit', async function
       alert('เกิดข้อผิดพลาด กรุณาลองใหม่อีกครั้ง');
     }
   } catch(err) {
-    // Fallback: submit normally (will redirect to formsubmit.co then back via _next)
     form.submit();
   }
 });
