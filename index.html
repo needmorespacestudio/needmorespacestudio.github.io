@@ -19,7 +19,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Noto+Serif+Thai:wght@300;400&family=DM+Sans:wght@300;400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Noto+Serif+Thai:wght@300;400;600&family=DM+Sans:wght@300;400;600&display=swap" rel="stylesheet">
 <meta name="facebook-domain-verification" content="re3x2vyc14i3ynjzd113ctko2f0zfn" />
 <!-- Meta Pixel Code -->
 <script>
@@ -801,6 +801,13 @@ footer{
 }
 img{-webkit-user-drag:none;pointer-events:none;}.img-wrap,.proj-img-wrap,.pgm-item,.hero,.proj-card{pointer-events:auto;}
 
+/* ── SCAN-FRIENDLY EMPHASIS ── */
+.kw{font-weight:600;color:var(--ink);}
+.mk{font-weight:600;color:var(--ink);background:linear-gradient(transparent 62%,rgba(184,152,96,0.3) 62%);padding:0 0.1em;-webkit-box-decoration-break:clone;box-decoration-break:clone;}
+.why-punch{display:block;margin-top:0.7rem;}
+.bs-body strong{font-weight:600;}
+.bs-body .kw{font-weight:400;}
+
 /* ── LAYOUT POLISH ── */
 section[id]{scroll-margin-top:84px;}
 .stat-l,.why-badge-l,.pgm-label{font-size:11px;}
@@ -925,9 +932,9 @@ section[id]{scroll-margin-top:84px;}
       </h1>
     </div>
     <div class="hero-l-bot">
-      <p class="hero-sub">สำหรับคนที่ไม่มีเวลาคุมงานเอง<br>เราส่งมอบบ้านระดับพรีเมียม ภายใต้งบประมาณที่วางแผนไว้ตั้งแต่วันแรก</p>
-      <p class="hero-p">เราไม่ได้ส่งมอบแค่งานดีไซน์ แต่เราเป็น "ที่ปรึกษาและผู้จัดการโปรเจกต์ส่วนตัว" ดูแลคุณตั้งแต่วันแรกจนถึงวันส่งมอบ คุณมีหน้าที่แค่เลือกแบบที่ชอบ ที่เหลือเราจัดการให้</p>
-      <p class="hero-p">เพื่อรักษามาตรฐานและดูแลได้อย่างใกล้ชิดจริง เรารับโปรเจกต์ในจำนวนจำกัดต่อปีเท่านั้น</p>
+      <p class="hero-sub"><span class="kw">สำหรับคนที่ไม่มีเวลาคุมงานเอง</span><br>เราส่งมอบบ้านระดับพรีเมียม ภายใต้<span class="mk">งบประมาณที่วางแผนไว้ตั้งแต่วันแรก</span></p>
+      <p class="hero-p">เราไม่ได้ส่งมอบแค่งานดีไซน์ แต่เราเป็น <span class="kw">"ที่ปรึกษาและผู้จัดการโปรเจกต์ส่วนตัว"</span> ดูแลคุณตั้งแต่วันแรกจนถึงวันส่งมอบ <span class="kw">คุณมีหน้าที่แค่เลือกแบบที่ชอบ ที่เหลือเราจัดการให้</span></p>
+      <p class="hero-p">เพื่อรักษามาตรฐานและดูแลได้อย่างใกล้ชิดจริง เรา<span class="kw">รับโปรเจกต์ในจำนวนจำกัดต่อปีเท่านั้น</span></p>
       <div class="hero-actions">
         <a href="contact.html" class="btn-dark" onclick="gtag('event','cta_click',{button_name:'hero_book'})">สมัครคิวประเมินโปรเจกต์</a>
         <a href="#projects" class="btn-ghost">ดูผลงาน</a>
@@ -1088,7 +1095,7 @@ section[id]{scroll-margin-top:84px;}
         <div class="eyebrow">Process</div>
         <h2 class="section-h">4 ขั้นตอน<em> เราช่วยดูแลทั้งหมด</em></h2>
       </div>
-      <p class="how-note" style="font-family:var(--serif-th);font-size:0.92rem;color:var(--muted);max-width:300px;line-height:1.9;text-align:right;font-weight:300;">คุณมีหน้าที่แค่บอกความต้องการ<br>นอกนั้นเราจัดการให้ทั้งหมด</p>
+      <p class="how-note" style="font-family:var(--serif-th);font-size:0.92rem;color:var(--muted);max-width:300px;line-height:1.9;text-align:right;font-weight:300;">คุณมีหน้าที่แค่<span class="kw">บอกความต้องการ</span><br>นอกนั้นเราจัดการให้ทั้งหมด</p>
     </div>
     <!-- 4-column step timeline -->
     <div class="steps reveal">
@@ -1096,25 +1103,25 @@ section[id]{scroll-margin-top:84px;}
         <div class="step-n">01</div>
         <div class="step-title">Brief & Consult</div>
         <div class="step-sub">ปรึกษาและวางแผน</div>
-        <p class="step-p">เราลงพื้นที่สำรวจด้วยตัวเอง รับฟังวิถีชีวิตและวางกรอบงบประมาณตั้งแต่แรก ก่อนเริ่มออกแบบทุกครั้ง</p>
+        <p class="step-p">เรา<span class="kw">ลงพื้นที่สำรวจด้วยตัวเอง</span> รับฟังวิถีชีวิตและ<span class="kw">วางกรอบงบประมาณตั้งแต่แรก</span> ก่อนเริ่มออกแบบทุกครั้ง</p>
       </div>
       <div class="step">
         <div class="step-n">02</div>
         <div class="step-title">Design & Develop</div>
         <div class="step-sub">ออกแบบและจัดทำแบบสร้าง</div>
-        <p class="step-p">ออกแบบ 3D สมจริง คัดสรรวัสดุ ให้อยู่ในงบที่ตั้งไว้ทุกรายการ งบประมาณชัดเจน ตรวจสอบได้ทุกรายการ</p>
+        <p class="step-p"><span class="kw">ออกแบบ 3D สมจริง</span> คัดสรรวัสดุ ให้อยู่ในงบที่ตั้งไว้ทุกรายการ <span class="kw">งบประมาณชัดเจน ตรวจสอบได้ทุกรายการ</span></p>
       </div>
       <div class="step">
         <div class="step-n">03</div>
         <div class="step-title">Construct & Manage</div>
         <div class="step-sub">ก่อสร้างและบริหารโครงการ</div>
-        <p class="step-p">คุมงานหน้าไซต์แทนคุณตลอดโครงการ คุณเข้ามาดูความคืบหน้าเป็นช่วงๆ พอ</p>
+        <p class="step-p"><span class="kw">คุมงานหน้าไซต์แทนคุณตลอดโครงการ</span> คุณเข้ามาดูความคืบหน้าเป็นช่วงๆ พอ</p>
       </div>
       <div class="step">
         <div class="step-n">04</div>
         <div class="step-title">Handover & Care</div>
         <div class="step-sub">ส่งมอบและดูแลหลังงาน</div>
-        <p class="step-p">ตรวจรับงานอย่างละเอียด ส่งมอบพื้นที่พร้อมเข้าอยู่ 100% ไม่มีฝุ่น ไม่มีงานค้าง</p>
+        <p class="step-p">ตรวจรับงานอย่างละเอียด <span class="kw">ส่งมอบพื้นที่พร้อมเข้าอยู่ 100%</span> ไม่มีฝุ่น ไม่มีงานค้าง</p>
       </div>
     </div>
   </div>
@@ -1133,7 +1140,7 @@ section[id]{scroll-margin-top:84px;}
           <div>
             <div class="why-card-title">Single Point of Contact</div>
             <div class="why-card-th">คุยกับเราคนเดียว ไม่ต้องประสานงานกับช่างแต่ละทีมเอง</div>
-            <p class="why-card-p">ไม่ต้องคุยกับสถาปนิก ช่างไฟ ผู้รับเหมา แยกกัน เราประสานงานทุกฝ่ายแทนคุณตลอดโปรเจกต์</p>
+            <p class="why-card-p">ไม่ต้องคุยกับสถาปนิก ช่างไฟ ผู้รับเหมา แยกกัน <span class="kw">เราประสานงานทุกฝ่ายแทนคุณ</span>ตลอดโปรเจกต์</p>
           </div>
         </div>
         <div class="why-card">
@@ -1141,11 +1148,11 @@ section[id]{scroll-margin-top:84px;}
           <div>
             <div class="why-card-title">บริหารงบประมาณให้คุ้มค่า</div>
             <div class="why-card-th">วางกรอบงบประมาณร่วมกันตั้งแต่ต้น ลดความเสี่ยงเรื่องงบบานปลายระหว่างก่อสร้าง</div>
-            <p class="why-card-p">กำหนดกรอบงบประมาณร่วมกับคุณ พร้อมทำ Value Engineering ตั้งแต่วันแรก เพื่อให้ทุกบาทคุ้มค่า โดยไม่มีค่าใช้จ่ายแฝง</p>
+            <p class="why-card-p">กำหนดกรอบงบประมาณร่วมกับคุณ พร้อมทำ <span class="kw">Value Engineering</span> ตั้งแต่วันแรก เพื่อให้<span class="kw">ทุกบาทคุ้มค่า</span> โดยไม่มีค่าใช้จ่ายแฝง</p>
             <ol class="budget-steps">
               <li><span class="bs-num">1</span><span class="bs-body"><strong>ช่วงออกแบบ</strong> — วางกรอบงบประมาณคร่าวๆ ร่วมกัน พร้อมปรับแบบให้เหมาะกับงบที่มีจริง</span></li>
-              <li><span class="bs-num">2</span><span class="bs-body"><strong>หลังแบบก่อสร้างเสร็จ</strong> — สรุปราคารวมแบบเหมาเบ็ดเสร็จก่อนเริ่มงาน ราคาที่ตกลงกันไว้ คงที่ตลอดโครงการ</span></li>
-              <li><span class="bs-num">3</span><span class="bs-body"><strong>ระหว่างก่อสร้าง</strong> — ติดตามและควบคุมค่าใช้จ่ายให้ไม่เกินที่ตกลงกันไว้ ทุกค่าใช้จ่าย แจ้งให้ทราบก่อนดำเนินการเสมอ</span></li>
+              <li><span class="bs-num">2</span><span class="bs-body"><strong>หลังแบบก่อสร้างเสร็จ</strong> — สรุปราคารวมแบบเหมาเบ็ดเสร็จก่อนเริ่มงาน <span class="kw">ราคาที่ตกลงกันไว้ คงที่ตลอดโครงการ</span></span></li>
+              <li><span class="bs-num">3</span><span class="bs-body"><strong>ระหว่างก่อสร้าง</strong> — ติดตามและควบคุมค่าใช้จ่ายให้ไม่เกินที่ตกลงกันไว้ <span class="kw">ทุกค่าใช้จ่าย แจ้งให้ทราบก่อนดำเนินการเสมอ</span></span></li>
             </ol>
           </div>
         </div>
@@ -1153,7 +1160,7 @@ section[id]{scroll-margin-top:84px;}
           <div class="why-icon">◈</div>
           <div>
             <div class="why-card-title">Limited Queue · Maximum Care</div>
-            <p class="why-card-p">เรารับดูแลโปรเจกต์ไม่เกิน 10 โครงการต่อปี เฉพาะพื้นที่กรุงเทพฯและปริมณฑล เพราะบ้านที่ดีต้องเกิดจากการลงพื้นที่ตรวจงานด้วยตัวเองทุกจุด ไม่ใช่การแบ่งเวลาดูแลหลายสิบโปรเจกต์พร้อมกัน — จำนวนที่จำกัด คือสิ่งที่การันตีว่าคุณจะได้รับความใส่ใจแบบเต็มร้อยจากเราจริงๆ</p>
+            <p class="why-card-p">เรารับดูแลโปรเจกต์<span class="kw">ไม่เกิน 10 โครงการต่อปี</span> เฉพาะพื้นที่กรุงเทพฯและปริมณฑล เพราะบ้านที่ดีต้องเกิดจากการลงพื้นที่ตรวจงานด้วยตัวเองทุกจุด ไม่ใช่การแบ่งเวลาดูแลหลายสิบโปรเจกต์พร้อมกัน —<span class="why-punch">จำนวนที่จำกัด คือสิ่งที่การันตีว่าคุณจะได้รับ<span class="mk">ความใส่ใจแบบเต็มร้อย</span>จากเราจริงๆ</span></p>
           </div>
         </div>
       </div>
@@ -1209,8 +1216,8 @@ section[id]{scroll-margin-top:84px;}
     <div class="offer-cols">
       <div class="offer-stat-block reveal">
         <div class="offer-big-pct">90%</div>
-        <p class="offer-stat-desc">ของเจ้าของบ้านพบปัญหา — งบบานปลาย งานล่าช้า ผลลัพธ์ไม่ตรงปก</p>
-        <p class="offer-body-txt">เราทำหน้าที่เป็น Project Orchestrator ส่วนตัวของคุณ ดูแลแบบเบ็ดเสร็จตั้งแต่คิดคอนเซปต์ดีไซน์ ล็อกงบประมาณ ควบคุมมาตรฐานก่อสร้าง ไปจนถึงวันส่งมอบบ้านพร้อมอยู่ — คุณมีหน้าที่แค่เลือกแบบที่ชอบ นอกนั้นเราจัดการความวุ่นวายแทนคุณทั้งหมด</p>
+        <p class="offer-stat-desc">ของเจ้าของบ้านพบปัญหา — <span class="kw">งบบานปลาย งานล่าช้า ผลลัพธ์ไม่ตรงปก</span></p>
+        <p class="offer-body-txt">เราทำหน้าที่เป็น <span class="kw">Project Orchestrator ส่วนตัวของคุณ</span> ดูแลแบบเบ็ดเสร็จตั้งแต่คิดคอนเซปต์ดีไซน์ ล็อกงบประมาณ ควบคุมมาตรฐานก่อสร้าง ไปจนถึงวันส่งมอบบ้านพร้อมอยู่ — <span class="kw">คุณมีหน้าที่แค่เลือกแบบที่ชอบ</span> นอกนั้นเราจัดการความวุ่นวายแทนคุณทั้งหมด</p>
       </div>
       <div class="offer-price-card reveal d1">
         <div class="offer-price-eyebrow">Turnkey Project Orchestrator</div>
@@ -1222,7 +1229,7 @@ section[id]{scroll-margin-top:84px;}
             <span style="font-family:var(--serif-th);font-size:1rem;font-weight:400;color:var(--ink);">ของมูลค่าโครงการ</span>
           </div>
         </div>
-        <p class="offer-price-desc">บริหารงบประมาณก่อสร้างให้คุ้มค่า และควบคุมค่าใช้จ่ายให้อยู่ในงบประมาณที่วางแผนไว้ ด้วยการให้เราเป็นตัวแทนบริหารจัดการความวุ่นวายทั้งหมด เพื่อให้บ้านเสร็จสมบูรณ์โดยที่คุณไม่ต้องเหนื่อยเอง</p>
+        <p class="offer-price-desc">บริหารงบประมาณก่อสร้างให้คุ้มค่า และ<span class="kw">ควบคุมค่าใช้จ่ายให้อยู่ในงบประมาณที่วางแผนไว้</span> ด้วยการให้เราเป็นตัวแทนบริหารจัดการความวุ่นวายทั้งหมด เพื่อให้บ้านเสร็จสมบูรณ์โดยที่คุณไม่ต้องเหนื่อยเอง</p>
         <div class="offer-coverage">
           <span><strong>Design & Spec</strong> — ออกแบบ 3D เฉพาะคุณ + คัดสรรวัสดุและวางสเปกให้คุ้มค่าที่สุดในงบที่คุณตั้งไว้ ไม่ต้องเสียเวลาเทียบราคาเอง</span>
           <span><strong>Construction Management</strong> — บริหารจัดการงานก่อสร้างครบวงจร</span>
@@ -1246,21 +1253,21 @@ section[id]{scroll-margin-top:84px;}
     </div>
     <div class="trust-testi-grid">
       <div class="testi featured reveal">
-        <p class="testi-q">"สบายใจมากครับ ตลอด 4 เดือนไม่ต้องคุยกับช่างเองแม้แต่ครั้งเดียว จัดการทุกอย่างและอัพเดทให้ทุกสัปดาห์ งบก็ตรงที่ตกลงกันไว้ตั้งแต่แรกเลย"</p>
+        <p class="testi-q">"สบายใจมากครับ <span class="kw">ตลอด 4 เดือนไม่ต้องคุยกับช่างเองแม้แต่ครั้งเดียว</span> จัดการทุกอย่างและอัพเดทให้ทุกสัปดาห์ งบก็ตรงที่ตกลงกันไว้ตั้งแต่แรกเลย"</p>
         <div class="testi-by">
           <div class="testi-avatar">K</div>
           <div><div class="testi-name">K Max</div><div class="testi-proj">Magnolias Waterfront Residences</div></div>
         </div>
       </div>
       <div class="testi reveal d1">
-        <p class="testi-q">"งบไม่บานปลายเลยสักบาท วางแผนและล็อกงบให้ตั้งแต่ก่อนเริ่ม บ้านออกมาสวยกว่าที่คิดไว้ด้วย แนะนำเพื่อนไปแล้ว 2 คน"</p>
+        <p class="testi-q">"<span class="kw">งบไม่บานปลายเลยสักบาท</span> วางแผนและล็อกงบให้ตั้งแต่ก่อนเริ่ม บ้านออกมาสวยกว่าที่คิดไว้ด้วย แนะนำเพื่อนไปแล้ว 2 คน"</p>
         <div class="testi-by">
           <div class="testi-avatar">K</div>
           <div><div class="testi-name">K Kong</div><div class="testi-proj">Bangkok Boulevard</div></div>
         </div>
       </div>
       <div class="testi reveal d2">
-        <p class="testi-q">"ในฐานะเจ้าของธุรกิจ เวลาคือทุกอย่าง เหมือนได้ Project Manager ส่วนตัว เราแค่บอก requirement ไป จัดการให้หมด บ้านเสร็จตรงเวลา"</p>
+        <p class="testi-q">"ในฐานะเจ้าของธุรกิจ เวลาคือทุกอย่าง <span class="kw">เหมือนได้ Project Manager ส่วนตัว</span> เราแค่บอก requirement ไป จัดการให้หมด บ้านเสร็จตรงเวลา"</p>
         <div class="testi-by">
           <div class="testi-avatar">K</div>
           <div><div class="testi-name">K May</div><div class="testi-proj">Origin Chula Samyan</div></div>
@@ -1282,7 +1289,7 @@ section[id]{scroll-margin-top:84px;}
         <blockquote class="founder-q">"ผมไม่ได้ขายแค่แบบบ้านที่สวยงาม แต่ผมขาย 'ความสบายใจ' ให้คุณในทุกขั้นตอน"</blockquote>
         <p class="founder-story">จากประสบการณ์กว่า 10 ปีในวงการออกแบบ ผมพบว่าสิ่งที่คนทำบ้านกลัวที่สุด ไม่ใช่การหาแบบบ้านที่ถูกใจ แต่คือ <em>'ความวุ่นวาย งบบานปลาย และความเครียดระหว่างก่อสร้าง'</em></p>
         <p class="founder-story">ที่ Need More Space Studio เราจึงเปลี่ยนวิธีการทำบ้านใหม่ทั้งหมด ผมตั้งใจรับหน้าที่เป็น <em>'ผู้อำนวยการสร้าง' (Project Orchestrator)</em> ดูแลคุณแบบเบ็ดเสร็จตั้งแต่ร่างแบบบนกระดาษจนถึงวันส่งมอบบ้าน</p>
-        <p class="founder-story">คุณมีหน้าที่แค่แชร์ความต้องการ นอกนั้น... ปล่อยให้ผมรับจบทุกความซับซ้อนแทนคุณ</p>
+        <p class="founder-story">คุณมีหน้าที่แค่แชร์ความต้องการ นอกนั้น... <span class="kw">ปล่อยให้ผมรับจบทุกความซับซ้อนแทนคุณ</span></p>
         <div class="founder-expertise-label">ความเชี่ยวชาญ (Core Expertise)</div>
         <div class="founder-expertise">
           <div class="expertise-item">
@@ -1316,19 +1323,19 @@ section[id]{scroll-margin-top:84px;}
     <div class="faq-list">
       <details class="faq-item">
         <summary>ค่าบริการออกแบบตกแต่งภายในเริ่มต้นเท่าไหร่</summary>
-        <p class="faq-a">Need More Space Studio คิดค่าบริการในรูปแบบ Turnkey โดยรวมค่าออกแบบ คุมงาน และบริหารโปรเจกต์ ประมาณ 5% ของมูลค่าก่อสร้างทั้งหมด <a href="contact.html">ติดต่อขอประเมินฟรีได้ที่นี่</a></p>
+        <p class="faq-a">Need More Space Studio คิดค่าบริการในรูปแบบ Turnkey โดยรวมค่าออกแบบ คุมงาน และบริหารโปรเจกต์ <span class="kw">ประมาณ 5% ของมูลค่าก่อสร้างทั้งหมด</span> <a href="contact.html">ติดต่อขอประเมินฟรีได้ที่นี่</a></p>
       </details>
       <details class="faq-item">
         <summary>Need More Space Studio ให้บริการพื้นที่ไหนบ้าง</summary>
-        <p class="faq-a">ให้บริการในเขตกรุงเทพมหานครและปริมณฑล ได้แก่ นนทบุรี ปทุมธานี สมุทรปราการ โดยเน้นดูแลโปรเจกต์ด้วยตัวเองทุกขั้นตอน</p>
+        <p class="faq-a">ให้บริการใน<span class="kw">เขตกรุงเทพมหานครและปริมณฑล</span> ได้แก่ นนทบุรี ปทุมธานี สมุทรปราการ โดยเน้นดูแลโปรเจกต์ด้วยตัวเองทุกขั้นตอน</p>
       </details>
       <details class="faq-item">
         <summary>Turnkey Interior Design คืออะไร ต่างจากจ้างอินทีเรียทั่วไปอย่างไร</summary>
-        <p class="faq-a">Turnkey คือบริการครบวงจรตั้งแต่ออกแบบ 3D เลือกวัสดุ คุมงานก่อสร้าง ไปจนถึงส่งมอบบ้านพร้อมอยู่ คุณไม่ต้องคุยกับช่างหรือผู้รับเหมาเอง ต่างจากการจ้างอินทีเรียแค่ออกแบบแต่ต้องไปหาช่างและคุมงานเอง</p>
+        <p class="faq-a"><span class="kw">Turnkey คือบริการครบวงจร</span>ตั้งแต่ออกแบบ 3D เลือกวัสดุ คุมงานก่อสร้าง ไปจนถึงส่งมอบบ้านพร้อมอยู่ <span class="kw">คุณไม่ต้องคุยกับช่างหรือผู้รับเหมาเอง</span> ต่างจากการจ้างอินทีเรียแค่ออกแบบแต่ต้องไปหาช่างและคุมงานเอง</p>
       </details>
       <details class="faq-item">
         <summary>ใช้เวลานานแค่ไหนตั้งแต่เริ่มจนส่งมอบ</summary>
-        <p class="faq-a">ขึ้นอยู่กับขนาดและความซับซ้อนของโปรเจกต์ โดยทั่วไปอยู่ที่ 4-8 เดือน แบ่งเป็นช่วงออกแบบ 4-6 สัปดาห์ และช่วงก่อสร้าง 3-6 เดือน</p>
+        <p class="faq-a">ขึ้นอยู่กับขนาดและความซับซ้อนของโปรเจกต์ โดยทั่วไปอยู่ที่ <span class="kw">4-8 เดือน</span> แบ่งเป็นช่วงออกแบบ 4-6 สัปดาห์ และช่วงก่อสร้าง 3-6 เดือน</p>
       </details>
     </div>
   </div>
@@ -1339,7 +1346,7 @@ section[id]{scroll-margin-top:84px;}
   <div class="cta-inner reveal">
     <div class="cta-eyebrow">ขณะนี้เปิดรับคิวประเมินโปรเจกต์ · จำนวนจำกัด</div>
     <h2 class="cta-h">พร้อมเริ่ม<br><em>โปรเจกต์ของคุณ?</em></h2>
-    <p class="cta-sub">เราลงพื้นที่สำรวจด้วยตัวเอง รับฟังความต้องการ และวางแผนงบประมาณให้ก่อนตัดสินใจ — เนื่องจากรับดูแลโปรเจกต์ในจำนวนจำกัดต่อปี แนะนำให้ติดต่อล่วงหน้าเพื่อจองคิวประเมิน</p>
+    <p class="cta-sub">เราลงพื้นที่สำรวจด้วยตัวเอง รับฟังความต้องการ และ<span class="kw">วางแผนงบประมาณให้ก่อนตัดสินใจ</span> — เนื่องจากรับดูแลโปรเจกต์ใน<span class="kw">จำนวนจำกัดต่อปี</span> แนะนำให้ติดต่อล่วงหน้าเพื่อจองคิวประเมิน</p>
     <div class="cta-btns">
       <a href="contact.html" class="btn-gold" onclick="gtag('event','cta_click',{button_name:'cta_section_book'})">สมัครคิวประเมินโปรเจกต์</a>
       <a href="https://drive.google.com/file/d/1PbGq4iaoKzgGuZ-4D4RdVw2q7iaHJPlI/view" target="_blank" class="btn-ghost2">ดาวน์โหลด Budget Guide ฟรี</a>
