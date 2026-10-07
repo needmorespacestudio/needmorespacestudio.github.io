@@ -133,6 +133,7 @@ footer{background:var(--dark);padding:2rem 4rem;border-top:1px solid rgba(253,25
   .nav-links{display:none;}
 }
 </style>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"หน้าแรก","item":"https://www.needmorespacestudio.com/"},{"@type":"ListItem","position":2,"name":"ผลงาน","item":"https://www.needmorespacestudio.com/projects.html"}]}</script>
 </head>
 <body>
 
@@ -328,6 +329,13 @@ btns.forEach(btn=>{
     countEl.textContent=n;
     gtag('event','filter_click',{filter_type:f});
   });
+});
+</script>
+<script>
+document.addEventListener('click',function(e){
+  var a=e.target.closest&&e.target.closest('a[href]'); if(!a||typeof gtag==='undefined') return;
+  var h=a.getAttribute('href'), m=h.indexOf('tel:')===0?'phone':h.indexOf('line.me')>-1?'line':h.indexOf('drive.google.com')>-1?'budget_guide':h.indexOf('mailto:')===0?'email':null;
+  if(m) gtag('event','contact_click',{method:m,link_url:h});
 });
 </script>
 </body>

@@ -457,6 +457,16 @@ document.getElementById('contactForm').addEventListener('submit', async function
     const result = await response.json();
     if (result.success) {
       if (typeof fbq !== 'undefined') fbq('track', 'Lead');
+      if (typeof gtag !== 'undefined') {
+        const fd = new FormData(form);
+        gtag('event', 'generate_lead', {
+          project_type: fd.get('project_type') || '',
+          service_type: fd.get('service_type') || '',
+          area: fd.get('area') || '',
+          project_location: fd.get('location') || '',
+          budget_range: fd.get('budget') || ''
+        });
+      }
       document.getElementById('formContent').style.display = 'none';
       document.getElementById('successScreen').style.display = 'block';
       window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -471,5 +481,12 @@ document.getElementById('contactForm').addEventListener('submit', async function
 });
 </script>
 <script>document.addEventListener("contextmenu",e=>e.preventDefault());</script>
+<script>
+document.addEventListener('click',function(e){
+  var a=e.target.closest&&e.target.closest('a[href]'); if(!a||typeof gtag==='undefined') return;
+  var h=a.getAttribute('href'), m=h.indexOf('tel:')===0?'phone':h.indexOf('line.me')>-1?'line':h.indexOf('drive.google.com')>-1?'budget_guide':h.indexOf('mailto:')===0?'email':null;
+  if(m) gtag('event','contact_click',{method:m,link_url:h});
+});
+</script>
 </body>
 </html>

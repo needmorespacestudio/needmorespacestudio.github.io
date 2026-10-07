@@ -7,11 +7,11 @@
 <link rel="apple-touch-icon" sizes="192x192" href="apple-touch-icon.png">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="canonical" href="https://www.needmorespacestudio.com/">
-<title>Need More Space Studio | รับออกแบบบ้าน ครบจบ งบไม่บานปลาย</title>
+<title>รับออกแบบตกแต่งภายใน บ้านและคอนโด กรุงเทพฯ | Need More Space Studio</title>
 <meta name="description" content="สตูดิโอออกแบบตกแต่งภายในและบริหารโปรเจกต์ Turnkey กรุงเทพฯ ดูแลครบตั้งแต่คิดคอนเซปต์จนส่งมอบบ้านพร้อมเข้าอยู่ งบไม่บานปลาย">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://www.needmorespacestudio.com/">
-<meta property="og:title" content="Need More Space Studio | รับออกแบบบ้าน ครบจบ งบไม่บานปลาย">
+<meta property="og:title" content="รับออกแบบตกแต่งภายใน บ้านและคอนโด กรุงเทพฯ | Need More Space Studio">
 <meta property="og:description" content="สตูดิโอออกแบบตกแต่งภายในและบริหารโปรเจกต์ Turnkey กรุงเทพฯ ดูแลครบตั้งแต่คิดคอนเซปต์จนส่งมอบบ้านพร้อมเข้าอยู่ งบไม่บานปลาย">
 <meta property="og:image" content="https://www.needmorespacestudio.com/img/liv-final-02.jpg">
 <meta property="og:locale" content="th_TH">
@@ -50,7 +50,7 @@ gtag('config','G-R0CKBW47ZQ');
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": ["InteriorDesigner", "LocalBusiness"],
+  "@type": "HomeAndConstructionBusiness",
   "name": "Need More Space Studio",
   "url": "https://www.needmorespacestudio.com",
   "logo": "https://www.needmorespacestudio.com/logo_cut_white.png",
@@ -1387,5 +1387,12 @@ img{-webkit-user-drag:none;pointer-events:none;}.img-wrap,.proj-img-wrap,.pgm-it
   </a>
 </div>
 <script>document.addEventListener("contextmenu",e=>e.preventDefault());</script>
+<script>
+document.addEventListener('click',function(e){
+  var a=e.target.closest&&e.target.closest('a[href]'); if(!a||typeof gtag==='undefined') return;
+  var h=a.getAttribute('href'), m=h.indexOf('tel:')===0?'phone':h.indexOf('line.me')>-1?'line':h.indexOf('drive.google.com')>-1?'budget_guide':h.indexOf('mailto:')===0?'email':null;
+  if(m) gtag('event','contact_click',{method:m,link_url:h});
+});
+</script>
 </body>
 </html>
