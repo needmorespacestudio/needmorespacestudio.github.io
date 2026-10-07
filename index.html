@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="th">
 <head>
 <meta charset="UTF-8">
@@ -13,9 +13,10 @@
 <meta property="og:url" content="https://www.needmorespacestudio.com/">
 <meta property="og:title" content="Need More Space Studio | รับออกแบบบ้าน ครบจบ งบไม่บานปลาย">
 <meta property="og:description" content="สตูดิโอออกแบบตกแต่งภายในและบริหารโปรเจกต์ Turnkey กรุงเทพฯ ดูแลครบตั้งแต่คิดคอนเซปต์จนส่งมอบบ้านพร้อมเข้าอยู่ งบไม่บานปลาย">
-<meta property="og:image" content="https://www.needmorespacestudio.com/liv%20final%2002.png">
+<meta property="og:image" content="https://www.needmorespacestudio.com/img/liv-final-02.jpg">
 <meta property="og:locale" content="th_TH">
 <meta property="og:site_name" content="Need More Space Studio">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Noto+Serif+Thai:wght@300;400&family=DM+Sans:wght@300;400&display=swap" rel="stylesheet">
@@ -53,15 +54,23 @@ gtag('config','G-R0CKBW47ZQ');
   "name": "Need More Space Studio",
   "url": "https://www.needmorespacestudio.com",
   "logo": "https://www.needmorespacestudio.com/logo_cut_white.png",
-  "image": "https://www.needmorespacestudio.com/liv%20final%2002.png",
+  "image": "https://www.needmorespacestudio.com/img/liv-final-02.jpg",
   "description": "สตูดิโอออกแบบตกแต่งภายในและบริหารโปรเจกต์ Turnkey กรุงเทพฯ ดูแลครบตั้งแต่คิดคอนเซปต์จนส่งมอบบ้านพร้อมเข้าอยู่ งบไม่บานปลาย",
   "telephone": "+66905456166",
   "address": {
     "@type": "PostalAddress",
-    "addressLocality": "กรุงเทพมหานคร",
-    "addressRegion": "กรุงเทพฯ",
+    "addressLocality": "เขตทวีวัฒนา",
+    "addressRegion": "กรุงเทพมหานคร",
+    "postalCode": "10170",
     "addressCountry": "TH"
   },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 13.7961604,
+    "longitude": 100.3372821
+  },
+  "hasMap": "https://maps.app.goo.gl/KHnqgVWNYwKPncEX6",
+  "email": "needmorespacestudio@gmail.com",
   "openingHoursSpecification": {
     "@type": "OpeningHoursSpecification",
     "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
@@ -213,6 +222,7 @@ body{background:var(--white);color:var(--ink);font-family:var(--sans);font-weigh
   letter-spacing:0.01em;text-wrap:balance;
 }
 .hero-h1 em{font-style:italic;color:var(--gold);}
+.hero-kw{display:block;font-family:var(--serif-th);font-size:0.95rem;font-weight:400;line-height:1.6;color:var(--gold);margin-bottom:0.9rem;}
 .hero-sub{
   font-family:var(--serif-th);
   font-size:1.05rem;font-weight:300;
@@ -289,6 +299,8 @@ body{background:var(--white);color:var(--ink);font-family:var(--sans);font-weigh
 }
 .proof .proj-btn{border-color:rgba(42,38,32,0.18);color:rgba(42,38,32,0.45);}
 .proof .proj-btn:hover{border-color:var(--gold);color:var(--gold);}
+.proj-all{font-size:0.68rem;letter-spacing:0.16em;color:var(--gold);text-decoration:none;margin-right:0.8rem;border-bottom:1px solid rgba(184,152,96,0.4);padding-bottom:2px;transition:border-color 0.3s;}
+.proj-all:hover{border-color:var(--gold);}
 .proof .proj-dot{background:rgba(42,38,32,0.1);}
 .proof .proj-dot.active{background:var(--gold);width:36px;}
 .proof-inner{max-width:1300px;margin:0 auto;}
@@ -470,6 +482,17 @@ body{background:var(--white);color:var(--ink);font-family:var(--sans);font-weigh
 
 /* ── TRUST ── */
 .trust{background:var(--off);padding:3.5rem 4rem;}
+.faq{background:var(--white);padding:4rem 4rem;}
+.faq-inner{max-width:900px;margin:0 auto;}
+.faq-list{margin-top:2rem;border-top:1px solid var(--sand);}
+.faq-item{border-bottom:1px solid var(--sand);}
+.faq-item summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:1.5rem;padding:1.3rem 0;font-family:var(--serif-th);font-size:1rem;font-weight:400;color:var(--ink);}
+.faq-item summary::-webkit-details-marker{display:none;}
+.faq-item summary::after{content:'+';font-family:var(--sans);font-size:1.3rem;color:var(--gold);flex-shrink:0;transition:transform 0.3s;}
+.faq-item[open] summary::after{transform:rotate(45deg);}
+.faq-a{font-family:var(--serif-th);font-size:0.9rem;font-weight:300;line-height:2;color:rgba(42,38,32,0.7);padding:0 2.5rem 1.4rem 0;}
+.faq-a a{color:var(--gold);}
+@media(max-width:768px){.faq{padding:3rem 1.4rem;}.faq-item summary{font-size:0.92rem;}.faq-a{padding-right:0;}}
 .trust-inner{max-width:1300px;margin:0 auto;}
 
 /* Testimonials — 3-col grid */
@@ -656,6 +679,7 @@ footer{
 }
 /* ── MOBILE ENHANCEMENTS ── */
 @media(max-width:768px){
+  .hero-kw{font-size:0.78rem;margin-bottom:0.6rem;}
   /* Hero image taller on mobile */
   .hero-r{height:72vw!important;}
   /* Stats box smaller on mobile */
@@ -806,6 +830,7 @@ img{-webkit-user-drag:none;pointer-events:none;}.img-wrap,.proj-img-wrap,.pgm-it
     <div class="hero-l-top">
       <div class="hero-pill">Bangkok Interior Studio · Est. 2015</div>
       <h1 class="hero-h1">
+        <span class="hero-kw">รับออกแบบตกแต่งภายใน Turnkey กรุงเทพฯ</span>
         งานออกแบบระดับพรีเมียม<br>ที่มาพร้อม<br><em>"ความสะดวกสบาย" 100%</em>
       </h1>
     </div>
@@ -825,7 +850,7 @@ img{-webkit-user-drag:none;pointer-events:none;}.img-wrap,.proj-img-wrap,.pgm-it
     </div>
   </div>
   <div class="hero-r">
-    <img class="hero-img" id="heroImg" src="liv%20final%2002.png" alt="Need More Space Studio — Premium Interior Design Bangkok">
+    <img fetchpriority="high" class="hero-img" id="heroImg" src="img/liv-final-02.jpg" alt="Need More Space Studio — Premium Interior Design Bangkok">
     <div class="hero-overlay"></div>
     <div class="hero-stats">
       <div class="stat"><span class="stat-n">10+</span><span class="stat-l">ปีประสบการณ์</span></div>
@@ -847,6 +872,7 @@ img{-webkit-user-drag:none;pointer-events:none;}.img-wrap,.proj-img-wrap,.pgm-it
       </div>
       <!-- Arrow controls -->
       <div style="display:flex;gap:0.5rem;align-items:center;">
+        <a href="projects.html" class="proj-all">ดูผลงานทั้งหมด →</a>
         <button class="proj-btn" id="projPrev" aria-label="previous">←</button>
         <button class="proj-btn" id="projNext" aria-label="next">→</button>
       </div>
@@ -857,7 +883,7 @@ img{-webkit-user-drag:none;pointer-events:none;}.img-wrap,.proj-img-wrap,.pgm-it
       <!-- เพิ่มโปรเจกต์ใหม่ได้ง่ายๆ ด้วยการ copy .proj-card block ด้านล่าง -->
       <a class="proj-card" href="cozy-retreat-kpei.html">
         <div class="proj-img-wrap">
-          <img class="proj-img" src="kpei/01.jpg" alt="The Cozy Retreat — K.Pei" loading="lazy">
+          <img class="proj-img" src="img/kpei-01.jpg" alt="The Cozy Retreat — K.Pei" loading="lazy">
           <div class="proj-arrow">→</div>
         </div>
         <div class="proj-info">
@@ -868,7 +894,7 @@ img{-webkit-user-drag:none;pointer-events:none;}.img-wrap,.proj-img-wrap,.pgm-it
       </a>
       <a class="proj-card" href="kao-vow.html">
         <div class="proj-img-wrap">
-          <img class="proj-img" src="kao2.jpg" alt="K.Kao & K.Vow Home" loading="lazy">
+          <img class="proj-img" src="img/kao2.jpg" alt="K.Kao & K.Vow Home" loading="lazy">
           <div class="proj-arrow">→</div>
         </div>
         <div class="proj-info">
@@ -879,7 +905,7 @@ img{-webkit-user-drag:none;pointer-events:none;}.img-wrap,.proj-img-wrap,.pgm-it
       </a>
       <a class="proj-card" href="private-resident-kmax.html">
         <div class="proj-img-wrap">
-          <img class="proj-img" src="kmax-1.jpg" alt="The Basecamp — K.Max" loading="lazy">
+          <img class="proj-img" src="img/kmax-1.jpg" alt="The Basecamp — K.Max" loading="lazy">
           <div class="proj-arrow">→</div>
         </div>
         <div class="proj-info">
@@ -890,7 +916,7 @@ img{-webkit-user-drag:none;pointer-events:none;}.img-wrap,.proj-img-wrap,.pgm-it
       </a>
       <a class="proj-card" href="chun-residence.html">
         <div class="proj-img-wrap">
-          <img class="proj-img" src="chun/a01.png" alt="The Grand Classic — K.Chun Residence" loading="lazy">
+          <img class="proj-img" src="img/chun-a01.jpg" alt="The Grand Classic — K.Chun Residence" loading="lazy">
           <div class="proj-arrow">→</div>
         </div>
         <div class="proj-info">
@@ -901,7 +927,7 @@ img{-webkit-user-drag:none;pointer-events:none;}.img-wrap,.proj-img-wrap,.pgm-it
       </a>
       <a class="proj-card" href="ivory-grace.html">
         <div class="proj-img-wrap">
-          <img class="proj-img" src="img8.jpg" alt="Ivory & Grace" loading="lazy">
+          <img class="proj-img" src="img/img8.jpg" alt="Ivory & Grace" loading="lazy">
           <div class="proj-arrow">→</div>
         </div>
         <div class="proj-info">
@@ -912,7 +938,7 @@ img{-webkit-user-drag:none;pointer-events:none;}.img-wrap,.proj-img-wrap,.pgm-it
       </a>
       <a class="proj-card" href="harmony-curve.html">
         <div class="proj-img-wrap">
-          <img class="proj-img" src="hcc-1.jpg" alt="Millennium IVF Clinic" loading="lazy">
+          <img class="proj-img" src="img/hcc-1.jpg" alt="Millennium IVF Clinic" loading="lazy">
           <div class="proj-arrow">→</div>
         </div>
         <div class="proj-info">
@@ -923,7 +949,7 @@ img{-webkit-user-drag:none;pointer-events:none;}.img-wrap,.proj-img-wrap,.pgm-it
       </a>
       <a class="proj-card" href="venue-flow.html">
         <div class="proj-img-wrap">
-          <img class="proj-img" src="Kai%20(3).jpg" alt="Venue Flow" loading="lazy">
+          <img class="proj-img" src="img/kai-3.jpg" alt="Venue Flow" loading="lazy">
           <div class="proj-arrow">→</div>
         </div>
         <div class="proj-info">
@@ -934,7 +960,7 @@ img{-webkit-user-drag:none;pointer-events:none;}.img-wrap,.proj-img-wrap,.pgm-it
       </a>
       <a class="proj-card" href="grand-britania.html">
         <div class="proj-img-wrap">
-          <img class="proj-img" src="gb-1.jpg" alt="Grand Britania" loading="lazy">
+          <img class="proj-img" src="img/gb-1.jpg" alt="Grand Britania" loading="lazy">
           <div class="proj-arrow">→</div>
         </div>
         <div class="proj-info">
@@ -945,7 +971,7 @@ img{-webkit-user-drag:none;pointer-events:none;}.img-wrap,.proj-img-wrap,.pgm-it
       </a>
       <a class="proj-card" href="the-five.html">
         <div class="proj-img-wrap">
-          <img class="proj-img" src="living.jpg" alt="The Five — Perfect Place Minburi" loading="lazy">
+          <img class="proj-img" src="img/living.jpg" alt="The Five — Perfect Place Minburi" loading="lazy">
           <div class="proj-arrow">→</div>
         </div>
         <div class="proj-info">
@@ -1045,35 +1071,35 @@ img{-webkit-user-drag:none;pointer-events:none;}.img-wrap,.proj-img-wrap,.pgm-it
     <div class="why-visual reveal d2">
       <div class="pgm-grid">
         <a href="kao-vow.html" class="pgm-item pgm-tall">
-          <img src="kao2.jpg" alt="K.Kao & K.Vow Home" loading="lazy">
+          <img src="img/kao2.jpg" alt="K.Kao & K.Vow Home" loading="lazy">
           <div class="pgm-label">K.Kao & K.Vow</div>
         </a>
         <a href="ivory-grace.html" class="pgm-item">
-          <img src="img8.jpg" alt="Ivory & Grace" loading="lazy">
+          <img src="img/img8.jpg" alt="Ivory & Grace" loading="lazy">
           <div class="pgm-label">Ivory & Grace</div>
         </a>
         <a href="harmony-curve.html" class="pgm-item">
-          <img src="hcc-1.jpg" alt="Millennium IVF" loading="lazy">
+          <img src="img/hcc-1.jpg" alt="Millennium IVF" loading="lazy">
           <div class="pgm-label">Millennium IVF</div>
         </a>
         <a href="venue-flow.html" class="pgm-item">
-          <img src="Kai%20(3).jpg" alt="Venue Flow" loading="lazy">
+          <img src="img/kai-3.jpg" alt="Venue Flow" loading="lazy">
           <div class="pgm-label">Venue Flow</div>
         </a>
         <a href="grand-britania.html" class="pgm-item">
-          <img src="gb-1.jpg" alt="Grand Britania" loading="lazy">
+          <img src="img/gb-1.jpg" alt="Grand Britania" loading="lazy">
           <div class="pgm-label">Grand Britania</div>
         </a>
         <a href="the-five.html" class="pgm-item pgm-wide">
-          <img src="living.jpg" alt="The Five" loading="lazy">
+          <img src="img/living.jpg" alt="The Five" loading="lazy">
           <div class="pgm-label">The Five · Minburi</div>
         </a>
         <a href="private-resident-kmax.html" class="pgm-item pgm-tall">
-          <img src="kmax-1.jpg" alt="The Basecamp — K.Max" loading="lazy">
+          <img src="img/kmax-1.jpg" alt="The Basecamp — K.Max" loading="lazy">
           <div class="pgm-label">K.Max · Waterfront</div>
         </a>
         <a href="chun-residence.html" class="pgm-item">
-          <img src="chun/a01.png" alt="The Grand Classic — K.Chun" loading="lazy">
+          <img src="img/chun-a01.jpg" alt="The Grand Classic — K.Chun" loading="lazy">
           <div class="pgm-label">K.Chun · ลำลูกกา</div>
         </a>
       </div>
@@ -1156,7 +1182,7 @@ img{-webkit-user-drag:none;pointer-events:none;}.img-wrap,.proj-img-wrap,.pgm-it
     <div class="trust-founder-block">
       <div class="founder-img-col reveal">
         <div class="founder-img-wrap">
-          <img class="founder-img" src="founder.jpg" alt="Panupong — Need More Space Studio">
+          <img loading="lazy" decoding="async" class="founder-img" src="img/founder.jpg" alt="Panupong — Need More Space Studio">
         </div>
         <div class="founder-eyebrow">Founder & Design Director</div>
         <div class="founder-name">Panupong<br>Truncharoen</div>
@@ -1189,6 +1215,32 @@ img{-webkit-user-drag:none;pointer-events:none;}.img-wrap,.proj-img-wrap,.pgm-it
       </div>
     </div>
 
+  </div>
+</section>
+
+<!-- ── FAQ ── -->
+<section class="faq" id="faq">
+  <div class="faq-inner reveal">
+    <div class="eyebrow">FAQ</div>
+    <h2 class="section-h">คำถาม<em>ที่พบบ่อย</em></h2>
+    <div class="faq-list">
+      <details class="faq-item">
+        <summary>ค่าบริการออกแบบตกแต่งภายในเริ่มต้นเท่าไหร่</summary>
+        <p class="faq-a">Need More Space Studio คิดค่าบริการในรูปแบบ Turnkey โดยรวมค่าออกแบบ คุมงาน และบริหารโปรเจกต์ ประมาณ 5% ของมูลค่าก่อสร้างทั้งหมด <a href="contact.html">ติดต่อขอประเมินฟรีได้ที่นี่</a></p>
+      </details>
+      <details class="faq-item">
+        <summary>Need More Space Studio ให้บริการพื้นที่ไหนบ้าง</summary>
+        <p class="faq-a">ให้บริการในเขตกรุงเทพมหานครและปริมณฑล ได้แก่ นนทบุรี ปทุมธานี สมุทรปราการ โดยเน้นดูแลโปรเจกต์ด้วยตัวเองทุกขั้นตอน</p>
+      </details>
+      <details class="faq-item">
+        <summary>Turnkey Interior Design คืออะไร ต่างจากจ้างอินทีเรียทั่วไปอย่างไร</summary>
+        <p class="faq-a">Turnkey คือบริการครบวงจรตั้งแต่ออกแบบ 3D เลือกวัสดุ คุมงานก่อสร้าง ไปจนถึงส่งมอบบ้านพร้อมอยู่ คุณไม่ต้องคุยกับช่างหรือผู้รับเหมาเอง ต่างจากการจ้างอินทีเรียแค่ออกแบบแต่ต้องไปหาช่างและคุมงานเอง</p>
+      </details>
+      <details class="faq-item">
+        <summary>ใช้เวลานานแค่ไหนตั้งแต่เริ่มจนส่งมอบ</summary>
+        <p class="faq-a">ขึ้นอยู่กับขนาดและความซับซ้อนของโปรเจกต์ โดยทั่วไปอยู่ที่ 4-8 เดือน แบ่งเป็นช่วงออกแบบ 4-6 สัปดาห์ และช่วงก่อสร้าง 3-6 เดือน</p>
+      </details>
+    </div>
   </div>
 </section>
 
@@ -1229,6 +1281,7 @@ img{-webkit-user-drag:none;pointer-events:none;}.img-wrap,.proj-img-wrap,.pgm-it
       <li><a href="venue-flow.html">Venue Flow Rama 5</a></li>
       <li><a href="grand-britania.html">Grand Britania</a></li>
       <li><a href="the-five.html">The Five · Minburi</a></li>
+      <li><a href="projects.html">ดูผลงานทั้งหมด →</a></li>
     </ul>
   </div>
   <div>
@@ -1288,7 +1341,7 @@ img{-webkit-user-drag:none;pointer-events:none;}.img-wrap,.proj-img-wrap,.pgm-it
   if(track){
     const cards=track.querySelectorAll('.proj-card');
     const cardW=()=>cards[0]?cards[0].offsetWidth+3:303;
-    const visCount=()=>Math.round(track.offsetWidth/cardW());
+    const visCount=()=>Math.max(1,Math.round(track.offsetWidth/cardW()));
     const totalPages=()=>Math.ceil(cards.length/visCount());
 
     // Build dots
