@@ -21,6 +21,14 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Noto+Serif+Thai:wght@300;400;600&family=DM+Sans:wght@300;400;600&display=swap" rel="stylesheet">
 <meta name="facebook-domain-verification" content="re3x2vyc14i3ynjzd113ctko2f0zfn" />
+<!-- Owner Mode: ไม่นับการเข้าเว็บของเจ้าของ (เปิดด้วย ?owner=1 / ปิดด้วย ?owner=0) -->
+<script>
+(function(){var on=false;try{var q=new URLSearchParams(location.search).get('owner');
+if(q==='1'){localStorage.setItem('nms_owner','1');alert('เปิดโหมดเจ้าของแล้ว: เครื่องนี้จะไม่ถูกนับใน Google Analytics และ Meta Pixel');}
+if(q==='0'){localStorage.removeItem('nms_owner');alert('ปิดโหมดเจ้าของแล้ว: เครื่องนี้จะถูกนับตามปกติ');}
+on=localStorage.getItem('nms_owner')==='1';}catch(e){}
+if(on){window['ga-disable-G-R0CKBW47ZQ']=true;window.fbq=function(){};window._fbq=window.fbq;}})();
+</script>
 <!-- Meta Pixel Code -->
 <script>
 !function(f,b,e,v,n,t,s)

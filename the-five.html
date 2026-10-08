@@ -132,6 +132,14 @@ footer{background:#D9D0C1;border-top-color:rgba(42,38,32,0.1);}
 .footer-copy{color:rgba(42,38,32,0.35);}
 img{-webkit-user-drag:none;pointer-events:none;}.img-wrap,.proj-img-wrap,.pgm-item,.hero,.proj-card{pointer-events:auto;}
 </style>
+<!-- Owner Mode: ไม่นับการเข้าเว็บของเจ้าของ (เปิดด้วย ?owner=1 / ปิดด้วย ?owner=0) -->
+<script>
+(function(){var on=false;try{var q=new URLSearchParams(location.search).get('owner');
+if(q==='1'){localStorage.setItem('nms_owner','1');alert('เปิดโหมดเจ้าของแล้ว: เครื่องนี้จะไม่ถูกนับใน Google Analytics และ Meta Pixel');}
+if(q==='0'){localStorage.removeItem('nms_owner');alert('ปิดโหมดเจ้าของแล้ว: เครื่องนี้จะถูกนับตามปกติ');}
+on=localStorage.getItem('nms_owner')==='1';}catch(e){}
+if(on){window['ga-disable-G-R0CKBW47ZQ']=true;window.fbq=function(){};window._fbq=window.fbq;}})();
+</script>
 <!-- Meta Pixel Code -->
 <script>
 !function(f,b,e,v,n,t,s)
