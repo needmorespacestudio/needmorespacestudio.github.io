@@ -815,6 +815,11 @@ img{-webkit-user-drag:none;pointer-events:none;}.img-wrap,.proj-img-wrap,.pgm-it
 .why-punch{display:block;margin-top:0.7rem;}
 .bs-body strong{font-weight:600;}
 .bs-body .kw{font-weight:400;}
+/* desktop: large text reads busy with bold; emphasise by colour only */
+@media(min-width:901px){
+  .kw,.mk{font-weight:400;}
+  .nav{background:rgba(253,250,246,0.97);border-bottom:1px solid rgba(184,152,96,0.12);}
+}
 
 /* ── LAYOUT POLISH ── */
 section[id]{scroll-margin-top:84px;}
