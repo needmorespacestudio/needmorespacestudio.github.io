@@ -911,6 +911,39 @@ section[id]{scroll-margin-top:84px;}
   .founder-eyebrow::before{display:none;}
 }
 </style>
+<style>
+/* LINE OA */
+a.line-btn{background:#06C755!important;color:#fff!important;border-color:#06C755!important;display:inline-flex;align-items:center;justify-content:center;gap:.5em;white-space:nowrap;text-decoration:none;}
+a.line-btn:hover{background:#05a847!important;border-color:#05a847!important;color:#fff!important;}
+.line-ico{flex-shrink:0;width:1.25em;height:1.25em;}
+.line-note{font-family:'Noto Serif Thai',serif;font-size:.8rem;line-height:1.7;color:#8C8478;margin-top:.8rem;}
+.line-steps{list-style:none;margin:0;padding:0;display:grid;gap:.85rem;text-align:left;}
+.line-steps li{display:flex;gap:.9rem;align-items:flex-start;font-family:'Noto Serif Thai',serif;font-size:.95rem;line-height:1.7;}
+.line-steps b{flex:0 0 28px;height:28px;border:1px solid #B8975A;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.82rem;font-weight:400;color:#B8975A;margin-top:.1rem;}
+.qr-card{display:block;background:#fff;padding:1.1rem;text-align:center;border-top:3px solid #06C755;box-shadow:0 12px 36px rgba(0,0,0,.1);text-decoration:none;color:#6b6456;}
+.qr-card img{width:170px;height:170px;display:block;margin:0 auto;}
+.qr-card span{display:block;margin-top:.7rem;font-family:'Noto Serif Thai',serif;font-size:.78rem;}
+.qr-card small{display:block;font-size:.72rem;color:#9A9080;margin-top:.1rem;}
+.mob-bar{display:none;}
+@media(max-width:900px){
+  a.line-btn.nav-cta{display:none!important;}
+  .qr-card{display:none;}
+  .mob-bar{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:95;background:#06C755;color:#fff;text-decoration:none;align-items:center;justify-content:center;gap:.5em;padding:.95rem 1rem calc(.95rem + env(safe-area-inset-bottom));font-family:'Noto Serif Thai',serif;font-size:1rem;box-shadow:0 -6px 24px rgba(0,0,0,.15);}
+  body{padding-bottom:58px;}
+}
+</style>
+<style>
+.stat-n,.stat-l{display:block;}
+@media(max-width:768px){.stat-n,.stat-l{display:inline;}.stat-n{margin-right:.5rem;}}
+.line-panel{display:grid;grid-template-columns:1fr auto;gap:2.5rem;align-items:center;margin:0 0 2rem;}
+.cta-inner{max-width:760px;}
+.line-fab{position:fixed;right:22px;bottom:22px;z-index:90;display:none;align-items:center;gap:.55rem;background:#06C755;color:#fff;text-decoration:none;padding:.8rem 1.25rem;border-radius:999px;box-shadow:0 8px 28px rgba(6,199,85,.4);font-family:'Noto Serif Thai',serif;font-size:.85rem;transition:background .25s,transform .25s;}
+.line-fab:hover{background:#05a847;transform:translateY(-2px);}
+.line-fab{opacity:0;visibility:hidden;}.line-fab.on{opacity:1;visibility:visible;}
+@media(min-width:769px){.line-fab{display:flex;}}
+@media(max-width:900px){.line-panel{grid-template-columns:1fr;gap:0;}}
+@media(max-width:768px){a.line-btn.nav-btn{display:none!important;}.mob-bar{display:none!important;}body{padding-bottom:0;}}
+</style>
 </head>
 <body>
 
@@ -922,7 +955,7 @@ section[id]{scroll-margin-top:84px;}
     <li><a href="#process">Process</a></li>
     <li><a href="#why">Why Us</a></li>
   </ul>
-  <a href="contact.html" class="nav-btn">ปรึกษากับเรา</a>
+  <a href="https://line.me/R/ti/p/%40299qrytx" target="_blank" rel="noopener" class="nav-btn line-btn" data-line="index-nav"><svg class="line-ico" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/></svg>แอดไลน์ปรึกษา</a>
   <button class="burger" id="burger"><span></span><span></span><span></span></button>
 </nav>
 
@@ -931,7 +964,7 @@ section[id]{scroll-margin-top:84px;}
   <a href="#projects" onclick="closeD()">Projects</a>
   <a href="#process" onclick="closeD()">Process</a>
   <a href="#why" onclick="closeD()">Why Us</a>
-  <a href="contact.html" style="color:var(--gold)">ปรึกษากับเรา →</a>
+  <a href="https://line.me/R/ti/p/%40299qrytx" target="_blank" rel="noopener" data-line="index-drawer" style="color:#06C755">แอดไลน์ปรึกษา →</a>
 </div>
 
 <!-- ── 1. HERO ── -->
@@ -949,9 +982,10 @@ section[id]{scroll-margin-top:84px;}
       <p class="hero-p">เราไม่ได้ส่งมอบแค่งานดีไซน์ แต่เราเป็น <span class="kw">"ที่ปรึกษาและผู้จัดการโปรเจกต์ส่วนตัว"</span> ดูแลคุณตั้งแต่วันแรกจนถึงวันส่งมอบ <span class="kw">คุณมีหน้าที่แค่เลือกแบบที่ชอบ ที่เหลือเราจัดการให้</span></p>
       <p class="hero-p">เพื่อรักษามาตรฐานและดูแลได้อย่างใกล้ชิดจริง เรา<span class="kw">รับโปรเจกต์ในจำนวนจำกัดต่อปีเท่านั้น</span></p>
       <div class="hero-actions">
-        <a href="contact.html" class="btn-dark" onclick="gtag('event','cta_click',{button_name:'hero_book'})">สมัครคิวประเมินโปรเจกต์</a>
+        <a href="https://line.me/R/ti/p/%40299qrytx" target="_blank" rel="noopener" class="btn-dark line-btn" data-line="index-cta2"><svg class="line-ico" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/></svg>แอดไลน์ เริ่มคุยกับเรา</a>
         <a href="#projects" class="btn-ghost">ดูผลงาน</a>
       </div>
+      <p class="line-note" style="margin:-1rem 0 1.4rem;">ไม่ต้องกรอกฟอร์ม · ระบบตอบกลับทันที · ทีมงานดูแลต่อในแชท</p>
       <a href="budget-guide.html" class="hero-lead">
         <span style="font-size:1.2rem;">📋</span>
         <span class="hero-lead-text"><strong>ดาวน์โหลดฟรี:</strong> เช็คลิสต์วางแผนงบตกแต่งบ้าน 5 หมวด</span>
@@ -963,10 +997,10 @@ section[id]{scroll-margin-top:84px;}
     <img fetchpriority="high" class="hero-img" id="heroImg" src="img/liv-final-02.jpg" alt="Need More Space Studio — Premium Interior Design Bangkok">
     <div class="hero-overlay"></div>
     <div class="hero-stats">
-      <div class="stat"><span class="stat-n">10+</span><span class="stat-l">ปีประสบการณ์</span></div>
-      <div class="stat"><span class="stat-n">Curated</span><span class="stat-l">Projects Only</span></div>
-      <div class="stat"><span class="stat-n">Budget</span><span class="stat-l">Managed</span></div>
-      <div class="stat"><span class="stat-n">10</span><span class="stat-l">Projects / Year</span></div>
+      <div class="stat"><span class="stat-n">10+ ปี</span><span class="stat-l">Experience</span></div>
+      <div class="stat"><span class="stat-n">Turnkey</span><span class="stat-l">ออกแบบ + ก่อสร้าง</span></div>
+      <div class="stat"><span class="stat-n">1 ทีม</span><span class="stat-l">ประตูบานเดียว</span></div>
+      <div class="stat"><span class="stat-n">คิวจำกัด</span><span class="stat-l">เน้นดูแลใกล้ชิด</span></div>
     </div>
   </div>
 </section>
@@ -1224,7 +1258,6 @@ section[id]{scroll-margin-top:84px;}
           <div class="pgm-label">K.Chun · ลำลูกกา</div>
         </a>
       </div>
-      <div class="why-badge"><span class="why-badge-n">40+</span><span class="why-badge-l">Projects</span></div>
     </div>
   </div>
 </section>
@@ -1260,7 +1293,7 @@ section[id]{scroll-margin-top:84px;}
           <span><strong>Quality Control</strong> — ตรวจสอบความเนี้ยบทุกขั้นตอน พร้อมรายงานประจำสัปดาห์</span>
           <span><strong>Move-in Ready</strong> — ส่งมอบพื้นที่พร้อมเข้าอยู่ 100%</span>
         </div>
-        <a href="contact.html" class="btn-dark" style="display:inline-block;" onclick="gtag('event','cta_click',{button_name:'offer_book'})">สมัครคิวประเมินโปรเจกต์</a>
+        <a href="https://line.me/R/ti/p/%40299qrytx" target="_blank" rel="noopener" class="btn-dark line-btn" data-line="index-cta3" style=""><svg class="line-ico" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/></svg>แอดไลน์ เริ่มคุยกับเรา</a>
       </div>
     </div>
   </div>
@@ -1371,8 +1404,16 @@ section[id]{scroll-margin-top:84px;}
     <div class="cta-eyebrow">ขณะนี้เปิดรับคิวประเมินโปรเจกต์ · จำนวนจำกัด</div>
     <h2 class="cta-h">พร้อมเริ่ม<br><em>โปรเจกต์ของคุณ?</em></h2>
     <p class="cta-sub">เราลงพื้นที่สำรวจด้วยตัวเอง รับฟังความต้องการ และ<span class="kw">วางแผนงบประมาณให้ก่อนตัดสินใจ</span> — เนื่องจากรับดูแลโปรเจกต์ใน<span class="kw">จำนวนจำกัดต่อปี</span> แนะนำให้ติดต่อล่วงหน้าเพื่อจองคิวประเมิน</p>
+    <div class="line-panel">
+      <ol class="line-steps">
+        <li><b>1</b><span>แอด LINE ของเรา ไม่ต้องกรอกฟอร์ม ไม่ต้องรอโทรกลับ</span></li>
+        <li><b>2</b><span>เล่าโจทย์คร่าวๆ ส่งรูปหรือแปลนได้ ระบบช่วยถามข้อมูลสำคัญและตอบทันที</span></li>
+        <li><b>3</b><span>ทีมดีไซเนอร์ดูแลต่อในแชทเดียวกัน และนัดดูหน้างานตามคิว</span></li>
+      </ol>
+      <a class="qr-card" href="https://line.me/R/ti/p/%40299qrytx" target="_blank" rel="noopener" data-line="index-qr"><img src="line-qr.png" alt="QR Code แอด LINE Official Account ของ Need More Space Studio" width="170" height="170" loading="lazy"><span>สแกนด้วยมือถือเพื่อแอดไลน์</span><small>@299qrytx</small></a>
+    </div>
     <div class="cta-btns">
-      <a href="contact.html" class="btn-gold" onclick="gtag('event','cta_click',{button_name:'cta_section_book'})">สมัครคิวประเมินโปรเจกต์</a>
+      <a href="https://line.me/R/ti/p/%40299qrytx" target="_blank" rel="noopener" class="btn-gold line-btn" data-line="index-cta4"><svg class="line-ico" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/></svg>แอดไลน์ เริ่มคุยกับเรา</a>
       <a href="budget-guide.html" class="btn-ghost2">ดาวน์โหลด Budget Guide ฟรี</a>
     </div>
   </div>
@@ -1425,7 +1466,7 @@ section[id]{scroll-margin-top:84px;}
       <li><a href="https://line.me/R/ti/p/%40299qrytx" target="_blank">Line OA</a></li>
     </ul>
     <div style="margin-top:1.5rem;">
-      <a href="contact.html" class="btn-gold" style="font-size:0.62rem;padding:0.6rem 1.2rem;">ปรึกษากับเรา</a>
+      <a href="https://line.me/R/ti/p/%40299qrytx" target="_blank" rel="noopener" class="btn-gold line-btn" data-line="index-cta5" style="font-size:0.62rem;padding:0.6rem 1.2rem;"><svg class="line-ico" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/></svg>แอดไลน์ปรึกษา</a>
     </div>
   </div>
   <div class="foot-bottom">
@@ -1503,10 +1544,7 @@ section[id]{scroll-margin-top:84px;}
 </script>
 <!-- Mobile Sticky CTA -->
 <div class="sticky-cta" id="stickyCta">
-  <a href="contact.html" class="sticky-cta-main" onclick="gtag('event','cta_click',{button_name:'sticky_book'})">จองคิวปรึกษาโครงการ</a>
-  <a href="https://line.me/R/ti/p/%40299qrytx" target="_blank" class="sticky-cta-icon" title="Line OA" onclick="gtag('event','cta_click',{button_name:'line_oa'})">
-    <svg width="19" height="19" viewBox="0 0 24 24" fill="currentColor"><path d="M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/></svg>
-  </a>
+  <a href="https://line.me/R/ti/p/%40299qrytx" target="_blank" rel="noopener" class="sticky-cta-main line-btn" data-line="index-sticky"><svg class="line-ico" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/></svg>แอดไลน์ เริ่มคุยกับเรา</a>
 </div>
 <script>document.addEventListener("contextmenu",e=>e.preventDefault());</script>
 <script>
@@ -1516,5 +1554,13 @@ document.addEventListener('click',function(e){
   if(m) gtag('event','contact_click',{method:m,link_url:h});
 });
 </script>
+<script>
+document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('a[href*="line.me"]');if(!a)return;var loc=a.getAttribute('data-line')||'link';
+try{if(typeof gtag==='function')gtag('event','line_click',{link_location:loc,page_path:location.pathname});}catch(_){}
+try{if(typeof fbq==='function')fbq('track','Contact',{content_name:'LINE OA',content_category:loc});}catch(_){}
+});
+</script>
+<a href="https://line.me/R/ti/p/%40299qrytx" target="_blank" rel="noopener" class="line-fab" data-line="index-fab"><svg class="line-ico" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/></svg>แอดไลน์</a>
+<script>(function(){var f=document.querySelector(".line-fab");function u(){f.classList.toggle("on",window.scrollY>window.innerHeight*.9);}window.addEventListener("scroll",u,{passive:true});u();})();</script>
 </body>
 </html>
