@@ -402,7 +402,7 @@ btns.forEach(btn=>{
 document.addEventListener('click',function(e){
   var a=e.target.closest&&e.target.closest('a[href]'); if(!a||typeof gtag==='undefined') return;
   var h=a.getAttribute('href'), m=h.indexOf('tel:')===0?'phone':h.indexOf('line.me')>-1?'line':h.indexOf('drive.google.com')>-1?'budget_guide':h.indexOf('mailto:')===0?'email':null;
-  if(m) gtag('event','contact_click',{method:m,link_url:h});
+  if(m&&m!=='line') gtag('event','contact_click',{method:m,link_url:h});
 });
 </script>
 <script>
