@@ -19,15 +19,15 @@
 <meta name="description" content="แอดไลน์ Need More Space Studio เพื่อเริ่มคุยเรื่องโปรเจกต์ ออกแบบและบริหารก่อสร้างครบวงจร กรุงเทพฯ และปริมณฑล ฟรี ไม่มีข้อผูกมัด">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Noto+Serif+Thai:wght@300;400&family=Jost:wght@200;300;400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Noto+Serif+Thai:wght@300;400;600&family=DM+Sans:wght@300;400;600&display=swap" rel="stylesheet">
 <style>
 :root {
   --ivory:#FDFAF5;--cream:#F5F0E8;--warm:#EDE8DF;--sand:#E5DDD1;
   --muted:#8C8478;--stone:#6B6560;--bark:#2C2416;--charcoal:#1A1814;
-  --gold:#B8975A;--gold-light:#D4AF7A;--border:rgba(184,151,90,0.2);
-  --serif:'Cormorant Garamond',serif;
+  --gold:#B89860;--gold-light:#D4AF7A;--border:rgba(184,152,96,0.2);
+  --serif:'Marcellus',serif;
   --serif-th:'Noto Serif Thai',serif;
-  --sans:'Jost',sans-serif;
+  --sans:'DM Sans',sans-serif;
 }
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
 html{scroll-behavior:smooth;}
@@ -69,7 +69,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 .form-row{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:1.4rem;}
 label{display:block;font-size:0.65rem;letter-spacing:0.16em;text-transform:uppercase;color:var(--stone);margin-bottom:0.45rem;}
 label span{color:var(--gold);}
-input,select,textarea{width:100%;font-family:var(--sans);font-size:0.83rem;font-weight:300;color:var(--charcoal);background:var(--ivory);border:1px solid rgba(184,151,90,0.25);padding:0.85rem 1rem;outline:none;transition:border-color 0.3s;-webkit-appearance:none;appearance:none;border-radius:0;}
+input,select,textarea{width:100%;font-family:var(--sans);font-size:0.83rem;font-weight:300;color:var(--charcoal);background:var(--ivory);border:1px solid rgba(184,152,96,0.25);padding:0.85rem 1rem;outline:none;transition:border-color 0.3s;-webkit-appearance:none;appearance:none;border-radius:0;}
 input:focus,select:focus,textarea:focus{border-color:var(--gold);}
 select{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23B8975A' fill='none' stroke-width='1.5'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 1rem center;}
 textarea{resize:vertical;min-height:90px;}
@@ -229,8 +229,8 @@ a.line-btn{display:inline-flex;align-items:center;justify-content:center;gap:.6e
 .line-note{font-family:'Noto Serif Thai',serif;font-size:.8rem;line-height:1.7;color:#8C8478;margin-top:.8rem;}
 .line-steps{list-style:none;margin:0;padding:0;display:grid;gap:.85rem;text-align:left;}
 .line-steps li{display:flex;gap:.9rem;align-items:flex-start;font-family:'Noto Serif Thai',serif;font-size:.95rem;line-height:1.7;}
-.line-steps b{flex:0 0 28px;height:28px;border:1px solid #B8975A;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.82rem;font-weight:400;color:#B8975A;margin-top:.1rem;}
-.qr-card{display:block;background:#fff;padding:1.1rem;text-align:center;border:1px solid rgba(184,151,90,.3);;text-decoration:none;color:#6b6456;}
+.line-steps b{flex:0 0 28px;height:28px;border:1px solid #B89860;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.82rem;font-weight:400;color:#B89860;margin-top:.1rem;}
+.qr-card{display:block;background:#fff;padding:1.1rem;text-align:center;border:1px solid rgba(184,152,96,.3);;text-decoration:none;color:#6b6456;}
 .qr-card img{width:170px;height:170px;display:block;margin:0 auto;}
 .qr-card span{display:block;margin-top:.7rem;font-family:'Noto Serif Thai',serif;font-size:.78rem;}
 .qr-card small{display:block;font-size:.72rem;color:#9A9080;margin-top:.1rem;}
@@ -242,15 +242,91 @@ a.line-btn{display:inline-flex;align-items:center;justify-content:center;gap:.6e
   body{padding-bottom:54px;}
 }
 </style>
+<style id="site-shared">
+/* ── SHARED SITE STYLE: same fonts, colours, nav and footer as the homepage ── */
+:root{
+  --serif:'Marcellus',serif;--serif-th:'Noto Serif Thai',serif;--sans:'DM Sans',sans-serif;
+  --gold:#B89860;--gold-dim:rgba(184,152,96,0.25);--gold-light:#CBB078;
+  --ivory:#FDFAF6;--white:#FDFAF6;--cream:#F2EDE4;--off:#F2EDE4;--warm:#E5DDD1;--sand:#E5DDD1;
+  --muted:#9A9080;--bark:#2A2620;--ink:#2A2620;--charcoal:#1C1A16;--dark:#1C1A16;
+  --border:rgba(184,152,96,0.2);
+}
+/* nav */
+.sn{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;gap:2rem;
+  padding:0.9rem 4rem;background:rgba(253,250,246,0.97);-webkit-backdrop-filter:blur(24px);backdrop-filter:blur(24px);
+  border-bottom:1px solid rgba(184,152,96,0.12);font-family:'DM Sans',sans-serif;font-weight:300;line-height:1.5;}
+.sn-logo{display:flex;align-items:center;text-decoration:none;}
+.sn-logo img{height:52px;width:auto;filter:invert(1);display:block;transition:opacity .3s;}
+.sn-logo img:hover{opacity:.7;}
+.sn-links{display:flex;align-items:center;gap:2.8rem;list-style:none;margin:0;padding:0;}
+.sn-links a{font-size:.85rem;letter-spacing:.14em;text-transform:uppercase;color:#9A9080;text-decoration:none;transition:color .3s;}
+.sn-links a:hover,.sn-links a[aria-current="page"]{color:#2A2620;}
+a.sn-btn{font-family:'Noto Serif Thai',serif;font-size:.85rem;font-weight:400;letter-spacing:0;padding:.65rem 1.6rem;background:#B89860;color:#1C1A16;border:1px solid #B89860;transition:background .3s;}
+a.sn-btn:hover{background:#CBB078;border-color:#CBB078;}
+.sn-burger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:6px;}
+.sn-burger span{display:block;width:22px;height:1.5px;background:#2A2620;}
+.sn-drawer{display:none;position:fixed;inset:0;z-index:101;background:#FDFAF6;flex-direction:column;align-items:center;justify-content:center;gap:2.6rem;}
+.sn-drawer.open{display:flex;}
+.sn-drawer a{font-family:'Marcellus',serif;font-size:1.8rem;color:#2A2620;text-decoration:none;}
+.sn-drawer a.sn-drawer-line{font-family:'Noto Serif Thai',serif;font-size:1.3rem;color:#B89860;}
+.sn-drawer-close{position:absolute;top:1.6rem;right:1.6rem;font-size:1.5rem;cursor:pointer;background:none;border:none;color:#2A2620;padding:.4rem;}
+@media(max-width:1100px){.sn{padding:.9rem 2rem;}.sn-links{gap:1.8rem;}}
+@media(max-width:900px){.sn-links,a.sn-btn{display:none!important;}.sn-burger{display:flex;}.sn-logo img{height:44px;}.sn{padding:.7rem 1.4rem;}}
+/* footer */
+.sf{background:#E5DDD1;padding:4rem;display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:3rem;font-family:'DM Sans',sans-serif;font-weight:300;line-height:1.7;color:#2A2620;text-align:left;}
+.sf-logo{height:26px;width:auto;filter:invert(1);margin-bottom:1rem;display:block;}
+.sf-tag{font-family:'Noto Serif Thai',serif;font-size:.9rem;color:rgba(28,26,22,.45);line-height:1.9;margin:0 0 1.2rem;}
+.sf-social{display:flex;gap:.5rem;}
+.sf-soc{width:34px;height:34px;border:1px solid rgba(28,26,22,.12);display:flex;align-items:center;justify-content:center;text-decoration:none;color:rgba(28,26,22,.38);transition:all .3s;}
+.sf-soc:hover{border-color:#B89860;color:#B89860;}
+.sf-h{font-size:.75rem;letter-spacing:.18em;text-transform:uppercase;color:#B89860;margin-bottom:1.2rem;}
+.sf-ul{list-style:none;margin:0;padding:0;}
+.sf-ul li{margin-bottom:.6rem;}
+.sf-ul a{font-size:.9rem;color:rgba(28,26,22,.5);text-decoration:none;transition:color .3s;}
+.sf-ul a:hover{color:#1C1A16;}
+.sf-ul li.sf-note{font-size:.78rem;color:rgba(28,26,22,.35);margin-top:-.1rem;margin-bottom:.8rem;}
+.sf-cta{margin-top:1.5rem;}
+a.sf-btn{font-family:'Noto Serif Thai',serif;font-size:.8rem;font-weight:400;letter-spacing:0;padding:.55rem 1.2rem;background:#B89860;color:#1C1A16;}
+a.sf-btn:hover{background:#CBB078;}
+.sf-bottom{grid-column:span 4;border-top:1px solid rgba(28,26,22,.1);padding-top:2rem;margin-top:1rem;}
+.sf-copy{font-size:.8rem;color:rgba(28,26,22,.35);}
+@media(max-width:1100px){.sf{grid-template-columns:1fr 1fr;gap:2.5rem;}.sf-bottom{grid-column:span 2;}}
+@media(max-width:768px){
+  .sf{padding:3rem 1.4rem 6rem;grid-template-columns:1fr 1fr;gap:2.2rem 1.5rem;}
+  .sf > div:first-child,.sf > div:nth-child(4),.sf-bottom{grid-column:1/3;}
+  .sf-ul a{display:inline-block;padding:.3rem 0;}
+  .sf-ul li{margin-bottom:.2rem;}
+}
+/* no bold: emphasis by colour only (as on the homepage) */
+.kw,.mk,.nw{font-weight:inherit!important;}
+strong{font-weight:inherit;color:inherit;}
+/* Thai text: no wide letter-spacing (it splits Thai characters apart) */
+a.line-btn,.th,.pitch-direct-label,.sa-map-badge,.section-eyebrow,.sa-tag{letter-spacing:0.02em!important;}
+</style>
 </head>
 <body>
 
 <!-- NAV -->
-<nav>
-  <a href="index.html" class="nav-back">กลับหน้าหลัก</a>
-  <a href="index.html"><img src="logo_cut_white.png" alt="Need More Space Studio" class="nav-logo" style="height:60px;width:auto;filter:invert(1);display:block;"></a>
-  <span style="width:120px;"></span>
-</nav>
+<!-- ── SITE NAV (same on every page; index.html has the same nav with #anchors) ── -->
+<div class="sn" id="sn" role="navigation" aria-label="Main">
+  <a href="index.html" class="sn-logo"><img src="logo_cut_white.png" alt="Need More Space Studio"></a>
+  <ul class="sn-links">
+    <li><a href="projects.html">Projects</a></li>
+    <li><a href="index.html#process">Process</a></li>
+    <li><a href="index.html#why">Why Us</a></li>
+    <li><a href="contact.html" aria-current="page">Contact</a></li>
+  </ul>
+  <a href="https://line.me/R/ti/p/%40299qrytx" target="_blank" rel="noopener" class="sn-btn line-btn" data-line="contact-nav"><svg class="line-ico" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/></svg>แอดไลน์ปรึกษา</a>
+  <button class="sn-burger" id="snBurger" type="button" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+</div>
+<div class="sn-drawer" id="snDrawer">
+  <button class="sn-drawer-close" id="snClose" type="button" aria-label="Close">✕</button>
+  <a href="projects.html">Projects</a>
+  <a href="index.html#process">Process</a>
+  <a href="index.html#why">Why Us</a>
+  <a href="contact.html">Contact</a>
+  <a href="https://line.me/R/ti/p/%40299qrytx" target="_blank" rel="noopener" data-line="contact-drawer" class="sn-drawer-line">แอดไลน์ปรึกษา →</a>
+</div>
 
 <!-- ── 1. FORM (MAIN CTA) ── -->
 <div class="form-section">
@@ -339,33 +415,37 @@ a.line-btn{display:inline-flex;align-items:center;justify-content:center;gap:.6e
 </div>
 
 <!-- ── FOOTER ── -->
-<footer>
+<!-- ── SITE FOOTER (same on every page) ── -->
+<div class="sf" role="contentinfo">
   <div>
-    <img src="logo_cut_white.png" alt="Need More Space Studio" class="foot-logo-img">
-    <p class="foot-tag">สตูดิโอออกแบบและบริหารโปรเจกต์ Turnkey<br>กรุงเทพฯ และปริมณฑล</p>
-    <div class="foot-social">
-      <a href="https://www.instagram.com/needmorespace.studio" target="_blank" class="soc" title="Instagram"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
-      <a href="https://www.facebook.com/profile.php?id=100064759611739" target="_blank" class="soc" title="Facebook"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
-      <a href="https://line.me/R/ti/p/%40299qrytx" target="_blank" class="soc" title="Line"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/></svg></a>
-      <a href="https://linktr.ee/needmorespace.studio" target="_blank" class="soc" title="Linktree">⊕</a>
+    <img src="logo_cut_white.png" alt="Need More Space Studio" class="sf-logo">
+    <p class="sf-tag">สตูดิโอออกแบบและบริหารโปรเจกต์ Turnkey<br>กรุงเทพฯ และปริมณฑล</p>
+    <div class="sf-social">
+      <a href="https://www.instagram.com/needmorespace.studio" target="_blank" rel="noopener" class="sf-soc" title="Instagram"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
+      <a href="https://www.facebook.com/profile.php?id=100064759611739" target="_blank" rel="noopener" class="sf-soc" title="Facebook"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+      <a href="https://line.me/R/ti/p/%40299qrytx" target="_blank" rel="noopener" class="sf-soc" title="Line" data-line="contact-footer-icon"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/></svg></a>
+      <a href="https://linktr.ee/needmorespace.studio" target="_blank" rel="noopener" class="sf-soc" title="Linktree">⊕</a>
     </div>
   </div>
   <div>
-    <div class="foot-h">Projects</div>
-    <ul class="foot-ul">
+    <div class="sf-h">Projects</div>
+    <ul class="sf-ul">
+      <li><a href="cozy-retreat-kpei.html">The Cozy Retreat — K.Pei</a></li>
       <li><a href="kao-vow.html">K.Kao &amp; K.Vow Home</a></li>
+      <li><a href="private-resident-kmax.html">The Basecamp — K.Max</a></li>
+      <li><a href="chun-residence.html">The Grand Classic — K.Chun</a></li>
       <li><a href="ivory-grace.html">Ivory &amp; Grace</a></li>
       <li><a href="harmony-curve.html">Millennium IVF Clinic</a></li>
       <li><a href="the-refined-core.html">The Refined Core · Ayutthaya</a></li>
       <li><a href="venue-flow.html">Venue Flow Rama 5</a></li>
       <li><a href="grand-britania.html">Grand Britania</a></li>
       <li><a href="the-five.html">The Five · Minburi</a></li>
-      <li><a href="cozy-retreat-kpei.html">The Cozy Retreat · K.Pei</a></li>
+      <li><a href="projects.html">ดูผลงานทั้งหมด →</a></li>
     </ul>
   </div>
   <div>
-    <div class="foot-h">Studio</div>
-    <ul class="foot-ul">
+    <div class="sf-h">Studio</div>
+    <ul class="sf-ul">
       <li><a href="index.html#process">Process</a></li>
       <li><a href="index.html#why">Why Us</a></li>
       <li><a href="index.html#team">About</a></li>
@@ -374,21 +454,21 @@ a.line-btn{display:inline-flex;align-items:center;justify-content:center;gap:.6e
     </ul>
   </div>
   <div>
-    <div class="foot-h">Contact</div>
-    <ul class="foot-ul">
+    <div class="sf-h">Contact</div>
+    <ul class="sf-ul">
       <li><a href="tel:0905456166">090-545-6166</a></li>
-      <li style="font-size:0.76rem;color:rgba(28,26,22,0.35);margin-top:-0.1rem;margin-bottom:0.8rem;">คุณ ภาณุพงษ์ · จ.–ศ. 9:00–18:00</li>
+      <li class="sf-note">คุณ ภาณุพงษ์ · จ.–ศ. 9:00–18:00</li>
       <li><a href="mailto:needmorespacestudio@gmail.com">needmorespacestudio@gmail.com</a></li>
-      <li><a href="https://line.me/R/ti/p/%40299qrytx" target="_blank">Line OA</a></li>
+      <li><a href="https://line.me/R/ti/p/%40299qrytx" target="_blank" rel="noopener" data-line="contact-footer-link">Line OA</a></li>
     </ul>
-    <div style="margin-top:1.5rem;">
-      <a href="https://line.me/R/ti/p/%40299qrytx" target="_blank" rel="noopener" class="btn-gold line-btn" data-line="contact-cta1" style="font-size:0.72rem;padding:0.7rem 1.3rem;"><svg class="line-ico" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/></svg>แอดไลน์ปรึกษา</a>
+    <div class="sf-cta">
+      <a href="https://line.me/R/ti/p/%40299qrytx" target="_blank" rel="noopener" class="sf-btn line-btn" data-line="contact-footer"><svg class="line-ico" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/></svg>แอดไลน์ปรึกษา</a>
     </div>
   </div>
-  <div class="foot-bottom">
-    <span class="foot-copy">© 2026 Need More Space Studio · Bangkok · All Rights Reserved</span>
+  <div class="sf-bottom">
+    <span class="sf-copy">© 2026 Need More Space Studio · Bangkok · All Rights Reserved</span>
   </div>
-</footer>
+</div>
 
 <script>document.addEventListener("contextmenu",e=>e.preventDefault());</script>
 <script>
@@ -405,5 +485,12 @@ try{if(typeof fbq==='function')fbq('track','Contact',{content_name:'LINE OA',con
 });
 </script>
 <a href="https://line.me/R/ti/p/%40299qrytx" target="_blank" rel="noopener" class="mob-bar" data-line="contact-mobbar"><svg class="line-ico" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/></svg>แอดไลน์ เริ่มคุยกับเรา</a>
+<script>
+/* shared site nav: mobile drawer */
+(function(){var d=document.getElementById('snDrawer'),b=document.getElementById('snBurger'),c=document.getElementById('snClose');
+if(!d||!b)return;function set(o){d.classList.toggle('open',o);b.setAttribute('aria-expanded',o?'true':'false');}
+b.addEventListener('click',function(){set(true);});c.addEventListener('click',function(){set(false);});
+d.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){set(false);});});})();
+</script>
 </body>
 </html>
