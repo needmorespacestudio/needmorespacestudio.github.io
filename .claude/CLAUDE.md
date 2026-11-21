@@ -20,6 +20,10 @@ The owner (Panupong) writes in Thai and often works from his phone. Reply in Tha
 - Do not leave backup copies (e.g. `index (1).html`) in the repo: every file here is public.
 - Change all pages consistently. There are ~14 pages that share nav, footer, tracking and CTAs
   as copy-pasted code (no templates), so a change to one shared part usually needs every page.
+- Shared nav and footer: every page except `index.html` uses the same markup (`.sn` nav +
+  `#snDrawer` mobile menu, `.sf` footer) and a `<style id="site-shared">` block in `<head>` with
+  the fonts, palette, nav/footer CSS and per-page overrides. `index.html` has its own nav/footer
+  with the same look and `#anchor` links. Edit all of them together.
 
 ## Pages
 
@@ -50,10 +54,12 @@ Copy the newest project page (`the-refined-core.html`) as the template, then:
 
 - Colours (CSS variables in each page): `--white #FDFAF6`, `--off #F2EDE4`, `--sand #E5DDD1`,
   `--muted #9A9080`, `--dark #1C1A16`, `--ink #2A2620`, `--gold #B89860`. Light theme, no dark
-  section backgrounds.
+  section backgrounds, except project pages whose room is dark: K.Max, K.Pei and The Refined Core
+  keep a dark theme on purpose (owner's choice: it matches the room). Do not convert them.
 - Fonts: Marcellus (English headings), Noto Serif Thai (Thai headings), DM Sans (body).
   Only weights 300/400/600 are loaded; do not use other weights.
-- On desktop, emphasise with colour, not bold.
+- No bold body text on any screen size: emphasise with colour (`.kw`, `.mk`), not weight.
+- Thai text gets no wide letter-spacing (it splits Thai characters); keep tracking for English only.
 - Thai text: no line breaks in the middle of a Thai word; avoid orphan words.
 - Breakpoints in use: 768, 900, 1100, 1366px. Check desktop, tablet (iPad) and mobile.
 - LINE buttons use the gold palette.
