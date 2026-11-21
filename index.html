@@ -549,6 +549,7 @@ body{background:var(--white);color:var(--ink);font-family:var(--sans);font-weigh
 .offer-cols{display:grid;grid-template-columns:1fr 1fr;gap:2px;align-items:stretch;}
 .offer-stat-block{padding:2rem;background:var(--off);border-top:3px solid var(--gold);}
 .offer-big-pct{font-family:var(--serif);font-size:clamp(2.2rem,4vw,3rem);font-weight:400;color:var(--gold);line-height:1;margin-bottom:0.5rem;}
+.offer-big-pct.offer-big-th{font-family:var(--serif-th);font-size:clamp(1.5rem,2.6vw,2rem)!important;line-height:1.4;}
 .offer-stat-desc{font-family:var(--serif-th);font-size:0.98rem;color:var(--ink);font-weight:400;line-height:1.9;margin-bottom:1.5rem;padding-bottom:1.5rem;border-bottom:1px solid rgba(184,152,96,0.15);text-wrap:pretty;}
 .offer-body-txt{font-family:var(--serif-th);font-size:0.88rem;color:rgba(28,26,22,0.6);line-height:2.1;font-weight:300;text-wrap:pretty;}
 .offer-body-txt em{font-style:italic;color:var(--gold);font-family:var(--serif);}
@@ -810,10 +811,10 @@ footer{
 img{-webkit-user-drag:none;pointer-events:none;}.img-wrap,.proj-img-wrap,.pgm-item,.hero,.proj-card{pointer-events:auto;}
 
 /* ── SCAN-FRIENDLY EMPHASIS ── */
-.kw{font-weight:600;color:var(--ink);}
-.mk{font-weight:600;color:var(--ink);background:linear-gradient(transparent 62%,rgba(184,152,96,0.3) 62%);padding:0 0.1em;-webkit-box-decoration-break:clone;box-decoration-break:clone;}
+.kw{font-weight:inherit;color:var(--ink);}
+.mk{font-weight:inherit;color:var(--ink);background:linear-gradient(transparent 62%,rgba(184,152,96,0.3) 62%);padding:0 0.1em;-webkit-box-decoration-break:clone;box-decoration-break:clone;}
 .why-punch{display:block;margin-top:0.7rem;}
-.bs-body strong{font-weight:600;}
+.bs-body strong{font-weight:inherit;}
 .bs-body .kw{font-weight:400;}
 /* hero intro, 4 steps, why-us cards: no bold on any screen size.
    Emphasised words keep the surrounding weight; emphasis is colour (+ highlight) only. */
@@ -981,7 +982,7 @@ a.line-btn{display:inline-flex;align-items:center;justify-content:center;gap:.6e
 <section class="hero">
   <div class="hero-l">
     <div class="hero-l-top">
-      <div class="hero-pill">Bangkok Interior Studio · Est. 2015</div>
+      <div class="hero-pill"><span>Bangkok Interior Studio · <span style="white-space:nowrap">Est. 2015</span></span></div>
       <h1 class="hero-h1">
         <span class="hero-kw">รับออกแบบตกแต่งภายใน Turnkey กรุงเทพฯ</span>
         งานออกแบบระดับพรีเมียม<br>ที่มาพร้อม<br><em>"ความสะดวกสบาย" 100%</em>
@@ -1282,9 +1283,9 @@ a.line-btn{display:inline-flex;align-items:center;justify-content:center;gap:.6e
     </div>
     <div class="offer-cols">
       <div class="offer-stat-block reveal">
-        <div class="offer-big-pct">90%</div>
-        <p class="offer-stat-desc">ของเจ้าของบ้านพบปัญหา — <span class="kw">งบบานปลาย งานล่าช้า ผลลัพธ์ไม่ตรงปก</span></p>
-        <p class="offer-body-txt">เราทำหน้าที่เป็น <span class="kw">Project Orchestrator ส่วนตัวของคุณ</span> ดูแลแบบเบ็ดเสร็จตั้งแต่คิดคอนเซปต์ดีไซน์ ล็อกงบประมาณ ควบคุมมาตรฐานก่อสร้าง ไปจนถึงวันส่งมอบบ้านพร้อมอยู่ — <span class="kw">คุณมีหน้าที่แค่เลือกแบบที่ชอบ</span> นอกนั้นเราจัดการความวุ่นวายแทนคุณทั้งหมด</p>
+        <div class="offer-big-pct offer-big-th">ปัญหาที่พบบ่อย</div>
+        <p class="offer-stat-desc">ที่เจ้าของบ้านหลายคนเจอ — <span class="kw">งบบานปลาย งานล่าช้า ผลลัพธ์ไม่ตรงปก</span></p>
+        <p class="offer-body-txt">เราทำหน้าที่เป็น <span class="kw">Project Orchestrator ส่วนตัวของคุณ</span> ดูแลแบบเบ็ดเสร็จตั้งแต่คิดคอนเซปต์ดีไซน์ วางแผนและควบคุมงบประมาณ ควบคุมมาตรฐานก่อสร้าง ไปจนถึงวันส่งมอบบ้านพร้อมอยู่ — <span class="kw">คุณมีหน้าที่แค่เลือกแบบที่ชอบ</span> นอกนั้นเราจัดการความวุ่นวายแทนคุณทั้งหมด</p>
       </div>
       <div class="offer-price-card reveal d1">
         <div class="offer-price-eyebrow">Turnkey Project Orchestrator</div>
@@ -1480,7 +1481,7 @@ a.line-btn{display:inline-flex;align-items:center;justify-content:center;gap:.6e
     </div>
   </div>
   <div class="foot-bottom">
-    <span class="foot-copy">© 2025 Need More Space Studio · Bangkok · All Rights Reserved</span>
+    <span class="foot-copy">© 2026 Need More Space Studio · Bangkok · All Rights Reserved</span>
   </div>
 </footer>
 
